@@ -116,6 +116,13 @@ with a one-line description of each tile (or image-generation prompts).
 Render prompts, drawings, specifications, or client presentation.
 ```
 
+## Gemini model
+
+When a task calls for Gemini (text generation, image-prompt drafting or checks),
+the studio default is **`gemini-3.5-flash`**. Call it with
+`scripts/gemini.sh "prompt"`; set `GEMINI_MODEL` only to override the default.
+Do not use `gemini-2.5-flash`: it is closed to new users.
+
 ## Voice
 
 - With the user (the studio): direct, expert, concise; explain the reasoning behind

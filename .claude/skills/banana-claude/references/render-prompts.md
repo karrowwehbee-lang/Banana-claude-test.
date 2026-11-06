@@ -61,7 +61,7 @@ photorealistic, physically accurate materials, soft natural contrast, high detai
 - **Stable Diffusion / Flux**: use comma-separated descriptors; add a negative
   prompt: `distorted perspective, warped lines, cartoon, CGI look, oversaturated,
   low detail, clutter, text, watermark, people`.
-- **Gemini / ChatGPT image / other natural-language models**: write full sentences;
+- **Gemini (studio default: `gemini-3.5-flash`) / ChatGPT image / other natural-language models**: write full sentences;
   for edits, describe only what changes and say "keep everything else identical".
 - **D5, V-Ray, Enscape, Lumion, Corona, Twinmotion** (real render engines): translate
   the prompt into settings rather than text — camera (focal length, height, two-point
