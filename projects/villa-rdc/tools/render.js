@@ -13,9 +13,9 @@ const srv = http.createServer((q, r) => {
     const p = await b.newPage({ viewport: { width: 1600, height: 1000 } });
     p.on('console', m => console.log(v, m.type(), m.text()));
     p.on('pageerror', e => console.log(v, 'ERR', e.message));
-    await p.goto(`http://localhost:8765/scene.html?view=${v}`);
+    await p.goto(`http://localhost:8765/${process.env.PAGE || 'scene'}.html?view=${v}`);
     await p.waitForFunction(() => window.__done, null, { timeout: 300000 });
-    await p.screenshot({ path: path.join(out, `render-${v}.png`) });
+    await p.screenshot({ path: path.join(out, `${process.env.PREFIX || 'render'}-${v}.png`) });
     console.log('done', v); await p.close();
   }
   await b.close(); srv.close();

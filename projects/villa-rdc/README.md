@@ -20,3 +20,10 @@ photorealistic renders (D5 / V-Ray / Corona), not a replacement for them.
 
 Re-render: serve `tools/` together with the `three` package (0.169.0) and run
 `node tools/render.js <www-dir> renders`.
+
+## Console LIGNE (mur habillé à côté d'une porte)
+
+| File | Content |
+|---|---|
+| `renders/console-front.png`, `console-angle.png`, `console-detail.png` | 3D views (`tools/console.js`, wall width set with `?wall=1.40`) |
+| `renders/console-fiche-technique.png` | Elevation, section A-A and schedule, in mm |
