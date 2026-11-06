@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Generate the four Série Minérale renders with Nano Banana 2
 # (gemini-3.1-flash-image). Run from this folder: ./generate.sh
-# Each prompt in view-XX-*.txt becomes view-XX-*.png next to it.
+# Each prompt in view-XX-*.txt becomes an image (view-XX-*.png) next to it.
 # The API key comes from GEMINI_API_KEY, or from the network proxy in the
 # cloud environment (a placeholder is used when it is unset).
 set -euo pipefail
@@ -48,8 +48,9 @@ for line in raw.splitlines():
         for p in c.get("content", {}).get("parts", []):
             img = p.get("inlineData")
             if img:
-                open(name + ".png", "wb").write(base64.b64decode(img["data"]))
-                print("  saved " + name + ".png")
+                ext = {"image/jpeg": ".jpg", "image/webp": ".webp"}.get(img.get("mimeType"), ".png")
+                open(name + ext, "wb").write(base64.b64decode(img["data"]))
+                print("  saved " + name + ext)
                 sys.exit(0)
 sys.exit("  no image returned: " + raw[:300])
 ' "$name"
