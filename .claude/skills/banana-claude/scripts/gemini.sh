@@ -12,20 +12,32 @@ PROMPT="${1:-$(cat)}"
 
 BODY=$(python3 -c 'import json,sys; print(json.dumps({"contents":[{"parts":[{"text":sys.argv[1]}]}]}))' "$PROMPT")
 
-RESPONSE=$(curl -sS --max-time 120 \
-  "https://generativelanguage.googleapis.com/v1beta/models/${MODEL}:generateContent" \
+# Stream the reply: long answers can take over 30 s, and a non-streamed
+# request is cut off by the network proxy at about that point.
+RESPONSE=$(curl -sS -N --max-time 300 \
+  "https://generativelanguage.googleapis.com/v1beta/models/${MODEL}:streamGenerateContent?alt=sse" \
   -H "x-goog-api-key: ${KEY}" \
   -H "Content-Type: application/json" \
   -d "$BODY")
 
 python3 -c '
 import json, sys
-try:
-    data = json.loads(sys.argv[1])
-except ValueError:
-    sys.exit("Gemini error: " + sys.argv[1][:500])
-if "error" in data:
-    sys.exit("Gemini error: " + data["error"].get("message", str(data["error"])))
-parts = data["candidates"][0]["content"]["parts"]
-print("".join(p.get("text", "") for p in parts))
+raw = sys.argv[1]
+text, errors = [], []
+chunks = [l[6:] for l in raw.splitlines() if l.startswith("data: ")] or [raw]
+for chunk in chunks:
+    try:
+        data = json.loads(chunk)
+    except ValueError:
+        sys.exit("Gemini error: " + raw[:500])
+    if isinstance(data, list):
+        data = data[0] if data else {}
+    if "error" in data:
+        errors.append(data["error"].get("message", str(data["error"])))
+    for c in data.get("candidates", []):
+        for p in c.get("content", {}).get("parts", []):
+            text.append(p.get("text", ""))
+if errors and not text:
+    sys.exit("Gemini error: " + errors[0])
+print("".join(text))
 ' "$RESPONSE"
