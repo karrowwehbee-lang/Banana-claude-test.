@@ -64,29 +64,36 @@ function cyl(x, d, r, z0, z1, m, rTop = r, seg = 64) {
   c.castShadow = c.receiveShadow = true; scene.add(c); return c;
 }
 
-// ---------- architecture ----------
+// ---------- architecture (d'après la vue Revit : niche entre deux retours, porte à gauche, retombée en haut) ----------
+const DOOR = +(q.get('door') || 0.90), SOF = 2.45;          // largeur porte, sous-face de la retombée
 const floor = new THREE.Mesh(new THREE.PlaneGeometry(8, 6), new THREE.MeshStandardMaterial({ map: T.oak, roughness: 0.55 }));
 floor.rotation.x = -Math.PI / 2; floor.position.set(0.5, 0, 2); floor.receiveShadow = true; scene.add(floor);
-box(-3, 4, CH, CH + 0.1, -0.3, 5, new THREE.MeshStandardMaterial({ color: '#f4f1ec', roughness: 0.9 }));      // ceiling
-// back wall (behind cladding) and side return wall at the corner
-box(WALL, WALL + 0.2, 0, CH, -0.2, 3.5, M.plaster);
-// door opening on the left (x −1.0 … −0.08), oak door leaf + architrave flush in shadow gap
-box(-0.9, -0.08, 2.2, CH, -0.2, 0, M.plaster);
-box(-0.9, -0.08, 0, 2.2, -0.2, -0.16, M.smoked);                         // closed flush door leaf
-box(-0.25, -0.23, 0.95, 1.35, -0.16, -0.12, M.bronze);                   // bronze pull
-box(-0.08, 0, 0, CH, -0.2, 0, M.plaster);                                 // door jamb return
-box(-3, -0.9, 0, CH, -0.2, 0, M.plaster);
-
+box(-4, 4, CH, CH + 0.1, -0.3, 5, new THREE.MeshStandardMaterial({ color: '#f4f1ec', roughness: 0.9 }));      // plafond
+const XL = -DOOR - 0.02;                                                       // face du retour gauche
+box(XL - 0.25, XL, 0, CH, -0.2, 0.55, M.plaster);                               // retour gauche
+box(WALL, WALL + 0.25, 0, CH, -0.2, 0.55, M.plaster);                           // retour droit
+box(-4, XL - 0.25, 0, CH, 0.35, 0.55, M.plaster); box(WALL + 0.25, 4, 0, CH, 0.35, 0.55, M.plaster);
+box(XL, WALL, SOF, CH, -0.2, 0.55, M.plaster);                                   // retombée
+box(XL, WALL, SOF - 0.004, SOF, 0.02, 0.03, M.gap, false);
+{ const strip = new THREE.Mesh(new THREE.BoxGeometry(WALL - XL - 0.1, 0.004, 0.012), M.glow); strip.position.set((XL + WALL) / 2, SOF - 0.006, 0.09); scene.add(strip); }
+// porte dérobée : même cannelure que le mur, joint 3 mm, tirage laiton vertical
+box(-DOOR, -0.003, 0.01, SOF - 0.003, -0.2, CLAD - 0.015, M.walnut(1.3, 2));
+for (let x = -DOOR + 0.004; x < -0.02; x += 0.03) {
+  const f = new THREE.Mesh(new THREE.CylinderGeometry(0.0125, 0.0125, SOF - 0.03, 12, 1, false, -Math.PI / 2, Math.PI), M.walnut(0.05, 2));
+  f.position.set(x + 0.013, SOF / 2, CLAD - 0.015); f.receiveShadow = true; scene.add(f);
+}
+box(-0.003, 0, 0.01, SOF, -0.2, CLAD, M.gap, false);
+box(-0.11, -0.095, 0.85, 1.45, CLAD, CLAD + 0.025, M.bronze);
 // ---------- 1. Habillage mural : cannelures noyer, joint creux 10 mm ----------
-box(0.01, WALL - 0.01, 0, 0.02, 0, CLAD - 0.01, M.gap);                  // plinthe en retrait
-box(0.01, WALL - 0.01, 0.02, CH - 0.01, 0, CLAD - 0.015, M.walnut(2, 2));
+box(0.0, WALL, 0, 0.02, 0, CLAD - 0.01, M.gap);                  // plinthe en retrait
+box(0.0, WALL, 0.02, SOF, 0, CLAD - 0.015, M.walnut(2, 2));
 const FL = 0.03;                                                           // cannelure 30 mm
 for (let x = 0.01 + 0.004; x < WALL - 0.02; x += FL) {
-  const f = new THREE.Mesh(new THREE.CylinderGeometry(0.0125, 0.0125, CH - 0.04, 12, 1, false, -Math.PI / 2, Math.PI), M.walnut(0.05, 2));
-  f.position.set(x + 0.013, CH / 2 + 0.005, CLAD - 0.015); f.castShadow = false; f.receiveShadow = true; scene.add(f);
+  const f = new THREE.Mesh(new THREE.CylinderGeometry(0.0125, 0.0125, SOF - 0.03, 12, 1, false, -Math.PI / 2, Math.PI), M.walnut(0.05, 2));
+  f.position.set(x + 0.013, SOF / 2 + 0.005, CLAD - 0.015); f.castShadow = false; f.receiveShadow = true; scene.add(f);
 }
 // ---------- 2. Miroir arche bronze, rétroéclairé ----------
-const MW = 0.62, MH = 1.05, MX = WALL / 2, MZ0 = 1.18;
+const MW = Math.min(0.62, WALL * 0.5), MH = 1.0, MX = WALL / 2, MZ0 = 1.18;
 {
   const s = new THREE.Shape(); s.moveTo(-MW / 2, 0); s.lineTo(MW / 2, 0); s.lineTo(MW / 2, MH - MW / 2); s.absarc(0, MH - MW / 2, MW / 2, 0, Math.PI, false); s.lineTo(-MW / 2, 0);
   const halo = new THREE.Mesh(new THREE.ShapeGeometry(s.clone(), 64), M.glow); halo.scale.set(1.04, 1.03, 1); halo.position.set(MX, MZ0 - 0.015, CLAD + 0.004); scene.add(halo);
@@ -95,7 +102,7 @@ const MW = 0.62, MH = 1.05, MX = WALL / 2, MZ0 = 1.18;
   
 }
 // ---------- 3. Console : plateau travertin suspendu + pied cylindrique + tiroir noyer ----------
-const CW = Math.min(1.20, WALL - 0.20), CX0 = WALL - 0.10 - CW, CX1 = WALL - 0.10;   // 10 cm de dégagement de chaque côté
+const CW = Math.min(1.20, WALL - 0.15), CX0 = WALL - 0.075 - CW, CX1 = WALL - 0.075;   // 10 cm de dégagement de chaque côté
 const D = 0.35, TOP = 0.80, TH = 0.04;
 box(CX0, CX1, TOP - TH, TOP, CLAD, CLAD + D, M.trav(1.2, 0.4));                         // plateau travertin 40 mm (chant d'onglet)
 box(CX0 + 0.04, CX1 - 0.32, TOP - TH - 0.14, TOP - TH, CLAD, CLAD + D - 0.03, M.walnut(1, 0.3));  // caisson tiroir suspendu
@@ -117,10 +124,10 @@ const s = new THREE.Mesh(new THREE.SphereGeometry(0.06, 48, 32), M.dark); s.posi
 scene.add(new THREE.HemisphereLight('#f4ede2', '#9c8670', 0.6));
 const key = new THREE.DirectionalLight('#ffe6c4', 2.2); key.position.set(-2.5, 3.5, 4); key.castShadow = true;
 key.shadow.mapSize.set(4096, 4096); key.shadow.bias = -0.0004; Object.assign(key.shadow.camera, { left: -3, right: 3, top: 3, bottom: -1, near: 0.5, far: 12 }); scene.add(key);
-for (const x of [0.3, WALL - 0.3]) { const sp = new THREE.SpotLight('#ffd4a0', 4, 4, 0.45, 0.8, 2); sp.position.set(x, CH - 0.05, 0.35); sp.target.position.set(x, 0.8, 0.02); scene.add(sp, sp.target); }
+for (const x of [0.3, WALL - 0.3]) { const sp = new THREE.SpotLight('#ffd4a0', 4, 4, 0.45, 0.8, 2); sp.position.set(x, SOF - 0.02, 0.35); sp.target.position.set(x, 0.8, 0.02); scene.add(sp, sp.target); }
 
-const V = { front: { pos: [0.25, 1.3, 3.1], look: [0.35, 1.2, 0], fov: 52 },
-            angle: { pos: [-1.3, 1.35, 2.3], look: [WALL / 2 + 0.1, 0.95, 0.1], fov: 50 },
+const V = { front: { pos: [(WALL - DOOR) / 2, 1.3, 3.2], look: [(WALL - DOOR) / 2, 1.2, 0], fov: 50 },
+            angle: { pos: [-1.9, 1.35, 2.4], look: [WALL / 2 + 0.1, 0.95, 0.1], fov: 50 },
             detail: { pos: [WALL - 0.05, 1.10, 0.95], look: [CX0 + 0.35, 0.72, 0.15], fov: 50 } }[VIEW];
 const cam = new THREE.PerspectiveCamera(V.fov, W / H, 0.05, 50); cam.position.set(...V.pos); cam.lookAt(...V.look);
 const comp = new EffectComposer(renderer); comp.addPass(new RenderPass(scene, cam));
