@@ -162,13 +162,9 @@ button:focus-visible{outline:2px solid var(--bronze);outline-offset:2px}
 @media (max-width:700px){.views{grid-template-columns:1fr}}
 .view{display:grid;gap:10px;margin:0}
 .frame{aspect-ratio:3/2;max-width:100%;position:relative;border-radius:2px;overflow:hidden}
-.frame svg{position:absolute;inset:0;width:100%;height:100%}
-.frame .tag{position:absolute;left:12px;bottom:12px;font-family:var(--mono);font-size:11px;letter-spacing:.06em;color:#F4EEE5;background:rgba(30,23,18,.55);padding:4px 8px;border-radius:2px}
-.v1{background:linear-gradient(100deg,#F6D9A8 0%,#E9CFA9 25%,#D9C3A6 55%,#9C8068 100%)}
-.v2{background:linear-gradient(180deg,#E6E0D6,#D6CDBF 70%,#BFB2A1)}
-.v3{background:linear-gradient(120deg,#E9D6B8 0%,#D9C8AE 50%,#7A5F4B 50.2%,#5A4535 100%)}
-.v4{background:linear-gradient(180deg,#22304A 0%,#3A3436 45%,#5B3F2A 100%)}
+.frame img{display:block;width:100%;height:100%;object-fit:cover}
 .view h3{font-size:20px}
+.frame{background:var(--surface)}
 
 /* signatures */
 .sigs{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:28px 36px}
@@ -369,45 +365,14 @@ footer b{font-family:var(--display);font-weight:400;letter-spacing:.28em;font-si
   <div class="head">
     <span class="eyebrow">Vues 3D</span>
     <h2>Quatre vues, un seul projet</h2>
-    <p>Les rendus photoréalistes sont en cours de production. Chaque vue garde les mêmes matériaux et le même mobilier, pour lire le projet à différents moments de la journée.</p>
+    <p>Chaque vue garde les mêmes matériaux et le même mobilier, pour lire le projet à différents moments de la journée. Images de synthèse issues de la maquette 3D du projet ; teintes et veinage définitifs selon les échantillons et les tranches choisies.</p>
   </div>
   <div class="views">
-    <figure class="view"><div class="frame v1"><svg viewBox="0 0 300 200" aria-hidden="true"><use href="#sil"/></svg><span class="tag">Rendu en préparation</span></div><h3>Vue d'ensemble</h3><span class="mono muted">24 mm · lumière dorée · depuis le séjour</span></figure>
-    <figure class="view"><div class="frame v2"><svg viewBox="0 0 300 200" aria-hidden="true"><use href="#sil-close"/></svg><span class="tag">Rendu en préparation</span></div><h3>L'îlot et ses assises</h3><span class="mono muted">35 mm · lumière du nord · trois-quarts</span></figure>
-    <figure class="view"><div class="frame v3"><span class="tag">Rendu en préparation</span></div><h3>La cascade et les cannelures</h3><span class="mono muted">85 mm · lumière rasante · détail</span></figure>
-    <figure class="view"><div class="frame v4"><svg viewBox="0 0 300 200" aria-hidden="true"><use href="#sil-night"/></svg><span class="tag">Rendu en préparation</span></div><h3>Le soir</h3><span class="mono muted">28 mm · heure bleue · lumières chaudes</span></figure>
+    <figure class="view"><div class="frame"><img src="rendus/vue-01.jpg" alt="Vue d'ensemble de la cuisine en fin d'après-midi : îlot en quartzite, mur de chêne fumé, baie vitrée à gauche" loading="lazy"></div><h3>Vue d'ensemble</h3><span class="mono muted">24 mm · lumière dorée · depuis le séjour</span></figure>
+    <figure class="view"><div class="frame"><img src="rendus/vue-02.jpg" alt="L'îlot cannelé et ses quatre tabourets en cuir moka sous les suspensions en bronze" loading="lazy"></div><h3>L'îlot et ses assises</h3><span class="mono muted">35 mm · lumière du nord · trois-quarts</span></figure>
+    <figure class="view"><div class="frame"><img src="rendus/vue-03.jpg" alt="Détail de la retombée en cascade en quartzite contre les cannelures en chêne, en lumière rasante" loading="lazy"></div><h3>La cascade et les cannelures</h3><span class="mono muted">85 mm · lumière rasante · détail</span></figure>
+    <figure class="view"><div class="frame"><img src="rendus/vue-04.jpg" alt="La cuisine le soir : niche rétro-éclairée, îlot en lévitation et office vert forêt ouvert" loading="lazy"></div><h3>Le soir</h3><span class="mono muted">28 mm · scène Ambiance · office ouvert</span></figure>
   </div>
-  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
-    <defs>
-      <symbol id="sil" viewBox="0 0 300 200">
-        <rect x="20" y="30" width="260" height="120" fill="#5B4636" opacity=".55"/>
-        <rect x="100" y="70" width="100" height="62" fill="#E8DCC8" opacity=".8"/>
-        <rect x="70" y="128" width="160" height="4" fill="#EFE6D6"/>
-        <rect x="72" y="132" width="156" height="36" fill="#5B4636" opacity=".85"/>
-        <rect x="80" y="168" width="140" height="4" fill="#FFD9A0" opacity=".7"/>
-        <rect x="0" y="172" width="300" height="28" fill="#6B5444" opacity=".7"/>
-      </symbol>
-      <symbol id="sil-close" viewBox="0 0 300 200">
-        <rect x="0" y="0" width="300" height="200" fill="#5B4636" opacity=".25"/>
-        <polygon points="0,110 300,95 300,103 0,120" fill="#EFE6D6"/>
-        <polygon points="0,120 300,103 300,200 0,200" fill="#5B4636" opacity=".8"/>
-        <g fill="#3E3029"><rect x="60" y="130" width="40" height="10" rx="3"/><rect x="150" y="124" width="40" height="10" rx="3"/><rect x="235" y="119" width="40" height="10" rx="3"/></g>
-        <g stroke="#8C6A43" stroke-width="2"><line x1="80" y1="70" x2="80" y2="0"/><line x1="200" y1="62" x2="200" y2="0"/></g>
-        <g fill="#F3E7D2"><ellipse cx="80" cy="72" rx="18" ry="8"/><ellipse cx="200" cy="64" rx="18" ry="8"/></g>
-      </symbol>
-      <symbol id="sil-night" viewBox="0 0 300 200">
-        <rect x="20" y="30" width="260" height="120" fill="#1A1410" opacity=".6"/>
-        <rect x="100" y="70" width="100" height="62" fill="#FFCF8F" opacity=".45"/>
-        <rect x="220" y="40" width="40" height="110" fill="#2F3B30"/>
-        <rect x="222" y="42" width="36" height="106" fill="#FFCF8F" opacity=".18"/>
-        <rect x="70" y="128" width="160" height="4" fill="#D9C7AA"/>
-        <rect x="72" y="132" width="156" height="36" fill="#2A211B"/>
-        <ellipse cx="150" cy="172" rx="90" ry="5" fill="#FFCF8F" opacity=".7"/>
-        <g fill="#FFD9A0"><ellipse cx="120" cy="92" rx="11" ry="6" opacity=".9"/><ellipse cx="180" cy="92" rx="11" ry="6" opacity=".9"/></g>
-        <rect x="0" y="172" width="300" height="28" fill="#1A1410" opacity=".8"/>
-      </symbol>
-    </defs>
-  </svg>
 </section>
 
 <section>
@@ -433,7 +398,7 @@ footer b{font-family:var(--display);font-weight:400;letter-spacing:.28em;font-si
     <li><p><strong>Validation du concept.</strong> Nous revoyons ensemble cette proposition et ajustons ce qui doit l'être.</p></li>
     <li><p><strong>Relevé et vérifications techniques.</strong> Mesures sur site, capacité du plancher pour l'îlot en pierre, évacuations, extraction de la hotte et alimentation électrique, avec les bureaux d'études concernés.</p></li>
     <li><p><strong>Sélection de la pierre.</strong> Choix des tranches de quartzite avec vous, chez le marbrier.</p></li>
-    <li><p><strong>Rendus et plans techniques.</strong> Quatre vues photoréalistes, plans, élévations et calepinage de la pierre.</p></li>
+    <li><p><strong>Plans techniques.</strong> Plans, élévations, coupes et calepinage de la pierre, puis mise à jour des vues 3D.</p></li>
     <li><p><strong>Estimation budgétaire.</strong> Une estimation détaillée par poste, établie après le relevé : [à compléter].</p></li>
   </ol>
 </section>
