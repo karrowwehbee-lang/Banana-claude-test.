@@ -1,0 +1,535 @@
+<title>Maison Lumen — KAÏRA</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Marcellus&family=Jost:wght@300;400;500&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: editorial vertical scroll, one idea per band, drawings set like architectural plates */
+:root{
+  --bg:#EDE6DB;        /* blanc chaux */
+  --surface:#E4DBCD;   /* sable lavé, plus dense */
+  --fg:#2E241D;        /* chêne fumé profond */
+  --muted:#6E5D4F;
+  --line:#CDBFAB;
+  --accent:#2F3B30;    /* vert forêt */
+  --bronze:#8C6A43;
+  --display:"Marcellus","Cormorant Garamond",Georgia,serif;
+  --body:"Jost","Helvetica Neue",Arial,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+  /* material depictions: identical in both themes */
+  --m-quartz:#E8DCC8; --m-oak:#5B4636; --m-moka:#3E3029; --m-lime:#EDE6DB; --m-green:#2F3B30; --m-bronze:#8C6A43;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#1C1713; --surface:#26201A; --fg:#EDE6DB; --muted:#B4A491; --line:#3D332A;
+    --accent:#9DB29C; --bronze:#C79F70; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#1C1713; --surface:#26201A; --fg:#EDE6DB; --muted:#B4A491; --line:#3D332A;
+  --accent:#9DB29C; --bronze:#C79F70; color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font-family:var(--body);font-weight:300;font-size:17px;line-height:1.65;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.wrap{max-width:1080px;margin:0 auto}
+section{padding-block:clamp(56px,9vw,112px);border-top:1px solid var(--line);display:grid;gap:32px}
+h1,h2,h3{font-family:var(--display);font-weight:400;text-wrap:balance;margin:0;line-height:1.1}
+h1{font-size:clamp(52px,10vw,120px);letter-spacing:.01em}
+h2{font-size:clamp(32px,5vw,52px)}
+h3{font-size:22px}
+p{margin:0;max-width:64ch}
+.eyebrow{font-family:var(--body);font-weight:500;font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--bronze)}
+.lead{font-size:clamp(19px,2.2vw,23px);line-height:1.55;max-width:58ch}
+.muted{color:var(--muted)}
+.mono{font-family:var(--mono);font-size:13px;letter-spacing:.02em;font-variant-numeric:tabular-nums}
+.head{display:grid;gap:14px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,5vw,64px);align-items:start}
+.two>*{min-width:0}
+@media (max-width:760px){.two{grid-template-columns:1fr}}
+
+/* cover */
+.cover{padding-block:clamp(40px,7vw,88px) 0;display:grid;gap:28px;border:0}
+.brand{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:baseline}
+.brand b{font-family:var(--display);font-weight:400;font-size:22px;letter-spacing:.28em}
+.cover .sub{display:flex;gap:10px 28px;flex-wrap:wrap}
+.plate{margin:0;display:grid;gap:10px}
+.plate svg{display:block;width:100%;height:auto;border-radius:2px;background:#E6DED2}
+figcaption{font-family:var(--mono);font-size:12px;color:var(--muted);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+
+/* brief */
+dl.facts{display:grid;grid-template-columns:max-content 1fr;gap:12px 28px;margin:0}
+dl.facts dt{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);padding-top:4px}
+dl.facts dd{margin:0}
+@media (max-width:480px){dl.facts{grid-template-columns:1fr;gap:2px}dl.facts dd{margin-bottom:12px}}
+.note{font-size:14px;color:var(--muted);border-left:2px solid var(--bronze);padding-left:14px}
+
+/* concept */
+.words{display:flex;flex-wrap:wrap;gap:8px 28px;font-family:var(--display);font-size:clamp(22px,3vw,30px);color:var(--accent)}
+
+/* palette */
+.palette{display:grid;grid-template-columns:repeat(7,1fr);gap:0;border:1px solid var(--line)}
+.chip{display:grid;grid-template-rows:140px auto;min-width:0}
+.chip i{display:block}
+.chip div{padding:12px 10px;display:grid;gap:2px;border-top:1px solid var(--line)}
+.chip strong{font-weight:500;font-size:14px}
+.chip span{font-size:12px;color:var(--muted)}
+.chip+.chip{border-left:1px solid var(--line)}
+@media (max-width:860px){.palette{grid-template-columns:repeat(4,1fr)}.chip:nth-child(5){border-left:0}.chip:nth-child(n+5){border-top:1px solid var(--line)}}
+@media (max-width:480px){.palette{grid-template-columns:repeat(2,1fr)}.chip{border-left:0!important;border-top:1px solid var(--line)}.chip:nth-child(2n){border-left:1px solid var(--line)!important}.chip:nth-child(-n+2){border-top:0}.chip{grid-template-rows:96px auto}}
+
+/* materials */
+.materials{display:grid;grid-template-columns:repeat(3,1fr);gap:28px 24px}
+@media (max-width:860px){.materials{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:480px){.materials{grid-template-columns:1fr}}
+.mat{display:grid;gap:12px;min-width:0}
+.sw{aspect-ratio:4/3;max-width:100%;border-radius:2px;box-shadow:inset 0 0 0 1px rgba(0,0,0,.06)}
+.mat h3{font-size:20px}
+.mat p{font-size:15px}
+.sw.quartz{background:
+  linear-gradient(118deg,transparent 0 31%,rgba(176,134,82,.55) 32%,rgba(201,167,122,.25) 34%,transparent 36%),
+  linear-gradient(104deg,transparent 0 58%,rgba(150,112,70,.45) 59%,transparent 60.5%),
+  linear-gradient(126deg,transparent 0 72%,rgba(201,167,122,.4) 73%,rgba(176,134,82,.2) 76%,transparent 79%),
+  radial-gradient(120% 80% at 20% 30%,#F1E8DA 0,transparent 60%),
+  radial-gradient(90% 70% at 80% 70%,#DCCBB2 0,transparent 70%),var(--m-quartz)}
+.sw.oak{background:
+  repeating-linear-gradient(90deg,rgba(0,0,0,.10) 0 1px,transparent 1px 7px,rgba(255,255,255,.04) 7px 9px,transparent 9px 13px),
+  repeating-linear-gradient(90deg,transparent 0 37px,rgba(0,0,0,.12) 37px 39px,transparent 39px 61px),
+  linear-gradient(90deg,#5F4A39,#54402F 40%,#634D3B 70%,#584332),var(--m-oak)}
+.sw.flute{background:
+  repeating-linear-gradient(90deg,#3F3025 0,#6E5543 7px,#7A5F4B 10px,#5A4535 16px,#3F3025 20px),var(--m-oak)}
+.sw.lime{background:
+  radial-gradient(40% 30% at 25% 35%,rgba(255,255,255,.55),transparent 70%),
+  radial-gradient(35% 40% at 70% 60%,rgba(190,175,152,.35),transparent 70%),
+  radial-gradient(25% 25% at 55% 20%,rgba(205,191,171,.3),transparent 70%),
+  radial-gradient(30% 20% at 15% 85%,rgba(190,175,152,.28),transparent 70%),var(--m-lime)}
+.sw.green{background:
+  linear-gradient(90deg,var(--m-green) 0 72%,#6E5233 72%,#A9845A 76%,#8C6A43 82%,#6E5233 100%)}
+.sw.leather{background:
+  radial-gradient(60% 50% at 35% 35%,rgba(255,255,255,.10),transparent 70%),
+  radial-gradient(50% 50% at 70% 75%,rgba(0,0,0,.25),transparent 70%),var(--m-moka)}
+
+/* plan */
+.drawing{overflow-x:auto}
+.drawing svg{display:block;width:100%;min-width:560px;height:auto}
+.pl-wall{fill:none;stroke:var(--fg);stroke-width:3}
+.pl-run{fill:var(--surface);stroke:var(--fg);stroke-width:1}
+.pl-stone{fill:var(--m-quartz);stroke:var(--fg);stroke-width:1}
+.pl-thin{fill:none;stroke:var(--fg);stroke-width:.8}
+.pl-dash{fill:none;stroke:var(--muted);stroke-width:.8;stroke-dasharray:4 3}
+.pl-dim{stroke:var(--bronze);stroke-width:.8;fill:none}
+.pl-win{stroke:var(--accent);stroke-width:5}
+.pl-txt{font-family:var(--mono);font-size:11px;fill:var(--fg)}
+.pl-lab{font-family:var(--body);font-size:12px;letter-spacing:.14em;fill:var(--muted);text-transform:uppercase}
+.pl-dimtxt{font-family:var(--mono);font-size:11px;fill:var(--bronze)}
+.zones{display:grid;gap:14px;margin:0;padding:0;list-style:none}
+.zones li{display:grid;grid-template-columns:28px 1fr;gap:12px}
+.zones b{font-family:var(--display);font-weight:400;font-size:20px;color:var(--accent);line-height:1.3}
+
+/* lighting */
+.scenes{display:flex;flex-wrap:wrap;gap:8px}
+.scenes button{font:inherit;font-size:14px;font-weight:400;letter-spacing:.06em;color:var(--fg);background:transparent;border:1px solid var(--line);padding:9px 18px;border-radius:999px;cursor:pointer}
+.scenes button[aria-pressed="true"]{background:var(--fg);color:var(--bg);border-color:var(--fg)}
+.scenes button:hover{border-color:var(--fg)}
+button:focus-visible{outline:2px solid var(--bronze);outline-offset:2px}
+.scene-text{min-height:3.4em}
+.layers{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:22px 28px}
+.layer{display:grid;gap:4px;border-top:1px solid var(--line);padding-top:12px}
+.layer strong{font-weight:500}
+.layer span{font-size:15px;color:var(--muted)}
+
+/* elevation light layers */
+.elev .dim{opacity:var(--dim)} .elev .sun{opacity:var(--sun)} .elev .cove{opacity:var(--cove)}
+.elev .task{opacity:var(--task)} .elev .niche{opacity:var(--niche)} .elev .shelf{opacity:var(--shelf)}
+.elev .plinth{opacity:var(--plinth)} .elev .pend{opacity:var(--pend)}
+.elev g,.elev rect,.elev polygon{transition:opacity .9s ease}
+.elev .lights{mix-blend-mode:screen}
+.elev[data-scene="golden"]{--dim:.12;--sun:.95;--cove:.35;--task:0;--niche:.35;--shelf:.3;--plinth:.2;--pend:.3}
+.elev[data-scene="cuisine"]{--dim:.04;--sun:.35;--cove:.6;--task:.85;--niche:.5;--shelf:1;--plinth:.25;--pend:.45}
+.elev[data-scene="diner"]{--dim:.5;--sun:0;--cove:.35;--task:0;--niche:.45;--shelf:.4;--plinth:.45;--pend:.85}
+.elev[data-scene="ambiance"]{--dim:.64;--sun:0;--cove:.22;--task:0;--niche:.65;--shelf:.2;--plinth:.55;--pend:.35}
+.elev[data-scene="nuit"]{--dim:.86;--sun:0;--cove:0;--task:0;--niche:0;--shelf:0;--plinth:.4;--pend:0}
+@media (prefers-reduced-motion:reduce){.elev g,.elev rect,.elev polygon{transition:none}}
+
+/* pieces */
+.pieces{display:grid;gap:0;border-top:1px solid var(--line)}
+.piece{display:grid;grid-template-columns:1.1fr 1fr 1.6fr;gap:16px 28px;padding-block:20px;border-bottom:1px solid var(--line)}
+.piece>*{min-width:0}
+@media (max-width:760px){.piece{grid-template-columns:1fr;gap:4px}}
+
+/* views */
+.views{display:grid;grid-template-columns:repeat(2,1fr);gap:28px 24px}
+@media (max-width:700px){.views{grid-template-columns:1fr}}
+.view{display:grid;gap:10px;margin:0}
+.frame{aspect-ratio:3/2;max-width:100%;position:relative;border-radius:2px;overflow:hidden}
+.frame svg{position:absolute;inset:0;width:100%;height:100%}
+.frame .tag{position:absolute;left:12px;bottom:12px;font-family:var(--mono);font-size:11px;letter-spacing:.06em;color:#F4EEE5;background:rgba(30,23,18,.55);padding:4px 8px;border-radius:2px}
+.v1{background:linear-gradient(100deg,#F6D9A8 0%,#E9CFA9 25%,#D9C3A6 55%,#9C8068 100%)}
+.v2{background:linear-gradient(180deg,#E6E0D6,#D6CDBF 70%,#BFB2A1)}
+.v3{background:linear-gradient(120deg,#E9D6B8 0%,#D9C8AE 50%,#7A5F4B 50.2%,#5A4535 100%)}
+.v4{background:linear-gradient(180deg,#22304A 0%,#3A3436 45%,#5B3F2A 100%)}
+.view h3{font-size:20px}
+
+/* signatures */
+.sigs{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:28px 36px}
+.sig{display:grid;gap:8px}
+.sig h3{color:var(--accent)}
+
+/* steps */
+.steps{display:grid;gap:0;counter-reset:s;margin:0;padding:0;list-style:none;border-top:1px solid var(--line)}
+.steps li{display:grid;grid-template-columns:48px 1fr;gap:16px;padding-block:18px;border-bottom:1px solid var(--line)}
+.steps li::before{counter-increment:s;content:counter(s,decimal-leading-zero);font-family:var(--mono);font-size:13px;color:var(--bronze);padding-top:3px}
+.steps strong{font-weight:500}
+
+footer{border-top:1px solid var(--line);padding-block:40px 56px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px}
+footer b{font-family:var(--display);font-weight:400;letter-spacing:.28em;font-size:18px}
+</style>
+
+<div class="wrap">
+
+<header class="cover">
+  <div class="brand">
+    <b>KAÏRA</b>
+    <span class="mono muted">Interior Design · Proposition de concept</span>
+  </div>
+  <div class="head">
+    <span class="eyebrow">Cuisine ouverte</span>
+    <h1>Maison Lumen</h1>
+    <p class="lead">La pierre, le bois fumé et la lumière rasante. Une cuisine pensée comme une pièce à vivre, où tout ce qui est technique s'efface.</p>
+  </div>
+  <div class="sub mono muted">
+    <span>Préparé pour [Client]</span><span>[Date]</span><span>Réf. KAIRA-[AAAA-###]</span>
+  </div>
+  <figure class="plate">
+    <div class="elev" data-scene="golden" id="elev-hero"></div>
+    <figcaption><span>Élévation depuis le séjour · fin d'après-midi</span><span>Éch. indicative 1:50</span></figcaption>
+  </figure>
+</header>
+
+<section>
+  <div class="head">
+    <span class="eyebrow">Notre compréhension du projet</span>
+    <h2>Une cuisine pour le quotidien et pour recevoir</h2>
+  </div>
+  <div class="two">
+    <p>Vous souhaitez une cuisine ouverte sur le séjour, assez généreuse pour cuisiner à deux et accueillir dix convives, sans que l'équipement prenne le pas sur l'architecture. Nous avons construit le concept autour de cette idée : un îlot central qui rassemble, et un mur de rangements qui se fait oublier.</p>
+    <dl class="facts">
+      <dt>Espace</dt><dd>7,20 × 5,00 m, hauteur 3,00 m, ouvert sur le séjour</dd>
+      <dt>Lumière</dt><dd>Baie vitrée sud-ouest de 4 m, soleil d'après-midi</dd>
+      <dt>Usage</dt><dd>Famille de quatre, réceptions de 8 à 12 personnes</dd>
+      <dt>Gamme</dt><dd>Luxe, menuiserie et pierre sur mesure</dd>
+    </dl>
+  </div>
+  <p class="note">Ces éléments sont nos hypothèses de travail. Nous les confirmerons avec vous lors du relevé sur site.</p>
+</section>
+
+<section>
+  <div class="head">
+    <span class="eyebrow">Le concept</span>
+    <h2>Un monolithe posé dans la lumière</h2>
+  </div>
+  <div class="two">
+    <p class="lead">L'îlot en quartzite est traité comme une sculpture. Sa veine descend sans interruption jusqu'au sol, et une lumière discrète sous sa base le fait paraître suspendu.</p>
+    <p>Derrière lui, un mur de chêne fumé toute hauteur, sans poignées, accueille réfrigération, fours et rangements. Au centre, une niche taillée dans la même pierre encadre la cuisson et devient le point focal depuis le séjour. Le reste disparaît : la hotte dans le plafond, le petit électroménager derrière des portes escamotables.</p>
+  </div>
+  <div class="words"><span>Monolithique</span><span>Feutré</span><span>Minéral</span><span>Chaleureux</span><span>Silencieux</span></div>
+</section>
+
+<section>
+  <div class="head">
+    <span class="eyebrow">Palette</span>
+    <h2>Des neutres tonaux, un vert profond</h2>
+  </div>
+  <div class="palette">
+    <div class="chip"><i style="background:#EDE6DB"></i><div><strong>Blanc chaux</strong><span class="mono">#EDE6DB</span><span>Murs et plafond</span></div></div>
+    <div class="chip"><i style="background:#D8CBB8"></i><div><strong>Sable lavé</strong><span class="mono">#D8CBB8</span><span>Fond de la pierre, lin</span></div></div>
+    <div class="chip"><i style="background:#B5A894"></i><div><strong>Grège pierre</strong><span class="mono">#B5A894</span><span>Céramiques, détails</span></div></div>
+    <div class="chip"><i style="background:#5B4636"></i><div><strong>Chêne fumé</strong><span class="mono">#5B4636</span><span>Menuiseries</span></div></div>
+    <div class="chip"><i style="background:#3E3029"></i><div><strong>Moka</strong><span class="mono">#3E3029</span><span>Cuir des assises</span></div></div>
+    <div class="chip"><i style="background:#2F3B30"></i><div><strong>Vert forêt</strong><span class="mono">#2F3B30</span><span>Intérieur de l'office</span></div></div>
+    <div class="chip"><i style="background:#8C6A43"></i><div><strong>Bronze brossé</strong><span class="mono">#8C6A43</span><span>Robinetterie, luminaires</span></div></div>
+  </div>
+  <p class="note">Teintes indicatives à l'écran. Les échantillons physiques seront validés sous la lumière de la pièce.</p>
+</section>
+
+<section>
+  <div class="head">
+    <span class="eyebrow">Matériaux &amp; finitions</span>
+    <h2>Six matières, choisies pour vieillir avec vous</h2>
+  </div>
+  <div class="materials">
+    <div class="mat"><div class="sw quartz"></div><h3>Quartzite Taj Mahal</h3><p>Finition adoucie, 20 mm. Plan de l'îlot, retombées en cascade et niche, issus d'un même bloc pour une veine continue.</p><span class="mono muted">Îlot · niche · étagère 30 mm</span></div>
+    <div class="mat"><div class="sw oak"></div><h3>Chêne fumé sur quartier</h3><p>Fil droit et vertical, raccordé d'une façade à l'autre. Vernis mat à 10 % de brillance.</p><span class="mono muted">Mur technique · parquet 240 mm</span></div>
+    <div class="mat"><div class="sw flute"></div><h3>Chêne massif cannelé</h3><p>Cannelures de 20 mm au pas de 25 mm, huile-cire mate. Elles captent la lumière rasante de l'après-midi.</p><span class="mono muted">Habillage de l'îlot</span></div>
+    <div class="mat"><div class="sw lime"></div><h3>Enduit à la chaux</h3><p>Taloché lissé en deux passes, d'un blanc chaud et vivant. Un joint creux de 10 mm le détache du plafond.</p><span class="mono muted">Murs · plafond</span></div>
+    <div class="mat"><div class="sw green"></div><h3>Laque vert forêt &amp; bronze</h3><p>Laque satinée à l'intérieur de l'office-caféier, quincaillerie en laiton finition bronze brossé.</p><span class="mono muted">Office · robinetterie · poignées</span></div>
+    <div class="mat"><div class="sw leather"></div><h3>Cuir semi-aniline moka</h3><p>Sur les assises des tabourets, montés sur une structure en bronze patiné. Il se patine avec l'usage.</p><span class="mono muted">Tabourets de comptoir</span></div>
+  </div>
+</section>
+
+<section>
+  <div class="head">
+    <span class="eyebrow">Implantation</span>
+    <h2>Une allée pour deux, une table pour tous</h2>
+  </div>
+  <div class="drawing" role="img" aria-label="Plan de la cuisine à l'échelle, 7,20 par 5,00 mètres">
+    <svg viewBox="0 0 860 640" xmlns="http://www.w3.org/2000/svg">
+      <!-- 1 px = 10 mm ; origine 60,60 -->
+      <rect class="pl-run" x="60" y="60" width="720" height="65"/>
+      <rect class="pl-stone" x="240" y="60" width="300" height="65"/>
+      <g class="pl-thin">
+        <line x1="120" y1="60" x2="120" y2="125"/><line x1="180" y1="60" x2="180" y2="125"/>
+        <line x1="660" y1="60" x2="660" y2="125"/><line x1="720" y1="60" x2="720" y2="125"/>
+        <rect x="345" y="70" width="90" height="48" rx="2"/>
+      </g>
+      <rect class="pl-stone" x="210" y="245" width="360" height="120"/>
+      <line class="pl-dash" x1="210" y1="335" x2="570" y2="335"/>
+      <rect class="pl-thin" x="270" y="255" width="76" height="45" rx="5"/>
+      <g class="pl-thin">
+        <circle cx="300" cy="392" r="20"/><circle cx="360" cy="392" r="20"/>
+        <circle cx="420" cy="392" r="20"/><circle cx="480" cy="392" r="20"/>
+      </g>
+      <rect class="pl-wall" x="60" y="60" width="720" height="500"/>
+      <line class="pl-win" x1="60" y1="110" x2="60" y2="510"/>
+      <!-- labels -->
+      <text class="pl-txt" x="88" y="97">Froid</text>
+      <text class="pl-txt" x="186" y="97">Fours</text>
+      <text class="pl-txt" x="366" y="137" text-anchor="start">Induction</text>
+      <text class="pl-txt" x="562" y="97">Office</text>
+      <text class="pl-txt" x="668" y="97">Cellier</text>
+      <text class="pl-txt" x="278" y="316">Évier</text>
+      <text class="pl-txt" x="390" y="295" text-anchor="middle">Îlot 3 600 × 1 200</text>
+      <text class="pl-txt" x="586" y="397">4 assises</text>
+      <text class="pl-lab" x="420" y="190" text-anchor="middle">Allée de travail</text>
+      <text class="pl-lab" x="420" y="530" text-anchor="middle">Vers le séjour</text>
+      <text class="pl-lab" x="76" y="320" transform="rotate(-90 76 320)" text-anchor="middle">Baie sud-ouest</text>
+      <!-- cotes -->
+      <g class="pl-dim">
+        <line x1="60" y1="36" x2="780" y2="36"/><line x1="60" y1="30" x2="60" y2="42"/><line x1="780" y1="30" x2="780" y2="42"/>
+        <line x1="808" y1="60" x2="808" y2="560"/>
+        <line x1="802" y1="60" x2="814" y2="60"/><line x1="802" y1="125" x2="814" y2="125"/><line x1="802" y1="245" x2="814" y2="245"/>
+        <line x1="802" y1="365" x2="814" y2="365"/><line x1="802" y1="465" x2="814" y2="465"/><line x1="802" y1="560" x2="814" y2="560"/>
+      </g>
+      <text class="pl-dimtxt" x="420" y="28" text-anchor="middle">7 200</text>
+      <text class="pl-dimtxt" x="820" y="96">650</text>
+      <text class="pl-dimtxt" x="820" y="189">1 200</text>
+      <text class="pl-dimtxt" x="820" y="309">1 200</text>
+      <text class="pl-dimtxt" x="820" y="419">1 000</text>
+      <text class="pl-dimtxt" x="820" y="516">950</text>
+      <text class="pl-dimtxt" x="60" y="600">Cotes en mm · plan indicatif</text>
+    </svg>
+  </div>
+  <ul class="zones">
+    <li><b>A</b><p><strong>Le mur technique.</strong> Réfrigérateur, congélateur et fours en colonnes, une niche de cuisson de 3 m au centre, l'office-caféier et le cellier à droite.</p></li>
+    <li><b>B</b><p><strong>L'îlot.</strong> Évier et deux lave-vaisselle côté cuisine, quatre assises côté séjour sur un débord de 300 mm.</p></li>
+    <li><b>C</b><p><strong>Les circulations.</strong> Une allée de 1 200 mm permet de cuisiner à deux sans se gêner ; 1 000 mm derrière les tabourets laissent passer sans déranger.</p></li>
+  </ul>
+</section>
+
+<section>
+  <div class="head">
+    <span class="eyebrow">Lumière</span>
+    <h2>Quatre scènes, d'un geste</h2>
+    <p>La lumière du jour vient en premier. Le soir, cinq couches de lumière chaude prennent le relais, toutes gradables. Choisissez une scène pour la voir sur l'élévation.</p>
+  </div>
+  <div class="scenes" role="group" aria-label="Scènes d'éclairage">
+    <button type="button" id="sc-cuisine" data-scene="cuisine" aria-pressed="true">Cuisine</button>
+    <button type="button" id="sc-diner" data-scene="diner" aria-pressed="false">Dîner</button>
+    <button type="button" id="sc-ambiance" data-scene="ambiance" aria-pressed="false">Ambiance</button>
+    <button type="button" id="sc-nuit" data-scene="nuit" aria-pressed="false">Nuit</button>
+  </div>
+  <figure class="plate">
+    <div class="elev" data-scene="cuisine" id="elev-light"></div>
+    <figcaption><span class="scene-text" id="scene-text">Cuisine — éclairage de travail à 500 lux sur le plan, lumière du jour en complément.</span></figcaption>
+  </figure>
+  <div class="layers">
+    <div class="layer"><strong>Halo périmétrique</strong><span>LED diffusée dans le joint creux du plafond, 2 700 K. Elle efface la limite entre mur et plafond.</span></div>
+    <div class="layer"><strong>Lumière de travail</strong><span>Encastrés orientables à cône profond au-dessus de l'îlot et profil linéaire sous l'étagère, 3 000 K, IRC ≥ 95.</span></div>
+    <div class="layer"><strong>Niche rétro-éclairée</strong><span>Lumière rasante sur la crédence en quartzite, qui révèle la veine de la pierre.</span></div>
+    <div class="layer"><strong>Plinthe de l'îlot</strong><span>LED en retrait de 80 mm, 2 700 K. L'îlot semble flotter ; la nuit, elle sert de veilleuse.</span></div>
+    <div class="layer"><strong>Suspensions</strong><span>Deux pièces sur mesure en bronze brossé et albâtre, Ø 450 mm, à 800 mm du plan. Gradation dim-to-warm.</span></div>
+  </div>
+</section>
+
+<section>
+  <div class="head">
+    <span class="eyebrow">Pièces maîtresses</span>
+    <h2>Dessinées et fabriquées pour ce lieu</h2>
+  </div>
+  <div class="pieces">
+    <div class="piece"><h3>Îlot Lumen</h3><span class="mono muted">3 600 × 1 200 × 900 mm<br>Sur mesure KAÏRA</span><p>Quartzite en cascade avec onglets à 45°, base en chêne cannelé, ossature acier pour la portée et le débord. Prises escamotables dans le plan.</p></div>
+    <div class="piece"><h3>Mur technique</h3><span class="mono muted">7 200 × 650 × 2 990 mm<br>Sur mesure KAÏRA</span><p>Façades toute hauteur en chêne fumé, ouverture par pression, joint creux au plafond. L'électroménager est entièrement intégré.</p></div>
+    <div class="piece"><h3>Office-caféier</h3><span class="mono muted">1 200 mm de large<br>Sur mesure KAÏRA</span><p>Portes escamotables qui s'effacent dans le caisson et dévoilent un intérieur laqué vert forêt, avec plan de travail et prise dédiée.</p></div>
+    <div class="piece"><h3>Tabourets de comptoir</h3><span class="mono muted">×4 · assise à 650 mm<br>Sélection en cours</span><p>Structure en bronze patiné, assise en cuir semi-aniline moka. 600 mm par convive.</p></div>
+    <div class="piece"><h3>Suspensions</h3><span class="mono muted">×2 · Ø 450 × H 300 mm<br>Sur mesure ou éditeur</span><p>Coupole en bronze brossé et diffuseur en albâtre pour une lumière douce et chaude au-dessus des assises.</p></div>
+  </div>
+</section>
+
+<section>
+  <div class="head">
+    <span class="eyebrow">Vues 3D</span>
+    <h2>Quatre vues, un seul projet</h2>
+    <p>Les rendus photoréalistes sont en cours de production. Chaque vue garde les mêmes matériaux et le même mobilier, pour lire le projet à différents moments de la journée.</p>
+  </div>
+  <div class="views">
+    <figure class="view"><div class="frame v1"><svg viewBox="0 0 300 200" aria-hidden="true"><use href="#sil"/></svg><span class="tag">Rendu en préparation</span></div><h3>Vue d'ensemble</h3><span class="mono muted">24 mm · lumière dorée · depuis le séjour</span></figure>
+    <figure class="view"><div class="frame v2"><svg viewBox="0 0 300 200" aria-hidden="true"><use href="#sil-close"/></svg><span class="tag">Rendu en préparation</span></div><h3>L'îlot et ses assises</h3><span class="mono muted">35 mm · lumière du nord · trois-quarts</span></figure>
+    <figure class="view"><div class="frame v3"><span class="tag">Rendu en préparation</span></div><h3>La cascade et les cannelures</h3><span class="mono muted">85 mm · lumière rasante · détail</span></figure>
+    <figure class="view"><div class="frame v4"><svg viewBox="0 0 300 200" aria-hidden="true"><use href="#sil-night"/></svg><span class="tag">Rendu en préparation</span></div><h3>Le soir</h3><span class="mono muted">28 mm · heure bleue · lumières chaudes</span></figure>
+  </div>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <symbol id="sil" viewBox="0 0 300 200">
+        <rect x="20" y="30" width="260" height="120" fill="#5B4636" opacity=".55"/>
+        <rect x="100" y="70" width="100" height="62" fill="#E8DCC8" opacity=".8"/>
+        <rect x="70" y="128" width="160" height="4" fill="#EFE6D6"/>
+        <rect x="72" y="132" width="156" height="36" fill="#5B4636" opacity=".85"/>
+        <rect x="80" y="168" width="140" height="4" fill="#FFD9A0" opacity=".7"/>
+        <rect x="0" y="172" width="300" height="28" fill="#6B5444" opacity=".7"/>
+      </symbol>
+      <symbol id="sil-close" viewBox="0 0 300 200">
+        <rect x="0" y="0" width="300" height="200" fill="#5B4636" opacity=".25"/>
+        <polygon points="0,110 300,95 300,103 0,120" fill="#EFE6D6"/>
+        <polygon points="0,120 300,103 300,200 0,200" fill="#5B4636" opacity=".8"/>
+        <g fill="#3E3029"><rect x="60" y="130" width="40" height="10" rx="3"/><rect x="150" y="124" width="40" height="10" rx="3"/><rect x="235" y="119" width="40" height="10" rx="3"/></g>
+        <g stroke="#8C6A43" stroke-width="2"><line x1="80" y1="70" x2="80" y2="0"/><line x1="200" y1="62" x2="200" y2="0"/></g>
+        <g fill="#F3E7D2"><ellipse cx="80" cy="72" rx="18" ry="8"/><ellipse cx="200" cy="64" rx="18" ry="8"/></g>
+      </symbol>
+      <symbol id="sil-night" viewBox="0 0 300 200">
+        <rect x="20" y="30" width="260" height="120" fill="#1A1410" opacity=".6"/>
+        <rect x="100" y="70" width="100" height="62" fill="#FFCF8F" opacity=".45"/>
+        <rect x="220" y="40" width="40" height="110" fill="#2F3B30"/>
+        <rect x="222" y="42" width="36" height="106" fill="#FFCF8F" opacity=".18"/>
+        <rect x="70" y="128" width="160" height="4" fill="#D9C7AA"/>
+        <rect x="72" y="132" width="156" height="36" fill="#2A211B"/>
+        <ellipse cx="150" cy="172" rx="90" ry="5" fill="#FFCF8F" opacity=".7"/>
+        <g fill="#FFD9A0"><ellipse cx="120" cy="92" rx="11" ry="6" opacity=".9"/><ellipse cx="180" cy="92" rx="11" ry="6" opacity=".9"/></g>
+        <rect x="0" y="172" width="300" height="28" fill="#1A1410" opacity=".8"/>
+      </symbol>
+    </defs>
+  </svg>
+</section>
+
+<section>
+  <div class="head">
+    <span class="eyebrow">Signatures</span>
+    <h2>Les détails qui font la différence</h2>
+  </div>
+  <div class="sigs">
+    <div class="sig"><h3>La cascade continue</h3><p>Les tranches de quartzite sont réservées et numérotées chez le marbrier pour que la veine passe du plan aux retombées sans rupture.</p></div>
+    <div class="sig"><h3>L'îlot en lévitation</h3><p>Une plinthe en retrait de 80 mm et une lumière rasante au sol détachent l'îlot du parquet.</p></div>
+    <div class="sig"><h3>La niche-écrin</h3><p>Crédence et étagère sont taillées dans la même pierre et éclairées par l'arrière ; la hotte se fond dans le plafond.</p></div>
+    <div class="sig"><h3>L'office secret</h3><p>Derrière deux portes en chêne, un intérieur vert forêt accueille le café et le petit électroménager.</p></div>
+    <div class="sig"><h3>Le silence architectural</h3><p>Pas de poignées, un fil du bois continu, un joint creux de 10 mm au plafond : rien ne vient interrompre les lignes.</p></div>
+  </div>
+</section>
+
+<section>
+  <div class="head">
+    <span class="eyebrow">Prochaines étapes</span>
+    <h2>De l'idée au chantier</h2>
+  </div>
+  <ol class="steps">
+    <li><p><strong>Validation du concept.</strong> Nous revoyons ensemble cette proposition et ajustons ce qui doit l'être.</p></li>
+    <li><p><strong>Relevé et vérifications techniques.</strong> Mesures sur site, capacité du plancher pour l'îlot en pierre, évacuations, extraction de la hotte et alimentation électrique, avec les bureaux d'études concernés.</p></li>
+    <li><p><strong>Sélection de la pierre.</strong> Choix des tranches de quartzite avec vous, chez le marbrier.</p></li>
+    <li><p><strong>Rendus et plans techniques.</strong> Quatre vues photoréalistes, plans, élévations et calepinage de la pierre.</p></li>
+    <li><p><strong>Estimation budgétaire.</strong> Une estimation détaillée par poste, établie après le relevé : [à compléter].</p></li>
+  </ol>
+</section>
+
+<footer>
+  <b>KAÏRA</b>
+  <span class="mono muted">Interior Design · [Adresse du studio] · [Contact]</span>
+</footer>
+
+</div>
+
+<script>
+(function(){
+  function elevation(p){
+    var veins = '<path d="M0 40 C60 30 90 80 160 70 S280 20 450 60" stroke="#B08A5A" stroke-width="1.4" fill="none" opacity=".55"/>'+
+                '<path d="M0 120 C80 100 140 150 230 130 S360 110 450 150" stroke="#C9A77A" stroke-width="2.4" fill="none" opacity=".45"/>'+
+                '<path d="M40 225 C120 190 200 210 300 180 S400 170 450 190" stroke="#B08A5A" stroke-width="1" fill="none" opacity=".5"/>';
+    var s = '<svg viewBox="0 0 1200 600" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Élévation de la cuisine : mur de chêne fumé avec niche en quartzite, îlot et tabourets">'+
+    '<defs>'+
+      '<pattern id="'+p+'flute" width="4" height="10" patternUnits="userSpaceOnUse"><rect width="4" height="10" fill="#4F3C2E"/><rect x="1" width="2" height="10" fill="#6E5543"/></pattern>'+
+      '<pattern id="'+p+'grain" width="9" height="40" patternUnits="userSpaceOnUse"><rect width="9" height="40" fill="#5B4636"/><rect x="3" width="1" height="40" fill="#523F31"/><rect x="7" width="1" height="40" fill="#634D3B"/></pattern>'+
+      '<linearGradient id="'+p+'cove" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFD39A" stop-opacity=".95"/><stop offset="1" stop-color="#FFD39A" stop-opacity="0"/></linearGradient>'+
+      '<radialGradient id="'+p+'niche" cx=".5" cy=".15" r=".9"><stop offset="0" stop-color="#FFD9A6" stop-opacity=".95"/><stop offset="1" stop-color="#FFD9A6" stop-opacity="0"/></radialGradient>'+
+      '<linearGradient id="'+p+'down" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFE2B8" stop-opacity=".9"/><stop offset="1" stop-color="#FFE2B8" stop-opacity="0"/></linearGradient>'+
+      '<radialGradient id="'+p+'pend" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#FFD08A" stop-opacity=".95"/><stop offset="1" stop-color="#FFD08A" stop-opacity="0"/></radialGradient>'+
+      '<radialGradient id="'+p+'floor" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#FFC983" stop-opacity="1"/><stop offset="1" stop-color="#FFC983" stop-opacity="0"/></radialGradient>'+
+      '<linearGradient id="'+p+'sun" x1="0" y1="0" x2="1" y2=".35"><stop offset="0" stop-color="#FFC77A" stop-opacity=".85"/><stop offset=".6" stop-color="#FFC77A" stop-opacity=".25"/><stop offset="1" stop-color="#FFC77A" stop-opacity="0"/></linearGradient>'+
+    '</defs>'+
+    /* architecture */
+    '<rect width="1200" height="520" fill="#E6DED2"/>'+
+    '<rect width="1200" height="70" fill="#ECE5DA"/><rect y="70" width="1200" height="2" fill="#3E3029" opacity=".35"/>'+
+    '<rect y="520" width="1200" height="80" fill="#6B5444"/>'+
+    '<g stroke="#5A4537" stroke-width="1"><line x1="0" y1="545" x2="1200" y2="545"/><line x1="0" y1="572" x2="1200" y2="572"/></g>'+
+    /* tall units */
+    '<g fill="url(#'+p+'grain)"><rect x="60" y="72" width="270" height="433"/><rect x="330" y="72" width="450" height="88"/><rect x="780" y="72" width="360" height="433"/><rect x="330" y="389" width="450" height="116"/></g>'+
+    '<g stroke="#2E241D" stroke-width="1.2" opacity=".8"><line x1="150" y1="72" x2="150" y2="505"/><line x1="240" y1="72" x2="240" y2="505"/><line x1="330" y1="72" x2="330" y2="505"/><line x1="780" y1="72" x2="780" y2="505"/><line x1="870" y1="72" x2="870" y2="505"/><line x1="960" y1="72" x2="960" y2="505"/><line x1="1050" y1="72" x2="1050" y2="505"/><line x1="105" y1="300" x2="150" y2="300" opacity="0"/><line x1="330" y1="430" x2="780" y2="430"/><line x1="330" y1="468" x2="780" y2="468"/><line x1="555" y1="389" x2="555" y2="505"/><line x1="330" y1="160" x2="780" y2="160"/></g>'+
+    '<rect x="242" y="295" width="86" height="88" fill="#221B16"/><rect x="250" y="303" width="70" height="40" fill="#2E2620"/><rect x="252" y="358" width="66" height="2" fill="#8C6A43"/>'+
+    '<rect x="60" y="505" width="1080" height="15" fill="#241C17"/>'+
+    /* niche */
+    '<rect x="330" y="160" width="450" height="225" fill="#E8DCC8"/>'+
+    '<g transform="translate(330 160)">'+veins+'</g>'+
+    '<rect x="330" y="385" width="450" height="4" fill="#EFE6D6"/>'+
+    '<rect x="330" y="301" width="450" height="5" fill="#EFE6D6"/><rect x="330" y="306" width="450" height="1.5" fill="#000" opacity=".18"/>'+
+    '<g fill="#B5A894"><rect x="380" y="281" width="22" height="20" rx="2"/><rect x="408" y="288" width="14" height="13" rx="2"/><rect x="700" y="270" width="26" height="31" rx="3"/></g>'+
+    /* island */
+    '<rect x="288" y="389" width="534" height="116" fill="url(#'+p+'flute)"/>'+
+    '<rect x="300" y="505" width="510" height="15" fill="#1E1713"/>'+
+    '<rect x="285" y="384" width="540" height="5" fill="#EFE6D6"/>'+
+    '<rect x="285" y="384" width="4" height="134" fill="#E8DCC8"/><rect x="821" y="384" width="4" height="134" fill="#E8DCC8"/>'+
+    '<path d="M470 384 V338 Q470 326 482 326 Q494 326 494 338 V346" stroke="#8C6A43" stroke-width="3.5" fill="none"/>'+
+    '<g><ellipse cx="640" cy="378" rx="22" ry="6" fill="#B5A894"/><path d="M620 378 Q640 352 660 378Z" fill="#E0C25A" opacity=".85"/></g>'+
+    /* pendants */
+    '<g stroke="#8C6A43" stroke-width="1.5"><line x1="465" y1="72" x2="465" y2="222"/><line x1="645" y1="72" x2="645" y2="222"/></g>'+
+    '<g><path d="M431 244 Q431 220 465 220 Q499 220 499 244Z" fill="#8C6A43"/><rect x="433" y="244" width="64" height="20" rx="10" fill="#F3E7D2"/>'+
+       '<path d="M611 244 Q611 220 645 220 Q679 220 679 244Z" fill="#8C6A43"/><rect x="613" y="244" width="64" height="20" rx="10" fill="#F3E7D2"/></g>'+
+    /* stools */
+    '<g>'+[420,510,600,690].map(function(x){return '<g><line x1="'+(x-26)+'" y1="430" x2="'+(x-32)+'" y2="520" stroke="#6E5233" stroke-width="3"/><line x1="'+(x+26)+'" y1="430" x2="'+(x+32)+'" y2="520" stroke="#6E5233" stroke-width="3"/><line x1="'+(x-29)+'" y1="480" x2="'+(x+29)+'" y2="480" stroke="#6E5233" stroke-width="2.5"/><rect x="'+(x-34)+'" y="418" width="68" height="13" rx="6" fill="#3E3029"/></g>';}).join('')+'</g>'+
+    /* night veil */
+    '<rect class="dim" width="1200" height="600" fill="#120D0A"/>'+
+    /* lights */
+    '<g class="lights">'+
+      '<polygon class="sun" points="0,120 0,600 900,600 380,120" fill="url(#'+p+'sun)"/>'+
+      '<rect class="cove" y="72" width="1200" height="70" fill="url(#'+p+'cove)"/>'+
+      '<rect class="niche" x="330" y="160" width="450" height="225" fill="url(#'+p+'niche)"/>'+
+      '<polygon class="shelf" points="334,307 776,307 780,385 330,385" fill="url(#'+p+'down)"/>'+
+      '<g class="task" fill="url(#'+p+'down)"><polygon points="352,72 368,72 400,384 320,384"/><polygon points="502,72 518,72 550,384 470,384"/><polygon points="592,72 608,72 640,384 560,384" /><polygon points="742,72 758,72 790,384 710,384"/></g>'+
+      '<g class="pend"><ellipse cx="465" cy="262" rx="70" ry="44" fill="url(#'+p+'pend)"/><ellipse cx="645" cy="262" rx="70" ry="44" fill="url(#'+p+'pend)"/><ellipse cx="555" cy="386" rx="230" ry="14" fill="url(#'+p+'floor)" opacity=".6"/></g>'+
+      '<ellipse class="plinth" cx="555" cy="521" rx="300" ry="12" fill="url(#'+p+'floor)"/>'+
+    '</g>'+
+    '</svg>';
+    return s;
+  }
+  document.getElementById('elev-hero').innerHTML = elevation('h');
+  var light = document.getElementById('elev-light');
+  light.innerHTML = elevation('l');
+
+  var texts = {
+    cuisine:"Cuisine — éclairage de travail à 500 lux sur le plan, lumière du jour en complément.",
+    diner:"Dîner — suspensions à 60 %, niche en veilleuse, lumière de travail éteinte.",
+    ambiance:"Ambiance — la niche et la plinthe dessinent l'espace, les suspensions restent basses.",
+    nuit:"Nuit — seule la plinthe de l'îlot reste allumée à 10 %, sur détection de présence."
+  };
+  var buttons = document.querySelectorAll('.scenes button');
+  var label = document.getElementById('scene-text');
+  buttons.forEach(function(b){
+    b.addEventListener('click', function(){
+      var sc = b.getAttribute('data-scene');
+      light.setAttribute('data-scene', sc);
+      label.textContent = texts[sc];
+      buttons.forEach(function(o){ o.setAttribute('aria-pressed', o === b ? 'true' : 'false'); });
+      try { localStorage.setItem('lumen-scene', sc); } catch(e){}
+    });
+  });
+  try {
+    var saved = localStorage.getItem('lumen-scene');
+    if (saved && texts[saved]) { document.querySelector('.scenes button[data-scene="'+saved+'"]').click(); }
+  } catch(e){}
+})();
+</script>
