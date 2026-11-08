@@ -13,3 +13,4 @@ sur le marbre.
 | `renders/chambre-front.png`, `chambre-angle.png`, `chambre-ceiling.png` | Three.js reconstruction (dimensions estimated from the screenshot) |
 | `tools/kaira_chambre.py` | Blender script: adds the same elements to the client's .blend and sets up Cycles |
 | `tools/chambre.js` | Reconstruction scene |
+| `renders/cycles-front.png`, `cycles-angle.png` | Blender Cycles renders (128 samples, denoised): `build_room.py` + `kaira_chambre.py` |
