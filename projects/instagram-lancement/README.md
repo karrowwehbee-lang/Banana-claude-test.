@@ -13,7 +13,7 @@ pixel for pixel at 100 % on a 2160 × 2700 (4:5) slide; only background and typo
 | `livrables/apercu-grille.jpg` | Reduced preview of the profile grid (preview only) |
 
 Not used yet: renders 03, 10, 15, 16 (TV screen showing Netflix), waiting for the studio's decision.
-`livrables/feed-v2/`, `rendus/`, `build-v2/` come from another session and use retouched renders.
+`rendus/originaux/` holds 9 original renders sent to another session (kept untouched, not used in the feeds).
 
 ## 12-post version (`livrables/feed-12/`, `tools/compose_feed12.py`)
 
