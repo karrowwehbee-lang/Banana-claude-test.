@@ -56,3 +56,4 @@
 |---|---|
 | plan-rdc-amenagement.png | Plan d'aménagement RDC vu de dessus (rendu 3D, 879 × 694 px) : salon, salle à manger, chambre d'amis. Icônes de lumières et grille du logiciel visibles |
 | plan-rdc-cote-2D.png | Plan 2D coté du RDC envoyé en début de projet (annotations rouges retirées) : 1122 / 424 / 315,8 / 322,2 cm… |
+| plan-etage1-amenagement.png | Plan d'aménagement étage 1 vu de dessus (rendu 3D) : séjour (à gauche), chambre principale (en bas à droite). Icônes lumières, point jaune et grille visibles |
