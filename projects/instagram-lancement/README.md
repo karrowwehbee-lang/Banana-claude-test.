@@ -20,3 +20,8 @@ Not used yet: renders 03, 10, 15, 16 (TV screen showing Netflix), waiting for th
 Full art direction: manifesto, brand palette, belief, approach, detail, services and process, plus the
 studio's renders. Ready to post: `instagram-1080x1350/`; HD masters with renders at 100 %: `hd-2160x2700/`.
 Renders are always whole and never upscaled; two editorial slides show a render reduced (72 % and 82 %).
+
+## Brand feed (`livrables/feed-marque/`, `tools/compose_feed_brand.py`) — current proposal
+
+12 posts: 3 featured projects with the studio's untouched renders (living room, master bedroom, dining room)
+and 9 brand posts (welcome, who we are, palette, signature, quote, design notes, services, promise, contact).

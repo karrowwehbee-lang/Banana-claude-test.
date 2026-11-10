@@ -1,0 +1,21 @@
+01-welcome-1 : visuel de marque (aucun rendu)
+02-featured-living-room-1 : rendu 07 entier à 100 %, identique à l'original
+02-featured-living-room-2 : visuel de marque (aucun rendu)
+03-who-we-are-1 : visuel de marque (aucun rendu)
+04-brand-palette-1 : visuel de marque (aucun rendu)
+05-the-kaira-signature-1 : visuel de marque (aucun rendu)
+06-featured-master-bedroom-1 : rendu 05 entier à 100 %, identique à l'original
+06-featured-master-bedroom-2 : rendu 05 entier, réduit à 72% (sans recadrage)
+07-quote-1 : visuel de marque (aucun rendu)
+08-design-notes-1 : visuel de marque (aucun rendu)
+08-design-notes-2 : visuel de marque (aucun rendu)
+08-design-notes-3 : visuel de marque (aucun rendu)
+08-design-notes-4 : visuel de marque (aucun rendu)
+08-design-notes-5 : visuel de marque (aucun rendu)
+08-design-notes-6 : visuel de marque (aucun rendu)
+09-our-services-1 : visuel de marque (aucun rendu)
+09-our-services-2 : visuel de marque (aucun rendu)
+10-featured-dining-room-1 : rendu 09 entier à 100 %, identique à l'original
+10-featured-dining-room-2 : visuel de marque (aucun rendu)
+11-what-you-can-expect-1 : visuel de marque (aucun rendu)
+12-lets-design-your-space-1 : visuel de marque (aucun rendu)
