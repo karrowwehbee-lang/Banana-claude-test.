@@ -1,14 +1,14 @@
-// Capture chaque publication HTML en JPEG 1080 × 1080 (qualité 95).
+// Capture chaque slide HTML en JPEG (qualité 95). jobs.json : {w, h, jobs: [[html, jpg], ...]}
 const { chromium } = require('playwright');
-const fs = require('fs'), path = require('path');
+const fs = require('fs');
 (async () => {
   const cfg = JSON.parse(fs.readFileSync(process.argv[2], 'utf8'));
   const b = await chromium.launch();
-  const p = await b.newPage({ viewport: { width: 1080, height: 1080 }, deviceScaleFactor: 1 });
-  for (const name of cfg.jobs) {
-    await p.goto('file://' + path.join(cfg.build, name + '.html'), { waitUntil: 'networkidle' });
+  const p = await b.newPage({ viewport: { width: cfg.w || 1080, height: cfg.h || 1080 }, deviceScaleFactor: 1 });
+  for (const [html, out] of cfg.jobs) {
+    await p.goto('file://' + html, { waitUntil: 'networkidle' });
     await p.evaluate(() => document.fonts.ready);
-    await p.screenshot({ path: path.join(cfg.out, name + '.jpg'), type: 'jpeg', quality: 95 });
+    await p.screenshot({ path: out, type: 'jpeg', quality: 95 });
   }
   await b.close();
 })();

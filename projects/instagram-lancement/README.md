@@ -1,19 +1,21 @@
-# KAÏRA — Lancement Instagram (9 publications)
+# KAÏRA — Instagram launch (9 posts, built from the studio's own renders)
 
-| Dossier | Contenu |
+| Path | Content |
 |---|---|
-| `prompts/` | Brief de style commun (`_style.txt`) + un prompt par visuel Gemini |
-| `tools/generate.py` | Génération Gemini : `--models`, puis `02-salon` (test) ou `all` |
-| `tools/compose.py` | Compose les 9 posts en JPEG 1080 × 1080 + `livrables/grille-feed.jpg` |
-| `livrables/visuels/` | Visuels finaux |
-| `livrables/legendes.md` | Légendes FR/EN, hashtags, ordre de publication |
+| `sources/recus/` | Renders sent by the studio (`sources/INVENTAIRE.md`) |
+| `tools/retouch.py` | Daylight retouch: partial white balance, uniform exposure, soft shoulder, fine sharpening |
+| `tools/build_feed.py` | TV screens off → retouch → covers and carousels (1080 × 1350) → `livrables/grille-feed.jpg` |
+| `livrables/feed/NN-*/` | Slides of each post (first = cover) + `caption.txt` |
+| `livrables/captions.md` | English captions, hashtags, posting order |
+| `livrables/KAIRA-instagram-feed.zip` | Everything above in one download |
 
-Grille (telle qu'affichée sur le profil) :
+Grid as shown on the profile once the nine are live (newest top left):
 
 | | | |
 |---|---|---|
-| 09 Salle de bain | 08 Notre approche | 07 Dressing |
-| 06 Services | 05 Cuisine | 04 Chambre |
-| 03 La palette | 02 Salon | 01 Manifeste |
+| 09 The detail | 08 Dining room | 07 Selected projects |
+| 06 Lounge | 05 Material palette | 04 Guest bedroom |
+| 03 Master bedroom | 02 Living room | 01 Manifesto |
 
-Rien n'est publié automatiquement.
+`prompts/` and `tools/generate.py` are the earlier Gemini attempt (not used: the feed uses only the studio's renders).
+Nothing is published automatically.
