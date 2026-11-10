@@ -49,3 +49,10 @@
 | etage1-sejour-06 | Mur entrée (3/4) | Double porte chêne à oculus vitrés verticaux, tableau, bibliothèque éclairée |
 | etage1-sejour-08 | Mur entrée (face) | Même mur, vue frontale |
 | etage1-sejour-09 | Mur entrée (3/4 droite) | Même mur, cadrage depuis le canapé |
+
+## Plans
+
+| Fichier | Contenu |
+|---|---|
+| plan-rdc-amenagement.png | Plan d'aménagement RDC vu de dessus (rendu 3D, 879 × 694 px) : salon, salle à manger, chambre d'amis. Icônes de lumières et grille du logiciel visibles |
+| plan-rdc-cote-2D.png | Plan 2D coté du RDC envoyé en début de projet (annotations rouges retirées) : 1122 / 424 / 315,8 / 322,2 cm… |
