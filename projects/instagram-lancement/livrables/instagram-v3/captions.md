@@ -2,25 +2,27 @@
 
 ---
 
-## 01 · KAÏRA — The architecture of calm
+## 01 · Meet KAÏRA (pinned, single image)
 
-KAÏRA Interior Design — the architecture of calm.
+Meet KAÏRA — the architecture of calm.
 
-We are an interior architecture studio devoted to calm. We design residences, villas and workspaces where light, proportion and honest materials come first, and where every line has a reason to exist.
+KAÏRA is an interior architecture studio for residences, villas and workspaces. We design calm spaces where light, proportion and honest materials come first, and where every line has a reason to exist.
 
-Swipe to meet the studio and discover our palette: luminous white, olive, burgundy and chocolate, with a soft touch of beige.
+Welcome to our studio.
 
-#KAIRAInteriorDesign #InteriorArchitecture #InteriorDesign #InteriorDesignStudio #LuxuryInteriors #QuietLuxury #MinimalistInterior #ArchitectureInterieure
+#KAIRAInteriorDesign #InteriorArchitecture #InteriorDesignStudio #InteriorDesign #LuxuryInteriors #QuietLuxury #ArchitectureInterieure #InteriorArchitect
 
 ---
 
-## 02 · Our services
+## 02 · Our services (pinned, single image)
 
 Our services.
 
-Interior design · Space planning · Bespoke furniture & joinery · Materials & lighting · 3D visualisation.
-
-You see your space in 3D before anything is built; every bespoke piece is designed for your home only; materials and lighting are chosen with you, along a calm, structured process from brief to detail.
+01 · Interior design: concept, mood and identity of every space.
+02 · Space planning: layouts, circulation and furniture placement.
+03 · Bespoke furniture & joinery: pieces drawn for one place only.
+04 · Materials & lighting: finishes, textures and lighting scenes.
+05 · 3D visualisation: see your space before it is built.
 
 For residences, villas and workspaces. Send us a direct message to start your project.
 
@@ -28,13 +30,13 @@ For residences, villas and workspaces. Send us a direct message to start your pr
 
 ---
 
-## 03 · Featured project — Villa master bedroom
+## 03 · The Project — Villa master bedroom (pinned, single image)
 
-Featured project · Villa — Master bedroom.
+The Project — Villa master bedroom.
 
 A suite built around a single gesture: a band of dark veined marble, backlit, rising behind a wraparound headboard with soft, rounded lines. Lit wood slats, glass globe pendants on fine gold rods and olive bed linen complete a quiet, enveloping atmosphere.
 
-Swipe for the material notes.
+Designed by KAÏRA Interior Design.
 
 #KAIRAInteriorDesign #MasterBedroom #LuxuryBedroom #BedroomDesign #MarbleWall #VillaInterior #QuietLuxury #InteriorArchitecture
 
