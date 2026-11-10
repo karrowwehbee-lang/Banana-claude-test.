@@ -17,3 +17,12 @@
 | rdc-salon-11 | Salon — mur tableau (face) | Tableau ligne abstraite, canapé crème, rideaux |
 
 À confirmer : appellation des zones (salon / salle à manger / entrée) ; images de meilleure résolution si disponibles.
+
+## 02 · Chambre d'amis (4 rendus)
+
+| Fichier | Zone | Contenu |
+|---|---|---|
+| chambre-amis-01 | Mur tête de lit (face) | Lit plateforme tapissé lin clair, tête de lit double coussin, lames chêne verticales, panneaux muraux, suspensions globe opalin + anneau, chevets ronds métal noir, rideaux |
+| chambre-amis-02 | Mur TV / coiffeuse (face) | Habillage marbre blanc veiné caramel, TV rétroéclairée, meuble suspendu chêne plateau marbre, coiffeuse + miroir, pouf capitonné cuir brun, lampes globe |
+| chambre-amis-03 | Vue 3/4 lit + fenêtre | Lit plateforme, rideaux occultants taupe + voilage, gorge LED |
+| chambre-amis-04 | Mur TV / coiffeuse (3/4) | Même mur que 02 en perspective |
