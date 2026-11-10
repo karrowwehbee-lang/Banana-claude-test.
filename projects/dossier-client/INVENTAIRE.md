@@ -36,3 +36,16 @@
 | chambre-principale-03 | Vue large avec baie | Baie vitrée, miroirs à droite de la tête de lit, dressing chêne en reflet |
 | chambre-principale-04 | Mur dressing / TV | Dressing chêne toute hauteur, meuble TV noir, rideaux, couloir vers la chambre |
 | chambre-principale-05 | Mur tête de lit (face) | Vue frontale symétrique |
+
+## 04 · Étage 1 — Séjour (9 rendus reçus, 8 uniques : 06 et 07 identiques, 07 supprimé)
+
+| Fichier | Zone | Contenu |
+|---|---|---|
+| etage1-sejour-01 | Mur TV (face) | Panneaux crème à joints creux, TV rétroéclairée, meuble bas chêne suspendu, étagère verticale chêne éclairée avec montant marbre, deux plantes en pots noirs |
+| etage1-sejour-02 | Salon (face, vers fenêtres) | Canapé d'angle gris taupe, coussins pied-de-poule + cuir cognac, table basse ovale marbre blanc veiné + table d'appoint bois foncé/métal noir, tapis tissé, rideaux taupe + voilage, bibliothèque chêne éclairée, tableau rouge/blanc |
+| etage1-sejour-03 | Salon (3/4, fenêtres) | Même salon, fauteuil tissu gris structure métal noir, pouf cuir cognac à côtes |
+| etage1-sejour-04 | Salon (3/4, tableau + bibliothèque) | Tableau motif organique rouge sur blanc, bibliothèque chêne éclairée |
+| etage1-sejour-05 | Mur TV (3/4) | Même mur que 01 en perspective |
+| etage1-sejour-06 | Mur entrée (3/4) | Double porte chêne à oculus vitrés verticaux, tableau, bibliothèque éclairée |
+| etage1-sejour-08 | Mur entrée (face) | Même mur, vue frontale |
+| etage1-sejour-09 | Mur entrée (3/4 droite) | Même mur, cadrage depuis le canapé |
