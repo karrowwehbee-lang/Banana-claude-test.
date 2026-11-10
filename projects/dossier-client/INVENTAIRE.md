@@ -26,3 +26,13 @@
 | chambre-amis-02 | Mur TV / coiffeuse (face) | Habillage marbre blanc veiné caramel, TV rétroéclairée, meuble suspendu chêne plateau marbre, coiffeuse + miroir, pouf capitonné cuir brun, lampes globe |
 | chambre-amis-03 | Vue 3/4 lit + fenêtre | Lit plateforme, rideaux occultants taupe + voilage, gorge LED |
 | chambre-amis-04 | Mur TV / coiffeuse (3/4) | Même mur que 02 en perspective |
+
+## 03 · Chambre principale (5 rendus)
+
+| Fichier | Zone | Contenu |
+|---|---|---|
+| chambre-principale-01 | Mur tête de lit (3/4) | Marbre brun foncé veiné (bande centrale rétroéclairée), panneaux crème, colonnes chêne + lames LED, tête de lit enveloppante aux formes arrondies, chevets chêne, suspensions globe + tige, banc capitonné piètement laiton, plaid kaki |
+| chambre-principale-02 | Mur tête de lit (3/4) | Variante très proche de 01 (cadrage légèrement différent) |
+| chambre-principale-03 | Vue large avec baie | Baie vitrée, miroirs à droite de la tête de lit, dressing chêne en reflet |
+| chambre-principale-04 | Mur dressing / TV | Dressing chêne toute hauteur, meuble TV noir, rideaux, couloir vers la chambre |
+| chambre-principale-05 | Mur tête de lit (face) | Vue frontale symétrique |
