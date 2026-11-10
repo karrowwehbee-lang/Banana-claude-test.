@@ -8,7 +8,7 @@ const path = require('path');
   const previews = process.argv[4];
   const b = await chromium.launch();
   const p = await b.newPage({ viewport: { width: 1123, height: 794 } });
-  await p.goto('file://' + path.join(build, 'dossier.html'), { waitUntil: 'networkidle' });
+  await p.goto('file://' + path.join(build, process.env.PAGE || 'dossier.html'), { waitUntil: 'networkidle' });
   await p.evaluate(() => document.fonts.ready);
   await p.pdf({ path: out, width: '297mm', height: '210mm', printBackground: true, preferCSSPageSize: true });
   if (previews) {

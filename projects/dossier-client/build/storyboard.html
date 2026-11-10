@@ -1,0 +1,214 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><title>KAÏRA — Storyboard</title><style>/* KAÏRA — Dossier de conception · A4 paysage. Typographies provisoires (en attente de la charte officielle). */
+@font-face { font-family: "Cormorant"; font-weight: 300; src: url(fonts/cormorant-garamond-latin-300-normal.woff2); }
+@font-face { font-family: "Cormorant"; font-weight: 400; src: url(fonts/cormorant-garamond-latin-400-normal.woff2); }
+@font-face { font-family: "Cormorant"; font-weight: 500; src: url(fonts/cormorant-garamond-latin-500-normal.woff2); }
+@font-face { font-family: "Cormorant"; font-weight: 300; font-style: italic; src: url(fonts/cormorant-garamond-latin-300-italic.woff2); }
+@font-face { font-family: "Cormorant"; font-weight: 400; font-style: italic; src: url(fonts/cormorant-garamond-latin-400-italic.woff2); }
+@font-face { font-family: "Jost"; font-weight: 300; src: url(fonts/jost-latin-300-normal.woff2); }
+@font-face { font-family: "Jost"; font-weight: 400; src: url(fonts/jost-latin-400-normal.woff2); }
+@font-face { font-family: "Jost"; font-weight: 500; src: url(fonts/jost-latin-500-normal.woff2); }
+
+:root { --paper: #F5F1EB; --paper2: #EDE6DC; --ink: #2B2622; --soft: #6E6258; --line: #CDBFAE; --accent: #8C7462; --m: 14mm; }
+@page { size: 297mm 210mm; margin: 0; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { background: var(--paper); }
+body { font-family: "Jost", sans-serif; font-weight: 300; color: var(--ink); font-size: 10.2pt; line-height: 1.55;
+       -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+.page { width: 297mm; height: 210mm; position: relative; overflow: hidden; background: var(--paper); page-break-after: always; break-after: page; }
+h1, h2, h3 { font-family: "Cormorant", serif; font-weight: 300; line-height: 1.05; letter-spacing: .2px; }
+h1 { font-size: 46pt; } h2 { font-size: 30pt; margin-bottom: 7mm; } h2.xl { font-size: 42pt; } h3 { font-size: 22pt; margin-bottom: 3mm; }
+em { font-style: italic; color: var(--accent); }
+p { margin-bottom: 3.2mm; } .lead { font-size: 12pt; line-height: 1.6; }
+.kicker { font-family: "Jost"; font-weight: 400; font-size: 7.4pt; letter-spacing: 3.2px; text-transform: uppercase; color: var(--accent); margin-bottom: 3.5mm; }
+.num { font-family: "Cormorant"; font-weight: 300; font-size: 20pt; color: var(--line); margin-bottom: 3mm; }
+.num.big { font-size: 64pt; line-height: 1; color: var(--line); }
+.rule { width: 18mm; height: .3mm; background: var(--accent); margin: 6mm 0; }
+.note { font-size: 8.6pt; color: var(--soft); max-width: 150mm; }
+ul { list-style: none; } li { padding: 1.3mm 0; border-bottom: .2mm solid var(--line); font-size: 9.2pt; }
+
+/* image tiles */
+.tile { position: relative; overflow: hidden; }
+.tile .ph { position: absolute; inset: 0; background-size: cover; background-repeat: no-repeat; }
+.tile figcaption { position: absolute; left: 0; right: 0; bottom: 0; padding: 7mm 4mm 3mm; font-size: 7.6pt; letter-spacing: .4px; color: #fff;
+  background: linear-gradient(transparent, rgba(30,24,20,.62)); }
+
+/* folio */
+.folio { position: absolute; left: var(--m); right: var(--m); bottom: 6mm; display: flex; justify-content: space-between; align-items: center;
+  font-size: 6.6pt; letter-spacing: 1.6px; text-transform: uppercase; color: var(--soft); z-index: 5; }
+.folio .pn { font-family: "Cormorant"; font-size: 11pt; letter-spacing: 0; color: var(--ink); }
+.folio span:nth-child(2) { position: absolute; left: 50%; transform: translateX(-50%); }
+.folio.narrow span:nth-child(2) { display: none; }
+
+/* cover */
+.cover { display: grid; grid-template-columns: 172mm 1fr; height: 100%; }
+.cover-img { height: 210mm; }
+.cover-panel { padding: 18mm 15mm 14mm; display: flex; flex-direction: column; justify-content: space-between; background: var(--paper); }
+.wordmark { font-family: "Cormorant"; font-weight: 400; font-size: 34pt; letter-spacing: 14px; line-height: 1; }
+.sub { font-size: 7pt; letter-spacing: 6.4px; color: var(--soft); margin-top: 3mm; }
+.cover-title h1 { margin-top: 3mm; } .cover-title .proj { font-size: 10pt; color: var(--soft); letter-spacing: .6px; }
+.cover-foot { font-size: 7.4pt; letter-spacing: 3px; text-transform: uppercase; color: var(--soft); }
+
+/* toc */
+.toc { display: grid; grid-template-columns: 112mm 1fr; height: 100%; }
+.toc-img { height: 210mm; } .toc-text { padding: 22mm 20mm; }
+.toc-list { margin-top: 4mm; columns: 1; }
+.toc-row { display: flex; gap: 8mm; padding: 2.6mm 0; border-bottom: .2mm solid var(--line); align-items: baseline; }
+.tn { font-family: "Cormorant"; font-size: 15pt; color: var(--accent); width: 10mm; } .tt { font-family: "Cormorant"; font-size: 15pt; }
+
+/* split / concept */
+.split { display: grid; grid-template-columns: 1fr 118mm; height: 100%; }
+.col-text { padding: 20mm 16mm 20mm var(--m); } .col-img { height: 210mm; }
+.facts { margin-top: 7mm; display: grid; gap: 2mm; font-size: 9pt; }
+.facts span { display: inline-block; width: 22mm; font-size: 7pt; letter-spacing: 2.4px; text-transform: uppercase; color: var(--accent); }
+.concept { display: grid; grid-template-columns: 100mm 1fr; height: 100%; }
+.concept-img { height: 210mm; } .concept-text { padding: 18mm 16mm 18mm 16mm; }
+.pillars { display: grid; grid-template-columns: 1fr 1fr; gap: 6mm 9mm; }
+.pillars b { font-family: "Cormorant"; font-weight: 500; font-size: 14pt; display: block; margin-bottom: 1.5mm; }
+.pillars p { font-size: 9pt; color: #4a413a; }
+
+/* moodboard */
+.mood { padding: 13mm var(--m) 14mm; height: 100%; display: flex; flex-direction: column; }
+.mood-head { display: flex; gap: 6mm; align-items: flex-end; } .mood-head h2 { margin-bottom: 5mm; }
+.mood-grid { flex: 1; display: grid; gap: 3mm; grid-template-columns: 2fr 1fr 1fr 1.3fr; grid-template-rows: 1fr 1fr; margin-bottom: 6mm; }
+.m1 { grid-row: span 2; } .m4 { grid-row: span 2; }
+
+/* palette pages */
+.palette-page, .mat-page { padding: 14mm var(--m) 16mm; height: 100%; display: flex; flex-direction: column; }
+.pp-head { display: flex; gap: 6mm; } .pp-head h2 { margin-bottom: 3mm; }
+.bars { flex: 1; display: grid; grid-template-columns: repeat(12, 1fr); gap: 0; margin-top: 7mm; }
+.bar { position: relative; } .bar span { display: none; }
+.bnames { display: grid; grid-template-columns: repeat(12, 1fr); gap: 1.5mm; margin-top: 2.5mm; margin-bottom: 6mm; }
+.bn { font-size: 6.6pt; line-height: 1.35; color: var(--soft); }
+.matgrid { flex: 1; display: grid; grid-template-columns: repeat(6, 1fr); grid-template-rows: 1fr 1fr; gap: 4mm 4mm; margin: 6mm 0 6mm; }
+.mat { display: flex; flex-direction: column; } .mchip { flex: 1; background-size: cover; background-position: center; }
+.mname { font-family: "Cormorant"; font-size: 11pt; line-height: 1.15; margin-top: 2mm; } .hex { font-size: 6.8pt; letter-spacing: 1.6px; color: var(--soft); }
+
+/* plans */
+.plans { padding: 12mm var(--m) 14mm; height: 100%; display: grid; grid-template-columns: 62mm 1fr; grid-template-rows: auto 1fr; gap: 0 10mm; }
+.plans-head { grid-column: 1; grid-row: 1; } .plans-head h2 { font-size: 26pt; }
+.plan-box { grid-column: 2; grid-row: 1 / span 2; background: var(--paper2); display: flex; align-items: center; justify-content: center; padding: 6mm; margin-bottom: 6mm; }
+.plan-box.white { background: #fff; }
+.plan-box img { max-width: 100%; max-height: 170mm; object-fit: contain; }
+.legend { grid-column: 1; grid-row: 2; align-self: end; margin-bottom: 8mm; display: flex; flex-direction: column; gap: 1.6mm; font-size: 9pt; }
+.legend b { font-family: "Cormorant"; font-weight: 500; font-size: 13pt; } .legend span::before { content: "— "; color: var(--accent); }
+
+/* opener */
+.opener { display: grid; grid-template-columns: 1fr 150mm; height: 100%; }
+.op-text { padding: 20mm 14mm 20mm var(--m); display: flex; flex-direction: column; justify-content: center; }
+.op-text p { font-size: 10.6pt; max-width: 110mm; } .op-img { height: 210mm; }
+
+/* galleries */
+.gal { padding: 12mm var(--m) 14mm; height: 100%; display: flex; flex-direction: column; }
+.g-head { display: grid; grid-template-columns: 1fr; margin-bottom: 4mm; } .g-head h3 { margin-bottom: 2mm; }
+.gintro { font-size: 9.2pt; color: #4a413a; max-width: 210mm; margin-bottom: 0; }
+.g3row { flex: 1; display: grid; grid-template-columns: repeat(3, 1fr); gap: 3.5mm; margin-bottom: 6mm; }
+
+/* feature */
+.feature { display: grid; grid-template-columns: 128mm 76mm 1fr; height: 100%; gap: 0; }
+.f-big { height: 210mm; } .f-small { height: 210mm; border-left: 1.2mm solid var(--paper); }
+.f-text { padding: 18mm 11mm 18mm 10mm; display: flex; flex-direction: column; justify-content: center; }
+.f-text p { font-size: 9.2pt; color: #4a413a; } .f-text ul { margin-top: 3mm; }
+
+/* room sheet */
+.sheet { display: grid; grid-template-columns: 1fr 104mm; height: 100%; }
+.sh-left { padding: 13mm 12mm 16mm var(--m); display: flex; flex-direction: column; }
+.palette { flex: 1; display: flex; flex-direction: column; margin-top: 3mm; }
+.swgrid { flex: 1; display: grid; grid-template-columns: repeat(4, 1fr); grid-auto-rows: 1fr; gap: 3.5mm; margin-bottom: 4mm; }
+.swgrid.n5, .swgrid.n6 { grid-template-columns: repeat(3, 1fr); }
+.sw { display: grid; grid-template-rows: 1fr 5mm auto auto; }
+.chip { background-size: cover; background-position: center; } .flat { }
+.swname { font-family: "Cormorant"; font-size: 10.5pt; line-height: 1.1; margin-top: 1.6mm; }
+.sh-right { background: var(--paper2); display: grid; grid-template-rows: 88mm 1fr; }
+.sh-img { height: 88mm; }
+.lists { padding: 7mm 9mm 16mm; display: grid; grid-template-columns: 1fr 1fr; gap: 6mm; }
+.lists li { font-size: 8.2pt; padding: 1mm 0; }
+
+/* custom */
+.custom { padding: 12mm var(--m) 14mm; height: 100%; display: flex; flex-direction: column; }
+.custom .g-head { margin-bottom: 4mm; } .custom .num { margin-bottom: 0; }
+.c6grid { flex: 1; display: grid; grid-template-columns: repeat(3, 1fr); grid-template-rows: 1fr 1fr; gap: 3.5mm; margin-bottom: 6mm; }
+.c6 figcaption { font-size: 7.4pt; } .c6 figcaption b { font-family: "Cormorant"; font-weight: 500; font-size: 11pt; letter-spacing: .2px; }
+
+/* synthesis / back */
+.synth { display: grid; grid-template-columns: 150mm 1fr; height: 100%; }
+.sy-img { height: 210mm; } .sy-text { padding: 22mm 18mm 20mm 16mm; display: flex; flex-direction: column; justify-content: center; }
+.back { display: grid; grid-template-columns: 1fr 100mm; height: 100%; }
+.back-img { height: 210mm; }
+.back-panel { padding: 20mm 16mm; display: flex; flex-direction: column; justify-content: center; align-items: flex-start; background: var(--ink); color: var(--paper); }
+.back-panel .sub { color: #b9ab9b; } .back-panel p { font-size: 8.6pt; letter-spacing: 1px; color: #cbbfb1; }
+.back-panel .rule { background: #b9ab9b; }
+.bhex { display: block; font-size: 7pt; letter-spacing: 1.4px; color: var(--ink); margin-bottom: .8mm; }
+
+.dur { margin-left: auto; font-size: 8pt; color: var(--soft); letter-spacing: 1px; }
+.sb-intro { padding: 16mm 14mm 18mm; display: grid; grid-template-columns: 1fr 1fr; gap: 14mm; height: 100%; }
+.sb-intro h2 { font-size: 26pt; }
+.rules { display: grid; grid-template-columns: 1fr 1fr; gap: 3mm 6mm; margin-top: 5mm; }
+.rules.one { grid-template-columns: 1fr; gap: 2.4mm; }
+.rules div { font-size: 8.8pt; border-top: .2mm solid var(--line); padding-top: 1.6mm; }
+.rules b { display: block; font-family: "Cormorant"; font-weight: 500; font-size: 12pt; }
+.sb-plan1 { padding: 14mm 14mm 16mm; display: grid; grid-template-columns: 62mm 1fr; gap: 10mm; height: 100%; }
+.sbp { background: var(--paper2); padding: 5mm; display: flex; align-items: center; justify-content: center; }
+.sbp svg { width: 100%; height: 100%; }
+.sb-note { font-size: 8pt; color: var(--soft); }
+.shots { padding: 12mm 14mm 16mm; display: grid; grid-template-columns: 1fr 1fr; gap: 8mm; height: 100%; }
+.shot { display: grid; grid-template-rows: 100mm 1fr; }
+.sh-ref { height: 100mm; } .sh-txt { padding-top: 4mm; }
+.sh-n { font-family: "Cormorant"; font-size: 26pt; color: var(--line); line-height: 1; float: right; }
+.sh-txt h3 { font-size: 18pt; margin-bottom: 2mm; } .sh-txt p { font-size: 9pt; color: #4a413a; margin-bottom: 2mm; }
+.cam { font-size: 8pt; color: var(--ink); border-top: .2mm solid var(--line); padding-top: 1.5mm; }
+.tr { font-size: 7.4pt; letter-spacing: 1.4px; text-transform: uppercase; color: var(--accent); margin-top: 1.5mm; }
+</style></head><body><section class="page"><div class="cover">
+<figure class="tile cover-img"><div class="ph" style="background-image:url(img/chambre-principale-05.jpg);background-position:50% 40%"></div></figure>
+<div class="cover-panel"><div class="brand"><div class="wordmark">KAÏRA</div><div class="sub">INTERIOR DESIGN</div></div>
+<div class="cover-title"><div class="kicker">Visite vidéo cinématique</div><h1>Storyboard<br><em>de la visite</em></h1><div class="rule"></div>
+<p class="proj">Salon principal · Chambre d'amis<br>Séjour de l'étage · Chambre principale</p></div>
+<div class="cover-foot">11 plans · environ 56 s + logo</div></div></div></section><section class="page"><div class="sb-intro">
+<div><div class="kicker">Principe</div><h2>Une visite <em>comme si l'on y marchait</em></h2>
+<p>La caméra suit le parcours d'un visiteur : elle entre dans le salon principal, passe dans la salle à manger, rejoint la chambre d'amis,
+puis monte à l'étage pour le séjour et la chambre principale. Les plans s'enchaînent dans le mouvement, sans arrêt de la caméra,
+pour un rendu fluide et continu.</p>
+<div class="rules"><div><b>Hauteur</b>1,20 à 1,60 m, comme un regard humain</div><div><b>Objectif</b>20 à 24 mm, 35 mm pour les détails</div>
+<div><b>Vitesse</b>0,15 à 0,35 m/s, accélération et freinage progressifs</div><div><b>Horizon</b>toujours droit, verticales verticales</div>
+<div><b>Lumière</b>ambiance du soir des rendus, gorges LED allumées</div><div><b>Rythme</b>4 à 7 s par plan, environ 1 minute</div></div></div>
+<div><div class="kicker">Séquencier</div><div class="toc-list"><div class="toc-row"><span class="tn">1</span><span class="tt">Ouverture — le seuil</span><span class="dur">4 s</span></div><div class="toc-row"><span class="tn">2</span><span class="tt">Révélation du salon</span><span class="dur">6 s</span></div><div class="toc-row"><span class="tn">3</span><span class="tt">Le mur TV</span><span class="dur">5 s</span></div><div class="toc-row"><span class="tn">4</span><span class="tt">Sous la ligne de lumière</span><span class="dur">5 s</span></div><div class="toc-row"><span class="tn">5</span><span class="tt">Détail — bibliothèque et marbre</span><span class="dur">4 s</span></div><div class="toc-row"><span class="tn">6</span><span class="tt">Entrée dans la chambre</span><span class="dur">5 s</span></div><div class="toc-row"><span class="tn">7</span><span class="tt">Le mur de marbre</span><span class="dur">4 s</span></div><div class="toc-row"><span class="tn">8</span><span class="tt">Arrivée à l&#x27;étage</span><span class="dur">6 s</span></div><div class="toc-row"><span class="tn">9</span><span class="tt">Bois et lumière</span><span class="dur">4 s</span></div><div class="toc-row"><span class="tn">10</span><span class="tt">Vers la suite</span><span class="dur">6 s</span></div><div class="toc-row"><span class="tn">11</span><span class="tt">Finale — l&#x27;écrin</span><span class="dur">7 s</span></div></div></div>
+</div><div class="folio" style="left:14mm;right:14mm"><span>KAÏRA Interior Design · Storyboard visite vidéo</span><span>Principe</span><span class="pn">02</span></div></section><section class="page"><div class="sb-plan1"><div class="sbp-head"><div class="kicker">Parcours caméra</div>
+<h2>Rez-de-chaussée</h2><p class="sb-note">Trajets indicatifs, à caler dans le logiciel de rendu sur le modèle 3D.
+Les numéros renvoient aux plans du séquencier.</p></div><div class="sbp"><svg viewBox="0 0 879 694" preserveAspectRatio="xMidYMid meet"><defs><marker id="a" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0,0 L10,5 L0,10z" fill="#B5462F"/></marker></defs><image href="img/plan-rdc-amenagement.jpg" width="879" height="694"/><path d="M395,470 L300,480" fill="none" stroke="#B5462F" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="9 6" marker-end="url(#a)"/><circle cx="395" cy="470" r="16" fill="#7A4A2A"/><text x="395" y="475" font-size="17" font-family="Jost" font-weight="500" fill="#fff" text-anchor="middle">1</text><path d="M300,455 L190,430 L130,455" fill="none" stroke="#B5462F" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="9 6" marker-end="url(#a)"/><circle cx="300" cy="455" r="16" fill="#7A4A2A"/><text x="300" y="460" font-size="17" font-family="Jost" font-weight="500" fill="#fff" text-anchor="middle">2</text><path d="M170,540 L230,500" fill="none" stroke="#B5462F" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="9 6" marker-end="url(#a)"/><circle cx="170" cy="540" r="16" fill="#7A4A2A"/><text x="170" y="545" font-size="17" font-family="Jost" font-weight="500" fill="#fff" text-anchor="middle">3</text><path d="M380,515 L450,530 L520,545" fill="none" stroke="#B5462F" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="9 6" marker-end="url(#a)"/><circle cx="380" cy="515" r="16" fill="#7A4A2A"/><text x="380" y="520" font-size="17" font-family="Jost" font-weight="500" fill="#fff" text-anchor="middle">4</text><path d="M640,470 L720,500" fill="none" stroke="#B5462F" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="9 6" marker-end="url(#a)"/><circle cx="640" cy="470" r="16" fill="#7A4A2A"/><text x="640" y="475" font-size="17" font-family="Jost" font-weight="500" fill="#fff" text-anchor="middle">5</text><path d="M520,300 L590,270 L640,215" fill="none" stroke="#B5462F" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="9 6" marker-end="url(#a)"/><circle cx="520" cy="300" r="16" fill="#7A4A2A"/><text x="520" y="305" font-size="17" font-family="Jost" font-weight="500" fill="#fff" text-anchor="middle">6</text><path d="M700,200 L705,160" fill="none" stroke="#B5462F" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="9 6" marker-end="url(#a)"/><circle cx="700" cy="200" r="16" fill="#7A4A2A"/><text x="700" y="205" font-size="17" font-family="Jost" font-weight="500" fill="#fff" text-anchor="middle">7</text></svg></div></div>
+<div class="folio" style="left:14mm;right:14mm"><span>KAÏRA Interior Design · Storyboard visite vidéo</span><span>Parcours</span><span class="pn">03</span></div></section><section class="page"><div class="sb-plan1"><div class="sbp-head"><div class="kicker">Parcours caméra</div>
+<h2>Étage 1</h2><p class="sb-note">Trajets indicatifs, à caler dans le logiciel de rendu sur le modèle 3D.
+Les numéros renvoient aux plans du séquencier.</p></div><div class="sbp"><svg viewBox="0 0 927 640" preserveAspectRatio="xMidYMid meet"><defs><marker id="a" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0,0 L10,5 L0,10z" fill="#B5462F"/></marker></defs><image href="img/plan-etage1-amenagement.jpg" width="927" height="640"/><path d="M330,300 L230,330 L170,380" fill="none" stroke="#B5462F" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="9 6" marker-end="url(#a)"/><circle cx="330" cy="300" r="16" fill="#7A4A2A"/><text x="330" y="305" font-size="17" font-family="Jost" font-weight="500" fill="#fff" text-anchor="middle">8</text><path d="M140,440 L210,420" fill="none" stroke="#B5462F" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="9 6" marker-end="url(#a)"/><circle cx="140" cy="440" r="16" fill="#7A4A2A"/><text x="140" y="445" font-size="17" font-family="Jost" font-weight="500" fill="#fff" text-anchor="middle">9</text><path d="M560,300 L560,420 L640,470" fill="none" stroke="#B5462F" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="9 6" marker-end="url(#a)"/><circle cx="560" cy="300" r="16" fill="#7A4A2A"/><text x="560" y="305" font-size="17" font-family="Jost" font-weight="500" fill="#fff" text-anchor="middle">10</text><path d="M700,480 L620,470" fill="none" stroke="#B5462F" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="9 6" marker-end="url(#a)"/><circle cx="700" cy="480" r="16" fill="#7A4A2A"/><text x="700" y="485" font-size="17" font-family="Jost" font-weight="500" fill="#fff" text-anchor="middle">11</text></svg></div></div>
+<div class="folio" style="left:14mm;right:14mm"><span>KAÏRA Interior Design · Storyboard visite vidéo</span><span>Parcours</span><span class="pn">04</span></div></section><section class="page"><div class="shots"><div class="shot"><figure class="tile sh-ref"><div class="ph" style="background-image:url(img/rdc-salon-10.jpg)"></div>
+<figcaption>Image de référence</figcaption></figure><div class="sh-txt"><div class="sh-n">01</div><div class="kicker">Salon principal · 4 s</div>
+<h3>Ouverture — le seuil</h3><p>Avancée lente (dolly avant) depuis la circulation, entre la double porte en bois foncé et le salon.</p><div class="cam">Hauteur 1,60 m · objectif 24 mm · vitesse 0,3 m/s · départ en fondu du noir</div><div class="tr">Transition — Fondu du noir</div></div></div><div class="shot"><figure class="tile sh-ref"><div class="ph" style="background-image:url(img/rdc-salon-02.jpg)"></div>
+<figcaption>Image de référence</figcaption></figure><div class="sh-txt"><div class="sh-n">02</div><div class="kicker">Salon principal · 6 s</div>
+<h3>Révélation du salon</h3><p>Travelling latéral le long des canapés modulaires, la caméra glisse vers le mur à l'œuvre graphique.</p><div class="cam">Hauteur 1,40 m · 24 mm · 0,35 m/s · cadrage centré sur le tableau en fin de plan</div><div class="tr">Transition — Coupe dans le mouvement</div></div></div></div><div class="folio" style="left:14mm;right:14mm"><span>KAÏRA Interior Design · Storyboard visite vidéo</span><span>Plans</span><span class="pn">05</span></div></section><section class="page"><div class="shots"><div class="shot"><figure class="tile sh-ref"><div class="ph" style="background-image:url(img/rdc-salon-03.jpg)"></div>
+<figcaption>Image de référence</figcaption></figure><div class="sh-txt"><div class="sh-n">03</div><div class="kicker">Salon principal · 5 s</div>
+<h3>Le mur TV</h3><p>Arc de caméra d'environ 20° autour de la table basse, face au mur TV rétroéclairé et à la baie.</p><div class="cam">Hauteur 1,30 m · 24 mm · rotation lente, horizon parfaitement droit</div><div class="tr">Transition — Enchaîné</div></div></div><div class="shot"><figure class="tile sh-ref"><div class="ph" style="background-image:url(img/rdc-salon-05.jpg)"></div>
+<figcaption>Image de référence</figcaption></figure><div class="sh-txt"><div class="sh-n">04</div><div class="kicker">Salle à manger · 5 s</div>
+<h3>Sous la ligne de lumière</h3><p>Avancée vers la table en pierre ; la suspension lumineuse entre dans le haut du cadre.</p><div class="cam">Hauteur 1,55 m · 24 mm · 0,3 m/s · légère montée de 10 cm</div><div class="tr">Transition — Enchaîné</div></div></div></div><div class="folio" style="left:14mm;right:14mm"><span>KAÏRA Interior Design · Storyboard visite vidéo</span><span>Plans</span><span class="pn">06</span></div></section><section class="page"><div class="shots"><div class="shot"><figure class="tile sh-ref"><div class="ph" style="background-image:url(img/rdc-salon-01.jpg)"></div>
+<figcaption>Image de référence</figcaption></figure><div class="sh-txt"><div class="sh-n">05</div><div class="kicker">Salle à manger · 4 s</div>
+<h3>Détail — bibliothèque et marbre</h3><p>Glissé latéral serré le long de la bibliothèque asymétrique et de la colonne en marbre veiné.</p><div class="cam">Hauteur 1,40 m · 35 mm · 0,2 m/s · faible profondeur de champ (f/2,8)</div><div class="tr">Transition — Coupe franche</div></div></div><div class="shot"><figure class="tile sh-ref"><div class="ph" style="background-image:url(img/chambre-amis-03.jpg)"></div>
+<figcaption>Image de référence</figcaption></figure><div class="sh-txt"><div class="sh-n">06</div><div class="kicker">Chambre d'amis · 5 s</div>
+<h3>Entrée dans la chambre</h3><p>Steadicam depuis la circulation, passage de la porte puis révélation du lit plateforme.</p><div class="cam">Hauteur 1,60 m · 20 mm · 0,35 m/s</div><div class="tr">Transition — Passage de porte (masque naturel)</div></div></div></div><div class="folio" style="left:14mm;right:14mm"><span>KAÏRA Interior Design · Storyboard visite vidéo</span><span>Plans</span><span class="pn">07</span></div></section><section class="page"><div class="shots"><div class="shot"><figure class="tile sh-ref"><div class="ph" style="background-image:url(img/chambre-amis-02.jpg)"></div>
+<figcaption>Image de référence</figcaption></figure><div class="sh-txt"><div class="sh-n">07</div><div class="kicker">Chambre d'amis · 4 s</div>
+<h3>Le mur de marbre</h3><p>Panoramique lent du lit vers le mur en marbre veiné, le meuble TV et la coiffeuse.</p><div class="cam">Hauteur 1,40 m · 24 mm · rotation 15°</div><div class="tr">Transition — Fondu enchaîné vers l'étage</div></div></div><div class="shot"><figure class="tile sh-ref"><div class="ph" style="background-image:url(img/etage1-sejour-08.jpg)"></div>
+<figcaption>Image de référence</figcaption></figure><div class="sh-txt"><div class="sh-n">08</div><div class="kicker">Séjour — étage 1 · 6 s</div>
+<h3>Arrivée à l'étage</h3><p>Ouverture face à la double porte en bois vitrée, puis avancée qui découvre le salon et la grande œuvre rouge.</p><div class="cam">Hauteur 1,60 m · 24 mm · 0,3 m/s</div><div class="tr">Transition — Enchaîné</div></div></div></div><div class="folio" style="left:14mm;right:14mm"><span>KAÏRA Interior Design · Storyboard visite vidéo</span><span>Plans</span><span class="pn">08</span></div></section><section class="page"><div class="shots"><div class="shot"><figure class="tile sh-ref"><div class="ph" style="background-image:url(img/etage1-sejour-05.jpg)"></div>
+<figcaption>Image de référence</figcaption></figure><div class="sh-txt"><div class="sh-n">09</div><div class="kicker">Séjour — étage 1 · 4 s</div>
+<h3>Bois et lumière</h3><p>Travelling latéral devant le mur TV et l'étagère verticale éclairée.</p><div class="cam">Hauteur 1,30 m · 24 mm · 0,25 m/s</div><div class="tr">Transition — Coupe dans le mouvement</div></div></div><div class="shot"><figure class="tile sh-ref"><div class="ph" style="background-image:url(img/chambre-principale-04.jpg)"></div>
+<figcaption>Image de référence</figcaption></figure><div class="sh-txt"><div class="sh-n">10</div><div class="kicker">Chambre principale · 6 s</div>
+<h3>Vers la suite</h3><p>Avancée dans le couloir lumineux, entrée dans la chambre devant le dressing en bois.</p><div class="cam">Hauteur 1,60 m · 20 mm · 0,35 m/s · virage doux en fin de plan</div><div class="tr">Transition — Enchaîné</div></div></div></div><div class="folio" style="left:14mm;right:14mm"><span>KAÏRA Interior Design · Storyboard visite vidéo</span><span>Plans</span><span class="pn">09</span></div></section><section class="page"><div class="shots"><div class="shot"><figure class="tile sh-ref"><div class="ph" style="background-image:url(img/chambre-principale-05.jpg)"></div>
+<figcaption>Image de référence</figcaption></figure><div class="sh-txt"><div class="sh-n">11</div><div class="kicker">Chambre principale · 7 s</div>
+<h3>Finale — l'écrin</h3><p>Plan final symétrique : lent recul face à la tête de lit et à la bande de marbre rétroéclairée, les gorges lumineuses s'intensifient.</p><div class="cam">Hauteur 1,20 m · 24 mm · 0,15 m/s · fin en fondu vers le logo KAÏRA</div><div class="tr">Transition — Fondu au noir + logo</div></div></div></div><div class="folio" style="left:14mm;right:14mm"><span>KAÏRA Interior Design · Storyboard visite vidéo</span><span>Plans</span><span class="pn">10</span></div></section><section class="page"><div class="sb-intro">
+<div><div class="kicker">Export</div><h2>Réglages <em>de rendu</em></h2>
+<div class="rules one"><div><b>Format Reels / TikTok</b>vertical 9:16 · 2160 × 3840 px (ou 1080 × 1920)</div>
+<div><b>Format site / YouTube</b>horizontal 16:9 · 3840 × 2160 px</div><div><b>Cadence</b>30 images/s · flou de mouvement activé</div>
+<div><b>Vertical 9:16</b>garder le sujet au centre ; préférer avancées et montées aux travellings latéraux larges</div>
+<div><b>Logiciel</b>mode vidéo de D5 Render, Lumion ou Enscape (images clés de caméra), ou Blender (caméra sur courbe)</div>
+<div><b>Écrans TV</b>éteints ou image neutre dans la scène avant le rendu</div></div></div>
+<div><div class="kicker">Montage</div><h2>Rythme <em>et habillage</em></h2>
+<div class="rules one"><div><b>Intro</b>fondu du noir sur le plan 01, titre « KAÏRA Interior Design »</div>
+<div><b>Titres de pièces</b>discrets, en bas du cadre, 1,5 s</div><div><b>Musique</b>piano ou ambient lent, libre de droits, coupes calées sur les temps</div>
+<div><b>Étalonnage</b>tons chauds, noirs légèrement relevés, pas de saturation excessive</div>
+<div><b>Fin</b>plan 11 puis logo KAÏRA sur fond sombre, 3 s</div></div></div>
+</div><div class="folio" style="left:14mm;right:14mm"><span>KAÏRA Interior Design · Storyboard visite vidéo</span><span>Export</span><span class="pn">11</span></div></section></body></html>
