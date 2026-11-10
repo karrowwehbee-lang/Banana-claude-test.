@@ -1,0 +1,140 @@
+/* KAÏRA — Dossier de conception · A4 paysage. Typographies provisoires (en attente de la charte officielle). */
+@font-face { font-family: "Cormorant"; font-weight: 300; src: url(fonts/cormorant-garamond-latin-300-normal.woff2); }
+@font-face { font-family: "Cormorant"; font-weight: 400; src: url(fonts/cormorant-garamond-latin-400-normal.woff2); }
+@font-face { font-family: "Cormorant"; font-weight: 500; src: url(fonts/cormorant-garamond-latin-500-normal.woff2); }
+@font-face { font-family: "Cormorant"; font-weight: 300; font-style: italic; src: url(fonts/cormorant-garamond-latin-300-italic.woff2); }
+@font-face { font-family: "Cormorant"; font-weight: 400; font-style: italic; src: url(fonts/cormorant-garamond-latin-400-italic.woff2); }
+@font-face { font-family: "Jost"; font-weight: 300; src: url(fonts/jost-latin-300-normal.woff2); }
+@font-face { font-family: "Jost"; font-weight: 400; src: url(fonts/jost-latin-400-normal.woff2); }
+@font-face { font-family: "Jost"; font-weight: 500; src: url(fonts/jost-latin-500-normal.woff2); }
+
+:root { --paper: #F5F1EB; --paper2: #EDE6DC; --ink: #2B2622; --soft: #6E6258; --line: #CDBFAE; --accent: #8C7462; --m: 14mm; }
+@page { size: 297mm 210mm; margin: 0; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { background: var(--paper); }
+body { font-family: "Jost", sans-serif; font-weight: 300; color: var(--ink); font-size: 10.2pt; line-height: 1.55;
+       -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+.page { width: 297mm; height: 210mm; position: relative; overflow: hidden; background: var(--paper); page-break-after: always; break-after: page; }
+h1, h2, h3 { font-family: "Cormorant", serif; font-weight: 300; line-height: 1.05; letter-spacing: .2px; }
+h1 { font-size: 46pt; } h2 { font-size: 30pt; margin-bottom: 7mm; } h2.xl { font-size: 42pt; } h3 { font-size: 22pt; margin-bottom: 3mm; }
+em { font-style: italic; color: var(--accent); }
+p { margin-bottom: 3.2mm; } .lead { font-size: 12pt; line-height: 1.6; }
+.kicker { font-family: "Jost"; font-weight: 400; font-size: 7.4pt; letter-spacing: 3.2px; text-transform: uppercase; color: var(--accent); margin-bottom: 3.5mm; }
+.num { font-family: "Cormorant"; font-weight: 300; font-size: 20pt; color: var(--line); margin-bottom: 3mm; }
+.num.big { font-size: 64pt; line-height: 1; color: var(--line); }
+.rule { width: 18mm; height: .3mm; background: var(--accent); margin: 6mm 0; }
+.note { font-size: 8.6pt; color: var(--soft); max-width: 150mm; }
+ul { list-style: none; } li { padding: 1.3mm 0; border-bottom: .2mm solid var(--line); font-size: 9.2pt; }
+
+/* image tiles */
+.tile { position: relative; overflow: hidden; }
+.tile .ph { position: absolute; inset: 0; background-size: cover; background-repeat: no-repeat; }
+.tile figcaption { position: absolute; left: 0; right: 0; bottom: 0; padding: 7mm 4mm 3mm; font-size: 7.6pt; letter-spacing: .4px; color: #fff;
+  background: linear-gradient(transparent, rgba(30,24,20,.62)); }
+
+/* folio */
+.folio { position: absolute; left: var(--m); right: var(--m); bottom: 6mm; display: flex; justify-content: space-between; align-items: center;
+  font-size: 6.6pt; letter-spacing: 1.6px; text-transform: uppercase; color: var(--soft); z-index: 5; }
+.folio .pn { font-family: "Cormorant"; font-size: 11pt; letter-spacing: 0; color: var(--ink); }
+.folio span:nth-child(2) { position: absolute; left: 50%; transform: translateX(-50%); }
+.folio.narrow span:nth-child(2) { display: none; }
+
+/* cover */
+.cover { display: grid; grid-template-columns: 172mm 1fr; height: 100%; }
+.cover-img { height: 210mm; }
+.cover-panel { padding: 18mm 15mm 14mm; display: flex; flex-direction: column; justify-content: space-between; background: var(--paper); }
+.wordmark { font-family: "Cormorant"; font-weight: 400; font-size: 34pt; letter-spacing: 14px; line-height: 1; }
+.sub { font-size: 7pt; letter-spacing: 6.4px; color: var(--soft); margin-top: 3mm; }
+.cover-title h1 { margin-top: 3mm; } .cover-title .proj { font-size: 10pt; color: var(--soft); letter-spacing: .6px; }
+.cover-foot { font-size: 7.4pt; letter-spacing: 3px; text-transform: uppercase; color: var(--soft); }
+
+/* toc */
+.toc { display: grid; grid-template-columns: 112mm 1fr; height: 100%; }
+.toc-img { height: 210mm; } .toc-text { padding: 22mm 20mm; }
+.toc-list { margin-top: 4mm; columns: 1; }
+.toc-row { display: flex; gap: 8mm; padding: 2.6mm 0; border-bottom: .2mm solid var(--line); align-items: baseline; }
+.tn { font-family: "Cormorant"; font-size: 15pt; color: var(--accent); width: 10mm; } .tt { font-family: "Cormorant"; font-size: 15pt; }
+
+/* split / concept */
+.split { display: grid; grid-template-columns: 1fr 118mm; height: 100%; }
+.col-text { padding: 20mm 16mm 20mm var(--m); } .col-img { height: 210mm; }
+.facts { margin-top: 7mm; display: grid; gap: 2mm; font-size: 9pt; }
+.facts span { display: inline-block; width: 22mm; font-size: 7pt; letter-spacing: 2.4px; text-transform: uppercase; color: var(--accent); }
+.concept { display: grid; grid-template-columns: 100mm 1fr; height: 100%; }
+.concept-img { height: 210mm; } .concept-text { padding: 18mm 16mm 18mm 16mm; }
+.pillars { display: grid; grid-template-columns: 1fr 1fr; gap: 6mm 9mm; }
+.pillars b { font-family: "Cormorant"; font-weight: 500; font-size: 14pt; display: block; margin-bottom: 1.5mm; }
+.pillars p { font-size: 9pt; color: #4a413a; }
+
+/* moodboard */
+.mood { padding: 13mm var(--m) 14mm; height: 100%; display: flex; flex-direction: column; }
+.mood-head { display: flex; gap: 6mm; align-items: flex-end; } .mood-head h2 { margin-bottom: 5mm; }
+.mood-grid { flex: 1; display: grid; gap: 3mm; grid-template-columns: 2fr 1fr 1fr 1.3fr; grid-template-rows: 1fr 1fr; margin-bottom: 6mm; }
+.m1 { grid-row: span 2; } .m4 { grid-row: span 2; }
+
+/* palette pages */
+.palette-page, .mat-page { padding: 14mm var(--m) 16mm; height: 100%; display: flex; flex-direction: column; }
+.pp-head { display: flex; gap: 6mm; } .pp-head h2 { margin-bottom: 3mm; }
+.bars { flex: 1; display: grid; grid-template-columns: repeat(12, 1fr); gap: 0; margin-top: 7mm; }
+.bar { position: relative; } .bar span { display: none; }
+.bnames { display: grid; grid-template-columns: repeat(12, 1fr); gap: 1.5mm; margin-top: 2.5mm; margin-bottom: 6mm; }
+.bn { font-size: 6.6pt; line-height: 1.35; color: var(--soft); }
+.matgrid { flex: 1; display: grid; grid-template-columns: repeat(6, 1fr); grid-template-rows: 1fr 1fr; gap: 4mm 4mm; margin: 6mm 0 6mm; }
+.mat { display: flex; flex-direction: column; } .mchip { flex: 1; background-size: cover; background-position: center; }
+.mname { font-family: "Cormorant"; font-size: 11pt; line-height: 1.15; margin-top: 2mm; } .hex { font-size: 6.8pt; letter-spacing: 1.6px; color: var(--soft); }
+
+/* plans */
+.plans { padding: 12mm var(--m) 14mm; height: 100%; display: grid; grid-template-columns: 62mm 1fr; grid-template-rows: auto 1fr; gap: 0 10mm; }
+.plans-head { grid-column: 1; grid-row: 1; } .plans-head h2 { font-size: 26pt; }
+.plan-box { grid-column: 2; grid-row: 1 / span 2; background: var(--paper2); display: flex; align-items: center; justify-content: center; padding: 6mm; margin-bottom: 6mm; }
+.plan-box.white { background: #fff; }
+.plan-box img { max-width: 100%; max-height: 170mm; object-fit: contain; }
+.legend { grid-column: 1; grid-row: 2; align-self: end; margin-bottom: 8mm; display: flex; flex-direction: column; gap: 1.6mm; font-size: 9pt; }
+.legend b { font-family: "Cormorant"; font-weight: 500; font-size: 13pt; } .legend span::before { content: "— "; color: var(--accent); }
+
+/* opener */
+.opener { display: grid; grid-template-columns: 1fr 150mm; height: 100%; }
+.op-text { padding: 20mm 14mm 20mm var(--m); display: flex; flex-direction: column; justify-content: center; }
+.op-text p { font-size: 10.6pt; max-width: 110mm; } .op-img { height: 210mm; }
+
+/* galleries */
+.gal { padding: 12mm var(--m) 14mm; height: 100%; display: flex; flex-direction: column; }
+.g-head { display: grid; grid-template-columns: 1fr; margin-bottom: 4mm; } .g-head h3 { margin-bottom: 2mm; }
+.gintro { font-size: 9.2pt; color: #4a413a; max-width: 210mm; margin-bottom: 0; }
+.g3row { flex: 1; display: grid; grid-template-columns: repeat(3, 1fr); gap: 3.5mm; margin-bottom: 6mm; }
+
+/* feature */
+.feature { display: grid; grid-template-columns: 128mm 76mm 1fr; height: 100%; gap: 0; }
+.f-big { height: 210mm; } .f-small { height: 210mm; border-left: 1.2mm solid var(--paper); }
+.f-text { padding: 18mm 11mm 18mm 10mm; display: flex; flex-direction: column; justify-content: center; }
+.f-text p { font-size: 9.2pt; color: #4a413a; } .f-text ul { margin-top: 3mm; }
+
+/* room sheet */
+.sheet { display: grid; grid-template-columns: 1fr 104mm; height: 100%; }
+.sh-left { padding: 13mm 12mm 16mm var(--m); display: flex; flex-direction: column; }
+.palette { flex: 1; display: flex; flex-direction: column; margin-top: 3mm; }
+.swgrid { flex: 1; display: grid; grid-template-columns: repeat(4, 1fr); grid-auto-rows: 1fr; gap: 3.5mm; margin-bottom: 4mm; }
+.swgrid.n5, .swgrid.n6 { grid-template-columns: repeat(3, 1fr); }
+.sw { display: grid; grid-template-rows: 1fr 5mm auto auto; }
+.chip { background-size: cover; background-position: center; } .flat { }
+.swname { font-family: "Cormorant"; font-size: 10.5pt; line-height: 1.1; margin-top: 1.6mm; }
+.sh-right { background: var(--paper2); display: grid; grid-template-rows: 88mm 1fr; }
+.sh-img { height: 88mm; }
+.lists { padding: 7mm 9mm 16mm; display: grid; grid-template-columns: 1fr 1fr; gap: 6mm; }
+.lists li { font-size: 8.2pt; padding: 1mm 0; }
+
+/* custom */
+.custom { padding: 12mm var(--m) 14mm; height: 100%; display: flex; flex-direction: column; }
+.custom .g-head { margin-bottom: 4mm; } .custom .num { margin-bottom: 0; }
+.c6grid { flex: 1; display: grid; grid-template-columns: repeat(3, 1fr); grid-template-rows: 1fr 1fr; gap: 3.5mm; margin-bottom: 6mm; }
+.c6 figcaption { font-size: 7.4pt; } .c6 figcaption b { font-family: "Cormorant"; font-weight: 500; font-size: 11pt; letter-spacing: .2px; }
+
+/* synthesis / back */
+.synth { display: grid; grid-template-columns: 150mm 1fr; height: 100%; }
+.sy-img { height: 210mm; } .sy-text { padding: 22mm 18mm 20mm 16mm; display: flex; flex-direction: column; justify-content: center; }
+.back { display: grid; grid-template-columns: 1fr 100mm; height: 100%; }
+.back-img { height: 210mm; }
+.back-panel { padding: 20mm 16mm; display: flex; flex-direction: column; justify-content: center; align-items: flex-start; background: var(--ink); color: var(--paper); }
+.back-panel .sub { color: #b9ab9b; } .back-panel p { font-size: 8.6pt; letter-spacing: 1px; color: #cbbfb1; }
+.back-panel .rule { background: #b9ab9b; }
+.bhex { display: block; font-size: 7pt; letter-spacing: 1.4px; color: var(--ink); margin-bottom: .8mm; }

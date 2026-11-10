@@ -1,0 +1,170 @@
+[
+ {
+  "room": "rdc",
+  "name": "Chêne clair — panneaux et colonnes",
+  "hex": "#6A5442",
+  "img": "swatches/rdc-00.jpg"
+ },
+ {
+  "room": "rdc",
+  "name": "Panneaux muraux crème",
+  "hex": "#978B80",
+  "img": "swatches/rdc-01.jpg"
+ },
+ {
+  "room": "rdc",
+  "name": "Bois foncé — double porte",
+  "hex": "#251B13",
+  "img": "swatches/rdc-02.jpg"
+ },
+ {
+  "room": "rdc",
+  "name": "Cuir taupe foncé — canapé",
+  "hex": "#4E463E",
+  "img": "swatches/rdc-03.jpg"
+ },
+ {
+  "room": "rdc",
+  "name": "Tapis clair",
+  "hex": "#9C9085",
+  "img": "swatches/rdc-04.jpg"
+ },
+ {
+  "room": "rdc",
+  "name": "Parquet bois",
+  "hex": "#624D3E",
+  "img": "swatches/rdc-05.jpg"
+ },
+ {
+  "room": "rdc",
+  "name": "Marbre blanc veiné — colonne",
+  "hex": "#97887A",
+  "img": "swatches/rdc-06.jpg"
+ },
+ {
+  "room": "rdc",
+  "name": "Travertin — table à manger",
+  "hex": "#C2BAB2",
+  "img": "swatches/rdc-07.jpg"
+ },
+ {
+  "room": "rdc",
+  "name": "Bouclé — chaises",
+  "hex": "#AAA198",
+  "img": "swatches/rdc-08.jpg"
+ },
+ {
+  "room": "rdc",
+  "name": "Rouge — œuvre salle à manger",
+  "hex": "#5C2924",
+  "img": "swatches/rdc-09.jpg"
+ },
+ {
+  "room": "rdc",
+  "name": "Rideaux taupe",
+  "hex": "#42362D",
+  "img": "swatches/rdc-10.jpg"
+ },
+ {
+  "room": "amis",
+  "name": "Marbre blanc veiné caramel",
+  "hex": "#B6AFA9",
+  "img": "swatches/amis-11.jpg"
+ },
+ {
+  "room": "amis",
+  "name": "Lames chêne",
+  "hex": "#82624B",
+  "img": "swatches/amis-12.jpg"
+ },
+ {
+  "room": "amis",
+  "name": "Panneaux muraux beige",
+  "hex": "#A1968E",
+  "img": "swatches/amis-13.jpg"
+ },
+ {
+  "room": "amis",
+  "name": "Lin clair — lit",
+  "hex": "#A1978F",
+  "img": "swatches/amis-14.jpg"
+ },
+ {
+  "room": "amis",
+  "name": "Cuir brun — pouf",
+  "hex": "#483C33",
+  "img": "swatches/amis-15.jpg"
+ },
+ {
+  "room": "princ",
+  "name": "Marbre brun foncé veiné",
+  "hex": "#312A1B",
+  "img": "swatches/princ-16.jpg"
+ },
+ {
+  "room": "princ",
+  "name": "Tissu clair — tête de lit",
+  "hex": "#918376",
+  "img": "swatches/princ-17.jpg"
+ },
+ {
+  "room": "princ",
+  "name": "Kaki — linge de lit",
+  "hex": "#3A3322",
+  "img": "swatches/princ-18.jpg"
+ },
+ {
+  "room": "princ",
+  "name": "Tissu — banc",
+  "hex": "#8D7E6F",
+  "img": "swatches/princ-19.jpg"
+ },
+ {
+  "room": "princ",
+  "name": "Chêne — dressing",
+  "hex": "#694E39",
+  "img": "swatches/princ-20.jpg"
+ },
+ {
+  "room": "princ",
+  "name": "Noir — meuble TV",
+  "hex": "#19170D",
+  "img": "swatches/princ-21.jpg"
+ },
+ {
+  "room": "et1",
+  "name": "Gris taupe — canapé",
+  "hex": "#685E4D",
+  "img": "swatches/et1-22.jpg"
+ },
+ {
+  "room": "et1",
+  "name": "Marbre blanc veiné — table basse",
+  "hex": "#877B6D",
+  "img": "swatches/et1-23.jpg"
+ },
+ {
+  "room": "et1",
+  "name": "Cuir cognac — pouf",
+  "hex": "#503726",
+  "img": "swatches/et1-24.jpg"
+ },
+ {
+  "room": "et1",
+  "name": "Rouge — œuvre",
+  "hex": "#7B3931",
+  "img": "swatches/et1-25.jpg"
+ },
+ {
+  "room": "et1",
+  "name": "Chêne — portes et bibliothèque",
+  "hex": "#563C27",
+  "img": "swatches/et1-26.jpg"
+ },
+ {
+  "room": "et1",
+  "name": "Tapis tissé",
+  "hex": "#8D837A",
+  "img": "swatches/et1-27.jpg"
+ }
+]
