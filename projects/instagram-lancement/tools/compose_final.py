@@ -1,7 +1,7 @@
-"""KAÏRA — lancement Instagram final : 15 publications, 3 épinglées, 6 couvertures Highlights, photo de profil,
+"""KAÏRA — lancement Instagram final : 12 publications, 3 épinglées, 6 couvertures Highlights, photo de profil,
 aperçus (grille, grille avec épinglés, profil complet).
 
-Les 21 rendus du studio sont tous intégrés, toujours entiers, jamais recadrés, retouchés ni agrandis
+5 rendus du studio en couverture de 5 projets, toujours entiers, jamais recadrés, retouchés ni agrandis
 (collés à 100 % dans les slides HD 2160 × 2700 ; les notes de matières montrent un rendu entier réduit).
 Version à publier : 1080 × 1350 (slide HD réduite de moitié).
 Usage : python3 tools/compose_final.py
@@ -96,7 +96,7 @@ def posts():
                                 (940, "Glass globe pendants", "Suspended on fine gold rods"),
                                 (1350, "Olive bed linen", "The single note of colour"),
                                 (1700, "Brushed-gold base", "Channel-tufted bench at the foot of the bed")],
-                               "Five materials, one atmosphere: quiet, enveloping and warm.", "2 / 3")
+                               "Five materials, one atmosphere: quiet, enveloping and warm.", "2 / 2")
     kitchen_notes = notes_slide("20", 1200, "Material notes", "Kitchen",
                                 [(320, "Ceiling cove of light", "A warm line tracing the whole room"),
                                  (540, "Cream lacquered cabinetry", "Full-height, handle-free, luminous"),
@@ -110,35 +110,21 @@ def posts():
     promise["html"] = promise["html"].replace("#C6AD8C", "#DCC8C2").replace(COL["sand_ink"], C["bordeaux"])
     return [
         ("01-welcome", [base.manifesto()]),
-        ("02-villa-living-room", [base.cover_below("07", k("Featured project · Villa"), "Living room", C["olive"], "02"),
-                                  base.inner("12", "Villa · Living room", "2 / 5"), base.inner("08", "Villa · Living room", "3 / 5"),
-                                  base.inner("10", "Villa · Living room", "4 / 5"), living_sheet]),
-        ("03-who-we-are", [brandfeed.who_we_are()]),
+        ("02-villa-living-room", [base.cover_below("07", k("Featured project · Villa"), "Living room", C["olive"], "02"), living_sheet]),
+        ("03-who-we-are", [brandfeed.who_we_are(), brandfeed.signature()]),
         ("04-kitchen", [base.cover_below("20", k("Featured project"), "Kitchen", C["olive"], "04"), kitchen_notes]),
         ("05-palette-and-materials", [base.palette(), material_library()]),
-        ("06-villa-bedrooms", [base.cover_above("05", k("Featured project · Villa"), "The bedrooms", C["bordeaux"], "06"),
-                               master_notes, base.inner("06", "Villa · Guest bedroom", "3 / 3")]),
-        ("07-the-kaira-signature", [brandfeed.signature()]),
-        ("08-villa-dining-room", [base.cover_above("09", k("Featured project · Villa"), "Dining room", C["bordeaux"], "08"),
-                                  base.inner("11", "Villa · Dining room", "2 / 4"), base.inner("18", "Villa · Dining room", "3 / 4"), dining_sheet]),
-        ("09-quote", [brandfeed.quote()]),
+        ("06-villa-master-bedroom", [base.cover_above("05", k("Featured project · Villa"), "Master bedroom", C["bordeaux"], "06"), master_notes]),
+        ("07-quote", [brandfeed.quote()]),
+        ("08-villa-dining-room", [base.cover_above("09", k("Featured project · Villa"), "Dining room", C["bordeaux"], "08"), dining_sheet]),
+        ("09-design-notes", brandfeed.tips()),
         ("10-entrance", [base.cover_below("21", k("Featured project"), "Entrance", C["olive"], "10"), entrance_sheet]),
-        ("11-design-notes", brandfeed.tips()),
-        ("12-villa-lounge", [base.cover_below("04", k("Featured project · Villa"), "First-floor lounge", C["bordeaux"], "12"),
-                             base.inner("17", "Villa · First-floor lounge", "2 / 5"), base.inner("02", "Villa · First-floor lounge", "3 / 5"),
-                             base.inner("01", "Villa · First-floor lounge", "4 / 5"), base.inner("03", "Villa · First-floor lounge", "5 / 5")]),
-        ("13-services", services + [promise]),
-        ("14-selected-projects", [base.cover_wide("13", k("Selected projects"), f"Residences <i style='color:{C['olive']}'>&amp; workspaces</i>",
-                                                  "Light-filled living spaces, media walls and executive offices.", C["olive"], "14"),
-                                  base.inner("19", "Selected projects · Open-plan living", "2 / 5"),
-                                  base.inner("14", "Selected projects · Executive office", "3 / 5"),
-                                  base.inner("16", "Selected projects · Media wall", "4 / 5"),
-                                  base.inner("15", "Selected projects · Media wall", "5 / 5")]),
-        ("15-lets-design-your-space", [brandfeed.contact()]),
+        ("11-services", services + [promise]),
+        ("12-lets-design-your-space", [brandfeed.contact()]),
     ]
 
 
-PINNED = ["02-villa-living-room", "03-who-we-are", "13-services"]
+PINNED = ["02-villa-living-room", "03-who-we-are", "11-services"]
 
 # ------------------------------------------------------------------ Highlights (1080 × 1920) et photo de profil
 ICONS = {
@@ -188,6 +174,9 @@ def main():
     B.mkdir(parents=True, exist_ok=True)
     shutil.copytree(base.FONTS, B / "fonts", dirs_exist_ok=True)
     posts_dir, hd_dir = OUT / "posts-1080x1350", OUT / "hd-2160x2700"
+    for d in (posts_dir, hd_dir):
+        if d.exists():
+            shutil.rmtree(d)
     P, plan, jobs = posts(), [], []
     for name, slides in P:
         for d in (posts_dir, hd_dir):
@@ -232,9 +221,7 @@ def main():
         canvas.save(hd_dir / name / f"{name}-{i}.png", icc_profile=SRGB, optimize=True)
         canvas.resize((1080, 1350), Image.LANCZOS).save(posts_dir / name / f"{name}-{i}.png", icc_profile=SRGB, optimize=True)
         report.append(f"{name}-{i} : " + ("; ".join(notes) if notes else "visuel de marque"))
-    all_renders = sorted(p.stem for p in (ROOT / "sources/recus").glob("*.*") if p.suffix in (".png", ".jpg"))
-    missing = [r for r in all_renders if r not in used]
-    report.append(f"\nRendus intégrés : {len(used)} / {len(all_renders)}" + (f" — manquants : {missing}" if missing else " (tous)"))
+    report.append(f"\nRendus utilisés : {len(used)} ({', '.join(sorted(used))}) — entiers, sans recadrage ni retouche")
     (OUT / "verification.txt").write_text("\n".join(report) + "\n")
     previews(P)
     print("\n".join(report[-3:]))

@@ -1,6 +1,6 @@
 # KAÏRA — Instagram
 
-**Version finale : `livrables/instagram-final/`** (15 posts, 3 épinglés, 6 Highlights, photo de profil, bio,
+**Version finale : `livrables/instagram-final/`** (12 posts, 5 rendus, 3 épinglés, 6 Highlights, photo de profil, bio,
 `PLAN-DE-LANCEMENT.md`, `KAIRA-Instagram-lancement.zip`). Script : `tools/compose_final.py`.
 Les autres dossiers de `livrables/` sont les versions précédentes.
 

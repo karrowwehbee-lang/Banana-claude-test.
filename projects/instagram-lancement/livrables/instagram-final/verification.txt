@@ -1,44 +1,28 @@
 01-welcome-1 : visuel de marque
 02-villa-living-room-1 : rendu 07 entier à 100 %, identique à l'original
-02-villa-living-room-2 : rendu 12 entier à 100 %, identique à l'original
-02-villa-living-room-3 : rendu 08 entier à 100 %, identique à l'original
-02-villa-living-room-4 : rendu 10 entier à 100 %, identique à l'original
-02-villa-living-room-5 : visuel de marque
+02-villa-living-room-2 : visuel de marque
 03-who-we-are-1 : visuel de marque
+03-who-we-are-2 : visuel de marque
 04-kitchen-1 : rendu 20 entier à 100 %, identique à l'original
 04-kitchen-2 : rendu 20 entier, réduit à 82% (sans recadrage)
 05-palette-and-materials-1 : visuel de marque
 05-palette-and-materials-2 : visuel de marque
-06-villa-bedrooms-1 : rendu 05 entier à 100 %, identique à l'original
-06-villa-bedrooms-2 : rendu 05 entier, réduit à 72% (sans recadrage)
-06-villa-bedrooms-3 : rendu 06 entier à 100 %, identique à l'original
-07-the-kaira-signature-1 : visuel de marque
+06-villa-master-bedroom-1 : rendu 05 entier à 100 %, identique à l'original
+06-villa-master-bedroom-2 : rendu 05 entier, réduit à 72% (sans recadrage)
+07-quote-1 : visuel de marque
 08-villa-dining-room-1 : rendu 09 entier à 100 %, identique à l'original
-08-villa-dining-room-2 : rendu 11 entier à 100 %, identique à l'original
-08-villa-dining-room-3 : rendu 18 entier à 100 %, identique à l'original
-08-villa-dining-room-4 : visuel de marque
-09-quote-1 : visuel de marque
+08-villa-dining-room-2 : visuel de marque
+09-design-notes-1 : visuel de marque
+09-design-notes-2 : visuel de marque
+09-design-notes-3 : visuel de marque
+09-design-notes-4 : visuel de marque
+09-design-notes-5 : visuel de marque
+09-design-notes-6 : visuel de marque
 10-entrance-1 : rendu 21 entier à 100 %, identique à l'original
 10-entrance-2 : visuel de marque
-11-design-notes-1 : visuel de marque
-11-design-notes-2 : visuel de marque
-11-design-notes-3 : visuel de marque
-11-design-notes-4 : visuel de marque
-11-design-notes-5 : visuel de marque
-11-design-notes-6 : visuel de marque
-12-villa-lounge-1 : rendu 04 entier à 100 %, identique à l'original
-12-villa-lounge-2 : rendu 17 entier à 100 %, identique à l'original
-12-villa-lounge-3 : rendu 02 entier à 100 %, identique à l'original
-12-villa-lounge-4 : rendu 01 entier à 100 %, identique à l'original
-12-villa-lounge-5 : rendu 03 entier à 100 %, identique à l'original
-13-services-1 : visuel de marque
-13-services-2 : visuel de marque
-13-services-3 : visuel de marque
-14-selected-projects-1 : rendu 13 entier à 100 %, identique à l'original
-14-selected-projects-2 : rendu 19 entier à 100 %, identique à l'original
-14-selected-projects-3 : rendu 14 entier à 100 %, identique à l'original
-14-selected-projects-4 : rendu 16 entier à 100 %, identique à l'original
-14-selected-projects-5 : rendu 15 entier à 100 %, identique à l'original
-15-lets-design-your-space-1 : visuel de marque
+11-services-1 : visuel de marque
+11-services-2 : visuel de marque
+11-services-3 : visuel de marque
+12-lets-design-your-space-1 : visuel de marque
 
-Rendus intégrés : 21 / 21 (tous)
+Rendus utilisés : 5 (05, 07, 09, 20, 21) — entiers, sans recadrage ni retouche
