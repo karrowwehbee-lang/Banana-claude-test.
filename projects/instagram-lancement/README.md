@@ -1,3 +1,9 @@
+# KAÏRA — Instagram
+
+**Version finale : `livrables/instagram-final/`** (15 posts, 3 épinglés, 6 Highlights, photo de profil, bio,
+`PLAN-DE-LANCEMENT.md`, `KAIRA-Instagram-lancement.zip`). Script : `tools/compose_final.py`.
+Les autres dossiers de `livrables/` sont les versions précédentes.
+
 # KAÏRA — Instagram launch (9 posts) — studio's original renders only
 
 Rule: renders are never modified (no crop, resize, retouch, recolouring, generation). Each render is pasted

@@ -21,3 +21,13 @@
 
 Identiques aux rendus du dossier client : 01–12 (versions TV éteinte déjà prêtes pour 03 et 10).
 Retouche : `tools/retouch.py` (balance des blancs partielle, exposition uniforme, épaule douce, netteté fine).
+
+## Ajouts (copies exactes, octet pour octet, de `rendus/originaux/`)
+
+| Fichier | Origine | Espace |
+|---|---|---|
+| 17 | 01-salon-tableau-bordeaux.png | Villa — séjour étage 1, vue 3/4 (œuvre rouge, fauteuil) |
+| 18 | 05-salle-a-manger-detail.png | Villa — salle à manger, bibliothèque + suspension |
+| 19 | 07-sejour-ouvert.jpg | Séjour ouvert lumineux, mur TV (écran éteint), sol clair |
+| 20 | 08-cuisine.jpg | Cuisine : îlot pierre veinée, façades crème laquées, parquet point de Hongrie |
+| 21 | 09-entree.jpg | Entrée : panneaux noyer et filets noirs, buffet aux arches, sol effet marbre |
