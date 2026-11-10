@@ -8,7 +8,7 @@ const fs = require('fs');
   for (const [html, out] of cfg.jobs) {
     await p.goto('file://' + html, { waitUntil: 'networkidle' });
     await p.evaluate(() => document.fonts.ready);
-    await p.screenshot({ path: out, type: 'jpeg', quality: 95 });
+    await p.screenshot(out.endsWith('.png') ? { path: out, type: 'png' } : { path: out, type: 'jpeg', quality: 95 });
   }
   await b.close();
 })();
