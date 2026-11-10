@@ -1,5 +1,8 @@
 # KAÏRA — Instagram
 
+**Version actuelle : `livrables/instagram-v3/`** — 12 posts (7 projets avec rendus intacts, 5 graphiques), 3 épinglés,
+blanc lumineux / olive / bordeaux / chocolat. Script : `tools/compose_v3.py`.
+
 **Version finale : `livrables/instagram-final/`** (12 posts, 5 rendus, 3 épinglés, 6 Highlights, photo de profil, bio,
 `PLAN-DE-LANCEMENT.md`, `KAIRA-Instagram-lancement.zip`). Script : `tools/compose_final.py`.
 Les autres dossiers de `livrables/` sont les versions précédentes.
