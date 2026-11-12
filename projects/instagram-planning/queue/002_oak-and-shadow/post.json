@@ -10,14 +10,18 @@
   "1.jpg"
  ],
  "caption": "Oak & shadow.\n\nLight oak columns rise from fluted, backlit bases, set between cream panels with fine shadow joints. At the end of the room, a double door in dark wood closes the composition.\n\nVilla — living room. Interior design by KAÏRA Interior Design.",
- "hashtags": "#kairainteriordesign #interiorarchitecture #interiordesign #luxuryinteriors #interiordesigner #materialpalette #interiordetails #walnut #marble #naturalmaterials #lightingdesign #indirectlighting #architecturallighting #ledlighting #luxuryhomes #contemporaryinterior",
- "full_caption": "Oak & shadow.\n\nLight oak columns rise from fluted, backlit bases, set between cream panels with fine shadow joints. At the end of the room, a double door in dark wood closes the composition.\n\nVilla — living room. Interior design by KAÏRA Interior Design.\n\n#kairainteriordesign #interiorarchitecture #interiordesign #luxuryinteriors #interiordesigner #materialpalette #interiordetails #walnut #marble #naturalmaterials #lightingdesign #indirectlighting #architecturallighting #ledlighting #luxuryhomes #contemporaryinterior",
- "status": "ready",
+ "hashtags": "#kairainteriordesign #interiorarchitecture #interiordesign #luxuryinteriors #interiordesigner #materialpalette #interiordetails #oakwood #woodpanelling #naturalmaterials #lightingdesign #indirectlighting #architecturallighting #ledlighting #luxuryhomes #contemporaryinterior",
+ "full_caption": "Oak & shadow.\n\nLight oak columns rise from fluted, backlit bases, set between cream panels with fine shadow joints. At the end of the room, a double door in dark wood closes the composition.\n\nVilla — living room. Interior design by KAÏRA Interior Design.\n\n#kairainteriordesign #interiorarchitecture #interiordesign #luxuryinteriors #interiordesigner #materialpalette #interiordetails #oakwood #woodpanelling #naturalmaterials #lightingdesign #indirectlighting #architecturallighting #ledlighting #luxuryhomes #contemporaryinterior",
+ "status": "published",
  "created": "2026-11-12",
- "published_at": null,
- "media_id": null,
- "permalink": null,
+ "published_at": "2026-11-12T12:04:33Z",
+ "media_id": "18095111228187583",
+ "permalink": "https://www.instagram.com/p/DfpA32hDmaL/",
  "checks": [
   "002-1: rdc-salon-08 whole, 100 %, pixel-identical on the HD slide"
- ]
+ ],
+ "media_urls": {
+  "1.jpg": "https://raw.githubusercontent.com/karrowwehbee-lang/Banana-claude-test./refs/heads/claude/kaira-interior-design-skill-1isxi1/projects/instagram-planning/queue/002_oak-and-shadow/1.jpg"
+ },
+ "note": "Published on Karen's explicit request (12 Nov). Hosted on Banana-claude-test (still public); media repo not created yet."
 }

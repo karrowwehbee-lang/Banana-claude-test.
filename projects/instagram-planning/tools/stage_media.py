@@ -23,8 +23,35 @@ def git(clone, *args, check=True):
     return subprocess.run(["git", "-C", str(clone), *args], check=check)
 
 
+def head_ok(u):
+    try:
+        with urllib.request.urlopen(urllib.request.Request(u, method="HEAD"), timeout=30) as r:
+            return r.status == 200
+    except Exception:
+        return False
+
+
+def fallback(pid):
+    """Temporary: the project repository is still public — serve the already approved files from it (no new exposure).
+    Stops working by itself as soon as Karen makes the repository private."""
+    item = next(ROOT.glob(f"queue/{pid}_*"))
+    meta = json.loads((item / "post.json").read_text())
+    base = ("https://raw.githubusercontent.com/karrowwehbee-lang/Banana-claude-test./refs/heads/"
+            "claude/kaira-interior-design-skill-1isxi1/projects/instagram-planning/queue/" + item.name + "/")
+    subprocess.run(["git", "-C", str(ROOT), "push", "-q", "origin", "claude/kaira-interior-design-skill-1isxi1"], check=True)
+    urls = {f: base + f for f in meta["files"]}
+    if not all(head_ok(u) for u in urls.values()):
+        sys.exit("NO PUBLIC HOSTING: kaira-instagram-media does not exist and Banana-claude-test is private — publish nothing.")
+    meta["media_urls"] = urls
+    meta["hosting"] = "fallback: Banana-claude-test (public)"
+    (item / "post.json").write_text(json.dumps(meta, indent=1, ensure_ascii=False))
+    print("FALLBACK hosting on Banana-claude-test (still public):", *urls.values(), sep="\n")
+
+
 def main(pid):
     cfg = json.loads((ROOT / "media.json").read_text())
+    if not head_ok(f"https://raw.githubusercontent.com/{cfg['owner']}/{cfg['repo']}/refs/heads/{cfg['branch']}/README.md"):
+        return fallback(pid)
     assert cfg.get("mode") == "media-repo", "media.json must point to the dedicated media repository"
     clone = ROOT.parent.parent.parent / cfg["repo"]
     if not clone.exists():

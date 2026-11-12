@@ -38,7 +38,8 @@ English, 3 short paragraphs: a title line, a factual description of what the ren
 (save, share, DM for enquiries). Credit line "Interior design & 3D visualization by KAÏRA Interior Design" at most
 every other post. Never name a client, a location, a date or a price that Karen has not given.
 Hashtags: 5 core (#kairainteriordesign #interiorarchitecture #interiordesign #luxuryinteriors #interiordesigner)
-+ 8–11 topical from the banks in content/posts.py; 16 maximum.
++ 8–11 topical from the banks in content/posts.py; 16 maximum. Every hashtag must match what the visuals
+show (no #walnut on an oak post, no #marble without marble).
 
 ## Buffer
 The queue always holds at least 5 ready items. The Sunday run reviews the week's performance (reach, saves, shares,

@@ -54,7 +54,7 @@ P(id="002", slug="oak-and-shadow", pillar="Detail", kind="image", renders=["rdc-
   caption="Oak & shadow.\n\nLight oak columns rise from fluted, backlit bases, set between cream panels with fine shadow "
           "joints. At the end of the room, a double door in dark wood closes the composition.\n\n"
           "Villa — living room. Interior design by KAÏRA Interior Design.",
-  hashtags=tags("materials", "lighting", "residential"))
+  hashtags=tags("materials", "lighting", "residential").replace("#walnut #marble", "#oakwood #woodpanelling"))
 
 # 003 — Villa — Reel
 P(id="003", slug="quiet-bedrooms-reel", pillar="Reel", kind="reel",
