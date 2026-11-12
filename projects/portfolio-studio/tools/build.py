@@ -50,6 +50,10 @@ V = {  # villa renders (dossier-client/sources)
     "am01": "02-chambre-amis/chambre-amis-01.png", "am03": "02-chambre-amis/chambre-amis-03.png",
 }
 O = {"liv19": "19.jpg", "liv13": "13.jpg", "ent21": "21.jpg", "kit20": "20.jpg", "off14": "14.jpg"}
+NEW = ROOT / "sources/recus"
+N = {"kitL": "01.jpg", "dinG": "02.jpg", "livG": "03.jpg", "off2": "04.jpg", "bar": "05.jpg", "dinB": "06.jpg",
+     "tvOak": "07.jpg", "lounge": "08.jpg", "livW": "09.jpg", "rAudio": "12.jpg", "rAC": "13.jpg", "rHall": "14.jpg",
+     "rTV": "15.jpg", "rMidea": "16.jpg"}
 
 LIGHT_MODE = False
 USED = {}
@@ -60,6 +64,8 @@ def src(key):
         p = VILLA / V[key]
     elif key in O:
         p = OTHER / O[key]
+    elif key in N:
+        p = NEW / N[key]
     else:
         p = KIDS / key
     USED[key] = p
@@ -278,14 +284,10 @@ def villa():
             "salon11", "salon08", "Oak columns with backlit fluted bases and the dark wood entrance door."),
            ("Dining room", "Travertine table, bouclé chairs and a sculptural LED pendant under a lit ceiling cove.",
             "salon09", "salon01", "Asymmetric oak library, veined marble column and floating console."),
-           ("Hall & gallery", "A double door in dark wood set in cream panels; the ceiling is split into two lit coffers.",
-            "salon10", "salon06", "The gallery wall: a large portrait painting and an olive tree mark the passage."),
            ("First-floor living room", "Sage sofas, a marble coffee table and a burgundy-patterned artwork.",
             "et02", "et03", "Backlit oak library and a cognac leather pouf; sheer curtains filter the light."),
-           ("Master bedroom", "A dark veined marble band, backlit, between oak columns and mirrored panels.",
-            "pr05", "pr01", "Wall-to-wall upholstered headboard, khaki linen and a brass-legged bench."),
-           ("Guest bedroom", "Upholstered platform bed against vertical oak slats and a slim mirror strip.",
-            "am01", "am03", "Soft light from opal pendants and a perimeter ceiling cove.")]
+           ("Bedrooms", "Master bedroom: a dark veined marble band, backlit, between oak columns and mirrored panels.",
+            "pr05", "am01", "Guest bedroom: upholstered platform bed against vertical oak slats and a slim mirror strip.")]
     for title, cap1, k1, k2, cap2 in viz:
         a, wa, ha = image(k1, M, M, h=PH - 2 * M - 8)
         hb = 112
@@ -587,6 +589,186 @@ def main():
     (BUILD / "used.json").write_text(json.dumps({k: str(v) for k, v in USED.items()}, indent=1))
     for f in (OUT_HD, OUT_LIGHT):
         print(f.name, f"{f.stat().st_size / 1e6:.1f} MB")
+
+
+# =============================================================================== v2 — new chapters
+def spread(k1, k2, kick, title, cap1, cap2, section, toc=None, col=92):
+    """Large image on the left, smaller image and text on the right. Whole images, never cropped."""
+    iw, ih = size(k1)
+    wa = PW - 2 * M - col - 10
+    ha = wa * ih / iw
+    if ha > PH - 2 * M - 8:
+        ha = PH - 2 * M - 8
+        wa = ha * iw / ih
+    a, wa, ha = image(k1, M, M, w=wa)
+    xb = M + wa + 10
+    wb = PW - M - xb
+    jw, jh = size(k2)
+    hb = min(wb * jh / jw, 112)
+    b, wb, hb = image(k2, xb, M, h=hb)
+    body = (a + b + kicker(kick, xb, M + hb + 6)
+            + box(xb, M + hb + 13, PW - M - xb, f'<h3>{e(title)}</h3><p class="cap">{e(cap1)}</p><p class="cap">{e(cap2)}</p>'))
+    page(body, section=section, toc=toc)
+
+
+CHAPTERS = [("01", "Villa", "Private residence — ground & first floor", "salon02"),
+            ("02", "Residential Interiors", "Living rooms, dining rooms, kitchens, entrance", "livG"),
+            ("03", "Workspaces", "Executive and private offices", "off14"),
+            ("04", "Rooftop Bar & Lounge", "Hospitality space with a city view", "bar"),
+            ("05", "Retail Showroom", "Home appliances & electronics", "rAC"),
+            ("06", "Children's Rooms", "A collection of five residential concepts", "07.png")]
+
+
+def projects_index():
+    wcard, hcard, gx = (PW - 2 * M - 2 * 9) / 3, 54, 9
+    out = ""
+    for i, (n, t, sub, key) in enumerate(CHAPTERS):
+        x = M + (i % 3) * (wcard + gx)
+        y = 36 + (i // 3) * (hcard + 30)
+        out += (f'<div class="b img fit" style="left:{x:.1f}mm;top:{y:.1f}mm;width:{wcard:.1f}mm;height:{hcard}mm">'
+                f'<img src="{src(key)}"></div>'
+                + box(x, y + hcard + 3.5, wcard, f'<div class="pc"><i>{n}</i><b>{e(t)}</b><span>{e(sub)}</span>'
+                                                 f'<em class="pn">p. {{{{p:{t}}}}}</em></div>'))
+    page(kicker("Selected projects") + box(M, 22, 200, '<h2>Selected projects</h2>') + out, section="Selected projects")
+
+
+def residential():
+    sec = "Project 02 — Residential Interiors"
+    im, w, h = image("livG", M, M, w=190)
+    x = M + w + 12
+    body = (im + kicker("Project 02", x)
+            + box(x, 26, PW - x - M, '<h2 class="xl">Residential<br>Interiors</h2>')
+            + box(x, 70, PW - x - M, '<p class="lead">Living rooms, dining rooms, kitchens and entrances designed by the '
+                                     'studio for private homes.</p>'
+                                     '<p class="cap">Living room — sculptural white bouclé seating, a curved sofa and arched '
+                                     'armchairs, against taupe wall panels framed by walnut fluted strips; track lighting, a '
+                                     'lit display cabinet and a large monochrome artwork.</p>'))
+    page(body, section=sec, toc=("02", "Residential Interiors"))
+    spread("dinG", "dinB", "Dining rooms", "Dining rooms",
+           "The adjoining dining room becomes a gallery: a white marble table and walnut armchairs under a cluster of "
+           "glass globe pendants, facing three expressive portraits.",
+           "Another home: a marble table on a black marble base, black and ivory armchairs, linen curtains, a geometric "
+           "artwork and terracotta jars.", sec)
+    spread("livW", "liv19", "Living rooms", "Living rooms",
+           "Tall walnut cabinetry with a lit black niche, a stone-clad TV wall, a floating walnut console and layered ceiling "
+           "coves, in taupe, cognac and sage.",
+           "An open living space: white and grey modular sofas, oak-clad columns and lit coves, with the dining area beyond.",
+           sec)
+    spread("kitL", "kit20", "Kitchens", "Kitchens",
+           "An L-shaped kitchen in greige matt lacquer, black veined marble worktop and splashback, lit open shelves and "
+           "handle-less fronts under a perimeter light cove.",
+           "Cream lacquered units around a waterfall island in boldly veined stone, black appliances and a herringbone floor.",
+           sec)
+    spread("liv13", "ent21", "Living & entrance", "Living room &amp; entrance".replace("&amp;", "&"),
+           "A luminous living area opening onto a sculptural white staircase; arched sideboard, recessed lighting and a "
+           "graphic artwork.",
+           "Entrance: walnut wall panelling with black reveals, an arched-front sideboard and a portrait artwork.", sec)
+    det = [("tvOak", (150, 1000, 525, 1350), "Oak panelling, black reveal and vertical battens"),
+           ("kitL", (500, 470, 880, 700), "Black marble splashback and lit open shelves"),
+           ("dinG", (690, 430, 1010, 640), "Cluster of glass globe pendants"),
+           ("livG", (1180, 230, 1560, 640), "Walnut fluted strip and taupe wall panels"),
+           ("bar", (330, 900, 1050, 1250), "Walnut battens and recessed LED line"),
+           ("off2", (600, 720, 1260, 1000), "Oak desk with a black fluted front")]
+    out = ""
+    wt, ht, gx, gy = 84, 62, 8.5, 18
+    for i, (k, bx, cap) in enumerate(det):
+        x = M + (i % 3) * (wt + gx)
+        y = 38 + (i // 3) * (ht + gy)
+        out += crop_fixed(k, bx, x, y, wt, ht) + box(x, y + ht + 2, wt, f'<p class="cap c">{e(cap)}</p>')
+    page(kicker("Interior details") + box(M, 22, 200, '<h3>Interior details — selected projects</h3>') + out, section=sec)
+
+
+def workspaces():
+    spread("off14", "off2", "Project 03 — Workspaces", "Workspaces",
+           "Executive office facing a panoramic city view: walnut desk and meeting table, backlit green onyx panels framing "
+           "the shelving, a lounge corner in soft leather and a perimeter light cove.",
+           "Private office: an oak desk with a black fluted front, a black open bookcase with oak accents and lit shelves, "
+           "under a curved ceiling cove.", "Project 03 — Workspaces", toc=("03", "Workspaces"))
+
+
+def rooftop():
+    spread("bar", "lounge", "Project 04 — Hospitality", "Rooftop bar & lounge",
+           "A bar counter clad in vertical walnut battens, with a dark green marble top and a recessed LED line, facing the "
+           "city skyline.",
+           "The lounge: woven armchairs with ivory cushions, brass and black bar stools, white marble-effect floor and a "
+           "framed light line in the ceiling.", "Project 04 — Rooftop Bar & Lounge", toc=("04", "Rooftop Bar & Lounge"))
+
+
+def retail():
+    sec = "Project 05 — Retail Showroom"
+    im, w, h = image("rAC", M, M, w=190)
+    x = M + w + 12
+    body = (im + kicker("Project 05", x)
+            + box(x, 26, PW - x - M, '<h2 class="xl">Retail<br>Showroom</h2>')
+            + box(x, 70, PW - x - M, '<p class="lead">A showroom for home appliances and consumer electronics, organised '
+                                     'in brand zones and product families.</p>'
+                                     '<p class="cap">Graphite display walls with walnut shelves and plinths, LED-outlined '
+                                     'niches and brand headers, poster panels, and a bright marble-effect floor under a '
+                                     'continuous light line.</p>'
+                                     '<p class="cap">Shown: air-conditioning wall — split and light-commercial units.</p>'))
+    page(body, section=sec, toc=("05", "Retail Showroom"))
+    h1, h2, y1 = 80, 70, 28
+    a, wa, _ = image("rHall", M, y1, h=h1)
+    b, wb, _ = image("rAudio", M + wa + 8, y1, h=h1)
+    y2 = y1 + h1 + 12
+    c, wc, _ = image("rTV", M, y2, h=h2)
+    d, wd, _ = image("rMidea", M + wc + 8, y2, h=h2)
+    xt = M + wc + 8 + wd + 12
+    body = (kicker("Retail showroom") + a + b + c + d
+            + box(M, y1 + h1 + 2, wa, '<p class="cap">Appliance hall — refrigerator wall and islands</p>')
+            + box(M + wa + 8, y1 + h1 + 2, wb, '<p class="cap">Audio islands on walnut plinths</p>')
+            + box(xt, y2 + 4, PW - M - xt, '<h3>Display design</h3><p class="cap">TV walls framed in black marble and '
+                                           'walnut, illuminated islands and refrigerator bays with LED outlines: each zone is '
+                                           'drawn as a piece of furniture, built in the same graphite, walnut and white '
+                                           'palette.</p><p class="cap">Left: TV wall and lit island · display units with LED '
+                                           'outlines.</p>'))
+    page(body, section=sec)
+
+
+def kids():
+    P = {p["key"]: p for p in pdata.PROJECTS}
+    sec = "Project 06 — Children's Rooms"
+    im, w, h = image("07.png", 104, 18, w=179)
+    order = [("lapin", "Douceur Lapin"), ("jungle", "Jungle Douce"), ("nuages", "Nuages"), ("ourson", "Ourson Caramel")]
+    th = ""
+    wt = (179 - 3 * 5) / 4
+    for i, (k, n) in enumerate(order):
+        t, tw, thh = image(P[k]["img"], 104 + i * (wt + 5), 18 + h + 7, w=wt)
+        th += t + box(104 + i * (wt + 5), 18 + h + 7 + thh + 1.5, wt, f'<p class="cap">{e(n)}</p>')
+    body = (kicker("Project 06") + box(M, 26, 82, '<h2>Children\'s<br>rooms</h2>')
+            + box(M, 56, 82, '<p class="lead">Arches, scallops and clouds: five residential concepts where soft shapes are '
+                             'drawn into the custom furniture itself.</p><p>Each room has its own palette — powder pink, olive, '
+                             'caramel — rooted in cream and light wood, with indirect light integrated into niches, arches and '
+                             'headboards.</p><p class="cap">Large image: Nuage Olive.</p>')
+            + im + th)
+    page(body, section=sec, toc=("06", "Children's Rooms"))
+    p = P["nuageolive"]
+    svg, w, h = KV.elevation(p, "A", 25)
+    body = (kicker("Design drawings") + box(M, 22, 200, '<h3>From render to drawing</h3>')
+            + svgbox(svg, (PW - w) / 2, 38) + box((PW - w) / 2, 38 + h + 3, w,
+                                                  '<p class="cap">Nuage Olive — elevation of the decorative wall, 1:25 (A4): '
+                                                  'wardrobe, olive storage column, fluted wall with backlit cloud, upholstered '
+                                                  'headboard, trundle bed and floating desk. Proposed concept dimensions in cm.</p>'))
+    page(body, section=sec)
+
+
+def assemble():
+    PAGES.clear()
+    cover(); about(); vision(); services(); projects_index(); villa(); residential(); workspaces(); rooftop(); retail()
+    kids(); process(); contact()
+    where = {pg["toc"][1]: i for i, pg in enumerate(PAGES, 1) if pg["toc"]}
+    out = []
+    for i, pg in enumerate(PAGES, 1):
+        body = pg["body"]
+        for t, n in where.items():
+            body = body.replace("{{p:" + t + "}}", f"{n:02d}")
+        hdr = f'<div class="hdr">{e(pg["section"])}</div>' if pg["section"] and pg["footer"] else ""
+        ftr = (f'<div class="ftr"><span>KAÏRA Interior Design</span><span>{i:02d}</span></div>' if pg["footer"] else "")
+        out.append(f'<section class="pg {pg["cls"]}">{body}{hdr}{ftr}</section>')
+    css = CSS.replace("FONTS/", FONTS.as_uri() + "/") + ".pc em.pn{display:block;font-style:normal;font-size:2.2mm;letter-spacing:.2em;color:#6E2234;margin-top:1.2mm}"
+    return (f'<!doctype html><html lang="en"><head><meta charset="utf-8"><title>KAÏRA Interior Design — Portfolio</title>'
+            f'<style>{css}</style></head><body>{PATTERNS}{"".join(out)}</body></html>')
+
 
 
 if __name__ == "__main__":
