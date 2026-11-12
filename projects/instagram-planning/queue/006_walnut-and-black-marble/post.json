@@ -1,0 +1,30 @@
+{
+ "id": "006",
+ "slug": "walnut-and-black-marble",
+ "pillar": "Materials",
+ "kind": "carousel",
+ "renders": [
+  "n01",
+  "n09",
+  "n04"
+ ],
+ "files": [
+  "1.jpg",
+  "2.jpg",
+  "3.jpg",
+  "4.jpg"
+ ],
+ "caption": "Material study — walnut & black marble.\n\nDeep woods and dark stones, balanced by greige lacquer and light oak. A palette we return to for kitchens, living rooms and workspaces: warm, quiet and made to last.\n\nWhich one would you choose for your home?",
+ "hashtags": "#kairainteriordesign #interiorarchitecture #interiordesign #luxuryinteriors #interiordesigner #materialpalette #interiordetails #walnut #marble #naturalmaterials #bespokefurniture #customfurniture #joinerydesign #madetomeasure #quietluxury #minimalluxury",
+ "full_caption": "Material study — walnut & black marble.\n\nDeep woods and dark stones, balanced by greige lacquer and light oak. A palette we return to for kitchens, living rooms and workspaces: warm, quiet and made to last.\n\nWhich one would you choose for your home?\n\n#kairainteriordesign #interiorarchitecture #interiordesign #luxuryinteriors #interiordesigner #materialpalette #interiordetails #walnut #marble #naturalmaterials #bespokefurniture #customfurniture #joinerydesign #madetomeasure #quietluxury #minimalluxury",
+ "status": "ready",
+ "created": "2026-11-12",
+ "published_at": null,
+ "media_id": null,
+ "permalink": null,
+ "checks": [
+  "006-2: n01 whole, 100 %, pixel-identical on the HD slide",
+  "006-3: n09 whole, 100 %, pixel-identical on the HD slide",
+  "006-4: n04 whole, 100 %, pixel-identical on the HD slide"
+ ]
+}

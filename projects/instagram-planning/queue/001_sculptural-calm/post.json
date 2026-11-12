@@ -1,0 +1,27 @@
+{
+ "id": "001",
+ "slug": "sculptural-calm",
+ "pillar": "Project",
+ "kind": "carousel",
+ "renders": [
+  "n03",
+  "n02"
+ ],
+ "files": [
+  "1.jpg",
+  "2.jpg",
+  "3.jpg"
+ ],
+ "caption": "Sculptural calm.\n\nA living room shaped by soft curves — a bouclé sofa and arched armchairs set against taupe panels and walnut fluted strips — opening onto a dining room conceived as a gallery of portraits.\n\nSwipe for the dining room and the design notes.\n\nInterior design & 3D visualization by KAÏRA Interior Design.",
+ "hashtags": "#kairainteriordesign #interiorarchitecture #interiordesign #luxuryinteriors #interiordesigner #luxuryhomes #contemporaryinterior #modernluxury #residentialdesign #livingroomdesign #quietluxury #minimalluxury #timelessdesign #3dvisualization #interiorrender #archviz",
+ "full_caption": "Sculptural calm.\n\nA living room shaped by soft curves — a bouclé sofa and arched armchairs set against taupe panels and walnut fluted strips — opening onto a dining room conceived as a gallery of portraits.\n\nSwipe for the dining room and the design notes.\n\nInterior design & 3D visualization by KAÏRA Interior Design.\n\n#kairainteriordesign #interiorarchitecture #interiordesign #luxuryinteriors #interiordesigner #luxuryhomes #contemporaryinterior #modernluxury #residentialdesign #livingroomdesign #quietluxury #minimalluxury #timelessdesign #3dvisualization #interiorrender #archviz",
+ "status": "ready",
+ "created": "2026-11-12",
+ "published_at": null,
+ "media_id": null,
+ "permalink": null,
+ "checks": [
+  "001-1: n03 whole, 100 %, pixel-identical on the HD slide",
+  "001-2: n02 whole, 100 %, pixel-identical on the HD slide"
+ ]
+}

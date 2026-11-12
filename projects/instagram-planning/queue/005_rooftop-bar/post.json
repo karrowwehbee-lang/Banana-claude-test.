@@ -1,0 +1,27 @@
+{
+ "id": "005",
+ "slug": "rooftop-bar",
+ "pillar": "Project",
+ "kind": "carousel",
+ "renders": [
+  "n05",
+  "n08"
+ ],
+ "files": [
+  "1.jpg",
+  "2.jpg",
+  "3.jpg"
+ ],
+ "caption": "Above the city.\n\nA rooftop bar and lounge: a counter clad in vertical walnut battens, topped with green marble and cut by a line of light; woven armchairs and brass stools facing the skyline.\n\nInterior design & 3D visualization by KAÏRA Interior Design.",
+ "hashtags": "#kairainteriordesign #interiorarchitecture #interiordesign #luxuryinteriors #interiordesigner #hospitalitydesign #bardesign #rooftopbar #loungedesign #materialpalette #interiordetails #walnut #marble #naturalmaterials #3dvisualization #interiorrender",
+ "full_caption": "Above the city.\n\nA rooftop bar and lounge: a counter clad in vertical walnut battens, topped with green marble and cut by a line of light; woven armchairs and brass stools facing the skyline.\n\nInterior design & 3D visualization by KAÏRA Interior Design.\n\n#kairainteriordesign #interiorarchitecture #interiordesign #luxuryinteriors #interiordesigner #hospitalitydesign #bardesign #rooftopbar #loungedesign #materialpalette #interiordetails #walnut #marble #naturalmaterials #3dvisualization #interiorrender",
+ "status": "ready",
+ "created": "2026-11-12",
+ "published_at": null,
+ "media_id": null,
+ "permalink": null,
+ "checks": [
+  "005-1: n05 whole, 100 %, pixel-identical on the HD slide",
+  "005-2: n08 whole, 100 %, pixel-identical on the HD slide"
+ ]
+}

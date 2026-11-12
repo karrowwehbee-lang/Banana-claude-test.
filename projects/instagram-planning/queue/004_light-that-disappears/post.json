@@ -1,0 +1,31 @@
+{
+ "id": "004",
+ "slug": "light-that-disappears",
+ "pillar": "Design notes",
+ "kind": "carousel",
+ "renders": [
+  "rdc-salon-10",
+  "chambre-principale-03",
+  "n01"
+ ],
+ "files": [
+  "1.jpg",
+  "2.jpg",
+  "3.jpg",
+  "4.jpg",
+  "5.jpg"
+ ],
+ "caption": "Light that disappears.\n\nIn our interiors, you see the light — rarely the fixture. Coves wash the ceilings, LED lines hide under shelves, panels and marble glow from behind. The result is a soft, even light that shapes the architecture.\n\nSave this post for your next project.",
+ "hashtags": "#kairainteriordesign #interiorarchitecture #interiordesign #luxuryinteriors #interiordesigner #lightingdesign #indirectlighting #architecturallighting #ledlighting #quietluxury #minimalluxury #timelessdesign #luxuryhomes #contemporaryinterior #modernluxury #residentialdesign",
+ "full_caption": "Light that disappears.\n\nIn our interiors, you see the light — rarely the fixture. Coves wash the ceilings, LED lines hide under shelves, panels and marble glow from behind. The result is a soft, even light that shapes the architecture.\n\nSave this post for your next project.\n\n#kairainteriordesign #interiorarchitecture #interiordesign #luxuryinteriors #interiordesigner #lightingdesign #indirectlighting #architecturallighting #ledlighting #quietluxury #minimalluxury #timelessdesign #luxuryhomes #contemporaryinterior #modernluxury #residentialdesign",
+ "status": "ready",
+ "created": "2026-11-12",
+ "published_at": null,
+ "media_id": null,
+ "permalink": null,
+ "checks": [
+  "004-2: rdc-salon-10 whole, 100 %, pixel-identical on the HD slide",
+  "004-3: chambre-principale-03 whole, 100 %, pixel-identical on the HD slide",
+  "004-4: n01 whole, 100 %, pixel-identical on the HD slide"
+ ]
+}

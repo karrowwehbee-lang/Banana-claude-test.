@@ -1,0 +1,674 @@
+{
+ "rdc-salon-01": {
+  "path": "projects/dossier-client/sources/01-rdc-salon-principal/rdc-salon-01.png",
+  "project": "Villa",
+  "space": "Living & dining room",
+  "size": [
+   1667,
+   1816
+  ],
+  "tv_on": false,
+  "brands": false,
+  "dup_of": null
+ },
+ "rdc-salon-02": {
+  "path": "projects/dossier-client/sources/01-rdc-salon-principal/rdc-salon-02.png",
+  "project": "Villa",
+  "space": "Living & dining room",
+  "size": [
+   1667,
+   1816
+  ],
+  "tv_on": false,
+  "brands": false,
+  "dup_of": null
+ },
+ "rdc-salon-03": {
+  "path": "projects/dossier-client/sources/01-rdc-salon-principal/rdc-salon-03.png",
+  "project": "Villa",
+  "space": "Living & dining room",
+  "size": [
+   1667,
+   1816
+  ],
+  "tv_on": true,
+  "brands": false,
+  "dup_of": null
+ },
+ "rdc-salon-04": {
+  "path": "projects/dossier-client/sources/01-rdc-salon-principal/rdc-salon-04.png",
+  "project": "Villa",
+  "space": "Living & dining room",
+  "size": [
+   1667,
+   1816
+  ],
+  "tv_on": true,
+  "brands": false,
+  "dup_of": null
+ },
+ "rdc-salon-05": {
+  "path": "projects/dossier-client/sources/01-rdc-salon-principal/rdc-salon-05.png",
+  "project": "Villa",
+  "space": "Living & dining room",
+  "size": [
+   1667,
+   1816
+  ],
+  "tv_on": false,
+  "brands": false,
+  "dup_of": null
+ },
+ "rdc-salon-06": {
+  "path": "projects/dossier-client/sources/01-rdc-salon-principal/rdc-salon-06.png",
+  "project": "Villa",
+  "space": "Living & dining room",
+  "size": [
+   1667,
+   1816
+  ],
+  "tv_on": false,
+  "brands": false,
+  "dup_of": null
+ },
+ "rdc-salon-07": {
+  "path": "projects/dossier-client/sources/01-rdc-salon-principal/rdc-salon-07.png",
+  "project": "Villa",
+  "space": "Living & dining room",
+  "size": [
+   1667,
+   1816
+  ],
+  "tv_on": true,
+  "brands": false,
+  "dup_of": null
+ },
+ "rdc-salon-08": {
+  "path": "projects/dossier-client/sources/01-rdc-salon-principal/rdc-salon-08.png",
+  "project": "Villa",
+  "space": "Living & dining room",
+  "size": [
+   1667,
+   1816
+  ],
+  "tv_on": false,
+  "brands": false,
+  "dup_of": null
+ },
+ "rdc-salon-09": {
+  "path": "projects/dossier-client/sources/01-rdc-salon-principal/rdc-salon-09.png",
+  "project": "Villa",
+  "space": "Living & dining room",
+  "size": [
+   1667,
+   1816
+  ],
+  "tv_on": false,
+  "brands": false,
+  "dup_of": null
+ },
+ "rdc-salon-10": {
+  "path": "projects/dossier-client/sources/01-rdc-salon-principal/rdc-salon-10.png",
+  "project": "Villa",
+  "space": "Living & dining room",
+  "size": [
+   1667,
+   1816
+  ],
+  "tv_on": false,
+  "brands": false,
+  "dup_of": null
+ },
+ "rdc-salon-11": {
+  "path": "projects/dossier-client/sources/01-rdc-salon-principal/rdc-salon-11.png",
+  "project": "Villa",
+  "space": "Living & dining room",
+  "size": [
+   1667,
+   1816
+  ],
+  "tv_on": false,
+  "brands": false,
+  "dup_of": null
+ },
+ "chambre-amis-01": {
+  "path": "projects/dossier-client/sources/02-chambre-amis/chambre-amis-01.png",
+  "project": "Villa",
+  "space": "Guest bedroom",
+  "size": [
+   1667,
+   1816
+  ],
+  "tv_on": false,
+  "brands": false,
+  "dup_of": null
+ },
+ "chambre-amis-02": {
+  "path": "projects/dossier-client/sources/02-chambre-amis/chambre-amis-02.png",
+  "project": "Villa",
+  "space": "Guest bedroom",
+  "size": [
+   1667,
+   1816
+  ],
+  "tv_on": true,
+  "brands": false,
+  "dup_of": null
+ },
+ "chambre-amis-03": {
+  "path": "projects/dossier-client/sources/02-chambre-amis/chambre-amis-03.png",
+  "project": "Villa",
+  "space": "Guest bedroom",
+  "size": [
+   1667,
+   1816
+  ],
+  "tv_on": false,
+  "brands": false,
+  "dup_of": null
+ },
+ "chambre-amis-04": {
+  "path": "projects/dossier-client/sources/02-chambre-amis/chambre-amis-04.png",
+  "project": "Villa",
+  "space": "Guest bedroom",
+  "size": [
+   1667,
+   1816
+  ],
+  "tv_on": true,
+  "brands": false,
+  "dup_of": null
+ },
+ "chambre-principale-01": {
+  "path": "projects/dossier-client/sources/03-chambre-principale/chambre-principale-01.png",
+  "project": "Villa",
+  "space": "Master bedroom",
+  "size": [
+   1667,
+   1816
+  ],
+  "tv_on": false,
+  "brands": false,
+  "dup_of": null
+ },
+ "chambre-principale-02": {
+  "path": "projects/dossier-client/sources/03-chambre-principale/chambre-principale-02.png",
+  "project": "Villa",
+  "space": "Master bedroom",
+  "size": [
+   1667,
+   1816
+  ],
+  "tv_on": false,
+  "brands": false,
+  "dup_of": null
+ },
+ "chambre-principale-03": {
+  "path": "projects/dossier-client/sources/03-chambre-principale/chambre-principale-03.png",
+  "project": "Villa",
+  "space": "Master bedroom",
+  "size": [
+   1667,
+   1816
+  ],
+  "tv_on": false,
+  "brands": false,
+  "dup_of": null
+ },
+ "chambre-principale-04": {
+  "path": "projects/dossier-client/sources/03-chambre-principale/chambre-principale-04.png",
+  "project": "Villa",
+  "space": "Master bedroom",
+  "size": [
+   1667,
+   1816
+  ],
+  "tv_on": true,
+  "brands": false,
+  "dup_of": null
+ },
+ "chambre-principale-05": {
+  "path": "projects/dossier-client/sources/03-chambre-principale/chambre-principale-05.png",
+  "project": "Villa",
+  "space": "Master bedroom",
+  "size": [
+   1667,
+   1816
+  ],
+  "tv_on": false,
+  "brands": false,
+  "dup_of": null
+ },
+ "etage1-sejour-01": {
+  "path": "projects/dossier-client/sources/04-etage1-sejour/etage1-sejour-01.png",
+  "project": "Villa",
+  "space": "First-floor living room",
+  "size": [
+   1667,
+   1816
+  ],
+  "tv_on": true,
+  "brands": false,
+  "dup_of": null
+ },
+ "etage1-sejour-02": {
+  "path": "projects/dossier-client/sources/04-etage1-sejour/etage1-sejour-02.png",
+  "project": "Villa",
+  "space": "First-floor living room",
+  "size": [
+   1667,
+   1816
+  ],
+  "tv_on": false,
+  "brands": false,
+  "dup_of": null
+ },
+ "etage1-sejour-03": {
+  "path": "projects/dossier-client/sources/04-etage1-sejour/etage1-sejour-03.png",
+  "project": "Villa",
+  "space": "First-floor living room",
+  "size": [
+   1667,
+   1816
+  ],
+  "tv_on": false,
+  "brands": false,
+  "dup_of": null
+ },
+ "etage1-sejour-04": {
+  "path": "projects/dossier-client/sources/04-etage1-sejour/etage1-sejour-04.png",
+  "project": "Villa",
+  "space": "First-floor living room",
+  "size": [
+   1667,
+   1816
+  ],
+  "tv_on": false,
+  "brands": false,
+  "dup_of": null
+ },
+ "etage1-sejour-05": {
+  "path": "projects/dossier-client/sources/04-etage1-sejour/etage1-sejour-05.png",
+  "project": "Villa",
+  "space": "First-floor living room",
+  "size": [
+   1667,
+   1816
+  ],
+  "tv_on": true,
+  "brands": false,
+  "dup_of": null
+ },
+ "etage1-sejour-06": {
+  "path": "projects/dossier-client/sources/04-etage1-sejour/etage1-sejour-06.png",
+  "project": "Villa",
+  "space": "First-floor living room",
+  "size": [
+   1667,
+   1816
+  ],
+  "tv_on": false,
+  "brands": false,
+  "dup_of": null
+ },
+ "etage1-sejour-08": {
+  "path": "projects/dossier-client/sources/04-etage1-sejour/etage1-sejour-08.png",
+  "project": "Villa",
+  "space": "First-floor living room",
+  "size": [
+   1667,
+   1816
+  ],
+  "tv_on": false,
+  "brands": false,
+  "dup_of": null
+ },
+ "etage1-sejour-09": {
+  "path": "projects/dossier-client/sources/04-etage1-sejour/etage1-sejour-09.png",
+  "project": "Villa",
+  "space": "First-floor living room",
+  "size": [
+   1667,
+   1816
+  ],
+  "tv_on": false,
+  "brands": false,
+  "dup_of": null
+ },
+ "r13": {
+  "path": "projects/instagram-lancement/sources/recus/13.jpg",
+  "project": "Residential Interiors",
+  "space": "Living room & staircase",
+  "size": [
+   1600,
+   1264
+  ],
+  "tv_on": false,
+  "brands": false,
+  "dup_of": null
+ },
+ "r14": {
+  "path": "projects/instagram-lancement/sources/recus/14.jpg",
+  "project": "Workspaces",
+  "space": "Executive office",
+  "size": [
+   1468,
+   1600
+  ],
+  "tv_on": false,
+  "brands": false,
+  "dup_of": null
+ },
+ "r15": {
+  "path": "projects/instagram-lancement/sources/recus/15.jpg",
+  "project": "Residential Interiors",
+  "space": "Walnut TV wall",
+  "size": [
+   1468,
+   1600
+  ],
+  "tv_on": true,
+  "brands": false,
+  "dup_of": null
+ },
+ "r16": {
+  "path": "projects/instagram-lancement/sources/recus/16.jpg",
+  "project": "Residential Interiors",
+  "space": "Living room, walnut TV wall",
+  "size": [
+   1468,
+   1600
+  ],
+  "tv_on": true,
+  "brands": false,
+  "dup_of": null
+ },
+ "r19": {
+  "path": "projects/instagram-lancement/sources/recus/19.jpg",
+  "project": "Residential Interiors",
+  "space": "Open living space",
+  "size": [
+   1600,
+   1264
+  ],
+  "tv_on": false,
+  "brands": false,
+  "dup_of": null
+ },
+ "r20": {
+  "path": "projects/instagram-lancement/sources/recus/20.jpg",
+  "project": "Residential Interiors",
+  "space": "Kitchen",
+  "size": [
+   1468,
+   1600
+  ],
+  "tv_on": false,
+  "brands": false,
+  "dup_of": null
+ },
+ "r21": {
+  "path": "projects/instagram-lancement/sources/recus/21.jpg",
+  "project": "Residential Interiors",
+  "space": "Entrance",
+  "size": [
+   1468,
+   1600
+  ],
+  "tv_on": false,
+  "brands": false,
+  "dup_of": null
+ },
+ "n01": {
+  "path": "projects/portfolio-studio/sources/recus/01.jpg",
+  "project": "Residential Interiors",
+  "space": "L-shaped kitchen",
+  "size": [
+   1600,
+   1264
+  ],
+  "tv_on": false,
+  "brands": false,
+  "dup_of": null
+ },
+ "n02": {
+  "path": "projects/portfolio-studio/sources/recus/02.jpg",
+  "project": "Residential Interiors",
+  "space": "Gallery dining room",
+  "size": [
+   1600,
+   1264
+  ],
+  "tv_on": false,
+  "brands": false,
+  "dup_of": null
+ },
+ "n03": {
+  "path": "projects/portfolio-studio/sources/recus/03.jpg",
+  "project": "Residential Interiors",
+  "space": "Sculptural living room",
+  "size": [
+   1600,
+   1264
+  ],
+  "tv_on": false,
+  "brands": false,
+  "dup_of": null
+ },
+ "n04": {
+  "path": "projects/portfolio-studio/sources/recus/04.jpg",
+  "project": "Workspaces",
+  "space": "Private office",
+  "size": [
+   1600,
+   1264
+  ],
+  "tv_on": false,
+  "brands": false,
+  "dup_of": null
+ },
+ "n05": {
+  "path": "projects/portfolio-studio/sources/recus/05.jpg",
+  "project": "Rooftop Bar & Lounge",
+  "space": "Bar",
+  "size": [
+   1468,
+   1600
+  ],
+  "tv_on": false,
+  "brands": false,
+  "dup_of": null
+ },
+ "n06": {
+  "path": "projects/portfolio-studio/sources/recus/06.jpg",
+  "project": "Residential Interiors",
+  "space": "Dining room",
+  "size": [
+   1468,
+   1600
+  ],
+  "tv_on": false,
+  "brands": false,
+  "dup_of": null
+ },
+ "n07": {
+  "path": "projects/portfolio-studio/sources/recus/07.jpg",
+  "project": "Residential Interiors",
+  "space": "Oak TV wall",
+  "size": [
+   1468,
+   1600
+  ],
+  "tv_on": true,
+  "brands": false,
+  "dup_of": null
+ },
+ "n08": {
+  "path": "projects/portfolio-studio/sources/recus/08.jpg",
+  "project": "Rooftop Bar & Lounge",
+  "space": "Lounge",
+  "size": [
+   1468,
+   1600
+  ],
+  "tv_on": false,
+  "brands": false,
+  "dup_of": null
+ },
+ "n09": {
+  "path": "projects/portfolio-studio/sources/recus/09.jpg",
+  "project": "Residential Interiors",
+  "space": "Living room, walnut wall",
+  "size": [
+   1600,
+   900
+  ],
+  "tv_on": false,
+  "brands": false,
+  "dup_of": null
+ },
+ "n10": {
+  "path": "projects/portfolio-studio/sources/recus/10.jpg",
+  "project": "Retail Showroom",
+  "space": "TV & AC islands",
+  "size": [
+   1600,
+   900
+  ],
+  "tv_on": false,
+  "brands": true,
+  "dup_of": null
+ },
+ "n11": {
+  "path": "projects/portfolio-studio/sources/recus/11.jpg",
+  "project": "Retail Showroom",
+  "space": "Brand zones",
+  "size": [
+   1600,
+   900
+  ],
+  "tv_on": false,
+  "brands": true,
+  "dup_of": null
+ },
+ "n12": {
+  "path": "projects/portfolio-studio/sources/recus/12.jpg",
+  "project": "Retail Showroom",
+  "space": "Audio islands",
+  "size": [
+   1600,
+   900
+  ],
+  "tv_on": false,
+  "brands": true,
+  "dup_of": null
+ },
+ "n13": {
+  "path": "projects/portfolio-studio/sources/recus/13.jpg",
+  "project": "Retail Showroom",
+  "space": "Air-conditioning wall",
+  "size": [
+   1600,
+   1264
+  ],
+  "tv_on": false,
+  "brands": true,
+  "dup_of": null
+ },
+ "n14": {
+  "path": "projects/portfolio-studio/sources/recus/14.jpg",
+  "project": "Retail Showroom",
+  "space": "Appliance hall",
+  "size": [
+   1600,
+   1264
+  ],
+  "tv_on": false,
+  "brands": true,
+  "dup_of": null
+ },
+ "n15": {
+  "path": "projects/portfolio-studio/sources/recus/15.jpg",
+  "project": "Retail Showroom",
+  "space": "TV wall",
+  "size": [
+   1468,
+   1600
+  ],
+  "tv_on": false,
+  "brands": true,
+  "dup_of": null
+ },
+ "n16": {
+  "path": "projects/portfolio-studio/sources/recus/16.jpg",
+  "project": "Retail Showroom",
+  "space": "Display units",
+  "size": [
+   1468,
+   1600
+  ],
+  "tv_on": false,
+  "brands": true,
+  "dup_of": null
+ },
+ "k01": {
+  "path": "projects/portfolio-enfants/sources/recus/01.png",
+  "project": "Children's Rooms",
+  "space": "Douceur Lapin",
+  "size": [
+   1536,
+   1024
+  ],
+  "tv_on": false,
+  "brands": false,
+  "dup_of": null
+ },
+ "k04": {
+  "path": "projects/portfolio-enfants/sources/recus/04.png",
+  "project": "Children's Rooms",
+  "space": "Nuages",
+  "size": [
+   1536,
+   1024
+  ],
+  "tv_on": false,
+  "brands": false,
+  "dup_of": null
+ },
+ "k05": {
+  "path": "projects/portfolio-enfants/sources/recus/05.png",
+  "project": "Children's Rooms",
+  "space": "Ourson Caramel",
+  "size": [
+   1536,
+   1024
+  ],
+  "tv_on": false,
+  "brands": false,
+  "dup_of": null
+ },
+ "k06": {
+  "path": "projects/portfolio-enfants/sources/recus/06.png",
+  "project": "Children's Rooms",
+  "space": "Jungle Douce",
+  "size": [
+   1536,
+   1024
+  ],
+  "tv_on": false,
+  "brands": false,
+  "dup_of": null
+ },
+ "k07": {
+  "path": "projects/portfolio-enfants/sources/recus/07.png",
+  "project": "Children's Rooms",
+  "space": "Nuage Olive",
+  "size": [
+   1536,
+   1024
+  ],
+  "tv_on": false,
+  "brands": false,
+  "dup_of": null
+ }
+}

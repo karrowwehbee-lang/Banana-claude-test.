@@ -1,0 +1,26 @@
+{
+ "id": "007",
+ "slug": "from-render-to-drawing",
+ "pillar": "Process",
+ "kind": "carousel",
+ "renders": [
+  "chambre-principale-05"
+ ],
+ "files": [
+  "1.jpg",
+  "2.jpg",
+  "3.jpg",
+  "4.jpg"
+ ],
+ "caption": "From render to drawing.\n\nA 3D view shows the atmosphere; the technical drawing makes it buildable. For each project we draw the elevations, sections and bespoke joinery so that workshops and craftsmen build exactly what was designed.\n\nSwipe to see the master bedroom wall, rendered and drawn.",
+ "hashtags": "#kairainteriordesign #interiorarchitecture #interiordesign #luxuryinteriors #interiordesigner #designprocess #technicaldrawing #interiorelevation #3dvisualization #bespokefurniture #customfurniture #joinerydesign #madetomeasure #bedroomdesign #masterbedroom #luxurybedroom",
+ "full_caption": "From render to drawing.\n\nA 3D view shows the atmosphere; the technical drawing makes it buildable. For each project we draw the elevations, sections and bespoke joinery so that workshops and craftsmen build exactly what was designed.\n\nSwipe to see the master bedroom wall, rendered and drawn.\n\n#kairainteriordesign #interiorarchitecture #interiordesign #luxuryinteriors #interiordesigner #designprocess #technicaldrawing #interiorelevation #3dvisualization #bespokefurniture #customfurniture #joinerydesign #madetomeasure #bedroomdesign #masterbedroom #luxurybedroom",
+ "status": "ready",
+ "created": "2026-11-12",
+ "published_at": null,
+ "media_id": null,
+ "permalink": null,
+ "checks": [
+  "007-2: chambre-principale-05 whole, 100 %, pixel-identical on the HD slide"
+ ]
+}
