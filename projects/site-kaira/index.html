@@ -1,0 +1,693 @@
+<title>KAÏRA Interior Design</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap">
+<style>
+/* Layout: a gallery wall — full-bleed renders alternate with a 12-column text grid hung on wide white margins;
+   architectural dimension lines (ticks + ≈ values from the KAÏRA technical dossier) are the recurring device. */
+:root{
+  --paper:#FFFFFF; --paper-2:#F5F3EF; --ink:#1E1916; --mute:#7A7068; --line:#E4DFD8;
+  --olive:#5F6A45; --olive-ink:#F2F1EA; --burgundy:#6E2234; --burgundy-ink:#F6ECEE; --stone:#C9BCAD;
+  --display:"Cormorant Garamond","Cormorant",Georgia,"Times New Roman",serif;
+  --text:"Jost","Avenir Next","Helvetica Neue",Arial,sans-serif;
+  --gut:clamp(16px,5vw,88px); --ease:cubic-bezier(.77,0,.18,1); --ease-out:cubic-bezier(.16,1,.3,1);
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--paper);color:var(--ink);font-family:var(--text);font-weight:300;font-size:16px;line-height:1.6;
+  overflow-x:hidden;-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--paper)}
+html.lenis,html.lenis body{height:auto} .lenis.lenis-smooth{scroll-behavior:auto!important}
+.lenis.lenis-stopped{overflow:hidden}
+img{display:block;max-width:100%}
+button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:pointer}
+a{color:inherit}
+:focus-visible{outline:1.5px solid var(--burgundy);outline-offset:4px}
+.wrap{padding-left:max(var(--gut),env(safe-area-inset-left,0px));padding-right:max(var(--gut),env(safe-area-inset-right,0px))}
+.eyebrow{font-family:var(--text);font-weight:400;font-size:11px;letter-spacing:.32em;text-transform:uppercase;color:var(--mute)}
+.display{font-family:var(--display);font-weight:300;letter-spacing:-.01em;line-height:.98;text-wrap:balance}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+
+/* preloader */
+.loader{position:fixed;inset:0;z-index:90;display:grid;place-items:center;background:var(--paper);
+  transition:transform 1.1s var(--ease)}
+.loader.out{transform:translateY(-100%)}
+.loader .mark{width:min(320px,62vw);color:var(--ink);opacity:0;transform:translateY(12px);animation:rise 1s .1s var(--ease-out) forwards}
+.loader .count{position:absolute;bottom:calc(36px + env(safe-area-inset-bottom,0px));left:max(var(--gut),env(safe-area-inset-left,0px));
+  font-family:var(--display);font-size:clamp(48px,9vw,120px);line-height:1;font-weight:300;font-variant-numeric:tabular-nums}
+.loader .bar{position:absolute;left:0;right:0;bottom:0;height:2px;background:var(--line)}
+.loader .bar i{display:block;height:100%;background:var(--burgundy);transform-origin:left;transform:scaleX(var(--p,0))}
+@keyframes rise{to{opacity:1;transform:none}}
+
+/* header */
+.hdr{position:fixed;inset:0 0 auto;z-index:50;padding-top:env(safe-area-inset-top,0px);transition:background .5s,color .5s,transform .6s var(--ease)}
+.hdr .row{display:flex;align-items:center;justify-content:space-between;gap:24px;height:84px}
+.hdr .logo{width:132px;color:currentColor;display:block}
+.hdr nav{display:flex;gap:clamp(18px,3vw,44px)}
+.hdr nav a,.menu-btn{font-size:12px;letter-spacing:.24em;text-transform:uppercase;font-weight:400;text-decoration:none;position:relative}
+.hdr nav a::after{content:"";position:absolute;left:0;right:0;bottom:-6px;height:1px;background:currentColor;transform:scaleX(0);
+  transform-origin:right;transition:transform .6s var(--ease)}
+.hdr nav a:hover::after{transform:scaleX(1);transform-origin:left}
+.hdr.on-hero{color:#FFFFFF}
+.hdr.solid{background:rgba(255,255,255,.92);color:var(--ink);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+.hdr.hide{transform:translateY(-100%)}
+.menu-btn{display:none}
+@media (max-width:760px){.hdr nav{display:none}.menu-btn{display:block}.hdr .row{height:68px}.hdr .logo{width:108px}}
+.menu{position:fixed;inset:0;z-index:55;background:var(--ink);color:var(--paper-2);display:flex;flex-direction:column;justify-content:center;
+  gap:12px;clip-path:inset(0 0 100% 0);transition:clip-path .9s var(--ease);padding-block:calc(90px + env(safe-area-inset-top,0px)) 40px}
+.menu.open{clip-path:inset(0 0 0 0)}
+.menu a{font-family:var(--display);font-size:clamp(44px,12vw,72px);line-height:1.05;text-decoration:none;font-weight:300;
+  transform:translateY(40px);opacity:0;transition:transform .8s var(--ease-out),opacity .8s}
+.menu.open a{transform:none;opacity:1}
+.menu.open a:nth-child(2){transition-delay:.06s}.menu.open a:nth-child(3){transition-delay:.12s}.menu.open a:nth-child(4){transition-delay:.18s}
+
+/* hero */
+.hero{position:relative;height:100svh;min-height:560px;overflow:hidden;background:#211B17;color:#FFFFFF}
+.hero .slides{position:absolute;inset:-6% 0;will-change:transform}
+.hero .slide{position:absolute;inset:0;opacity:0;transition:opacity 1.6s var(--ease)}
+.hero .slide.on{opacity:1}
+.hero .slide img{width:100%;height:100%;object-fit:cover;transform:scale(1.12)}
+.hero .slide.on img{animation:kb 8s linear forwards}
+@keyframes kb{from{transform:scale(1.12)}to{transform:scale(1.0)}}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,15,12,.38) 0%,rgba(20,15,12,0) 30%,rgba(20,15,12,0) 50%,rgba(20,15,12,.66) 100%),linear-gradient(90deg,rgba(20,15,12,.42) 0%,rgba(20,15,12,0) 58%);pointer-events:none}
+.hero .inner{position:absolute;inset:auto 0 0 0;z-index:2;padding-bottom:calc(clamp(28px,6vh,64px) + env(safe-area-inset-bottom,0px))}
+.hero h1{font-size:clamp(44px,8.4vw,132px);max-width:13ch;margin:0 0 clamp(24px,4vh,44px)}
+.hero h1 .ln{display:block;overflow:hidden;padding-bottom:.06em}
+.hero h1 .ln span{display:block;transform:translateY(105%);transition:transform 1.3s var(--ease-out)}
+.ready .hero h1 .ln span{transform:none}
+.ready .hero h1 .ln:nth-child(2) span{transition-delay:.1s}.ready .hero h1 .ln:nth-child(3) span{transition-delay:.2s}
+.hero h1 em{font-style:italic;font-weight:300}
+.hero .meta{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;flex-wrap:wrap;opacity:0;transition:opacity 1.2s .5s}
+.ready .hero .meta{opacity:1}
+.hero .cap{font-size:12px;letter-spacing:.24em;text-transform:uppercase;font-weight:400}
+.hero .cap b{font-weight:400;opacity:.65;margin-right:14px}
+.dots{display:flex;gap:10px}
+.dots button{width:44px;height:24px;position:relative}
+.dots button::before,.dots button i{content:"";position:absolute;left:0;right:0;top:50%;height:1px;background:rgba(255,255,255,.35)}
+.dots button i{background:#FFFFFF;transform:scaleX(0);transform-origin:left}
+.dots button.on i{animation:prog 6.5s linear forwards}
+.dots button.past i{transform:scaleX(1)}
+@keyframes prog{to{transform:scaleX(1)}}
+.hero .dim{position:absolute;z-index:2;right:max(var(--gut),env(safe-area-inset-right,0px));top:22%;bottom:30%;width:44px;
+  display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity 1s}
+.hero .dim.show{opacity:.92}
+.dimline{position:absolute;top:0;bottom:0;left:50%;width:1px;background:rgba(255,255,255,.7)}
+.dimline::before,.dimline::after{content:"";position:absolute;left:-6px;width:13px;height:1px;background:#FFFFFF;transform:rotate(-45deg)}
+.dimline::before{top:0}.dimline::after{bottom:0}
+.dim span{position:relative;transform:rotate(-90deg);white-space:nowrap;font-size:11px;letter-spacing:.2em;background:transparent;
+  padding:4px 8px;text-transform:uppercase}
+.scroll-cue{position:absolute;z-index:2;left:50%;bottom:calc(18px + env(safe-area-inset-bottom,0px));width:1px;height:56px;background:rgba(255,255,255,.25);overflow:hidden}
+.scroll-cue::after{content:"";position:absolute;left:0;top:-50%;width:1px;height:50%;background:#FFFFFF;animation:cue 2.2s var(--ease) infinite}
+@keyframes cue{to{top:110%}}
+@media (max-width:760px){.hero .dim{display:none}.scroll-cue{display:none}}
+
+/* statement */
+.statement{padding-block:clamp(96px,16vh,200px)}
+.statement .grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:24px}
+.statement .eyebrow{grid-column:1/4}
+.statement p.big{grid-column:4/13;margin:0;font-family:var(--display);font-weight:300;font-size:clamp(30px,4.3vw,64px);line-height:1.12;text-wrap:balance}
+.statement .w{opacity:.22}
+.statement .sig{grid-column:4/13;display:flex;gap:40px;flex-wrap:wrap;margin-top:56px}
+.sig div{display:flex;flex-direction:column;gap:6px}
+.sig strong{font-family:var(--display);font-weight:400;font-size:24px}
+@media (max-width:760px){.statement .grid>*{grid-column:1/-1!important}}
+
+/* projects index */
+.projects{padding-block:clamp(64px,10vh,120px) clamp(96px,14vh,160px);border-top:1px solid var(--line)}
+.sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;flex-wrap:wrap;margin-bottom:clamp(36px,6vh,64px)}
+.sec-head h2{font-size:clamp(46px,7vw,104px);margin:10px 0 0}
+.sec-head p{max-width:34ch;margin:0;color:var(--mute)}
+.plist{list-style:none;margin:0;padding:0;border-top:1px solid var(--ink)}
+.prow{border-bottom:1px solid var(--line)}
+.prow button{width:100%;display:grid;grid-template-columns:72px minmax(0,1fr) minmax(0,.9fr) 120px;align-items:center;gap:20px;
+  padding:clamp(20px,3.2vh,34px) 0;text-align:left;transition:padding .6s var(--ease),color .4s}
+.prow .no{font-family:var(--display);font-style:italic;font-size:22px;color:var(--burgundy)}
+.prow .t{font-family:var(--display);font-size:clamp(30px,4.2vw,64px);line-height:1;font-weight:300;transition:transform .7s var(--ease)}
+.prow .k{font-size:13px;color:var(--mute);letter-spacing:.04em}
+.prow .c{font-size:11px;letter-spacing:.24em;text-transform:uppercase;text-align:right;font-weight:400}
+.prow .thumb{display:none}
+@media (hover:hover){.prow button:hover .t{transform:translateX(24px)}.plist:hover .prow button{color:var(--stone)}.plist:hover .prow button:hover{color:var(--ink)}}
+.preview{position:fixed;left:0;top:0;z-index:40;width:clamp(260px,26vw,420px);aspect-ratio:4/5;pointer-events:none;overflow:hidden;
+  opacity:0;transform:translate(-50%,-50%) scale(.86);transition:opacity .45s,transform .6s var(--ease-out);border-radius:2px}
+.preview.on{opacity:1;transform:translate(-50%,-50%) scale(1)}
+.preview img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .5s}
+.preview img.on{opacity:1}
+@media (max-width:760px){
+  .prow button{grid-template-columns:44px minmax(0,1fr);row-gap:10px}
+  .prow .k{grid-column:2}.prow .c{display:none}
+  .prow .thumb{display:block;grid-column:1/-1;aspect-ratio:3/2;overflow:hidden}
+  .prow .thumb img{width:100%;height:100%;object-fit:cover}
+}
+@media (hover:none){.preview{display:none}}
+
+/* horizontal gallery */
+.hgal{background:var(--paper-2);overflow:hidden}
+.hgal .head{padding-block:clamp(64px,10vh,110px) 36px;display:flex;align-items:flex-end;justify-content:space-between;gap:24px;flex-wrap:wrap}
+.hgal h2{font-size:clamp(40px,6vw,92px);margin:10px 0 0}
+.track{display:flex;gap:clamp(16px,2.4vw,40px);padding-bottom:clamp(64px,10vh,110px);width:max-content}
+.panel{margin:0;display:flex;flex-direction:column;gap:14px}
+.panel .frame{height:min(64vh,640px);overflow:hidden}
+.panel img{height:100%;width:auto;max-width:none;transition:transform 1.4s var(--ease-out)}
+.panel:hover img{transform:scale(1.035)}
+.panel figcaption{display:flex;justify-content:space-between;gap:20px;font-size:12px;letter-spacing:.18em;text-transform:uppercase}
+.panel figcaption span{color:var(--mute)}
+.hgal .track-wrap{padding-left:max(var(--gut),env(safe-area-inset-left,0px))}
+.h-touch{display:none}@media (max-width:760px){.h-desk{display:none}.h-touch{display:inline}}
+@media (max-width:760px){
+  .hgal .track-wrap{overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding-right:16px}
+  .panel{scroll-snap-align:start}.panel .frame{height:min(52vh,420px)}
+}
+
+/* studio */
+.studio{padding-block:clamp(96px,14vh,170px)}
+.studio .grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:24px;align-items:start}
+.studio .pic{grid-column:1/7;position:relative;overflow:hidden;aspect-ratio:1667/1816;max-width:100%}
+.studio .pic img{position:absolute;inset:-9% 0;width:100%;height:118%;object-fit:cover}
+.studio .txt{grid-column:8/13;display:flex;flex-direction:column;gap:28px;padding-top:4vh;min-width:0}
+.studio h2{font-size:clamp(40px,5vw,78px);margin:0}
+.studio p{margin:0;max-width:52ch}
+.studio .lead{font-family:var(--display);font-size:clamp(22px,2vw,28px);line-height:1.38;font-weight:400}
+.triad{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;border-top:1px solid var(--line);padding-top:24px}
+.triad b{display:block;font-family:var(--display);font-weight:400;font-size:26px;margin-bottom:4px}
+.triad span{font-size:14px;color:var(--mute);line-height:1.5}
+.steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px;margin-top:clamp(64px,10vh,110px);border-top:1px solid var(--ink);padding-top:28px}
+.steps li{list-style:none;display:flex;flex-direction:column;gap:8px}
+.steps .n{font-family:var(--display);font-style:italic;color:var(--burgundy);font-size:22px}
+.steps strong{font-family:var(--display);font-weight:400;font-size:26px}
+.steps span{font-size:14px;color:var(--mute)}
+.steps ol{display:contents}
+@media (max-width:900px){.studio .grid>*{grid-column:1/-1!important}.studio .pic{aspect-ratio:4/5}.steps{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:480px){.triad{grid-template-columns:1fr}.steps{grid-template-columns:1fr}}
+
+/* services */
+.services{background:var(--olive);color:var(--olive-ink);padding-block:clamp(96px,14vh,160px)}
+.services .eyebrow{color:rgba(242,241,234,.7)}
+.services h2{font-size:clamp(44px,6.5vw,100px);margin:10px 0 clamp(40px,7vh,72px);max-width:12ch}
+.slist{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:clamp(24px,5vw,80px)}
+.svc{border-top:1px solid rgba(242,241,234,.28);padding:26px 0 28px;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:6px 16px;cursor:default}
+.svc b{font-family:var(--display);font-weight:300;font-size:clamp(28px,2.8vw,42px);line-height:1.05;transition:transform .7s var(--ease)}
+.svc i{font-style:normal;font-size:20px;opacity:.6;transition:transform .7s var(--ease)}
+.svc p{grid-column:1/-1;margin:0;max-width:46ch;font-size:15px;color:rgba(242,241,234,.78);
+  max-height:0;opacity:0;overflow:hidden;transition:max-height .8s var(--ease),opacity .6s}
+.svc:hover b,.svc:focus-within b{transform:translateX(14px)}
+.svc:hover i{transform:rotate(45deg)}
+.svc:hover p,.svc:focus-within p{max-height:120px;opacity:1}
+@media (hover:none){.svc p{max-height:none;opacity:1}}
+@media (max-width:760px){.slist{grid-template-columns:1fr}}
+
+/* contact */
+.contact{background:var(--burgundy);color:var(--burgundy-ink);padding-block:clamp(96px,14vh,160px)}
+.contact .grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:24px}
+.contact .l{grid-column:1/7;display:flex;flex-direction:column;gap:28px;min-width:0}
+.contact .eyebrow{color:rgba(246,236,238,.7)}
+.contact h2{font-size:clamp(46px,7vw,110px);margin:0}
+.handle{display:flex;align-items:center;gap:16px;flex-wrap:wrap;font-family:var(--display);font-size:clamp(24px,2.4vw,34px)}
+.handle button{font-family:var(--text);font-size:11px;letter-spacing:.24em;text-transform:uppercase;border:1px solid rgba(246,236,238,.5);padding:10px 16px;transition:background .4s,color .4s}
+.handle button:hover{background:var(--burgundy-ink);color:var(--burgundy)}
+form.f{grid-column:8/13;display:flex;flex-direction:column;gap:20px;min-width:0}
+.fld{display:flex;flex-direction:column;gap:6px}
+.fld label{font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:rgba(246,236,238,.75)}
+.fld input,.fld select,.fld textarea{font:inherit;font-size:17px;color:var(--burgundy-ink);background:transparent;border:0;border-bottom:1px solid rgba(246,236,238,.45);
+  padding:10px 0;border-radius:0;outline:none;transition:border-color .4s}
+.fld select option{color:var(--ink)}
+.fld input:focus,.fld select:focus,.fld textarea:focus{border-bottom-color:var(--burgundy-ink)}
+.send{align-self:flex-start;display:flex;align-items:center;gap:14px;font-size:12px;letter-spacing:.24em;text-transform:uppercase;font-weight:400;
+  border:1px solid var(--burgundy-ink);padding:16px 26px;transition:background .4s,color .4s}
+.send:hover{background:var(--burgundy-ink);color:var(--burgundy)}
+.note{font-size:14px;color:var(--burgundy-ink);border-left:2px solid var(--burgundy-ink);padding-left:12px}
+@media (max-width:900px){.contact .grid>*{grid-column:1/-1!important}}
+
+/* footer */
+footer{padding-block:56px calc(40px + env(safe-area-inset-bottom,0px));background:var(--paper)}
+footer .row{display:flex;justify-content:space-between;align-items:flex-end;gap:32px;flex-wrap:wrap}
+footer .logo{width:min(520px,80vw);color:var(--ink)}
+footer .cols{display:flex;gap:48px;flex-wrap:wrap;font-size:13px;color:var(--mute)}
+footer .cols div{display:flex;flex-direction:column;gap:6px}
+footer a{text-decoration:none}
+
+/* project overlay */
+.ov{position:fixed;inset:0;z-index:80;background:var(--paper);display:flex;flex-direction:column;clip-path:inset(100% 0 0 0);
+  transition:clip-path 1s var(--ease);padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+.ov.open{clip-path:inset(0 0 0 0)}
+.ov .top{display:flex;align-items:center;justify-content:space-between;gap:16px;height:76px;border-bottom:1px solid var(--line)}
+.ov .top .t{display:flex;gap:18px;align-items:baseline;min-width:0}
+.ov .top .t i{font-family:var(--display);color:var(--burgundy);font-size:20px}
+.ov .top .t b{font-family:var(--display);font-weight:400;font-size:clamp(22px,2.4vw,32px);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.close{font-size:12px;letter-spacing:.24em;text-transform:uppercase;display:flex;gap:10px;align-items:center}
+.ov .body{flex:1;display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:clamp(24px,3vw,48px);min-height:0;padding-block:24px}
+.stage{position:relative;min-height:0;display:flex;align-items:center;justify-content:center;touch-action:pan-y}
+.stage img{max-height:100%;max-width:100%;object-fit:contain;position:absolute;inset:0;margin:auto;opacity:0;transform:scale(1.02);
+  transition:opacity .8s var(--ease),transform 1.2s var(--ease-out)}
+.stage img.on{opacity:1;transform:none}
+.nav-arrows{position:absolute;inset:auto 0 0 auto;display:flex;gap:8px;z-index:2}
+.nav-arrows button{width:48px;height:48px;border:1px solid var(--line);background:rgba(255,255,255,.88);font-size:18px}
+.nav-arrows button:hover{border-color:var(--ink)}
+.side{display:flex;flex-direction:column;gap:22px;min-height:0;overflow:auto}
+.side p{margin:0;font-size:15px}
+.side dl{margin:0;display:grid;grid-template-columns:auto minmax(0,1fr);gap:10px 18px;font-size:14px;border-top:1px solid var(--line);padding-top:18px}
+.side dt{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--mute);padding-top:2px}
+.side dd{margin:0}
+.thumbs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}
+.thumbs button{aspect-ratio:1;overflow:hidden;opacity:.45;transition:opacity .4s}
+.thumbs button.on,.thumbs button:hover{opacity:1}
+.thumbs img{width:100%;height:100%;object-fit:cover}
+.counter{font-size:12px;letter-spacing:.2em;font-variant-numeric:tabular-nums;color:var(--mute)}
+.capline{font-size:12px;letter-spacing:.18em;text-transform:uppercase}
+@media (max-width:900px){.ov .body{grid-template-columns:1fr;grid-template-rows:minmax(0,56vh) auto;overflow:auto}.side{overflow:visible}}
+
+/* cursor */
+.cur{position:fixed;left:0;top:0;z-index:95;pointer-events:none;width:12px;height:12px;margin:-6px 0 0 -6px;border-radius:50%;
+  background:var(--burgundy);transition:width .45s var(--ease-out),height .45s var(--ease-out),margin .45s var(--ease-out),background .4s;
+  display:grid;place-items:center;color:#FFFFFF;font-size:10px;letter-spacing:.2em;text-transform:uppercase}
+.cur span{opacity:0;transition:opacity .3s}
+.cur.big{width:86px;height:86px;margin:-43px 0 0 -43px}
+.cur.big span{opacity:1}
+@media (hover:none),(pointer:coarse){.cur{display:none}}
+
+.reveal{transform:translateY(28px);opacity:.001;transition:transform 1.2s var(--ease-out),opacity 1.2s var(--ease-out)}
+.reveal.in{transform:none;opacity:1}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition-duration:.01ms!important}
+  .reveal{transform:none;opacity:1}.statement .w{opacity:1}.hero .slide img{transform:none}
+  .hero h1 .ln span{transform:none}.hero .meta{opacity:1}.cur{display:none}
+}
+</style>
+
+<div id="root"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.3.1/umd/react.production.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.3.1/umd/react-dom.production.min.js"></script>
+<script src="https://unpkg.com/htm@3.1.1/dist/htm.umd.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+<script>
+const { useState, useEffect, useRef, useCallback } = React;
+const html = htm.bind(React.createElement);
+const RM = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+const IMG = (id) => "img/" + id + ".jpg";
+const WORDMARK = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="145.9 145.9 1216.0 250.0" width="100%" role="img" aria-label="KAÏRA Interior Design" style="display:block;height:auto"><g fill="currentColor" color="currentColor" transform="translate(145.9,145.9)"><g transform="translate(0,50)"><g transform="translate(14,0)"><path d="M0.00,0.00 L26.00,0.00 L26.00,200.00 L0.00,200.00 Z"/><path d="M34.00,128.00 L41.00,128.00 L157.00,0.00 L150.00,0.00 Z"/><path d="M55.50,112.00 L91.75,72.00 L178.00,200.00 L142.00,200.00 Z"/><path d="M-14.00,0.00 L40.00,0.00 L40.00,4.00 L-14.00,4.00 Z"/><path d="M-14.00,196.00 L40.00,196.00 L40.00,200.00 L-14.00,200.00 Z"/><path d="M136.00,0.00 L172.00,0.00 L172.00,4.00 L136.00,4.00 Z"/><path d="M128.00,196.00 L194.00,196.00 L194.00,200.00 L128.00,200.00 Z"/></g><g transform="translate(296,0)"><path d="M0.00,200.00 L7.00,200.00 L89.00,0.00 L82.00,0.00 Z"/><path d="M82.00,0.00 L114.00,0.00 L198.00,200.00 L166.00,200.00 Z"/><path d="M39.60,138.00 L132.80,138.00 L132.80,142.00 L39.60,142.00 Z"/><path d="M-14.00,196.00 L26.00,196.00 L26.00,200.00 L-14.00,200.00 Z"/><path d="M148.00,196.00 L212.00,196.00 L212.00,200.00 L148.00,200.00 Z"/></g><g transform="translate(596,0)"><path d="M0.00,0.00 L26.00,0.00 L26.00,200.00 L0.00,200.00 Z"/><path d="M-14.00,0.00 L40.00,0.00 L40.00,4.00 L-14.00,4.00 Z"/><path d="M-14.00,196.00 L40.00,196.00 L40.00,200.00 L-14.00,200.00 Z"/><path d="M-11.00,-50.00 L-1.00,-40.00 L-11.00,-30.00 L-21.00,-40.00 Z"/><path d="M37.00,-50.00 L47.00,-40.00 L37.00,-30.00 L27.00,-40.00 Z"/></g><g transform="translate(724,0)"><path d="M0.00,0.00 L26.00,0.00 L26.00,200.00 L0.00,200.00 Z"/><path d="M0,0 H96 C141,0 154,24 154,52 C154,80 141,104 96,104 H0 Z M26,4 V100 H92 C118,100 126,80 126,52 C126,24 118,4 92,4 Z" fill-rule="evenodd"/><path d="M70.00,112.00 L104.00,112.00 L176.00,200.00 L142.00,200.00 Z"/><path d="M-14.00,0.00 L26.00,0.00 L26.00,4.00 L-14.00,4.00 Z"/><path d="M-14.00,196.00 L40.00,196.00 L40.00,200.00 L-14.00,200.00 Z"/><path d="M128.00,196.00 L192.00,196.00 L192.00,200.00 L128.00,200.00 Z"/></g><g transform="translate(1004,0)"><path d="M0.00,200.00 L7.00,200.00 L89.00,0.00 L82.00,0.00 Z"/><path d="M82.00,0.00 L114.00,0.00 L198.00,200.00 L166.00,200.00 Z"/><path d="M39.60,138.00 L132.80,138.00 L132.80,142.00 L39.60,142.00 Z"/><path d="M-14.00,196.00 L26.00,196.00 L26.00,200.00 L-14.00,200.00 Z"/><path d="M148.00,196.00 L212.00,196.00 L212.00,200.00 L148.00,200.00 Z"/></g></g></g></svg>`;
+const EMBLEM = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="62.4 62.4 400.0 520.0" width="100%" role="img" aria-label="KAÏRA Interior Design" style="display:block;height:auto"><g fill="currentColor" color="currentColor" transform="translate(62.4,62.4)"><path d="M0,520 V200.0 A200.0,200.0 0 0 1 400,200.0 V520" fill="none" stroke="currentColor" stroke-width="5"/><g transform="translate(60.0,260.0)"><g transform="translate(14,0)"><path d="M0.00,0.00 L26.00,0.00 L26.00,200.00 L0.00,200.00 Z"/><path d="M34.00,150.00 L41.00,150.00 L135.00,0.00 L128.00,0.00 Z"/><path d="M128.00,0.00 L160.00,0.00 L252.00,200.00 L220.00,200.00 Z"/><path d="M57.29,124.00 L79.85,88.00 L156.00,200.00 L120.00,200.00 Z"/><path d="M112.33,122.00 L177.04,122.00 L177.04,126.00 L112.33,126.00 Z"/><path d="M-14.00,0.00 L40.00,0.00 L40.00,4.00 L-14.00,4.00 Z"/><path d="M-14.00,196.00 L40.00,196.00 L40.00,200.00 L-14.00,200.00 Z"/><path d="M106.00,196.00 L170.00,196.00 L170.00,200.00 L106.00,200.00 Z"/><path d="M202.00,196.00 L266.00,196.00 L266.00,200.00 L202.00,200.00 Z"/></g></g></g></svg>`;
+const Svg = ({ markup, className }) => html`<span className=${className} dangerouslySetInnerHTML=${{ __html: markup }}></span>`;
+
+/* ---------------------------------------------------------------- content (KAÏRA's own projects and renders) */
+const HERO = [
+  { id: "rdc-salon-05", cap: "Villa", room: "Dining room", h: "≈ 284 cm" },
+  { id: "n03", cap: "Residential", room: "Living room", h: null },
+  { id: "chambre-principale-05", cap: "Villa", room: "Master bedroom", h: "≈ 292 cm" },
+  { id: "etage1-sejour-02", cap: "Villa", room: "First-floor living room", h: "≈ 289 cm" },
+];
+const PROJECTS = [
+  { key: "villa", n: "01", title: "Villa", kind: "Private residence", cover: "rdc-salon-02",
+    text: "A family villa conceived as a sequence of warm, quiet rooms, each organised around one wall drawn as a piece of furniture: an oak TV wall, a library, a backlit marble headboard.",
+    facts: [["Spaces", "Living & dining room, guest bedroom, first-floor living room, master bedroom"],
+            ["Ceiling height", "≈ 284 cm on the ground floor"], ["Palette", "Light oak, cream, dark wood, veined marble, burgundy"],
+            ["Scope", "Interior design, space planning, custom furniture, 3D visualization, technical drawings"]],
+    imgs: [["rdc-salon-05", "Dining room"], ["rdc-salon-09", "Dining room — library"], ["rdc-salon-11", "Living room — artwork wall"],
+           ["rdc-salon-08", "Living room — oak columns"], ["etage1-sejour-02", "First-floor living room"],
+           ["etage1-sejour-03", "First-floor living room"], ["chambre-principale-05", "Master bedroom"],
+           ["chambre-principale-01", "Master bedroom — headboard wall"], ["chambre-amis-01", "Guest bedroom"]] },
+  { key: "residential", n: "02", title: "Residential Interiors", kind: "Living, dining, kitchens, entrance", cover: "n03",
+    text: "Living rooms, dining rooms, kitchens and entrances for private homes: sculptural seating, walnut and oak joinery, veined stones and integrated light.",
+    facts: [["Spaces", "Living rooms, dining rooms, kitchens, entrance"], ["Materials", "Walnut, light oak, black and white marble, bouclé"],
+            ["Scope", "Interior design, custom furniture, 3D visualization"]],
+    imgs: [["n03", "Sculptural living room"], ["n02", "Gallery dining room"], ["n09", "Walnut wall and stone TV panel"],
+           ["n01", "L-shaped kitchen"], ["r19", "Open living space"], ["r13", "Living room and staircase"], ["r21", "Entrance"], ["r20", "Kitchen island"]] },
+  { key: "workspaces", n: "03", title: "Workspaces", kind: "Executive and private offices", cover: "r14",
+    text: "Offices drawn for focus: an executive office facing the city with backlit onyx panels, and a compact private office in light oak and black fluting.",
+    facts: [["Spaces", "Executive office, private office"], ["Materials", "Walnut, green onyx, light oak, matt black"], ["Scope", "Interior design, furniture, 3D visualization"]],
+    imgs: [["r14", "Executive office"], ["n04", "Private office"]] },
+  { key: "rooftop", n: "04", title: "Rooftop Bar & Lounge", kind: "Hospitality", cover: "n05",
+    text: "A bar counter clad in vertical walnut battens, topped with green marble and cut by a line of light, facing the skyline; woven armchairs for the lounge.",
+    facts: [["Spaces", "Bar, lounge"], ["Materials", "Walnut battens, green marble, brass, woven fibre"], ["Scope", "Interior design, 3D visualization"]],
+    imgs: [["n05", "Bar"], ["n08", "Lounge"]] },
+  { key: "retail", n: "05", title: "Retail Showroom", kind: "Home appliances & electronics", cover: "n13",
+    text: "A showroom organised in brand zones and product families: graphite display walls, walnut shelves and plinths, LED-outlined niches and a continuous light line.",
+    facts: [["Zones", "Air conditioning, appliances, TV walls, audio"], ["Materials", "Graphite, walnut, white marble-effect floor"], ["Scope", "Retail design, display furniture, 3D visualization"]],
+    imgs: [["n13", "Air-conditioning wall"], ["n14", "Appliance hall"], ["n12", "Audio islands"], ["n15", "TV wall"], ["n16", "Display units"]] },
+  { key: "kids", n: "06", title: "Children's Rooms", kind: "A collection of five concepts", cover: "k07",
+    text: "Arches, scallops and clouds drawn into the custom furniture itself, in powder pink, olive and caramel, with light hidden in niches and headboards.",
+    facts: [["Concepts", "Nuage Olive, Douceur Lapin, Jungle Douce, Nuages, Ourson Caramel"], ["Scope", "Concept design, custom furniture, 3D visualization"]],
+    imgs: [["k07", "Nuage Olive"], ["k01", "Douceur Lapin"], ["k06", "Jungle Douce"], ["k04", "Nuages"], ["k05", "Ourson Caramel"]] },
+];
+const GALLERY = [["rdc-salon-11", "Living room", "Villa"], ["etage1-sejour-08", "Entrance wall", "First floor"],
+  ["chambre-principale-03", "Bay window", "Master bedroom"], ["rdc-salon-10", "Lit coffers", "Hall"],
+  ["chambre-amis-03", "Soft light", "Guest bedroom"], ["rdc-salon-08", "Oak & shadow", "Living room"]];
+const SERVICES = [
+  ["Interior Design", "Concept, atmosphere and complete design of residential and professional interiors."],
+  ["Space Planning", "Layouts that organise circulation, storage and everyday uses, room by room."],
+  ["2D Plans", "Furniture and layout plans, clear and dimensioned."],
+  ["3D Visualization", "Realistic renders to see each space before it is built."],
+  ["Custom Furniture", "TV walls, libraries, wardrobes, headboards and dressings drawn for the space."],
+  ["Material Selection", "Woods, stones, lacquers and fabrics, presented as boards and samples."],
+  ["Technical Drawings", "Elevations, sections and joinery details for workshops and the site."],
+  ["Project Follow-up", "Coordination with craftsmen and follow-up through to completion."],
+];
+const STATEMENT = "We design calm, measured interiors. Light comes first, then matter: oak, marble, lacquer and soft textiles. Every wall is drawn like a piece of furniture, so that storage, light and decoration become architecture.";
+
+/* ---------------------------------------------------------------- smooth scroll + shared helpers */
+let lenis = null;
+function scrollToId(id) {
+  const el = document.getElementById(id);
+  if (!el) return;
+  if (lenis) lenis.scrollTo(el, { offset: 0, duration: 1.6 });
+  else el.scrollIntoView({ behavior: RM ? "auto" : "smooth" });
+}
+
+function Loader({ onDone }) {
+  const [p, setP] = useState(RM ? 100 : 0);
+  const [out, setOut] = useState(false);
+  useEffect(() => {
+    if (RM) { onDone(); setOut(true); return; }
+    let raf, t0;
+    const img = new Image(); let loaded = false;
+    img.onload = img.onerror = () => { loaded = true; };
+    img.src = IMG(HERO[0].id);
+    const tick = (t) => {
+      t0 = t0 || t;
+      const k = Math.min(1, (t - t0) / 1500);
+      const v = Math.round((loaded ? k : Math.min(k, .9)) * 100);
+      setP(v);
+      if (v < 100) raf = requestAnimationFrame(tick);
+      else setTimeout(() => { setOut(true); onDone(); }, 250);
+    };
+    raf = requestAnimationFrame(tick);
+    return () => cancelAnimationFrame(raf);
+  }, []);
+  return html`<div className=${"loader" + (out ? " out" : "")} aria-hidden="true" style=${{ "--p": p / 100 }}>
+    <${Svg} markup=${WORDMARK} className="mark" />
+    <div className="count">${String(p).padStart(3, "0")}</div>
+    <div className="bar"><i></i></div></div>`;
+}
+
+function Header({ menu, setMenu }) {
+  const [mode, setMode] = useState("on-hero");
+  useEffect(() => {
+    let last = 0;
+    const onScroll = () => {
+      const y = window.scrollY, h = window.innerHeight * .82;
+      setMode((y > h ? "solid" : "on-hero") + (y > last && y > h + 200 ? " hide" : ""));
+      last = y;
+    };
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+  const go = (id) => (e) => { e.preventDefault(); setMenu(false); scrollToId(id); };
+  return html`<header className=${"hdr " + (menu ? "on-hero" : mode)}>
+    <div className="wrap row">
+      <a href="#top" onClick=${go("top")} aria-label="KAÏRA Interior Design, back to top"><${Svg} markup=${WORDMARK} className="logo" /></a>
+      <nav aria-label="Main">
+        <a href="#studio" onClick=${go("studio")}>Studio</a><a href="#projects" onClick=${go("projects")}>Projects</a>
+        <a href="#services" onClick=${go("services")}>Services</a><a href="#contact" onClick=${go("contact")}>Contact</a>
+      </nav>
+      <button className="menu-btn" onClick=${() => setMenu(!menu)} aria-expanded=${menu}>${menu ? "Close" : "Menu"}</button>
+    </div></header>
+    <div className=${"menu wrap" + (menu ? " open" : "")} aria-hidden=${!menu}>
+      <a href="#studio" onClick=${go("studio")}>Studio</a><a href="#projects" onClick=${go("projects")}>Projects</a>
+      <a href="#services" onClick=${go("services")}>Services</a><a href="#contact" onClick=${go("contact")}>Contact</a>
+    </div>`;
+}
+
+function Hero({ ready }) {
+  const [i, setI] = useState(0);
+  const slidesRef = useRef(null);
+  useEffect(() => {
+    if (!ready) return;
+    const t = setTimeout(() => setI((i + 1) % HERO.length), 6500);
+    return () => clearTimeout(t);
+  }, [i, ready]);
+  useEffect(() => {
+    if (RM) return;
+    const tw = gsap.to(slidesRef.current, { yPercent: 14, ease: "none",
+      scrollTrigger: { trigger: slidesRef.current.parentNode, start: "top top", end: "bottom top", scrub: true } });
+    return () => { tw.scrollTrigger && tw.scrollTrigger.kill(); tw.kill(); };
+  }, []);
+  const s = HERO[i];
+  return html`<section className="hero" id="top" aria-label="Featured interiors">
+    <div className="slides" ref=${slidesRef}>
+      ${HERO.map((h, k) => html`<div key=${h.id} className=${"slide" + (k === i && ready ? " on" : "") + (k === 0 && !ready ? " on" : "")}>
+        <img src=${IMG(h.id)} alt=${h.cap + " — " + h.room + ", 3D visualization by KAÏRA"} loading=${k ? "lazy" : "eager"} /></div>`)}
+    </div>
+    <div className=${"dim" + (s.h && ready ? " show" : "")} aria-hidden="true"><div className="dimline"></div><span>${s.h ? "H " + s.h : ""}</span></div>
+    <div className="inner wrap">
+      <h1 className="display">
+        <span className="ln"><span>Interiors drawn</span></span>
+        <span className="ln"><span>in light, <em>matter</em></span></span>
+        <span className="ln"><span>and measure</span></span>
+      </h1>
+      <div className="meta">
+        <div className="cap" aria-live="polite"><b>${String(i + 1).padStart(2, "0")} / ${String(HERO.length).padStart(2, "0")}</b>${s.cap} — ${s.room}</div>
+        <div className="dots" role="tablist" aria-label="Choose an image">
+          ${HERO.map((h, k) => html`<button key=${k} role="tab" aria-selected=${k === i} aria-label=${"Show " + h.room}
+            className=${k === i ? "on" : k < i ? "past" : ""} onClick=${() => setI(k)}><i key=${k === i ? "a" + i : "b"}></i></button>`)}
+        </div>
+      </div>
+    </div>
+    <div className="scroll-cue" aria-hidden="true"></div>
+  </section>`;
+}
+
+function Statement() {
+  const ref = useRef(null);
+  useEffect(() => {
+    if (RM) return;
+    const words = ref.current.querySelectorAll(".w");
+    const tw = gsap.to(words, { opacity: 1, stagger: .06, ease: "none",
+      scrollTrigger: { trigger: ref.current, start: "top 80%", end: "bottom 55%", scrub: true } });
+    return () => { tw.scrollTrigger && tw.scrollTrigger.kill(); tw.kill(); };
+  }, []);
+  return html`<section className="statement wrap" id="studio-intro">
+    <div className="grid">
+      <div className="eyebrow">The studio</div>
+      <p className="big" ref=${ref}>${STATEMENT.split(" ").map((w, k) => html`<span key=${k} className="w">${w} </span>`)}</p>
+      <div className="sig">
+        <div><span className="eyebrow">Founder</span><strong>Karen Wehbe</strong></div>
+        <div><span className="eyebrow">Studio</span><strong>KAÏRA Interior Design</strong></div>
+        <div><span className="eyebrow">Practice</span><strong>Interior architecture</strong></div>
+      </div>
+    </div></section>`;
+}
+
+function Projects({ open, cursor }) {
+  const prev = useRef(null);
+  const [hover, setHover] = useState(null);
+  useEffect(() => {
+    if (!prev.current) return;
+    const xTo = gsap.quickTo(prev.current, "x", { duration: .6, ease: "power3" });
+    const yTo = gsap.quickTo(prev.current, "y", { duration: .6, ease: "power3" });
+    const mv = (e) => { xTo(e.clientX); yTo(e.clientY); };
+    window.addEventListener("pointermove", mv);
+    return () => window.removeEventListener("pointermove", mv);
+  }, []);
+  return html`<section className="projects wrap" id="projects">
+    <div className="sec-head">
+      <div><div className="eyebrow">Selected projects</div><h2 className="display">Projects</h2></div>
+      <p>Residences, workspaces, hospitality and retail, designed and visualised by the studio. Select a project to open its gallery.</p>
+    </div>
+    <ul className="plist" onMouseLeave=${() => { setHover(null); cursor(""); }}>
+      ${PROJECTS.map((p) => html`<li className="prow" key=${p.key}>
+        <button onMouseEnter=${() => { setHover(p.key); cursor("View"); }} onFocus=${() => setHover(p.key)} onClick=${() => open(p.key)}>
+          <span className="no">${p.n}</span><span className="t">${p.title}</span><span className="k">${p.kind}</span>
+          <span className="c">${p.imgs.length} views</span>
+          <span className="thumb"><img src=${IMG(p.cover)} alt="" loading="lazy" /></span>
+        </button></li>`)}
+    </ul>
+    <div className=${"preview" + (hover ? " on" : "")} ref=${prev} aria-hidden="true">
+      ${PROJECTS.map((p) => html`<img key=${p.key} src=${IMG(p.cover)} alt="" className=${hover === p.key ? "on" : ""} loading="lazy" />`)}
+    </div>
+  </section>`;
+}
+
+function HGallery({ cursor }) {
+  const sec = useRef(null), track = useRef(null);
+  useEffect(() => {
+    if (RM) return;
+    const mm = gsap.matchMedia();
+    mm.add("(min-width: 761px)", () => {
+      const dist = () => Math.max(0, track.current.scrollWidth - window.innerWidth + 32);
+      gsap.to(track.current, { x: () => -dist(), ease: "none",
+        scrollTrigger: { trigger: sec.current, start: "top top", end: () => "+=" + dist(), pin: true, scrub: 1, invalidateOnRefresh: true } });
+    });
+    return () => mm.revert();
+  }, []);
+  return html`<section className="hgal" ref=${sec} aria-label="Inside the villa">
+    <div className="wrap head"><div><div className="eyebrow">Inside the villa</div><h2 className="display">A walk through<br/>quiet rooms</h2></div>
+      <p className="eyebrow hint"><span className="h-desk">Scroll to move through the villa</span><span className="h-touch">Swipe to move through the villa</span></p></div>
+    <div className="track-wrap"><div className="track" ref=${track}>
+      ${GALLERY.map(([id, t, r]) => html`<figure className="panel" key=${id} onMouseEnter=${() => cursor("Villa")} onMouseLeave=${() => cursor("")}>
+        <div className="frame"><img src=${IMG(id)} alt=${r + " — " + t} loading="lazy" /></div>
+        <figcaption><b>${t}</b><span>${r}</span></figcaption></figure>`)}
+    </div></div></section>`;
+}
+
+function Studio() {
+  const pic = useRef(null);
+  useEffect(() => {
+    if (RM) return;
+    const img = pic.current.querySelector("img");
+    const tw = gsap.fromTo(img, { yPercent: -6 }, { yPercent: 6, ease: "none",
+      scrollTrigger: { trigger: pic.current, start: "top bottom", end: "bottom top", scrub: true } });
+    return () => { tw.scrollTrigger && tw.scrollTrigger.kill(); tw.kill(); };
+  }, []);
+  const steps = [["Survey", "Measurements, photographs and existing plans."], ["Concept", "Atmosphere, palette, materials and layout."],
+    ["3D visualization", "Realistic renders of each key space."], ["Drawings & follow-up", "Elevations, joinery details and site coordination."]];
+  return html`<section className="studio wrap" id="studio">
+    <div className="grid">
+      <div className="pic" ref=${pic}><img src=${IMG("etage1-sejour-08")} alt="Villa, first-floor living room — oak double door and backlit library" loading="lazy" /></div>
+      <div className="txt reveal">
+        <div className="eyebrow">Studio</div>
+        <h2 className="display">A studio for calm, measured interiors</h2>
+        <p className="lead">KAÏRA Interior Design is an interior architecture studio founded by Karen Wehbe.</p>
+        <p>Each project starts with listening: how a family lives, how a team works, how light enters the rooms. From there the studio builds one clear idea and carries it through every scale, from the plan to the joint between two materials.</p>
+        <div className="triad">
+          <div><b>Light</b><span>Daylight first, then light built into coves, niches and panels.</span></div>
+          <div><b>Matter</b><span>Oak, marble, travertine, lacquer and textured fabrics.</span></div>
+          <div><b>Measure</b><span>Walls composed and drawn, down to the joinery.</span></div>
+        </div>
+      </div>
+    </div>
+    <ol className="steps reveal" aria-label="How a project unfolds">
+      ${steps.map(([t, d], k) => html`<li key=${t}><span className="n">${String(k + 1).padStart(2, "0")}</span><strong>${t}</strong><span>${d}</span></li>`)}
+    </ol>
+  </section>`;
+}
+
+function Services() {
+  return html`<section className="services" id="services"><div className="wrap">
+    <div className="eyebrow">Services</div>
+    <h2 className="display">What the studio designs for you</h2>
+    <div className="slist">${SERVICES.map(([n, d]) => html`<div className="svc" key=${n} tabIndex="0"><b>${n}</b><i aria-hidden="true">+</i><p>${d}</p></div>`)}</div>
+  </div></section>`;
+}
+
+function Contact() {
+  const [copied, setCopied] = useState(false);
+  const [sent, setSent] = useState(false);
+  const copy = () => {
+    const t = "@kaira.interior.design";
+    const ok = () => { setCopied(true); setTimeout(() => setCopied(false), 2000); };
+    try { navigator.clipboard.writeText(t).then(ok).catch(() => selectHandle()); } catch (e) { selectHandle(); }
+  };
+  const selectHandle = () => { const r = document.createRange(); r.selectNodeContents(document.getElementById("ig")); const s = getSelection(); s.removeAllRanges(); s.addRange(r); };
+  return html`<section className="contact" id="contact"><div className="wrap grid">
+    <div className="l">
+      <div className="eyebrow">Contact</div>
+      <h2 className="display">Tell us about your space</h2>
+      <p>For a new project, a renovation or a single custom piece, write to the studio on Instagram.</p>
+      <div className="handle"><span id="ig">@kaira.interior.design</span><button onClick=${copy}>${copied ? "Copied" : "Copy"}</button></div>
+    </div>
+    <form className="f" onSubmit=${(e) => { e.preventDefault(); setSent(true); }}>
+      <div className="fld"><label htmlFor="c-name">Name</label><input id="c-name" name="name" autoComplete="name" required /></div>
+      <div className="fld"><label htmlFor="c-mail">E-mail</label><input id="c-mail" name="email" type="email" autoComplete="email" required /></div>
+      <div className="fld"><label htmlFor="c-type">Project</label><select id="c-type" name="type">
+        <option>Private residence</option><option>Apartment</option><option>Office or workspace</option><option>Hospitality</option><option>Retail</option><option>Custom furniture</option></select></div>
+      <div className="fld"><label htmlFor="c-msg">Message</label><textarea id="c-msg" name="message" rows="3"></textarea></div>
+      ${sent ? html`<p className="note">This prototype does not send messages yet. Please write to @kaira.interior.design on Instagram.</p>`
+             : html`<button className="send" type="submit">Send enquiry <span aria-hidden="true">→</span></button>`}
+    </form>
+  </div></section>`;
+}
+
+function Footer() {
+  return html`<footer className="wrap"><div className="row">
+    <${Svg} markup=${WORDMARK} className="logo" />
+    <div className="cols">
+      <div><span className="eyebrow">Studio</span><span>KAÏRA Interior Design</span><span>Founder — Karen Wehbe</span></div>
+      <div><span className="eyebrow">Follow</span><a href="https://www.instagram.com/kaira.interior.design/" target="_blank" rel="noopener">Instagram</a></div>
+      <div><span className="eyebrow">©</span><span>2026 KAÏRA Interior Design</span></div>
+    </div></div></footer>`;
+}
+
+function Overlay({ pkey, close }) {
+  const p = PROJECTS.find((x) => x.key === pkey);
+  const [i, setI] = useState(0);
+  const [shown, setShown] = useState(false);
+  useEffect(() => { setI(0); const t = requestAnimationFrame(() => setShown(!!pkey)); return () => cancelAnimationFrame(t); }, [pkey]);
+  const go = useCallback((d) => p && setI((v) => (v + d + p.imgs.length) % p.imgs.length), [p]);
+  useEffect(() => {
+    if (!pkey) return;
+    const k = (e) => { if (e.key === "Escape") close(); if (e.key === "ArrowRight") go(1); if (e.key === "ArrowLeft") go(-1); };
+    window.addEventListener("keydown", k);
+    return () => window.removeEventListener("keydown", k);
+  }, [pkey, go]);
+  const sx = useRef(null);
+  if (!p) return html`<div className="ov" aria-hidden="true"></div>`;
+  return html`<div className=${"ov" + (shown ? " open" : "")} role="dialog" aria-modal="true" aria-label=${p.title}>
+    <div className="wrap top"><div className="t"><i>${p.n}</i><b>${p.title}</b></div>
+      <button className="close" onClick=${close} autoFocus>Close <span aria-hidden="true">✕</span></button></div>
+    <div className="wrap body">
+      <div className="stage" onPointerDown=${(e) => { sx.current = e.clientX; }}
+        onPointerUp=${(e) => { if (sx.current != null && Math.abs(e.clientX - sx.current) > 40) go(e.clientX < sx.current ? 1 : -1); sx.current = null; }}>
+        ${p.imgs.map(([id, c], k) => html`<img key=${id} src=${IMG(id)} alt=${p.title + " — " + c} className=${k === i ? "on" : ""} loading=${k < 2 ? "eager" : "lazy"} draggable="false" />`)}
+        ${p.imgs.length > 1 && html`<div className="nav-arrows"><button onClick=${() => go(-1)} aria-label="Previous image">←</button><button onClick=${() => go(1)} aria-label="Next image">→</button></div>`}
+      </div>
+      <aside className="side">
+        <div className="counter">${String(i + 1).padStart(2, "0")} / ${String(p.imgs.length).padStart(2, "0")}</div>
+        <div className="capline">${p.imgs[i][1]}</div>
+        <p>${p.text}</p>
+        <dl>${p.facts.map(([a, b]) => html`<${React.Fragment} key=${a}><dt>${a}</dt><dd>${b}</dd></${React.Fragment}>`)}</dl>
+        ${p.imgs.length > 1 && html`<div className="thumbs">${p.imgs.map(([id, c], k) => html`<button key=${id} className=${k === i ? "on" : ""} onClick=${() => setI(k)} aria-label=${"Show " + c}><img src=${IMG(id)} alt="" loading="lazy" /></button>`)}</div>`}
+      </aside>
+    </div></div>`;
+}
+
+function Cursor({ label }) {
+  const ref = useRef(null);
+  useEffect(() => {
+    if (RM || !window.matchMedia("(pointer: fine)").matches) return;
+    const xTo = gsap.quickTo(ref.current, "x", { duration: .35, ease: "power3" });
+    const yTo = gsap.quickTo(ref.current, "y", { duration: .35, ease: "power3" });
+    const mv = (e) => { xTo(e.clientX); yTo(e.clientY); };
+    window.addEventListener("pointermove", mv);
+    return () => window.removeEventListener("pointermove", mv);
+  }, []);
+  return html`<div className=${"cur" + (label ? " big" : "")} ref=${ref} aria-hidden="true"><span>${label}</span></div>`;
+}
+
+function App() {
+  const [ready, setReady] = useState(false);
+  const [menu, setMenu] = useState(false);
+  const [proj, setProj] = useState(null);
+  const [cur, setCur] = useState("");
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+    if (!RM && window.Lenis) {
+      lenis = new Lenis({ lerp: .085, smoothWheel: true });
+      lenis.on("scroll", ScrollTrigger.update);
+      gsap.ticker.add((t) => lenis && lenis.raf(t * 1000));
+      gsap.ticker.lagSmoothing(0);
+    }
+    const io = new IntersectionObserver((es) => es.forEach((e) => e.isIntersecting && e.target.classList.add("in")), { threshold: .15 });
+    document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
+    const settle = setTimeout(() => ScrollTrigger.refresh(), 1200);
+    return () => { io.disconnect(); clearTimeout(settle); };
+  }, []);
+  useEffect(() => { document.documentElement.classList.toggle("ready", ready); }, [ready]);
+  useEffect(() => {
+    const lock = !!proj || menu;
+    if (lenis) lock ? lenis.stop() : lenis.start();
+    document.body.style.overflow = lock ? "hidden" : "";
+  }, [proj, menu]);
+  return html`<${React.Fragment}>
+    <${Loader} onDone=${() => setReady(true)} />
+    <${Header} menu=${menu} setMenu=${setMenu} />
+    <main>
+      <${Hero} ready=${ready} />
+      <${Statement} />
+      <${Projects} open=${(k) => { setCur(""); setProj(k); }} cursor=${setCur} />
+      <${HGallery} cursor=${setCur} />
+      <${Studio} />
+      <${Services} />
+      <${Contact} />
+    </main>
+    <${Footer} />
+    <${Overlay} pkey=${proj} close=${() => setProj(null)} />
+    <${Cursor} label=${cur} />
+  </${React.Fragment}>`;
+}
+
+ReactDOM.createRoot(document.getElementById("root")).render(html`<${App} />`);
+</script>
