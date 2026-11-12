@@ -1,0 +1,10 @@
+# Netlify: caching rules (images, fonts and libraries change rarely; the page itself is always checked)
+/img/*
+  Cache-Control: public, max-age=31536000
+/fonts/*
+  Cache-Control: public, max-age=31536000
+/vendor/*
+  Cache-Control: public, max-age=31536000
+/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin

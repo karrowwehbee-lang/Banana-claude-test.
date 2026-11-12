@@ -102,7 +102,7 @@ button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:poin
 .cur.big{width:92px;height:92px;margin:-46px 0 0 -46px;mix-blend-mode:normal;background:var(--white)}
 .cur.big span{opacity:1}
 @media (hover:none),(pointer:coarse){.cur{display:none}}
-.grain{position:fixed;inset:-60%;z-index:80;pointer-events:none;opacity:.055;
+.grain{position:fixed;inset:-8%;z-index:80;pointer-events:none;opacity:.055;
   background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
   animation:grain 1.2s steps(6) infinite}
 @keyframes grain{0%{transform:translate(0,0)}17%{transform:translate(-4%,3%)}33%{transform:translate(3%,-5%)}50%{transform:translate(-6%,1%)}67%{transform:translate(5%,4%)}83%{transform:translate(-2%,-3%)}100%{transform:translate(0,0)}}
@@ -149,6 +149,7 @@ html.anim .hero .sc+.sc,html.anim .hero .cap+.cap,html.anim .hero .dim+.dim{visi
   .hero .w{font-size:clamp(46px,15vw,92px)}.hero .w.it{font-size:clamp(34px,10vw,64px)}
   .p-tl,.p-tr{top:calc(78px + env(safe-area-inset-top,0px))}
   .p-bl,.p-br{bottom:calc(200px + env(safe-area-inset-bottom,0px))}
+  .p-ml{top:39%}.p-mr{top:55%}
   .hero .bar{bottom:calc(84px + env(safe-area-inset-bottom,0px));flex-direction:column;align-items:stretch;gap:12px}
   .hero .caps,.hero .dims{flex:none;width:100%}
   .hero .dim{left:0;right:auto;align-items:flex-start}
@@ -246,7 +247,7 @@ html.rm .reel .k0full{display:none}
 .reel .count b{font-family:var(--display);font-weight:300;font-size:32px;font-variant-numeric:tabular-nums;line-height:1}
 .reel .tt{position:absolute;left:max(var(--g),env(safe-area-inset-left,0px));right:max(var(--g),env(safe-area-inset-right,0px));bottom:calc(104px + env(safe-area-inset-bottom,0px));display:flex;justify-content:space-between;align-items:flex-end;gap:24px}
 .reel .titles{position:relative;flex:1;min-width:0;height:clamp(64px,9.6vw,184px)}
-.reel .titles .t{position:absolute;left:0;bottom:0;font-size:clamp(58px,9.6vw,184px);white-space:nowrap}
+.reel .titles .t{position:absolute;left:0;right:0;bottom:0;font-size:clamp(58px,9.6vw,184px);line-height:.9}
 .reel .metas{position:relative;width:min(340px,34vw);height:150px;flex:none}
 .reel .meta{position:absolute;inset:auto 0 0 0;display:flex;flex-direction:column;align-items:flex-start;gap:14px;font-size:14px;line-height:1.6}
 .reel .meta .eyebrow{color:var(--sand)}
@@ -301,6 +302,7 @@ html.rm .reel .k0full{display:none}
 .foot{position:fixed;left:0;right:0;bottom:0;z-index:1;background:var(--burgundy);color:var(--white);overflow:hidden;
   padding-top:clamp(56px,11vh,120px);padding-bottom:calc(92px + env(safe-area-inset-bottom,0px))}
 .foot.static{position:relative}
+.foot:not(.ready){visibility:hidden}
 .foot .cols{display:grid;grid-template-columns:minmax(0,1.5fr) repeat(3,minmax(0,1fr));gap:32px}
 .foot .cols>div{display:flex;flex-direction:column;gap:10px;min-width:0}
 .foot .cols .eyebrow{color:rgba(247,242,235,.6);margin-bottom:8px}
@@ -512,7 +514,7 @@ html.rm .scene>.stage{position:relative}
 html.rm .hero .sc+.sc{display:none}
 html.rm .b-strip .stage{height:auto;overflow-x:auto;padding-block:40px}
 html.rm .fs .arch{clip-path:inset(24% 40% 16% 40% round 999px 999px 0 0)}
-html.rm .fs .card,html.rm .reel .intro,html.rm .reel .ly+.ly,html.rm .reel .t+.t,html.rm .reel .meta+.meta,html.rm .pr .tiltw,html.rm .pr .fadeT,html.rm .pr .fadeB{display:none}
+html.rm .hero .w:not([data-s="0"]),html.rm .hero .door,html.rm .fs .card,html.rm .reel .intro,html.rm .reel .ly:not(.k0),html.rm .reel .t+.t,html.rm .reel .meta+.meta,html.rm .pr .tiltw,html.rm .pr .fadeT,html.rm .pr .fadeB{display:none}
 html.rm .dr .stage,html.rm .pr .stage{height:auto;padding-block:120px 80px}
 html.rm .dr .it{position:relative;top:auto;right:auto;height:auto;padding:6px 0}
 html.rm .pr .head,html.rm .pr .list{position:relative;top:auto;left:auto}
@@ -520,6 +522,7 @@ html.rm .pr .list{margin-top:48px}html.rm .pr .list li{height:auto;padding:16px 
 </style>
 
 <div id="root"></div>
+<noscript><p style="padding:40px 20px;font-family:Georgia,serif;color:#F7F2EB;background:#15110E">KAÏRA Interior Design — please enable JavaScript to view the website, or visit @kaira.interior.design on Instagram.</p></noscript>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.3.1/umd/react.production.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.3.1/umd/react-dom.production.min.js"></script>
@@ -528,11 +531,14 @@ html.rm .pr .list{margin-top:48px}html.rm .pr .list li{height:auto;padding:16px 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
 <script>
-/* ============================================================== SETTINGS — fill in before going live
-   An empty field is simply not shown. formEndpoint: a Formspree form URL (https://formspree.io/f/xxxx).
-   founderPortrait: a photo file name in img/ (e.g. "karen.jpg") to show Karen's portrait in the founder arch.     */
+/* ============================================================== KAÏRA — SETTINGS (fill in before going live)
+   An empty field is simply not shown on the site.
+   email / phone / city : your studio details, e.g. email: "contact@your-domain.com"
+   formEndpoint         : a Formspree form address (https://formspree.io/f/xxxx) to receive the contact form by e-mail
+   founderPortrait      : a photo placed in the img/ folder (e.g. "karen.jpg") to show your portrait in the founder arch */
 const CONFIG = { email: "", phone: "", city: "", formEndpoint: "", founderPortrait: "" };
-
+</script>
+<script>
 const { useState, useEffect, useLayoutEffect, useRef, useCallback, Fragment } = React;
 const html = htm.bind(React.createElement);
 const RM = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -547,10 +553,10 @@ const dims = (id) => SIZES[id] || [1600, 1200];
 const pad = (n) => String(n).padStart(2, "0");
 const isDraw = (id) => id.startsWith("draw-");
 const Svg = ({ markup, className }) => html`<span className=${className} dangerouslySetInnerHTML=${{ __html: markup }}></span>`;
-function Pic({ id, alt = "", pos, cls = "cover", eager }) {
+function Pic({ id, alt = "", pos, cls = "cover", eager, prio }) {
   const [w, h] = dims(id);
   return html`<img className=${cls + (isDraw(id) ? " drawing" : "")} src=${IMG(id)} alt=${alt} width=${w} height=${h}
-    loading=${eager ? "eager" : "lazy"} decoding="async" draggable="false" style=${pos ? { objectPosition: pos } : null} />`;
+    loading=${eager ? "eager" : "lazy"} fetchpriority=${prio || (eager ? "high" : null)} decoding="async" draggable="false" style=${pos ? { objectPosition: pos } : null} />`;
 }
 /* KAÏRA monogram (from the arch emblem) */
 const KA = '<path d="M0,0 L26,0 L26,200 L0,200 Z"/><path d="M34,150 L41,150 L135,0 L128,0 Z"/><path d="M128,0 L160,0 L252,200 L220,200 Z"/><path d="M57.29,124 L79.85,88 L156,200 L120,200 Z"/><path d="M112.33,122 L177.04,122 L177.04,126 L112.33,126 Z"/><path d="M-14,0 L40,0 L40,4 L-14,4 Z"/><path d="M-14,196 L40,196 L40,200 L-14,200 Z"/><path d="M106,196 L170,196 L170,200 L106,200 Z"/><path d="M202,196 L266,196 L266,200 L202,200 Z"/>';
@@ -735,7 +741,7 @@ function Loader({ route, onDone }) {
     };
     draw(); addEventListener("resize", draw);
     const load = (src) => new Promise((res) => { const i = new Image(); i.onload = i.onerror = res; i.src = src; });
-    const ids = route === "home" ? SCENES.map((s) => s.id) : p ? [p.id] : [];
+    const ids = p ? [p.id] : [];  /* only the first image gates the opening; the next rooms keep loading behind it */
     const ready = Promise.race([Promise.all([...ids.map((i) => load(IMG(i))), document.fonts ? document.fonts.ready : 0]), new Promise((r) => setTimeout(r, 7000))]);
     if (RM) { ready.then(() => { window.__booted = true; onDone(); }); return () => removeEventListener("resize", draw); }
     const tl = gsap.timeline({ onUpdate: draw });
@@ -859,6 +865,7 @@ function Foot({ route }) {
       el.classList.remove("static");
       const h = el.offsetHeight, tooTall = h > innerHeight - 8 || RM;
       el.classList.toggle("static", tooTall);
+      el.classList.add("ready");
       main && main.style.setProperty("--fh", tooTall ? "0px" : h + "px");
       ScrollTrigger.refresh();
     };
@@ -921,7 +928,7 @@ function Hero() {
   return html`<section className="hero scene" style=${{ height: "560vh" }} ref=${ref} data-tone="dark" aria-label="A walk through the villa">
     <h1 className="sr">KAÏRA Interior Design, interior architecture studio founded by Karen Wehbe</h1>
     <div className="stage"><div className="frame">
-      ${SCENES.map((s, i) => html`<div className="sc" key=${s.id}><${Pic} id=${s.id} pos=${s.pos} eager=${true} alt=${"Villa, " + s.room.toLowerCase()} /></div>`)}
+      ${SCENES.map((s, i) => html`<div className="sc" key=${s.id}><${Pic} id=${s.id} pos=${s.pos} eager=${true} prio=${i ? "low" : "high"} alt=${"Villa, " + s.room.toLowerCase()} /></div>`)}
       ${SCENES.slice(1).map((s, i) => html`<div className="door" key=${i}><i></i><i></i></div>`)}
       <div className="veil"></div>
       ${SCENES.map((s, i) => s.words.map(([w, p, it], j) => html`<div key=${i + "-" + j} className=${"w p-" + p + (it ? " it" : "")} data-s=${i} aria-hidden=${i > 0}>

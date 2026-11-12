@@ -3,7 +3,7 @@
   dist/       — standalone website for any static host / own domain: full HTML document, img/, fonts/, vendor/ (no CDN needed)
 Usage: python3 tools/images.py   (once, or when renders change)   then   python3 build.py
 """
-import json, pathlib, re, shutil
+import json, pathlib, re, shutil, subprocess
 ROOT = pathlib.Path(__file__).resolve().parent
 LOGO = ROOT.parent / "kaira-logo/logo"
 FONTS = ROOT.parent / "dossier-client/build/fonts"
@@ -60,26 +60,77 @@ for url in re.findall(r'<script src="(https://[^"]+)"></script>', body):
     assert (dist / "vendor" / name).exists(), name
     local = local.replace(url, "vendor/" + name)
 shutil.copy2(LOGO / "social/kaira-favicon-512.png", dist / "favicon.png")
+shutil.copy2(LOGO / "social/kaira-favicon-512.png", dist / "apple-touch-icon.png")
 shutil.copy2(ROOT / "img/rdc-salon-02.jpg", dist / "og-image.jpg")
+
+
+def minify(code, loader):
+    """Production copy only (the source stays readable). Falls back to the original if esbuild is unavailable."""
+    try:
+        r = subprocess.run(["npx", "-y", "esbuild@0.24.0", f"--loader={loader}", "--minify", "--target=es2019,chrome80,safari13"],
+                           input=code.encode(), capture_output=True, timeout=180, cwd="/tmp")
+        out = r.stdout.decode()
+        return out if r.returncode == 0 and len(out) > 100 else code
+    except Exception:
+        return code
+
+
+local = local.replace('<meta name="claude:viewport-fit-sides" content="cover">\n', "")
+css = re.search(r"<style>(.*?)</style>", local, re.S)
+local = local[:css.start(1)] + minify(css.group(1), "css") + local[css.end(1):]
+app = list(re.finditer(r"<script>(.*?)</script>", local, re.S))[-1]
+local = local[:app.start(1)] + minify(app.group(1), "js") + local[app.end(1):]
+
+site = json.loads((ROOT / "deploy/site.json").read_text()) if (ROOT / "deploy/site.json").exists() else {}
+url = (site.get("url") or "").rstrip("/")
 desc = "KAÏRA Interior Design, interior architecture studio founded by Karen Wehbe: residences, workspaces, hospitality and retail."
+ld = {"@context": "https://schema.org", "@type": "ProfessionalService", "name": "KAÏRA Interior Design",
+      "description": desc, "image": (url + "/" if url else "") + "og-image.jpg",
+      "founder": {"@type": "Person", "name": "Karen Wehbe"},
+      "sameAs": ["https://www.instagram.com/kaira.interior.design/"],
+      "knowsAbout": ["Interior design", "Interior architecture", "Space planning", "3D visualization", "Custom furniture", "Technical drawings"]}
+if url:
+    ld["url"] = url + "/"
+preload = "".join(f'<link rel="preload" href="fonts/{f}" as="font" type="font/woff2" crossorigin>' for f in
+                  ("cormorant-garamond-latin-300-normal.woff2", "cormorant-garamond-latin-300-italic.woff2", "jost-latin-300-normal.woff2", "jost-latin-400-normal.woff2"))
 head = f"""<!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="description" content="{desc}">
+{f'<link rel="canonical" href="{url}/">' if url else ''}
 <meta property="og:type" content="website">
+<meta property="og:site_name" content="KAÏRA Interior Design">
 <meta property="og:title" content="KAÏRA Interior Design">
 <meta property="og:description" content="{desc}">
-<meta property="og:image" content="og-image.jpg">
+<meta property="og:image" content="{(url + '/') if url else ''}og-image.jpg">
+{f'<meta property="og:url" content="{url}/">' if url else ''}
+<meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#15110E">
 <link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<script>if(!location.hash||location.hash==="#home"){{var l=document.createElement("link");l.rel="preload";l.as="image";l.href="img/rdc-salon-02.jpg";l.setAttribute("fetchpriority","high");document.head.appendChild(l)}}</script>
+{preload}
+<script type="application/ld+json">{json.dumps(ld, ensure_ascii=False)}</script>
 <style>{"".join(faces)}:root{{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}}body{{margin:0}}[hidden]{{display:none!important}}</style>
 """
-local = local.replace('<meta name="claude:viewport-fit-sides" content="cover">\n', "")
 title_end = local.index("</title>") + len("</title>")
 (dist / "index.html").write_text(head + local[:title_end] + "\n</head>\n<body>\n" + local[title_end:] + "\n</body>\n</html>\n")
+# hosting files: search engines, unknown addresses, caching and compression (Apache hosts and Netlify)
+(dist / "robots.txt").write_text("User-agent: *\nAllow: /\n" + (f"Sitemap: {url}/sitemap.xml\n" if url else ""))
+if url:
+    (dist / "sitemap.xml").write_text(f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'
+                                      f'<url><loc>{url}/</loc></url></urlset>\n')
+(dist / "404.html").write_text('<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">'
+                               '<title>KAÏRA Interior Design</title><meta http-equiv="refresh" content="0; url=/"><style>body{margin:0;min-height:100vh;display:grid;'
+                               'place-items:center;background:#15110E;color:#F7F2EB;font-family:Georgia,serif}a{color:inherit}</style></head><body>'
+                               '<p><a href="/">KAÏRA Interior Design</a></p></body></html>\n')
+for name in (".htaccess", "_headers"):
+    shutil.copy2(ROOT / "deploy" / name, dist / name)
 if GUIDE.exists():
     shutil.copy2(GUIDE, dist / "LISEZ-MOI.md")
+if (ROOT / "deploy/PUBLISH-EN.md").exists():
+    shutil.copy2(ROOT / "deploy/PUBLISH-EN.md", dist / "PUBLISH-EN.md")
 total = sum(f.stat().st_size for f in dist.rglob("*") if f.is_file())
 print(f"index.html {len(body)} bytes · {len(used)} images · dist {total / 1e6:.1f} MB (self-contained: fonts + libraries)")
