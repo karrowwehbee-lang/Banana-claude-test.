@@ -1,1 +1,16 @@
-{"published": []}
+{
+ "published": [
+  {
+   "id": "001",
+   "slug": "sculptural-calm",
+   "kind": "carousel",
+   "media_id": "18078936413560059",
+   "published_at": "2026-11-12T11:50Z",
+   "renders": [
+    "n03",
+    "n02"
+   ],
+   "permalink": null
+  }
+ ]
+}
