@@ -43,3 +43,8 @@ Hashtags: 5 core (#kairainteriordesign #interiorarchitecture #interiordesign #lu
 ## Buffer
 The queue always holds at least 5 ready items. The Sunday run reviews the week's performance (reach, saves, shares,
 follows) and adjusts the mix: more of what is saved and shared, less of what is skipped.
+
+## Privacy
+The project repository (client plans, dossiers, PDFs, sources) is private. Only finished Instagram media go to the public
+repository kaira-instagram-media — never plans, technical drawings of client projects as files, PDFs, captions files,
+metadata, or personal information. If that repository is not reachable, nothing is published (no fallback).

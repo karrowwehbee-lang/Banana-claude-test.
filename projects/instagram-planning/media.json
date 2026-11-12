@@ -1,6 +1,1 @@
-{
- "mode": "this-repo",
- "repo": "karrowwehbee-lang/Banana-claude-test.",
- "branch": "claude/kaira-interior-design-skill-1isxi1",
- "raw_base": "https://raw.githubusercontent.com/karrowwehbee-lang/Banana-claude-test./refs/heads/claude/kaira-interior-design-skill-1isxi1/projects/instagram-planning/"
-}
+{"mode": "media-repo", "owner": "karrowwehbee-lang", "repo": "kaira-instagram-media", "branch": "main"}
