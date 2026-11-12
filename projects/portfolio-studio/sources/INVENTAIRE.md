@@ -8,11 +8,11 @@
 | 04 | 1600 × 1264 | Bureau : bureau chêne à façade cannelée noire, bibliothèque noire et chêne éclairée | Workspaces |
 | 05 | 1468 × 1600 | Rooftop : bar en tasseaux noyer, plateau marbre vert, LED, vue sur la ville | Rooftop |
 | 06 | 1468 × 1600 | Salle à manger : table marbre sur pied marbre noir, fauteuils noirs, œuvre géométrique (même œuvre que le séjour 13 du feed) | Residential — Dining |
-| 07 | 1468 × 1600 | Mur TV chêne, tasseaux et filets noirs — écran allumé (Netflix) | Détail recadré sans l'écran uniquement |
+| 07 | 1468 × 1600 | Mur TV chêne, tasseaux et filets noirs — écran allumé (Netflix) | Residential — Living rooms + détail |
 | 08 | 1468 × 1600 | Rooftop : fauteuils tressés devant le bar | Rooftop |
 | 09 | 1600 × 900 | Séjour : colonne noyer à niche noire éclairée, panneau pierre, TV éteinte, rideaux | Residential — Living |
-| 10 | 1600 × 900 | Showroom : îlots TV et climatisation | Non retenu (rendu plus schématique) |
-| 11 | 1600 × 900 | Showroom : vue d'ensemble des zones de marques | Non retenu (rendu plus schématique) |
+| 10 | 1600 × 900 | Showroom : îlots TV et climatisation | Retail — Display design |
+| 11 | 1600 × 900 | Showroom : vue d'ensemble des zones de marques | Retail — Display design |
 | 12 | 1600 × 900 | Showroom : îlots audio | Retail |
 | 13 | 1600 × 1264 | Showroom : mur climatisation, vue frontale | Retail — ouverture |
 | 14 | 1600 × 1264 | Showroom : hall électroménager, mur de réfrigérateurs | Retail |

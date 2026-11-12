@@ -53,7 +53,7 @@ O = {"liv19": "19.jpg", "liv13": "13.jpg", "ent21": "21.jpg", "kit20": "20.jpg",
 NEW = ROOT / "sources/recus"
 N = {"kitL": "01.jpg", "dinG": "02.jpg", "livG": "03.jpg", "off2": "04.jpg", "bar": "05.jpg", "dinB": "06.jpg",
      "tvOak": "07.jpg", "lounge": "08.jpg", "livW": "09.jpg", "rAudio": "12.jpg", "rAC": "13.jpg", "rHall": "14.jpg",
-     "rTV": "15.jpg", "rMidea": "16.jpg"}
+     "rTV": "15.jpg", "rMidea": "16.jpg", "rIsl": "10.jpg", "rBrands": "11.jpg"}
 
 LIGHT_MODE = False
 USED = {}
@@ -649,20 +649,32 @@ def residential():
            "glass globe pendants, facing three expressive portraits.",
            "Another home: a marble table on a black marble base, black and ivory armchairs, linen curtains, a geometric "
            "artwork and terracotta jars.", sec)
-    spread("livW", "liv19", "Living rooms", "Living rooms",
+    spread("livW", "tvOak", "Living rooms", "Living rooms",
            "Tall walnut cabinetry with a lit black niche, a stone-clad TV wall, a floating walnut console and layered ceiling "
            "coves, in taupe, cognac and sage.",
-           "An open living space: white and grey modular sofas, oak-clad columns and lit coves, with the dining area beyond.",
-           sec)
+           "An oak-panelled TV wall with black reveals and vertical battens, a backlit screen and a floating cabinet with a "
+           "dark stone top, framed by full-height curtains.", sec)
     spread("kitL", "kit20", "Kitchens", "Kitchens",
            "An L-shaped kitchen in greige matt lacquer, black veined marble worktop and splashback, lit open shelves and "
            "handle-less fronts under a perimeter light cove.",
            "Cream lacquered units around a waterfall island in boldly veined stone, black appliances and a herringbone floor.",
            sec)
-    spread("liv13", "ent21", "Living & entrance", "Living room &amp; entrance".replace("&amp;", "&"),
-           "A luminous living area opening onto a sculptural white staircase; arched sideboard, recessed lighting and a "
-           "graphic artwork.",
-           "Entrance: walnut wall panelling with black reveals, an arched-front sideboard and a portrait artwork.", sec)
+    wl, hl, he = 99, 99 * 1264 / 1600, 128
+    we = he * 1468 / 1600
+    x0 = M + (PW - 2 * M - (wl + 10 + we)) / 2
+    a1, _, _ = image("liv19", x0, M, w=wl)
+    a2, _, _ = image("liv13", x0, M + hl + 9, w=wl)
+    xe = x0 + wl + 10
+    c1, we, he = image("ent21", xe, M, h=he)
+    body = (a1 + a2 + c1
+            + box(x0, M + hl + 1.5, wl, '<p class="cap">Open living space — modular sofas, oak-clad columns, dining area beyond.</p>')
+            + box(x0, M + 2 * hl + 10.5, wl, '<p class="cap">Living room opening onto a sculptural white staircase.</p>')
+            + kicker("Living & entrance", xe, M + he + 5)
+            + box(xe, M + he + 12, we, '<h3>Living &amp; entrance</h3><p class="cap">Two luminous living areas in white, '
+                                       'grey and light oak, with recessed lighting, an arched sideboard and graphic artworks. '
+                                       'The entrance: walnut wall panelling with black reveals, an arched-front sideboard and '
+                                       'a portrait artwork on marble-effect flooring.</p>'))
+    page(body, section=sec)
     det = [("tvOak", (150, 1000, 525, 1350), "Oak panelling, black reveal and vertical battens"),
            ("kitL", (500, 470, 880, 700), "Black marble splashback and lit open shelves"),
            ("dinG", (690, 430, 1010, 640), "Cluster of glass globe pendants"),
@@ -707,21 +719,26 @@ def retail():
                                      'continuous light line.</p>'
                                      '<p class="cap">Shown: air-conditioning wall — split and light-commercial units.</p>'))
     page(body, section=sec, toc=("05", "Retail Showroom"))
-    h1, h2, y1 = 80, 70, 28
-    a, wa, _ = image("rHall", M, y1, h=h1)
-    b, wb, _ = image("rAudio", M + wa + 8, y1, h=h1)
-    y2 = y1 + h1 + 12
-    c, wc, _ = image("rTV", M, y2, h=h2)
-    d, wd, _ = image("rMidea", M + wc + 8, y2, h=h2)
-    xt = M + wc + 8 + wd + 12
-    body = (kicker("Retail showroom") + a + b + c + d
-            + box(M, y1 + h1 + 2, wa, '<p class="cap">Appliance hall — refrigerator wall and islands</p>')
-            + box(M + wa + 8, y1 + h1 + 2, wb, '<p class="cap">Audio islands on walnut plinths</p>')
-            + box(xt, y2 + 4, PW - M - xt, '<h3>Display design</h3><p class="cap">TV walls framed in black marble and '
-                                           'walnut, illuminated islands and refrigerator bays with LED outlines: each zone is '
-                                           'drawn as a piece of furniture, built in the same graphite, walnut and white '
-                                           'palette.</p><p class="cap">Left: TV wall and lit island · display units with LED '
-                                           'outlines.</p>'))
+    y1, h1, g = 30, 47, 8
+    row1 = [("rBrands", "Brand zones — overview"), ("rIsl", "TV and air-conditioning islands"), ("rAudio", "Audio islands")]
+    w1 = (PW - 2 * M - 2 * g) / 3
+    body = kicker("Retail showroom") + box(M, 20, 200, '<h3>Display design</h3>')
+    x = M
+    for k, cap in row1:
+        im, w, h = image(k, x, y1, w=w1)
+        body += im + box(x, y1 + h + 1.5, w, f'<p class="cap">{e(cap)}</p>')
+        x += w + g
+    y2 = y1 + w1 * 900 / 1600 + 11
+    row2 = [("rHall", "Appliance hall — refrigerator wall"), ("rTV", "TV wall and lit island"),
+            ("rMidea", "Display units with LED outlines")]
+    ratio = sum(size(k)[0] / size(k)[1] for k, _ in row2)
+    h2 = min(PH - 18 - y2 - 8, (PW - 2 * M - 2 * g) / ratio)
+    tot = ratio * h2 + 2 * g
+    x = M + (PW - 2 * M - tot) / 2
+    for k, cap in row2:
+        im, w, h = image(k, x, y2, h=h2)
+        body += im + box(x, y2 + h + 1.5, w, f'<p class="cap">{e(cap)}</p>')
+        x += w + g
     page(body, section=sec)
 
 

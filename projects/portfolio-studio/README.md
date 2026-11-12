@@ -12,8 +12,7 @@ Cover · About the Studio (Karen Wehbe, fondatrice) · Creative Vision · Servic
 **03 Workspaces** · **04 Rooftop Bar & Lounge** · **05 Retail Showroom** (2 pages) ·
 **06 Children's Rooms** (collection, dessin technique) · Design Process · Contact.
 
-Nouveaux rendus : `sources/recus/01–16.jpg` (inventaire : `sources/INVENTAIRE.md`). Non retenus : 10 et 11 (showroom,
-rendus plus schématiques) ; 07 (écran allumé) uniquement en détail recadré sans l'écran.
+Nouveaux rendus : `sources/recus/01–16.jpg` (inventaire : `sources/INVENTAIRE.md`). Les 16 rendus sont utilisés (07, écran allumé, en petit format dans Living rooms).
 
 ## Choix
 - Textes en anglais (marque internationale, intitulés demandés en anglais).
