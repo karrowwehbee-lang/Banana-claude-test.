@@ -1,18 +1,23 @@
 # Site KAÏRA Interior Design — mise en ligne sur votre domaine
 
-Ce dossier est le site complet : `index.html`, `img/`, `favicon.png`, `og-image.jpg`.
-Il fonctionne sur n'importe quel hébergement de site statique (aucun serveur ni base de données nécessaire).
+Ce dossier est le site complet : `index.html`, `img/` (vos rendus), `fonts/` (polices), `vendor/` (bibliothèques
+d'animation), `favicon.png`, `og-image.jpg`. Il est autonome : il ne dépend d'aucun service externe et fonctionne sur
+n'importe quel hébergement de site statique (aucun serveur ni base de données nécessaire).
 
 ## 1. Compléter vos coordonnées (5 minutes)
 Ouvrez `index.html` avec un éditeur de texte, cherchez la ligne :
 
-    const CONFIG = { email: "", phone: "", city: "", formEndpoint: "" };
+    const CONFIG = { email: "", phone: "", city: "", formEndpoint: "", founderPortrait: "" };
 
 et remplissez ce que vous voulez afficher, par exemple :
 
-    const CONFIG = { email: "contact@votre-domaine.com", phone: "+225 …", city: "Abidjan", formEndpoint: "" };
+    const CONFIG = { email: "contact@votre-domaine.com", phone: "+…", city: "…", formEndpoint: "", founderPortrait: "" };
 
 Un champ laissé vide n'apparaît pas sur le site.
+
+**Votre portrait (optionnel)** : déposez une photo dans `img/` (par exemple `karen.jpg`, format portrait) et écrivez
+`founderPortrait: "karen.jpg"`. Elle apparaîtra dans l'arche de la séquence « Karen Wehbe ». Sans photo, l'arche montre
+un de vos rendus.
 
 ## 2. Activer le formulaire de contact (optionnel)
 Sans service de formulaire, le site affiche « The form is not connected yet » et renvoie vers Instagram.
@@ -31,6 +36,7 @@ Pensez à activer le HTTPS (gratuit chez la plupart des hébergeurs).
 
 ## À savoir
 - Les pages ont des adresses du type `votre-domaine.com/#projects`, `#project-villa`, `#studio`, `#services`, `#contact`.
-- Les images sont des versions web compressées de vos rendus (sans recadrage ni retouche) ; vos fichiers originaux
-  ne sont pas modifiés.
-- Les bibliothèques (React, GSAP, Lenis) et les polices (Google Fonts) sont chargées depuis leurs CDN officiels.
+- Vos rendus ne sont ni recadrés ni retouchés. Les rendus JPEG sont les fichiers originaux, à l'octet près ; les rendus
+  PNG (villa, chambres d'enfants, 2 à 5 Mo chacun) sont enregistrés une fois en JPEG haute qualité (q90, pleine
+  résolution des couleurs, mêmes dimensions). Le cadrage plein écran et les mouvements se font uniquement à l'affichage.
+- Les visiteurs qui ont réduit les animations dans leur système voient une version calme du site, sans défilement animé.
