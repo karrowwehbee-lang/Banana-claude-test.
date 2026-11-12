@@ -289,6 +289,15 @@ def elevation_svg(room, wall, scale=25):
     return svg
 
 
+
+def concept_elevation_svg(key, wall="A", scale=25):
+    """Elevation of a children's-room CONCEPT (no client project) from projects/portfolio-enfants."""
+    sys.path.insert(0, str(REPO / "projects/portfolio-enfants/tools"))
+    import pdata, pviews
+    p = {q["key"]: q for q in pdata.PROJECTS}[key]
+    return pviews.elevation(p, wall, scale)[0]
+
+
 if __name__ == "__main__":
     if "--library" in sys.argv:
         lib = build_library()

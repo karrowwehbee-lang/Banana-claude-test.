@@ -118,20 +118,21 @@ P(id="006", slug="walnut-and-black-marble", pillar="Materials", kind="carousel",
           "Which one would you choose for your home?",
   hashtags=tags("materials", "joinery", "quiet"))
 
-# 007 — Process — carousel with a technical elevation
-P(id="007", slug="from-render-to-drawing", pillar="Process", kind="carousel", renders=["chambre-principale-05"],
+# 007 — Process — carousel with a concept elevation (no client drawings on Instagram)
+P(id="007", slug="from-render-to-drawing", pillar="Process", kind="carousel", renders=["k07"],
   build=lambda S: [
       S.solid("olive", "Our process", "From render<br>to drawing", "Every wall we design is drawn, dimensioned and "
               "detailed — ready for the workshop.", foot="Swipe"),
-      S.render_slide("chambre-principale-05", "white", "Villa — master bedroom, 3D visualization", "02 / 04"),
-      S.drawing_slide(S.elevation_svg("princ", "A"), "Technical drawing", "The same wall, drawn",
-                      "Elevation of the headboard wall: marble band, oak columns, mirrored panels and upholstered headboard."),
+      S.render_slide("k07", "white", "Nuage Olive — children's room concept, 3D visualization", "02 / 04"),
+      S.drawing_slide(S.concept_elevation_svg("nuageolive"), "Design drawing", "The same wall, drawn",
+                      "Concept elevation: wardrobe, olive storage column, fluted wall with a backlit cloud, upholstered "
+                      "headboard, trundle bed and floating desk."),
       S.numbered("white", "Our process", "Four steps", [
           ("Survey", "Measurements, photographs and existing plans."),
           ("Concept", "Atmosphere, materials and layout."),
           ("3D visualization", "Realistic renders of each key space."),
           ("Technical drawings", "Elevations, sections and joinery details.")], size_t=80, pg="04 / 04")],
-  caption="From render to drawing.\n\nA 3D view shows the atmosphere; the technical drawing makes it buildable. For each "
-          "project we draw the elevations, sections and bespoke joinery so that workshops and craftsmen build exactly "
-          "what was designed.\n\nSwipe to see the master bedroom wall, rendered and drawn.",
-  hashtags=tags("process", "joinery", "bedroom"))
+  caption="From render to drawing.\n\nA 3D view shows the atmosphere; the drawing makes it buildable. For each project we "
+          "draw elevations, sections and bespoke joinery so that workshops build exactly what was designed.\n\n"
+          "Swipe to see the Nuage Olive children's room concept, rendered and drawn.",
+  hashtags=tags("process", "joinery", "viz"))

@@ -47,4 +47,5 @@ follows) and adjusts the mix: more of what is saved and shared, less of what is 
 ## Privacy
 The project repository (client plans, dossiers, PDFs, sources) is private. Only finished Instagram media go to the public
 repository kaira-instagram-media — never plans, technical drawings of client projects as files, PDFs, captions files,
-metadata, or personal information. If that repository is not reachable, nothing is published (no fallback).
+metadata, or personal information. On Instagram, technical drawings are only shown for
+concepts (e.g. the children's rooms collection), never for client projects. If that repository is not reachable, nothing is published (no fallback).
