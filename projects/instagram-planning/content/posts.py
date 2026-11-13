@@ -136,3 +136,16 @@ P(id="007", slug="from-render-to-drawing", pillar="Process", kind="carousel", re
           "draw elevations, sections and bespoke joinery so that workshops build exactly what was designed.\n\n"
           "Swipe to see the Nuage Olive children's room concept, rendered and drawn.",
   hashtags=tags("process", "joinery", "viz"))
+
+# 008 — Villa — Reel (first-floor living room; etage1-sejour-02 is held back by the 30-day launch-feed rule)
+P(id="008", slug="upstairs-living-reel", pillar="Reel", kind="reel",
+  renders=["etage1-sejour-03", "etage1-sejour-04", "etage1-sejour-06", "etage1-sejour-09"],
+  reel=dict(kick="Villa", title="Upstairs,<br>softly lit", scenes=[
+      ("etage1-sejour-03", "First-floor living room — sheer curtains"), ("etage1-sejour-04", "Lit oak shelving and red artwork"),
+      ("etage1-sejour-06", "Oak double door and a quiet corner"), ("etage1-sejour-09", "A cove of light around the room")]),
+  caption="Upstairs, softly lit.\n\nThe villa's first-floor living room, seen from every side: sheer curtains along tall "
+          "windows, a ceiling cove that traces the room, oak shelving lit shelf by shelf, and a red-and-white artwork "
+          "beside an oak double door. A green-grey corner sofa, an oval marble coffee table and a cognac leather pouf "
+          "keep it warm and relaxed.\n\nSave it for your next living-room project. Interior design & 3D visualization "
+          "by KAÏRA Interior Design.",
+  hashtags=tags("residential", "viz") + " #villadesign #indirectlighting")
