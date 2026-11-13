@@ -20,3 +20,8 @@ Strategy: `STRATEGY.md`. Render library: `library.json` (56 renders, built by `t
 - Windsor.ai is on a trial plan: data refresh is delayed and the connection may stop when the trial ends.
 
 Done by hand in the app (no API): pinning, Highlights, music on Reels, location and people tags, collabs.
+
+## Website launch kit
+`launch/` holds the announcement of the new website (carousel, Reel, Story, caption, bio text). It is **not** in
+`queue/` and is never published by the daily routine: it waits until the site is online and Karen approves.
+See `launch/README.md`.
