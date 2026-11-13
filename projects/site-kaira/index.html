@@ -84,7 +84,21 @@ button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:poin
 .menu a i{font-family:var(--text);font-style:normal;font-size:11px;letter-spacing:.2em;color:var(--sand)}
 .menu.open a{transform:none;opacity:1}
 .menu.open a:nth-child(2){transition-delay:.06s}.menu.open a:nth-child(3){transition-delay:.12s}.menu.open a:nth-child(4){transition-delay:.18s}.menu.open a:nth-child(5){transition-delay:.24s}
-.menu .ig{margin-top:30px;font-size:12px;letter-spacing:.2em;color:var(--mute)}
+/* Instagram link: thin pill, line glyph, KAÏRA type (no colour logo) */
+.igb{display:inline-flex;align-items:center;gap:12px;padding:12px 20px 12px 16px;border:1px solid currentColor;border-radius:999px;text-decoration:none;
+  font-family:var(--text);font-size:11px;letter-spacing:.24em;text-transform:uppercase;font-weight:400;white-space:nowrap;transition:background .5s,color .5s,border-color .5s,gap .6s var(--ease)}
+.igb .glyph,.pill .pig .glyph,.top .igtop .glyph{display:inline-grid;place-items:center;width:16px;height:16px;flex:none}
+.igb .glyph svg,.pill .pig svg,.top .igtop svg{display:block;width:16px;height:16px}
+.igb .h{text-transform:none;letter-spacing:.04em;font-size:14px}
+.igb .t+.h{opacity:.75}
+.igb .arr{font-size:13px;letter-spacing:0;transition:transform .6s var(--ease)}
+.igb:hover{gap:16px}.igb:hover .arr{transform:translate(2px,-2px)}
+.menu .igb{margin-top:30px;align-self:flex-start;align-items:center;gap:12px;font-family:var(--text);font-weight:400;color:var(--white);border-color:rgba(247,242,235,.35);font-size:11px;line-height:1.6}
+.menu.open .igb{transition-delay:.3s}
+.menu .igb:hover{background:var(--white);color:var(--night)}
+.top .igtop{display:inline-flex;align-items:center;gap:9px}
+.pill .pig{width:40px;height:40px;padding:0;margin-left:3px;display:grid;place-items:center;border-radius:50%;border:1px solid rgba(247,242,235,.2)}
+.pill .pig:hover{background:rgba(247,242,235,.12)}
 
 /* page transition: fluted oak slats */
 .slats{position:fixed;inset:0;z-index:90;display:flex;pointer-events:none}
@@ -308,6 +322,8 @@ html.rm .reel .k0full{display:none}
 .foot .cols .eyebrow{color:rgba(247,242,235,.6);margin-bottom:8px}
 .foot .cols a,.foot .cols span{font-size:15px;text-decoration:none;overflow-wrap:anywhere}
 .foot .cols a:hover{opacity:.7}
+.foot .cols .igb{font-size:11px;align-self:flex-start;color:var(--white);border-color:rgba(247,242,235,.45);margin:2px 0 6px}
+.foot .cols .igb:hover{background:var(--white);color:var(--burgundy);opacity:1}
 .foot .lead{font-family:var(--display);font-weight:300;font-size:clamp(28px,2.8vw,44px);line-height:1.12;margin:0;max-width:14em}
 .foot .big{margin-top:clamp(40px,9vh,110px);color:var(--white);line-height:0}
 .foot .big svg{width:100%;height:auto}
@@ -491,6 +507,8 @@ html.rm .reel .k0full{display:none}
 .ct dl{margin:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px 32px}
 .ct dt{font-size:10px;letter-spacing:.26em;text-transform:uppercase;color:var(--sand);margin-bottom:6px}
 .ct dd{margin:0;font-size:15px;overflow-wrap:anywhere}
+.ct dd .igb{color:var(--white);border-color:rgba(247,242,235,.4);margin-top:4px}
+.ct dd .igb:hover{background:var(--white);color:var(--night)}
 .ct form{display:flex;flex-direction:column;gap:26px}
 .ct .two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:26px}
 .ct .fld{display:flex;flex-direction:column;gap:6px;min-width:0}
@@ -679,6 +697,12 @@ const STEPS = [["Listening", "Brief, uses, budget and expectations; a first visi
   ["Material selection", "Samples, finishes and manufacturer references.", "n01"],
   ["Follow-up", "Coordination with workshops and craftsmen until completion.", "n05"]];
 const IG = "https://www.instagram.com/kaira.interior.design/";
+const IG_GLYPH = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><rect x="3.2" y="3.2" width="17.6" height="17.6" rx="5.2"/><circle cx="12" cy="12" r="4.1"/><circle cx="17.3" cy="6.7" r=".95" fill="currentColor" stroke="none"/></svg>';
+const IG_LABEL = "Instagram, @kaira.interior.design (opens in a new tab)";
+function IgLink({ label = "Instagram", handle = false, cls = "igb" }) {
+  return html`<a className=${cls} href=${IG} target="_blank" rel="noopener" aria-label=${IG_LABEL}>
+    <span className="glyph" dangerouslySetInnerHTML=${{ __html: IG_GLYPH }}></span>${label && html`<span className="t">${label}</span>`}${handle && html`<span className="h">@kaira.interior.design</span>`}<span className="arr" aria-hidden="true">↗</span></a>`;
+}
 
 /* ============================================================== routing (plain #name hashes) */
 const PAGES = ["projects", "studio", "services", "contact"];
@@ -790,7 +814,7 @@ function Top({ route }) {
   }, [route]);
   return html`<header className="top" ref=${ref}><div className="wrap row">
     <a href="#home" onClick=${go("home")} aria-label="KAÏRA Interior Design, home"><${Svg} markup=${WORDMARK} className="logo" /></a>
-    <div className="right"><a className="ig ul" href=${IG} target="_blank" rel="noopener">Instagram</a>
+    <div className="right"><a className="ig igtop ul" href=${IG} target="_blank" rel="noopener" aria-label=${IG_LABEL}><span className="glyph" dangerouslySetInnerHTML=${{ __html: IG_GLYPH }}></span>Instagram</a>
       <a className="btn" href="#contact" onClick=${go("contact")}>Start a project</a></div>
   </div></header>`;
 }
@@ -800,6 +824,7 @@ function Pill({ route, menu, setMenu }) {
     <a className="home" href="#home" onClick=${go("home")} aria-label="Home"><span dangerouslySetInnerHTML=${{ __html: KA_SVG }}></span></a>
     ${NAV.slice(0, 3).map(([k, t]) => html`<a key=${k} className=${"lk" + (cur === k ? " here" : "")} aria-current=${cur === k ? "page" : null} href=${"#" + k} onClick=${go(k)}>${t}</a>`)}
     <a className=${"go lk" + (cur === "contact" ? " here" : "")} href="#contact" onClick=${go("contact")}>Contact</a>
+    <a className="pig" href=${IG} target="_blank" rel="noopener" aria-label=${IG_LABEL} title="@kaira.interior.design"><span className="glyph" dangerouslySetInnerHTML=${{ __html: IG_GLYPH }}></span></a>
     <button className="mob" onClick=${() => setMenu(!menu)} aria-expanded=${menu} aria-controls="menu">${menu ? "Close" : html`Menu <span style=${{ opacity: .6 }}>· ${route === "home" ? "Home" : titleOf(route)}</span>`}</button>
   </nav>`;
 }
@@ -808,7 +833,7 @@ function Menu({ open, setMenu }) {
   return html`<div id="menu" className=${"menu wrap" + (open ? " open" : "")} aria-hidden=${!open}>
     <a href="#home" onClick=${g("home")} tabIndex=${open ? 0 : -1}><i>00</i>Home</a>
     ${NAV.map(([k, t], i) => html`<a key=${k} href=${"#" + k} onClick=${g(k)} tabIndex=${open ? 0 : -1}><i>${pad(i + 1)}</i>${t}</a>`)}
-    <div className="ig">@kaira.interior.design</div>
+    <${IgLink} handle=${true} />
   </div>`;
 }
 function Slats({ api }) {
@@ -885,7 +910,7 @@ function Foot({ route }) {
       <div><span className="eyebrow">Pages</span>${[["home", "Home"], ...NAV].map(([k, t]) => html`<a key=${k} href=${"#" + k} onClick=${go(k)}>${t}</a>`)}</div>
       <div><span className="eyebrow">Studio</span><span>Founder, Karen Wehbe</span>${CONFIG.city && html`<span>${CONFIG.city}</span>`}
         ${CONFIG.email && html`<span>${CONFIG.email}</span>`}${CONFIG.phone && html`<span>${CONFIG.phone}</span>`}</div>
-      <div><span className="eyebrow">Follow</span><a href=${IG} target="_blank" rel="noopener">Instagram ↗</a><span>@kaira.interior.design</span></div>
+      <div><span className="eyebrow">Follow</span><${IgLink} /><span>@kaira.interior.design</span></div>
     </div>
     <div className="big" aria-hidden="true" dangerouslySetInnerHTML=${{ __html: WORDMARK }}></div>
     <div className="legal"><span>© 2026 KAÏRA Interior Design</span><span>All renders by the studio</span></div>
@@ -1375,7 +1400,7 @@ function ContactPage() {
       <div><span className="eyebrow">Contact</span><h1 className="disp"><${Lines} lines=${["Let's talk", html`about <em>your space</em>`]} /></h1></div>
       <p className="lead">For a new home, a renovation, a workspace or a single custom piece, tell the studio about your project.</p>
       <dl>
-        <div><dt>Instagram</dt><dd><a className="ul" href=${IG} target="_blank" rel="noopener">@kaira.interior.design</a></dd></div>
+        <div><dt>Instagram</dt><dd><${IgLink} label="" handle=${true} /></dd></div>
         <div><dt>Founder</dt><dd>Karen Wehbe</dd></div>
         ${CONFIG.email && html`<div><dt>E-mail</dt><dd>${CONFIG.email}</dd></div>`}
         ${CONFIG.phone && html`<div><dt>Phone / WhatsApp</dt><dd>${CONFIG.phone}</dd></div>`}
