@@ -22,6 +22,34 @@
     "rdc-salon-08"
    ],
    "permalink": "https://www.instagram.com/p/DfpA32hDmaL/"
+  },
+  {
+   "id": "003",
+   "slug": "quiet-bedrooms-reel",
+   "kind": "reel",
+   "media_id": "18115243403150712",
+   "published_at": "2026-11-13T17:40:14Z",
+   "renders": [
+    "chambre-principale-05",
+    "chambre-principale-01",
+    "chambre-principale-03",
+    "chambre-amis-01",
+    "chambre-amis-03"
+   ],
+   "permalink": "https://www.instagram.com/reel/DfsMCrTqvtq/"
+  },
+  {
+   "id": "004",
+   "slug": "light-that-disappears",
+   "kind": "carousel",
+   "media_id": "18122037616785614",
+   "published_at": "2026-11-14T17:39:44Z",
+   "renders": [
+    "rdc-salon-10",
+    "chambre-principale-03",
+    "n01"
+   ],
+   "permalink": "https://www.instagram.com/p/Dfuw01eiBrm/"
   }
  ]
 }

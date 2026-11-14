@@ -18,14 +18,22 @@
  "caption": "Light that disappears.\n\nIn our interiors, you see the light — rarely the fixture. Coves wash the ceilings, LED lines hide under shelves, panels and marble glow from behind. The result is a soft, even light that shapes the architecture.\n\nSave this post for your next project.",
  "hashtags": "#kairainteriordesign #interiorarchitecture #interiordesign #luxuryinteriors #interiordesigner #lightingdesign #indirectlighting #architecturallighting #ledlighting #quietluxury #minimalluxury #timelessdesign #luxuryhomes #contemporaryinterior #modernluxury #residentialdesign",
  "full_caption": "Light that disappears.\n\nIn our interiors, you see the light — rarely the fixture. Coves wash the ceilings, LED lines hide under shelves, panels and marble glow from behind. The result is a soft, even light that shapes the architecture.\n\nSave this post for your next project.\n\n#kairainteriordesign #interiorarchitecture #interiordesign #luxuryinteriors #interiordesigner #lightingdesign #indirectlighting #architecturallighting #ledlighting #quietluxury #minimalluxury #timelessdesign #luxuryhomes #contemporaryinterior #modernluxury #residentialdesign",
- "status": "ready",
+ "status": "published",
  "created": "2026-11-12",
- "published_at": null,
- "media_id": null,
- "permalink": null,
+ "published_at": "2026-11-14T17:39:44Z",
+ "media_id": "18122037616785614",
+ "permalink": "https://www.instagram.com/p/Dfuw01eiBrm/",
  "checks": [
   "004-2: rdc-salon-10 whole, 100 %, pixel-identical on the HD slide",
   "004-3: chambre-principale-03 whole, 100 %, pixel-identical on the HD slide",
   "004-4: n01 whole, 100 %, pixel-identical on the HD slide"
- ]
+ ],
+ "media_urls": {
+  "1.jpg": "https://raw.githubusercontent.com/karrowwehbee-lang/Banana-claude-test./refs/heads/claude/kaira-interior-design-skill-1isxi1/projects/instagram-planning/queue/004_light-that-disappears/1.jpg",
+  "2.jpg": "https://raw.githubusercontent.com/karrowwehbee-lang/Banana-claude-test./refs/heads/claude/kaira-interior-design-skill-1isxi1/projects/instagram-planning/queue/004_light-that-disappears/2.jpg",
+  "3.jpg": "https://raw.githubusercontent.com/karrowwehbee-lang/Banana-claude-test./refs/heads/claude/kaira-interior-design-skill-1isxi1/projects/instagram-planning/queue/004_light-that-disappears/3.jpg",
+  "4.jpg": "https://raw.githubusercontent.com/karrowwehbee-lang/Banana-claude-test./refs/heads/claude/kaira-interior-design-skill-1isxi1/projects/instagram-planning/queue/004_light-that-disappears/4.jpg",
+  "5.jpg": "https://raw.githubusercontent.com/karrowwehbee-lang/Banana-claude-test./refs/heads/claude/kaira-interior-design-skill-1isxi1/projects/instagram-planning/queue/004_light-that-disappears/5.jpg"
+ },
+ "hosting": "fallback: Banana-claude-test (public)"
 }

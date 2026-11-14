@@ -17,11 +17,11 @@
  "caption": "Quiet bedrooms.\n\nA dark veined marble band, backlit between oak columns. A wall-to-wall upholstered headboard. In the guest room, vertical oak slats and opal pendants. Two bedrooms of the same villa, written in the same calm language.\n\nInterior design & 3D visualization by KAÏRA Interior Design.",
  "hashtags": "#kairainteriordesign #interiorarchitecture #interiordesign #luxuryinteriors #interiordesigner #bedroomdesign #masterbedroom #luxurybedroom #calminteriors #quietluxury #minimalluxury #timelessdesign #3dvisualization #interiorrender #archviz",
  "full_caption": "Quiet bedrooms.\n\nA dark veined marble band, backlit between oak columns. A wall-to-wall upholstered headboard. In the guest room, vertical oak slats and opal pendants. Two bedrooms of the same villa, written in the same calm language.\n\nInterior design & 3D visualization by KAÏRA Interior Design.\n\n#kairainteriordesign #interiorarchitecture #interiordesign #luxuryinteriors #interiordesigner #bedroomdesign #masterbedroom #luxurybedroom #calminteriors #quietluxury #minimalluxury #timelessdesign #3dvisualization #interiorrender #archviz",
- "status": "unconfirmed",
+ "status": "published",
  "created": "2026-11-12",
- "published_at": null,
- "media_id": null,
- "permalink": null,
+ "published_at": "2026-11-13T17:40:14Z",
+ "media_id": "18115243403150712",
+ "permalink": "https://www.instagram.com/reel/DfsMCrTqvtq/",
  "checks": [
   "reel 18.3 s — renders shown whole: chambre-principale-05, chambre-principale-01, chambre-principale-03, chambre-amis-01, chambre-amis-03"
  ],
@@ -41,6 +41,11 @@
    "at": "2026-11-13T20:45Z",
    "action": "re-check (Windsor get_data, 12–13 Nov)",
    "result": "no post dated 2026-11-13 in Windsor data; still unconfirmed — not retried, waiting for Karen to check her profile"
+  },
+  {
+   "at": "2026-11-14T17:39Z",
+   "action": "re-check (Windsor get_data, media_id filter)",
+   "result": "found: REEL 18115243403150712 published 2026-11-13T17:40:14Z with the 003 caption — the timed-out call had succeeded"
   }
  ]
 }

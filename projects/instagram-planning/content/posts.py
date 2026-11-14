@@ -149,3 +149,24 @@ P(id="008", slug="upstairs-living-reel", pillar="Reel", kind="reel",
           "keep it warm and relaxed.\n\nSave it for your next living-room project. Interior design & 3D visualization "
           "by KAÏRA Interior Design.",
   hashtags=tags("residential", "viz") + " #villadesign #indirectlighting")
+
+# 009 — Design notes — zoning open spaces (Residential + Workspaces; not Villa, which is 008)
+P(id="009", slug="one-room-several-zones", pillar="Design notes", kind="carousel", renders=["r19", "n06", "r14"],
+  build=lambda S: [
+      S.solid("choc", "Design notes", "One room,<br>several zones", "How we organise open spaces without walls.",
+              foot="Swipe"),
+      S.render_slide("r19", "white", "A rug and two low sofas draw the lounge", "01"),
+      S.render_slide("n06", "white", "The dining zone, under a recessed line of light", "02"),
+      S.render_slide("r14", "white", "Office — lounge, meeting table and desk in one room", "03"),
+      S.numbered("white", "Design notes", "The principles", [
+          ("Rugs draw the plan", "Each zone stands on its own ground."),
+          ("The ceiling follows", "Coves and light lines echo the zones below."),
+          ("Furniture as walls", "A sofa back or a table edge marks the limit."),
+          ("One continuous floor", "A single finish keeps the space whole.")], size_t=80, pg="05 / 05")],
+  caption="One room, several zones.\n\nOpen spaces need structure, not walls. A rug and two low sofas draw the lounge, a "
+          "recessed line of light marks the dining table, oak-clad columns frame the view, and in an office the lounge, "
+          "the meeting table and the desk each find their own place, all on one continuous floor.\n\n"
+          "Save this post for your next open-plan project.",
+  hashtags=" ".join(CORE + ["#openplanliving", "#spaceplanning", "#livingroomdesign", "#diningroomdesign", "#officedesign",
+                            "#workspacedesign", "#residentialdesign", "#contemporaryinterior", "#3dvisualization",
+                            "#interiorrender"]))
