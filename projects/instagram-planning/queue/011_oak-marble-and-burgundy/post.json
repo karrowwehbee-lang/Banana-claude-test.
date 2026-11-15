@@ -1,0 +1,30 @@
+{
+ "id": "011",
+ "slug": "oak-marble-and-burgundy",
+ "pillar": "Materials",
+ "kind": "carousel",
+ "renders": [
+  "rdc-salon-02",
+  "rdc-salon-01",
+  "rdc-salon-09"
+ ],
+ "files": [
+  "1.jpg",
+  "2.jpg",
+  "3.jpg",
+  "4.jpg"
+ ],
+ "caption": "Material study — oak, marble & burgundy.\n\nIn the villa's living and dining room, light oak shelving and fins meet a veined marble column, greige wall panels and charcoal leather, with one deep burgundy artwork as the accent. Warm, restrained and made to age well.\n\nSave it as a reference for your own palette.",
+ "hashtags": "#kairainteriordesign #interiorarchitecture #interiordesign #luxuryinteriors #interiordesigner #materialpalette #interiordetails #oakwood #marble #naturalmaterials #villadesign #livingroomdesign #diningroomdesign #quietluxury #timelessdesign",
+ "full_caption": "Material study — oak, marble & burgundy.\n\nIn the villa's living and dining room, light oak shelving and fins meet a veined marble column, greige wall panels and charcoal leather, with one deep burgundy artwork as the accent. Warm, restrained and made to age well.\n\nSave it as a reference for your own palette.\n\n#kairainteriordesign #interiorarchitecture #interiordesign #luxuryinteriors #interiordesigner #materialpalette #interiordetails #oakwood #marble #naturalmaterials #villadesign #livingroomdesign #diningroomdesign #quietluxury #timelessdesign",
+ "status": "ready",
+ "created": "2026-11-15",
+ "published_at": null,
+ "media_id": null,
+ "permalink": null,
+ "checks": [
+  "011-2: rdc-salon-02 whole, 100 %, pixel-identical on the HD slide",
+  "011-3: rdc-salon-01 whole, 100 %, pixel-identical on the HD slide",
+  "011-4: rdc-salon-09 whole, 100 %, pixel-identical on the HD slide"
+ ]
+}

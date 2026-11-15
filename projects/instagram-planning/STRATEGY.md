@@ -50,3 +50,12 @@ The project repository (client plans, dossiers, PDFs, sources) is private. Only 
 repository kaira-instagram-media — never plans, technical drawings of client projects as files, PDFs, captions files,
 metadata, or personal information. On Instagram, technical drawings are only shown for
 concepts (e.g. the children's rooms collection), never for client projects. If that repository is not reachable, nothing is published (no fallback).
+
+## Review log
+**15 Nov 2026 (first weekly review — 4 posts since the daily routine started, plus the 12-post launch feed of 11 Nov).**
+Reach per post: Reel 003 *Quiet bedrooms* 94 accounts (134 views); carousels 001 / 004 37 and 26 (004 after < 1 day);
+single image 002 34; launch-feed posts 14–60. Engagement is very low everywhere (0–2 likes, 1 save in total, no shares,
+no follows attributed to a post) although the profile has 3,831 followers: reach, not content, is the bottleneck.
+**Change (test, two weeks):** a second Reel each week — the Friday project spotlight is made as a Reel (first: 010,
+20 Nov). Keep it if Reels keep reaching at least twice as many accounts as carousels; otherwise return to one Reel a
+week. Hashtags unchanged (no per-hashtag data available through the API).

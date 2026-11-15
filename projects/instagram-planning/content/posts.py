@@ -170,3 +170,35 @@ P(id="009", slug="one-room-several-zones", pillar="Design notes", kind="carousel
   hashtags=" ".join(CORE + ["#openplanliving", "#spaceplanning", "#livingroomdesign", "#diningroomdesign", "#officedesign",
                             "#workspacedesign", "#residentialdesign", "#contemporaryinterior", "#3dvisualization",
                             "#interiorrender"]))
+
+# 010 — Children's Rooms — Reel (Friday project spotlight as a Reel: two-Reels-a-week test from the 15 Nov review)
+P(id="010", slug="little-worlds-reel", pillar="Reel", kind="reel", renders=["k01", "k04", "k05", "k06"],
+  reel=dict(kick="Children's Rooms", title="Little<br>worlds", scenes=[
+      ("k01", "Douceur Lapin — blush pink arches"), ("k04", "Nuages — backlit clouds, sage bed"),
+      ("k05", "Ourson Caramel — the teddy-bear arch"), ("k06", "Jungle Douce — sage arches, painted leaves")]),
+  caption="Little worlds.\n\nFour children's rooms from our collection, each built around one idea: soft pink arches for "
+          "Douceur Lapin, backlit clouds above a sage bed for Nuages, a caramel teddy-bear arch for Ourson Caramel and "
+          "painted leaves for Jungle Douce. Rounded shapes, warm light and low open shelves within reach.\n\n"
+          "Interior design & 3D visualization by KAÏRA Interior Design.",
+  hashtags=" ".join(CORE + ["#kidsroomdesign", "#childrensroom", "#nurserydesign", "#kidsinterior", "#playfulinteriors",
+                            "#bespokefurniture", "#customfurniture", "#3dvisualization", "#interiorrender", "#archviz"]))
+
+# 011 — Villa — Materials & palette
+P(id="011", slug="oak-marble-and-burgundy", pillar="Materials", kind="carousel",
+  renders=["rdc-salon-02", "rdc-salon-01", "rdc-salon-09"],
+  build=lambda S: [
+      S.palette_slide("white", "Material study", "Oak, marble<br>&amp; burgundy", [
+          ("Light oak", S.sample("rdc-salon-01", (1340, 650, 1520, 1000))),
+          ("Veined marble", S.sample("rdc-salon-01", (600, 1250, 680, 1500))),
+          ("Greige panel", S.sample("rdc-salon-02", (1340, 750, 1420, 1000))),
+          ("Charcoal leather", S.sample("rdc-salon-02", (330, 1080, 520, 1180))),
+          ("Burgundy", S.sample("rdc-salon-09", (1450, 850, 1560, 950)))],
+          "Tints sampled from our renders."),
+      S.render_slide("rdc-salon-02", "white", "Villa living room — oak fins, greige panels, charcoal sofa", "02 / 04"),
+      S.render_slide("rdc-salon-01", "white", "Oak shelving and a veined marble column", "03 / 04"),
+      S.render_slide("rdc-salon-09", "white", "Dining — pale stone table and a burgundy artwork", "04 / 04")],
+  caption="Material study — oak, marble & burgundy.\n\nIn the villa's living and dining room, light oak shelving and fins "
+          "meet a veined marble column, greige wall panels and charcoal leather, with one deep burgundy artwork as the "
+          "accent. Warm, restrained and made to age well.\n\nSave it as a reference for your own palette.",
+  hashtags=" ".join(CORE + ["#materialpalette", "#interiordetails", "#oakwood", "#marble", "#naturalmaterials",
+                            "#villadesign", "#livingroomdesign", "#diningroomdesign", "#quietluxury", "#timelessdesign"]))
