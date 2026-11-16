@@ -366,3 +366,42 @@ P(id="020", slug="a-bar-for-six", pillar="Detail", kind="image", renders=["c14"]
           "Residential interiors — kitchen.",
   hashtags=" ".join(CORE + ["#kitchendesign", "#kitchenbar", "#breakfastbar", "#woodkitchen", "#fluteddetails",
                             "#indirectlighting", "#contemporaryinterior", "#modernkitchen", "#residentialdesign"]))
+
+# ---- Images received 16 Nov 2026, third batch (sources/2026-11-16c): private office o01–o08, dressing room d09–d16 ----
+
+# 021 — Workspaces — project: the private office (all eight views)
+P(id="021", slug="the-private-office", pillar="Project", kind="carousel",
+  renders=["o04", "o08", "o06", "o05", "o03", "o07", "o01", "o02"],
+  build=lambda S: [
+      S.cover("o04", "white", "Workspaces", "The private<br>office", "Office"),
+      S.render_slide("o08", "white", "The desk in front of the window, two visitor chairs", "02 / 09"),
+      S.render_slide("o06", "white", "A walnut desk and a wall of four screens", "03 / 09"),
+      S.render_slide("o05", "white", "Four screens over a floating unit with stone fronts", "04 / 09"),
+      S.render_slide("o03", "white", "Fluted walnut and cream panels, before the furniture", "05 / 09"),
+      S.render_slide("o07", "white", "The lounge corner — a walnut return and stone-backed shelving", "06 / 09"),
+      S.render_slide("o01", "white", "Two armchairs and a round stone table", "07 / 09"),
+      S.render_slide("o02", "white", "The same corner with the shelving lit", "08 / 09"),
+      S.numbered("choc", "Design notes", "The office", [
+          ("Walnut that wraps", "Wall panels, returns and desk in one wood."),
+          ("Cream panels", "Fine joints that keep the walls calm."),
+          ("A place to pause", "Two armchairs away from the desk."),
+          ("Light in lines", "A ceiling cove and lit shelving.")], size_t=80, pg="09 / 09")],
+  caption="The private office.\n\nWalnut panels that wrap the room, cream walls with fine joints, a walnut and black desk "
+          "in front of the window, a wall of four screens above a floating unit, and a lounge corner with two armchairs "
+          "and stone-backed shelving that can be lit.\n\nInterior design & 3D visualization by KAÏRA Interior Design.",
+  hashtags=" ".join(CORE + ["#officedesign", "#privateoffice", "#executiveoffice", "#workspacedesign", "#officeinterior",
+                            "#walnut", "#woodpanelling", "#indirectlighting", "#3dvisualization", "#interiorrender"]))
+
+# 022 — Residential — Reel: the dressing room, closed then open (all eight views)
+P(id="022", slug="behind-the-doors-reel", pillar="Reel", kind="reel",
+  renders=["d13", "d16", "d09", "d12", "d10", "d11", "d15", "d14"],
+  reel=dict(kick="Residential", title="Behind<br>the doors", scenes=[
+      ("d13", "Closed — cream doors, smoked glass at the centre"), ("d16", "Open — walnut shelving and hanging rails"),
+      ("d09", "Cream doors and a lit glass tower"), ("d12", "The same wall, opened"),
+      ("d10", "Closed, from the corner"), ("d11", "Open, from the same corner"),
+      ("d15", "Glass doors at the heart of the wardrobe"), ("d14", "A walk-in, both sides")]),
+  caption="Behind the doors.\n\nOne dressing room, shown closed and then open: tall cream doors with smoked glass at the "
+          "centre, a lit glass tower for display, and behind them walnut shelving, hanging rails and drawers planned "
+          "piece by piece.\n\nSave it for your own dressing room.",
+  hashtags=" ".join(CORE + ["#dressingroom", "#walkincloset", "#wardrobedesign", "#closetdesign", "#bespokefurniture",
+                            "#customfurniture", "#joinerydesign", "#walnut", "#storagedesign", "#bedroomdesign"]))

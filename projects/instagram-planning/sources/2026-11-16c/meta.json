@@ -1,0 +1,98 @@
+{
+ "01.jpg": {
+  "id": "o01",
+  "project": "Workspaces",
+  "space": "Private office — lounge corner, shelving unlit",
+  "tv_on": false
+ },
+ "02.jpg": {
+  "id": "o02",
+  "project": "Workspaces",
+  "space": "Private office — lounge corner, shelving lit",
+  "tv_on": false
+ },
+ "03.jpg": {
+  "id": "o03",
+  "project": "Workspaces",
+  "space": "Private office — fluted walnut and cream panels, unfurnished",
+  "tv_on": false
+ },
+ "04.jpg": {
+  "id": "o04",
+  "project": "Workspaces",
+  "space": "Private office — desk, frontal",
+  "tv_on": false
+ },
+ "05.jpg": {
+  "id": "o05",
+  "project": "Workspaces",
+  "space": "Private office — four screens over a floating unit",
+  "tv_on": false
+ },
+ "06.jpg": {
+  "id": "o06",
+  "project": "Workspaces",
+  "space": "Private office — desk and screen wall, angled",
+  "tv_on": false
+ },
+ "07.jpg": {
+  "id": "o07",
+  "project": "Workspaces",
+  "space": "Private office — lounge and shelving niche",
+  "tv_on": false
+ },
+ "08.jpg": {
+  "id": "o08",
+  "project": "Workspaces",
+  "space": "Private office — desk and visitor chairs",
+  "tv_on": false
+ },
+ "09.jpg": {
+  "id": "d09",
+  "project": "Residential Interiors",
+  "space": "Dressing room — closed, cream doors and lit glass tower",
+  "tv_on": false
+ },
+ "10.jpg": {
+  "id": "d10",
+  "project": "Residential Interiors",
+  "space": "Dressing room — closed, corner view",
+  "tv_on": false
+ },
+ "11.jpg": {
+  "id": "d11",
+  "project": "Residential Interiors",
+  "space": "Dressing room — open, corner view",
+  "tv_on": false
+ },
+ "12.jpg": {
+  "id": "d12",
+  "project": "Residential Interiors",
+  "space": "Dressing room — open, frontal",
+  "tv_on": false
+ },
+ "13.jpg": {
+  "id": "d13",
+  "project": "Residential Interiors",
+  "space": "Dressing room — closed L, glass doors",
+  "tv_on": false
+ },
+ "14.jpg": {
+  "id": "d14",
+  "project": "Residential Interiors",
+  "space": "Dressing room — walk-in, both sides",
+  "tv_on": false
+ },
+ "15.jpg": {
+  "id": "d15",
+  "project": "Residential Interiors",
+  "space": "Dressing room — open, glass doors at the centre",
+  "tv_on": false
+ },
+ "16.jpg": {
+  "id": "d16",
+  "project": "Residential Interiors",
+  "space": "Dressing room — open L, glass doors",
+  "tv_on": false
+ }
+}

@@ -922,5 +922,197 @@
   "tv_on": false,
   "brands": false,
   "dup_of": null
+ },
+ "o01": {
+  "path": "projects/instagram-planning/sources/2026-11-16c/01.jpg",
+  "project": "Workspaces",
+  "space": "Private office — lounge corner, shelving unlit",
+  "size": [
+   1600,
+   1264
+  ],
+  "tv_on": false,
+  "brands": false,
+  "dup_of": null
+ },
+ "o02": {
+  "path": "projects/instagram-planning/sources/2026-11-16c/02.jpg",
+  "project": "Workspaces",
+  "space": "Private office — lounge corner, shelving lit",
+  "size": [
+   1600,
+   1264
+  ],
+  "tv_on": false,
+  "brands": false,
+  "dup_of": null
+ },
+ "o03": {
+  "path": "projects/instagram-planning/sources/2026-11-16c/03.jpg",
+  "project": "Workspaces",
+  "space": "Private office — fluted walnut and cream panels, unfurnished",
+  "size": [
+   1600,
+   1264
+  ],
+  "tv_on": false,
+  "brands": false,
+  "dup_of": null
+ },
+ "o04": {
+  "path": "projects/instagram-planning/sources/2026-11-16c/04.jpg",
+  "project": "Workspaces",
+  "space": "Private office — desk, frontal",
+  "size": [
+   1600,
+   1264
+  ],
+  "tv_on": false,
+  "brands": false,
+  "dup_of": null
+ },
+ "o05": {
+  "path": "projects/instagram-planning/sources/2026-11-16c/05.jpg",
+  "project": "Workspaces",
+  "space": "Private office — four screens over a floating unit",
+  "size": [
+   1600,
+   1264
+  ],
+  "tv_on": false,
+  "brands": false,
+  "dup_of": null
+ },
+ "o06": {
+  "path": "projects/instagram-planning/sources/2026-11-16c/06.jpg",
+  "project": "Workspaces",
+  "space": "Private office — desk and screen wall, angled",
+  "size": [
+   1600,
+   1264
+  ],
+  "tv_on": false,
+  "brands": false,
+  "dup_of": null
+ },
+ "o07": {
+  "path": "projects/instagram-planning/sources/2026-11-16c/07.jpg",
+  "project": "Workspaces",
+  "space": "Private office — lounge and shelving niche",
+  "size": [
+   1600,
+   1264
+  ],
+  "tv_on": false,
+  "brands": false,
+  "dup_of": null
+ },
+ "o08": {
+  "path": "projects/instagram-planning/sources/2026-11-16c/08.jpg",
+  "project": "Workspaces",
+  "space": "Private office — desk and visitor chairs",
+  "size": [
+   1600,
+   1264
+  ],
+  "tv_on": false,
+  "brands": false,
+  "dup_of": null
+ },
+ "d09": {
+  "path": "projects/instagram-planning/sources/2026-11-16c/09.jpg",
+  "project": "Residential Interiors",
+  "space": "Dressing room — closed, cream doors and lit glass tower",
+  "size": [
+   1600,
+   1264
+  ],
+  "tv_on": false,
+  "brands": false,
+  "dup_of": null
+ },
+ "d10": {
+  "path": "projects/instagram-planning/sources/2026-11-16c/10.jpg",
+  "project": "Residential Interiors",
+  "space": "Dressing room — closed, corner view",
+  "size": [
+   1600,
+   1264
+  ],
+  "tv_on": false,
+  "brands": false,
+  "dup_of": null
+ },
+ "d11": {
+  "path": "projects/instagram-planning/sources/2026-11-16c/11.jpg",
+  "project": "Residential Interiors",
+  "space": "Dressing room — open, corner view",
+  "size": [
+   1600,
+   1264
+  ],
+  "tv_on": false,
+  "brands": false,
+  "dup_of": null
+ },
+ "d12": {
+  "path": "projects/instagram-planning/sources/2026-11-16c/12.jpg",
+  "project": "Residential Interiors",
+  "space": "Dressing room — open, frontal",
+  "size": [
+   1600,
+   1264
+  ],
+  "tv_on": false,
+  "brands": false,
+  "dup_of": null
+ },
+ "d13": {
+  "path": "projects/instagram-planning/sources/2026-11-16c/13.jpg",
+  "project": "Residential Interiors",
+  "space": "Dressing room — closed L, glass doors",
+  "size": [
+   1600,
+   1264
+  ],
+  "tv_on": false,
+  "brands": false,
+  "dup_of": null
+ },
+ "d14": {
+  "path": "projects/instagram-planning/sources/2026-11-16c/14.jpg",
+  "project": "Residential Interiors",
+  "space": "Dressing room — walk-in, both sides",
+  "size": [
+   1600,
+   1264
+  ],
+  "tv_on": false,
+  "brands": false,
+  "dup_of": null
+ },
+ "d15": {
+  "path": "projects/instagram-planning/sources/2026-11-16c/15.jpg",
+  "project": "Residential Interiors",
+  "space": "Dressing room — open, glass doors at the centre",
+  "size": [
+   1600,
+   1264
+  ],
+  "tv_on": false,
+  "brands": false,
+  "dup_of": null
+ },
+ "d16": {
+  "path": "projects/instagram-planning/sources/2026-11-16c/16.jpg",
+  "project": "Residential Interiors",
+  "space": "Dressing room — open L, glass doors",
+  "size": [
+   1600,
+   1264
+  ],
+  "tv_on": false,
+  "brands": false,
+  "dup_of": null
  }
 }
