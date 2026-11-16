@@ -151,4 +151,4 @@ Images generated during design studies (`projects/villa-rdc/renders/`, `projects
 
 ## Sent by Karen but not design content
 
-Three screenshots of the Cloudflare dashboard (website set-up, 13 Nov), kept in the conversation only.
+Three screenshots of the Cloudflare dashboard (website set-up, 13 Nov): kept off Instagram, Karen's decision of 16 Nov 2026.

@@ -72,7 +72,7 @@ def main():
            "Images generated during design studies (`projects/villa-rdc/renders/`, `projects/chambre-blender/renders/`) "
            "are not KAÏRA renders sent by Karen; they stay out unless she approves them (confirmed 16 Nov 2026).", "",
            "## Sent by Karen but not design content", "",
-           "Three screenshots of the Cloudflare dashboard (website set-up, 13 Nov), kept in the conversation only.", ""]
+           "Three screenshots of the Cloudflare dashboard (website set-up, 13 Nov): kept off Instagram, Karen's decision of 16 Nov 2026.", ""]
     (ROOT / "COVERAGE.md").write_text("\n".join(out))
     print(f"{len(rows)} renders, {len(missing)} not yet planned", missing or "",
           f"| originals unchanged: {len(lib) - len(changed)}/{len(lib)}", changed or "")
