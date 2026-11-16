@@ -26,6 +26,10 @@ Done by hand in the app (no API): pinning, Highlights, music on Reels, location 
 `queue/` and is never published by the daily routine: it waits until the site is online and Karen approves.
 See `launch/README.md`.
 
+## Calendar
+`CALENDAR.md` lists the date of every ready post (one a day, 17:37 GMT, queue order). Rebuild it with
+`python3 tools/calendar.py` after each publication or new post.
+
 ## New images from Karen
 1. Save byte-exact copies in `sources/<YYYY-MM-DD>/` (numbered in the order received) and describe each one in
    `sources/<YYYY-MM-DD>/INVENTAIRE.md` (project, space, screen on, brand logos, KAÏRA render or inspiration).

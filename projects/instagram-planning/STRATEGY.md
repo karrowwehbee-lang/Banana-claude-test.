@@ -24,6 +24,7 @@ Every image Karen sends is published in at least one post. `COVERAGE.md` (built 
 and the post that carries it. When writing new specs, take renders first from the ones not yet planned; run
 `python3 tools/coverage.py` after each change (it fails while a render has no post). Renders with a screen on and
 retail renders follow the rules above (inner slides; retail every two weeks). New images: see README, "New images".
+`CALENDAR.md` (built by `tools/calendar.py`) shows the date of every ready post; rebuild it after each publication or new post.
 
 ## Visual rules (identical to feed v3)
 - 1080 × 1350 (4:5) JPEG for the feed; 1080 × 1920 MP4 for Reels.
@@ -65,3 +66,5 @@ no follows attributed to a post) although the profile has 3,831 followers: reach
 **Change (test, two weeks):** a second Reel each week — the Friday project spotlight is made as a Reel (first: 010,
 20 Nov). Keep it if Reels keep reaching at least twice as many accounts as carousels; otherwise return to one Reel a
 week. Hashtags unchanged (no per-hashtag data available through the API).
+
+**16 Nov 2026 — Karen:** integrate all the images she sent into the schedule and publish them along the calendar. Posts 006–029 (16 Nov → 9 Dec) carry every publishable render (118/118), including inner slides that show screens switched on, flags and shop names. Still held until she answers: children's images 02/03 and the three white kitchens (authorship), the villa plans and the two salon top views (client plans).
