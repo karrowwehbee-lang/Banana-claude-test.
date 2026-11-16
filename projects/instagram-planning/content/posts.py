@@ -202,3 +202,57 @@ P(id="011", slug="oak-marble-and-burgundy", pillar="Materials", kind="carousel",
           "accent. Warm, restrained and made to age well.\n\nSave it as a reference for your own palette.",
   hashtags=" ".join(CORE + ["#materialpalette", "#interiordetails", "#oakwood", "#marble", "#naturalmaterials",
                             "#villadesign", "#livingroomdesign", "#diningroomdesign", "#quietluxury", "#timelessdesign"]))
+
+# ---- Coverage plan (16 Nov 2026): every render Karen sent appears in at least one post — see COVERAGE.md ----
+
+# 012 — Retail Showroom I — carousel (Retail at most once every two weeks: part II not before 6 Dec)
+P(id="012", slug="a-showroom-in-zones", pillar="Project", kind="carousel", renders=["n13", "n11", "n10", "n12"],
+  build=lambda S: [
+      S.cover("n13", "white", "Retail Showroom", "A showroom<br>in zones", "Retail"),
+      S.render_slide("n11", "white", "Overview — one zone per brand, one material language", "02 / 05"),
+      S.render_slide("n10", "white", "TV and air-conditioning islands on wood-topped plinths", "03 / 05"),
+      S.render_slide("n12", "white", "Audio island — stepped wood shelves", "04 / 05"),
+      S.numbered("choc", "Design notes", "The showroom", [
+          ("One language", "Charcoal, wood and white for every brand."),
+          ("Islands", "Products at hand height, with room to walk around."),
+          ("Wall bays", "Framed niches that read from across the hall."),
+          ("Light lines", "LED profiles that guide the eye.")], size_t=80, pg="05 / 05")],
+  caption="A showroom in zones.\n\nAn electronics and appliance showroom organised brand by brand: framed wall bays in "
+          "charcoal and white, islands on wood-topped plinths, and lines of light that lead visitors through the hall.\n\n"
+          "Retail interior design & 3D visualization by KAÏRA Interior Design.",
+  hashtags=" ".join(CORE + ["#retaildesign", "#showroomdesign", "#retailinterior", "#storedesign", "#visualmerchandising",
+                            "#commercialdesign", "#retailspace", "#3dvisualization", "#interiorrender", "#archviz"]))
+
+# 013 — Villa — art (the two Villa renders without a screen that were not yet planned)
+P(id="013", slug="art-first", pillar="Detail", kind="carousel", renders=["rdc-salon-06", "etage1-sejour-08"],
+  build=lambda S: [
+      S.cover("rdc-salon-06", "white", "Villa — Living &amp; dining", "Art first", "Detail"),
+      S.render_slide("etage1-sejour-08", "white", "First-floor lounge — a red-and-white work beside the oak door", "02 / 03"),
+      S.numbered("olive", "Design notes", "Placing art", [
+          ("A wall of its own", "No shelves or fixtures competing with it."),
+          ("Scale", "A large work for a large wall, never the reverse."),
+          ("Quiet around it", "Neutral panels and furniture let it lead."),
+          ("Light", "Soft, even light from the ceiling cove.")], size_t=80, pg="03 / 03")],
+  caption="Art first.\n\nA large painted portrait, a figure under a wide straw hat in red, ochre and stripes, is given a "
+          "whole white wall beside the dining table. Upstairs, a red-and-white work answers the oak door. Everything "
+          "around them stays quiet so that they can lead.\n\nVilla — living and dining room, first-floor lounge.",
+  hashtags=" ".join(CORE + ["#artininteriors", "#interiorart", "#statementart", "#villadesign", "#diningroomdesign",
+                            "#contemporaryinterior", "#quietluxury", "#timelessdesign", "#interiordetails"]))
+
+# 014 — Residential — design notes: media walls (renders with a screen on: inner slides only, never the cover)
+P(id="014", slug="the-media-wall", pillar="Design notes", kind="carousel", renders=["r15", "r16", "n07"],
+  build=lambda S: [
+      S.solid("burgundy", "Design notes", "The media<br>wall", "How we make room for the screen.", foot="Swipe"),
+      S.render_slide("r15", "white", "Walnut cabinetry around a dark panel, with a lit low unit", "01"),
+      S.render_slide("r16", "white", "Walnut and black around the screen, marble underfoot", "02"),
+      S.render_slide("n07", "white", "Oak slats, black lines and a floating bench", "03"),
+      S.numbered("white", "Design notes", "The principles", [
+          ("Frame the screen", "A panel or a niche gives it a place."),
+          ("Hide the cables", "Everything runs inside the wall."),
+          ("Storage below", "A low, floating unit keeps the floor clear."),
+          ("Calm when off", "Wood and stone carry the wall, not the screen.")], size_t=80, pg="05 / 05")],
+  caption="The media wall.\n\nThe screen is part of the room, so we design around it: walnut cabinetry and a lit low "
+          "unit, a dark frame between wood panels, oak slats with black lines and a floating bench. Cables disappear "
+          "and the wall stays calm when the screen is off.\n\nSave this post for your living-room project.",
+  hashtags=" ".join(CORE + ["#tvwall", "#mediawall", "#tvunit", "#livingroomdesign", "#joinerydesign", "#bespokefurniture",
+                            "#walnut", "#woodpanelling", "#contemporaryinterior", "#residentialdesign"]))

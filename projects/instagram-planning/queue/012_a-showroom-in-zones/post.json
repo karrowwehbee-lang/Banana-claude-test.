@@ -1,0 +1,33 @@
+{
+ "id": "012",
+ "slug": "a-showroom-in-zones",
+ "pillar": "Project",
+ "kind": "carousel",
+ "renders": [
+  "n13",
+  "n11",
+  "n10",
+  "n12"
+ ],
+ "files": [
+  "1.jpg",
+  "2.jpg",
+  "3.jpg",
+  "4.jpg",
+  "5.jpg"
+ ],
+ "caption": "A showroom in zones.\n\nAn electronics and appliance showroom organised brand by brand: framed wall bays in charcoal and white, islands on wood-topped plinths, and lines of light that lead visitors through the hall.\n\nRetail interior design & 3D visualization by KAÏRA Interior Design.",
+ "hashtags": "#kairainteriordesign #interiorarchitecture #interiordesign #luxuryinteriors #interiordesigner #retaildesign #showroomdesign #retailinterior #storedesign #visualmerchandising #commercialdesign #retailspace #3dvisualization #interiorrender #archviz",
+ "full_caption": "A showroom in zones.\n\nAn electronics and appliance showroom organised brand by brand: framed wall bays in charcoal and white, islands on wood-topped plinths, and lines of light that lead visitors through the hall.\n\nRetail interior design & 3D visualization by KAÏRA Interior Design.\n\n#kairainteriordesign #interiorarchitecture #interiordesign #luxuryinteriors #interiordesigner #retaildesign #showroomdesign #retailinterior #storedesign #visualmerchandising #commercialdesign #retailspace #3dvisualization #interiorrender #archviz",
+ "status": "ready",
+ "created": "2026-11-16",
+ "published_at": null,
+ "media_id": null,
+ "permalink": null,
+ "checks": [
+  "012-1: n13 whole, 100 %, pixel-identical on the HD slide",
+  "012-2: n11 whole, 100 %, pixel-identical on the HD slide",
+  "012-3: n10 whole, 100 %, pixel-identical on the HD slide",
+  "012-4: n12 whole, 100 %, pixel-identical on the HD slide"
+ ]
+}

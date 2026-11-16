@@ -19,6 +19,12 @@ not published until fixed. Nothing is ever reported as published unless Instagra
 Projects rotate: Villa · Residential Interiors · Workspaces · Rooftop Bar & Lounge · Retail Showroom · Children's Rooms.
 Never two consecutive posts on the same project. Retail at most once every two weeks (brand logos visible).
 
+## Coverage — nothing left out (Karen, 16 Nov 2026)
+Every image Karen sends is published in at least one post. `COVERAGE.md` (built by `tools/coverage.py`) lists each render
+and the post that carries it. When writing new specs, take renders first from the ones not yet planned; run
+`python3 tools/coverage.py` after each change (it fails while a render has no post). Renders with a screen on and
+retail renders follow the rules above (inner slides; retail every two weeks). New images: see README, "New images".
+
 ## Visual rules (identical to feed v3)
 - 1080 × 1350 (4:5) JPEG for the feed; 1080 × 1920 MP4 for Reels.
 - Palette: luminous white, olive, burgundy, chocolate, beige touches. Cormorant + Jost. KAÏRA mark on covers.

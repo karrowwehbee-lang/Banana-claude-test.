@@ -25,3 +25,11 @@ Done by hand in the app (no API): pinning, Highlights, music on Reels, location 
 `launch/` holds the announcement of the new website (carousel, Reel, Story, caption, bio text). It is **not** in
 `queue/` and is never published by the daily routine: it waits until the site is online and Karen approves.
 See `launch/README.md`.
+
+## New images from Karen
+1. Save byte-exact copies in `sources/<YYYY-MM-DD>/` (numbered in the order received) and describe each one in
+   `sources/<YYYY-MM-DD>/INVENTAIRE.md` (project, space, screen on, brand logos, KAÏRA render or inspiration).
+2. Write `sources/<YYYY-MM-DD>/meta.json`: `{"01.jpg": {"id": "x01", "project": "…", "space": "…", "tv_on": false}}`
+   (`"inspiration": true` keeps an image out), then rebuild the library: `python3 tools/studio.py --library`.
+3. Run `python3 tools/coverage.py`: the new renders appear as not yet planned until a post carries them.
+4. Write the specs, render, check, send Karen the previews; they go out at the earliest 24 h later, in rotation.

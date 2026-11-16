@@ -72,11 +72,19 @@ def build_library():
     for k in ("01", "04", "05", "06", "07"):          # 02 and 03 are inspirations: never published
         f = KIDS / f"{k}.png"
         lib["k" + k] = dict(path=str(f.relative_to(REPO)), project="Children's Rooms", space=META["k" + k][1])
+    extra_tv = set()
+    for meta in sorted((ROOT / "sources").glob("*/meta.json")):   # new images from Karen (README, "New images")
+        for name, m in json.loads(meta.read_text()).items():      # {"01.jpg": {"id", "project", "space", "tv_on"}}
+            if m.get("inspiration"):
+                continue
+            lib[m["id"]] = dict(path=str((meta.parent / name).relative_to(REPO)), project=m["project"], space=m["space"])
+            if m.get("tv_on"):
+                extra_tv.add(m["id"])
     for k, d in lib.items():
         p = REPO / d["path"]
         im = Image.open(p)
         d["size"] = list(im.size)
-        d["tv_on"] = k in TV_ON
+        d["tv_on"] = k in TV_ON or k in extra_tv
         d["brands"] = d["project"] == "Retail Showroom"
         h = hashlib.md5(p.read_bytes()).hexdigest()
         d["dup_of"] = seen.get(h)
