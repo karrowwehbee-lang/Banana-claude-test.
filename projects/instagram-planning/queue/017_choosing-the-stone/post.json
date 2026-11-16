@@ -1,0 +1,34 @@
+{
+ "id": "017",
+ "slug": "choosing-the-stone",
+ "pillar": "Materials",
+ "kind": "carousel",
+ "renders": [
+  "w14",
+  "w15",
+  "w11",
+  "w12"
+ ],
+ "files": [
+  "1.jpg",
+  "2.jpg",
+  "3.jpg",
+  "4.jpg",
+  "5.jpg",
+  "6.jpg"
+ ],
+ "caption": "Choosing the stone.\n\nThe same office, before the furniture, in two finishes: a beige veined stone or a dark green marble for the feature wall, and the same choice for the columns between the windows. Walnut, black panels and a white marble floor stay the same.\n\nWhich would you choose, A or B?",
+ "hashtags": "#kairainteriordesign #interiorarchitecture #interiordesign #luxuryinteriors #interiordesigner #materialpalette #materialselection #interiordetails #marble #naturalstone #stoneinteriors #walnut #officedesign #workspacedesign #timelessdesign",
+ "full_caption": "Choosing the stone.\n\nThe same office, before the furniture, in two finishes: a beige veined stone or a dark green marble for the feature wall, and the same choice for the columns between the windows. Walnut, black panels and a white marble floor stay the same.\n\nWhich would you choose, A or B?\n\n#kairainteriordesign #interiorarchitecture #interiordesign #luxuryinteriors #interiordesigner #materialpalette #materialselection #interiordetails #marble #naturalstone #stoneinteriors #walnut #officedesign #workspacedesign #timelessdesign",
+ "status": "ready",
+ "created": "2026-11-16",
+ "published_at": null,
+ "media_id": null,
+ "permalink": null,
+ "checks": [
+  "017-2: w14 whole, 100 %, pixel-identical on the HD slide",
+  "017-3: w15 whole, 100 %, pixel-identical on the HD slide",
+  "017-4: w11 whole, 100 %, pixel-identical on the HD slide",
+  "017-5: w12 whole, 100 %, pixel-identical on the HD slide"
+ ]
+}

@@ -11,14 +11,11 @@ import sys
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 LAUNCH_FEED = {"chambre-principale-02", "etage1-sejour-02", "rdc-salon-11", "rdc-salon-05", "r13", "r20", "r21"}  # 11 Nov
 PLANNED = {   # render: when / which post (specs written when the date approaches, so rotation rules hold)
-    **{r: "Villa · \"The screen, framed\" carousel (after 014, not next to another Villa post)" for r in
-       ("rdc-salon-03", "rdc-salon-04", "rdc-salon-07", "etage1-sejour-01", "etage1-sejour-05", "chambre-amis-02",
-        "chambre-amis-04", "chambre-principale-04")},
     **{r: "Retail Showroom II carousel, not before 6 Dec (retail at most once every two weeks)" for r in ("n14", "n15", "n16")},
 }
 AWAITING_KAREN = {   # sent by Karen but not publishable until she decides
-    "portfolio-enfants/sources/recus/02.jpg": "children's room — inspiration image or KAÏRA render? (web JPEG, Cyrillic book titles)",
-    "portfolio-enfants/sources/recus/03.jpg": "children's room — inspiration image or KAÏRA render? (web JPEG)",
+    "portfolio-enfants/sources/recus/02.jpg": "children's room — inspiration image or KAÏRA render? (web JPEG, Cyrillic book titles; sent again 16 Nov as 06)",
+    "portfolio-enfants/sources/recus/03.jpg": "children's room — inspiration image or KAÏRA render? (web JPEG; sent again 16 Nov as 05)",
     "dossier-client/sources/plans/plan-rdc-amenagement.png": "client villa plan — privacy rule: client plans are never published",
     "dossier-client/sources/plans/plan-etage1-amenagement.png": "client villa plan — privacy rule",
     "dossier-client/sources/plans/plan-rdc-cote-2D.png": "client villa plan — privacy rule",

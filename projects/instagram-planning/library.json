@@ -670,5 +670,101 @@
   "tv_on": false,
   "brands": false,
   "dup_of": null
+ },
+ "w08": {
+  "path": "projects/instagram-planning/sources/2026-11-16/08.jpg",
+  "project": "Workspaces",
+  "space": "Unfurnished office — walnut wall, beige stone panel",
+  "size": [
+   1468,
+   1600
+  ],
+  "tv_on": false,
+  "brands": false,
+  "dup_of": null
+ },
+ "w09": {
+  "path": "projects/instagram-planning/sources/2026-11-16/09.jpg",
+  "project": "Workspaces",
+  "space": "Unfurnished office — green marble columns",
+  "size": [
+   1468,
+   1600
+  ],
+  "tv_on": false,
+  "brands": false,
+  "dup_of": null
+ },
+ "w10": {
+  "path": "projects/instagram-planning/sources/2026-11-16/10.jpg",
+  "project": "Workspaces",
+  "space": "Unfurnished office — storage wall, green marble niches",
+  "size": [
+   1468,
+   1600
+  ],
+  "tv_on": false,
+  "brands": false,
+  "dup_of": null
+ },
+ "w11": {
+  "path": "projects/instagram-planning/sources/2026-11-16/11.jpg",
+  "project": "Workspaces",
+  "space": "Unfurnished office — travertine columns",
+  "size": [
+   1468,
+   1600
+  ],
+  "tv_on": false,
+  "brands": false,
+  "dup_of": null
+ },
+ "w12": {
+  "path": "projects/instagram-planning/sources/2026-11-16/12.jpg",
+  "project": "Workspaces",
+  "space": "Unfurnished office — green marble columns, storm light",
+  "size": [
+   1468,
+   1600
+  ],
+  "tv_on": false,
+  "brands": false,
+  "dup_of": null
+ },
+ "w13": {
+  "path": "projects/instagram-planning/sources/2026-11-16/13.jpg",
+  "project": "Workspaces",
+  "space": "Unfurnished office — walnut-clad corner",
+  "size": [
+   1468,
+   1600
+  ],
+  "tv_on": false,
+  "brands": false,
+  "dup_of": null
+ },
+ "w14": {
+  "path": "projects/instagram-planning/sources/2026-11-16/14.jpg",
+  "project": "Workspaces",
+  "space": "Unfurnished office — wall, option A (beige stone)",
+  "size": [
+   1468,
+   1600
+  ],
+  "tv_on": false,
+  "brands": false,
+  "dup_of": null
+ },
+ "w15": {
+  "path": "projects/instagram-planning/sources/2026-11-16/15.jpg",
+  "project": "Workspaces",
+  "space": "Unfurnished office — wall, option B (green marble)",
+  "size": [
+   1468,
+   1600
+  ],
+  "tv_on": false,
+  "brands": false,
+  "dup_of": null
  }
 }

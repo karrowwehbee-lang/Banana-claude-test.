@@ -256,3 +256,61 @@ P(id="014", slug="the-media-wall", pillar="Design notes", kind="carousel", rende
           "and the wall stays calm when the screen is off.\n\nSave this post for your living-room project.",
   hashtags=" ".join(CORE + ["#tvwall", "#mediawall", "#tvunit", "#livingroomdesign", "#joinerydesign", "#bespokefurniture",
                             "#walnut", "#woodpanelling", "#contemporaryinterior", "#residentialdesign"]))
+
+# ---- Images received 16 Nov 2026 (sources/2026-11-16): the unfurnished office w08–w15 ----
+
+# 015 — Workspaces — Reel (renders w08, w13, w10, w09; the other four go to 017 so no render repeats within 21 days)
+P(id="015", slug="before-the-furniture-reel", pillar="Reel", kind="reel", renders=["w08", "w13", "w10", "w09"],
+  reel=dict(kick="Workspaces", title="Before the<br>furniture", scenes=[
+      ("w08", "Walnut, stone and a line of light"), ("w13", "A corner of glass and walnut"),
+      ("w10", "Storage wall — green marble niches"), ("w09", "Green marble columns, walnut below")]),
+  caption="Before the furniture.\n\nAn office floor shown bare, so the architecture speaks first: walnut walls, a beige "
+          "veined stone panel, niches backed in green marble, marble-clad columns between tall windows and a line of "
+          "light that runs around the ceiling.\n\nInterior design & 3D visualization by KAÏRA Interior Design.",
+  hashtags=" ".join(CORE + ["#officedesign", "#workspacedesign", "#officeinterior", "#corporateinterior", "#walnut",
+                            "#marble", "#architecturallighting", "#3dvisualization", "#interiorrender", "#archviz"]))
+
+# 016 — Villa — design notes: every screen wall of the villa (the 8 Villa renders with a screen on; solid cover)
+P(id="016", slug="the-screen-framed", pillar="Design notes", kind="carousel",
+  renders=["rdc-salon-04", "rdc-salon-03", "rdc-salon-07", "etage1-sejour-01", "etage1-sejour-05", "chambre-amis-02",
+           "chambre-amis-04", "chambre-principale-04"],
+  build=lambda S: [
+      S.solid("olive", "Design notes · Villa", "The screen,<br>framed", "Every screen in the villa has its own wall.",
+              foot="Swipe"),
+      S.render_slide("rdc-salon-04", "white", "Ground floor — a backlit oak panel beside the garden doors", "02 / 10"),
+      S.render_slide("rdc-salon-03", "white", "The same wall: lit niches and a low white unit", "03 / 10"),
+      S.render_slide("rdc-salon-07", "white", "Seen from the sofa", "04 / 10"),
+      S.render_slide("etage1-sejour-01", "white", "First-floor lounge — a long oak unit, lit shelving beside it", "05 / 10"),
+      S.render_slide("etage1-sejour-05", "white", "The same wall, from the coffee table", "06 / 10"),
+      S.render_slide("chambre-amis-02", "white", "Guest bedroom — veined marble behind the screen, oak fins", "07 / 10"),
+      S.render_slide("chambre-amis-04", "white", "A dressing table built into the same wall", "08 / 10"),
+      S.render_slide("chambre-principale-04", "white", "Master bedroom — a walnut wall and a low media unit", "09 / 10"),
+      S.numbered("white", "Design notes", "In every room", [
+          ("One wall, one gesture", "The screen sits inside a panel, never alone."),
+          ("Light behind", "A soft halo instead of a bright box."),
+          ("Low and light", "Long low units keep the wall calm."),
+          ("The room's materials", "Oak, marble and walnut, as everywhere else.")], size_t=80, pg="10 / 10")],
+  caption="The screen, framed.\n\nIn the villa, every screen has its wall: a backlit oak panel beside the garden doors, a "
+          "long oak unit upstairs, veined marble and oak fins in the guest bedroom, walnut in the master suite. The "
+          "screen sits inside the architecture instead of on it.\n\nSwipe through the four rooms.",
+  hashtags=" ".join(CORE + ["#mediawall", "#tvwalldesign", "#villadesign", "#villainterior", "#bedroomdesign",
+                            "#guestbedroom", "#oakwood", "#marble", "#indirectlighting", "#timelessdesign"]))
+
+# 017 — Workspaces — materials: two finishes for the same office (w14, w15, w11, w12)
+P(id="017", slug="choosing-the-stone", pillar="Materials", kind="carousel", renders=["w14", "w15", "w11", "w12"],
+  build=lambda S: [
+      S.solid("choc", "Material study", "Choosing<br>the stone", "One office, two finishes, before the furniture.",
+              foot="Swipe"),
+      S.render_slide("w14", "white", "Option A — the feature wall in beige stone", "02 / 06"),
+      S.render_slide("w15", "white", "Option B — the same wall in dark green marble", "03 / 06"),
+      S.render_slide("w11", "white", "Option A — beige stone columns", "04 / 06"),
+      S.render_slide("w12", "white", "Option B — green marble columns", "05 / 06"),
+      S.palette_slide("white", "Material study", "The palette", [
+          ("Walnut", S.sample("w14", (230, 600, 330, 840))), ("Beige stone", S.sample("w14", (340, 620, 480, 900))),
+          ("Green marble", S.sample("w15", (390, 620, 520, 900))), ("Black panel", S.sample("w14", (530, 700, 610, 920))),
+          ("White marble", S.sample("w14", (600, 1250, 900, 1450)))], "Tints sampled from our renders.")],
+  caption="Choosing the stone.\n\nThe same office, before the furniture, in two finishes: a beige veined stone or a dark "
+          "green marble for the feature wall, and the same choice for the columns between the windows. Walnut, black "
+          "panels and a white marble floor stay the same.\n\nWhich would you choose, A or B?",
+  hashtags=" ".join(CORE + ["#materialpalette", "#materialselection", "#interiordetails", "#marble", "#naturalstone",
+                            "#stoneinteriors", "#walnut", "#officedesign", "#workspacedesign", "#timelessdesign"]))

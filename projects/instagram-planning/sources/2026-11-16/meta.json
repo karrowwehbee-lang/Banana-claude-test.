@@ -1,0 +1,50 @@
+{
+ "08.jpg": {
+  "id": "w08",
+  "project": "Workspaces",
+  "space": "Unfurnished office — walnut wall, beige stone panel",
+  "tv_on": false
+ },
+ "09.jpg": {
+  "id": "w09",
+  "project": "Workspaces",
+  "space": "Unfurnished office — green marble columns",
+  "tv_on": false
+ },
+ "10.jpg": {
+  "id": "w10",
+  "project": "Workspaces",
+  "space": "Unfurnished office — storage wall, green marble niches",
+  "tv_on": false
+ },
+ "11.jpg": {
+  "id": "w11",
+  "project": "Workspaces",
+  "space": "Unfurnished office — travertine columns",
+  "tv_on": false
+ },
+ "12.jpg": {
+  "id": "w12",
+  "project": "Workspaces",
+  "space": "Unfurnished office — green marble columns, storm light",
+  "tv_on": false
+ },
+ "13.jpg": {
+  "id": "w13",
+  "project": "Workspaces",
+  "space": "Unfurnished office — walnut-clad corner",
+  "tv_on": false
+ },
+ "14.jpg": {
+  "id": "w14",
+  "project": "Workspaces",
+  "space": "Unfurnished office — wall, option A (beige stone)",
+  "tv_on": false
+ },
+ "15.jpg": {
+  "id": "w15",
+  "project": "Workspaces",
+  "space": "Unfurnished office — wall, option B (green marble)",
+  "tv_on": false
+ }
+}

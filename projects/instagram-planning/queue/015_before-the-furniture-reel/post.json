@@ -1,0 +1,27 @@
+{
+ "id": "015",
+ "slug": "before-the-furniture-reel",
+ "pillar": "Reel",
+ "kind": "reel",
+ "renders": [
+  "w08",
+  "w13",
+  "w10",
+  "w09"
+ ],
+ "files": [
+  "reel.mp4",
+  "cover.jpg"
+ ],
+ "caption": "Before the furniture.\n\nAn office floor shown bare, so the architecture speaks first: walnut walls, a beige veined stone panel, niches backed in green marble, marble-clad columns between tall windows and a line of light that runs around the ceiling.\n\nInterior design & 3D visualization by KAÏRA Interior Design.",
+ "hashtags": "#kairainteriordesign #interiorarchitecture #interiordesign #luxuryinteriors #interiordesigner #officedesign #workspacedesign #officeinterior #corporateinterior #walnut #marble #architecturallighting #3dvisualization #interiorrender #archviz",
+ "full_caption": "Before the furniture.\n\nAn office floor shown bare, so the architecture speaks first: walnut walls, a beige veined stone panel, niches backed in green marble, marble-clad columns between tall windows and a line of light that runs around the ceiling.\n\nInterior design & 3D visualization by KAÏRA Interior Design.\n\n#kairainteriordesign #interiorarchitecture #interiordesign #luxuryinteriors #interiordesigner #officedesign #workspacedesign #officeinterior #corporateinterior #walnut #marble #architecturallighting #3dvisualization #interiorrender #archviz",
+ "status": "ready",
+ "created": "2026-11-16",
+ "published_at": null,
+ "media_id": null,
+ "permalink": null,
+ "checks": [
+  "reel 15.5 s — renders shown whole: w08, w13, w10, w09"
+ ]
+}
