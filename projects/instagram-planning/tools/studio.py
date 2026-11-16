@@ -7,6 +7,7 @@
 Usage (normally called by make_post.py):  python3 tools/studio.py --library   (rebuilds library.json)
 """
 import hashlib
+import io
 import json
 import pathlib
 import shutil
@@ -15,7 +16,7 @@ import subprocess
 import sys
 
 import numpy as np
-from PIL import Image
+from PIL import Image, ImageCms
 
 HERE = pathlib.Path(__file__).resolve().parent
 ROOT = HERE.parent                                   # projects/instagram-planning
@@ -91,6 +92,7 @@ def build_library():
         d["brands"] = d["project"] == "Retail Showroom"
         h = hashlib.md5(p.read_bytes()).hexdigest()
         d["dup_of"] = seen.get(h)
+        d["md5"] = h                                   # fingerprint of Karen's file: tools/coverage.py checks it never changes
         seen.setdefault(h, k)
     LIB_FILE.write_text(json.dumps(lib, indent=1, ensure_ascii=False))
     return lib
@@ -101,7 +103,16 @@ def library():
 
 
 def original(rid):
-    return Image.open(REPO / library()[rid]["path"]).convert("RGB")
+    """Karen's file as it is, decoded to sRGB for the slide. Files tagged with another colour space (Display P3 from an
+    iPhone or a Mac) are colour-managed into sRGB so they look the same; nothing else is changed."""
+    im = Image.open(REPO / library()[rid]["path"])
+    icc = im.info.get("icc_profile")
+    if icc:
+        src = ImageCms.ImageCmsProfile(io.BytesIO(icc))
+        if "srgb" not in ImageCms.getProfileDescription(src).lower():
+            return ImageCms.profileToProfile(im.convert("RGB"), src, ImageCms.createProfile("sRGB"),
+                                             renderingIntent=ImageCms.Intent.RELATIVE_COLORIMETRIC, outputMode="RGB")
+    return im.convert("RGB")
 
 
 def size(rid):

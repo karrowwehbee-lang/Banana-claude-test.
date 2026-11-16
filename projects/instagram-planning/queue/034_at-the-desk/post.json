@@ -23,6 +23,6 @@
  "permalink": null,
  "checks": [
   "034-2: h02 whole, shown at 95% to fit (not cropped), pixel-identical on the HD slide",
-  "034-3: h03 whole, shown at 96% to fit (not cropped), pixel-identical on the HD slide"
+  "034-3: h03 whole, shown at 79% to fit (not cropped), pixel-identical on the HD slide"
  ]
 }
