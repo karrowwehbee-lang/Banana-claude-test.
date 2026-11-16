@@ -477,3 +477,40 @@ P(id="027", slug="the-executive-floor", pillar="Detail", kind="image", renders=[
           "city view.\n\nWorkspaces — executive office.",
   hashtags=" ".join(CORE + ["#executiveoffice", "#officedesign", "#workspacedesign", "#officeinterior", "#corporateinterior",
                             "#walnut", "#naturalstone", "#cityview", "#indirectlighting"]))
+
+# ---- Images received 16 Nov 2026, fifth batch (sources/2026-11-16e): barbershop y01–y07, beauty salon s08–s14 ----
+
+# 028 — Beauty Salon — project (all seven views; s10, s11, s14 show the salon's name: inner slides only)
+P(id="028", slug="soft-arches", pillar="Project", kind="carousel",
+  renders=["s12", "s08", "s09", "s13", "s10", "s11", "s14"],
+  build=lambda S: [
+      S.cover("s12", "white", "Beauty Salon", "Soft arches", "Salon"),
+      S.render_slide("s08", "white", "Manicure corner — polish displayed in an arched niche", "02 / 08"),
+      S.render_slide("s09", "white", "Pedicure and shampoo, side by side", "03 / 08"),
+      S.render_slide("s13", "white", "A wave of light behind the product shelves", "04 / 08"),
+      S.render_slide("s10", "white", "The manicure table, fluted wood beside it", "05 / 08"),
+      S.render_slide("s11", "white", "Reception — a stone counter, a curved sofa under a lit arch", "06 / 08"),
+      S.render_slide("s14", "white", "The entrance, with the whole salon in view", "07 / 08"),
+      S.numbered("white", "Design notes", "The salon", [
+          ("Soft arches", "Mirrors, niches and the welcome wall share one curve."),
+          ("A wave of light", "Backlit shelving that flows along the wall."),
+          ("Each service its corner", "Hair, nails and pedicure, close but distinct."),
+          ("Warm neutrals", "Cream walls, taupe panels, walnut and stone.")], size_t=80, pg="08 / 08")],
+  caption="Soft arches.\n\nA beauty salon in cream and taupe: arched mirrors lit along their edge, a manicure corner with "
+          "polish displayed in an arched niche, pedicure and shampoo side by side under a wave of backlit shelving, and a "
+          "reception with a stone counter and a curved sofa.\n\nInterior design & 3D visualization by KAÏRA Interior Design.",
+  hashtags=" ".join(CORE + ["#beautysalon", "#salondesign", "#saloninterior", "#nailsalon", "#nailbar", "#commercialdesign",
+                            "#archdesign", "#softminimalism", "#3dvisualization", "#interiorrender"]))
+
+# 029 — Barbershop — Reel: walk-through (the seven new views; y01 shows the shop's name)
+P(id="029", slug="barbershop-walkthrough-reel", pillar="Reel", kind="reel",
+  renders=["y02", "y06", "y04", "y05", "y03", "y07", "y01"],
+  reel=dict(kick="Barbershop", title="The barbershop,<br>walk-through", scenes=[
+      ("y02", "Five arched mirrors"), ("y06", "Cognac leather, lit arches"), ("y04", "Backlit shelving at the end of the row"),
+      ("y05", "Display wall over a stone counter"), ("y03", "Shampoo, sofa and the street"), ("y07", "The waiting corner"),
+      ("y01", "The shampoo cabin, in walnut")]),
+  caption="The barbershop, walk-through.\n\nFrom the waiting sofa to the shampoo cabin: five arched mirrors lit along their "
+          "edge, cognac leather chairs, backlit display shelving over a stone counter and a quiet corner by the window.\n\n"
+          "Save it for your own salon project.",
+  hashtags=" ".join(CORE + ["#barbershop", "#barbershopdesign", "#barbershopinterior", "#salondesign", "#commercialdesign",
+                            "#archedmirror", "#leatherchairs", "#3dvisualization", "#interiorrender", "#archviz"]))

@@ -1,0 +1,42 @@
+{
+ "id": "028",
+ "slug": "soft-arches",
+ "pillar": "Project",
+ "kind": "carousel",
+ "renders": [
+  "s12",
+  "s08",
+  "s09",
+  "s13",
+  "s10",
+  "s11",
+  "s14"
+ ],
+ "files": [
+  "1.jpg",
+  "2.jpg",
+  "3.jpg",
+  "4.jpg",
+  "5.jpg",
+  "6.jpg",
+  "7.jpg",
+  "8.jpg"
+ ],
+ "caption": "Soft arches.\n\nA beauty salon in cream and taupe: arched mirrors lit along their edge, a manicure corner with polish displayed in an arched niche, pedicure and shampoo side by side under a wave of backlit shelving, and a reception with a stone counter and a curved sofa.\n\nInterior design & 3D visualization by KAÏRA Interior Design.",
+ "hashtags": "#kairainteriordesign #interiorarchitecture #interiordesign #luxuryinteriors #interiordesigner #beautysalon #salondesign #saloninterior #nailsalon #nailbar #commercialdesign #archdesign #softminimalism #3dvisualization #interiorrender",
+ "full_caption": "Soft arches.\n\nA beauty salon in cream and taupe: arched mirrors lit along their edge, a manicure corner with polish displayed in an arched niche, pedicure and shampoo side by side under a wave of backlit shelving, and a reception with a stone counter and a curved sofa.\n\nInterior design & 3D visualization by KAÏRA Interior Design.\n\n#kairainteriordesign #interiorarchitecture #interiordesign #luxuryinteriors #interiordesigner #beautysalon #salondesign #saloninterior #nailsalon #nailbar #commercialdesign #archdesign #softminimalism #3dvisualization #interiorrender",
+ "status": "ready",
+ "created": "2026-11-16",
+ "published_at": null,
+ "media_id": null,
+ "permalink": null,
+ "checks": [
+  "028-1: s12 whole, 100 %, pixel-identical on the HD slide",
+  "028-2: s08 whole, 100 %, pixel-identical on the HD slide",
+  "028-3: s09 whole, 100 %, pixel-identical on the HD slide",
+  "028-4: s13 whole, 100 %, pixel-identical on the HD slide",
+  "028-5: s10 whole, 100 %, pixel-identical on the HD slide",
+  "028-6: s11 whole, 100 %, pixel-identical on the HD slide",
+  "028-7: s14 whole, 100 %, pixel-identical on the HD slide"
+ ]
+}

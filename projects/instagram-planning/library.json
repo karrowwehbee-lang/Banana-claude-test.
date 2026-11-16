@@ -1246,5 +1246,173 @@
   "tv_on": false,
   "brands": false,
   "dup_of": null
+ },
+ "y01": {
+  "path": "projects/instagram-planning/sources/2026-11-16e/01.jpg",
+  "project": "Barbershop",
+  "space": "Barbershop — shampoo cabin, walnut lower cabinets (variant of x10), shop name",
+  "size": [
+   1468,
+   1600
+  ],
+  "tv_on": false,
+  "brands": false,
+  "dup_of": null
+ },
+ "y02": {
+  "path": "projects/instagram-planning/sources/2026-11-16e/02.jpg",
+  "project": "Barbershop",
+  "space": "Barbershop — five arched mirrors, from the sofa",
+  "size": [
+   1468,
+   1600
+  ],
+  "tv_on": false,
+  "brands": false,
+  "dup_of": null
+ },
+ "y03": {
+  "path": "projects/instagram-planning/sources/2026-11-16e/03.jpg",
+  "project": "Barbershop",
+  "space": "Barbershop — shampoo, sofa and window",
+  "size": [
+   1468,
+   1600
+  ],
+  "tv_on": false,
+  "brands": false,
+  "dup_of": null
+ },
+ "y04": {
+  "path": "projects/instagram-planning/sources/2026-11-16e/04.jpg",
+  "project": "Barbershop",
+  "space": "Barbershop — arched mirrors and backlit shelving",
+  "size": [
+   1468,
+   1600
+  ],
+  "tv_on": false,
+  "brands": false,
+  "dup_of": null
+ },
+ "y05": {
+  "path": "projects/instagram-planning/sources/2026-11-16e/05.jpg",
+  "project": "Barbershop",
+  "space": "Barbershop — backlit display over a stone counter",
+  "size": [
+   1468,
+   1600
+  ],
+  "tv_on": false,
+  "brands": false,
+  "dup_of": null
+ },
+ "y06": {
+  "path": "projects/instagram-planning/sources/2026-11-16e/06.jpg",
+  "project": "Barbershop",
+  "space": "Barbershop — arched mirrors, angled",
+  "size": [
+   1468,
+   1600
+  ],
+  "tv_on": false,
+  "brands": false,
+  "dup_of": null
+ },
+ "y07": {
+  "path": "projects/instagram-planning/sources/2026-11-16e/07.jpg",
+  "project": "Barbershop",
+  "space": "Barbershop — waiting corner by the window",
+  "size": [
+   1468,
+   1600
+  ],
+  "tv_on": false,
+  "brands": false,
+  "dup_of": null
+ },
+ "s08": {
+  "path": "projects/instagram-planning/sources/2026-11-16e/08.jpg",
+  "project": "Beauty Salon",
+  "space": "Beauty salon — manicure niche, pedicure, wig display",
+  "size": [
+   1468,
+   1600
+  ],
+  "tv_on": false,
+  "brands": false,
+  "dup_of": null
+ },
+ "s09": {
+  "path": "projects/instagram-planning/sources/2026-11-16e/09.jpg",
+  "project": "Beauty Salon",
+  "space": "Beauty salon — pedicure and shampoo room",
+  "size": [
+   1468,
+   1600
+  ],
+  "tv_on": false,
+  "brands": false,
+  "dup_of": null
+ },
+ "s10": {
+  "path": "projects/instagram-planning/sources/2026-11-16e/10.jpg",
+  "project": "Beauty Salon",
+  "space": "Beauty salon — manicure table, fluted wood (partial name)",
+  "size": [
+   1468,
+   1600
+  ],
+  "tv_on": false,
+  "brands": false,
+  "dup_of": null
+ },
+ "s11": {
+  "path": "projects/instagram-planning/sources/2026-11-16e/11.jpg",
+  "project": "Beauty Salon",
+  "space": "Beauty salon — reception with the salon's name",
+  "size": [
+   1468,
+   1600
+  ],
+  "tv_on": false,
+  "brands": false,
+  "dup_of": null
+ },
+ "s12": {
+  "path": "projects/instagram-planning/sources/2026-11-16e/12.jpg",
+  "project": "Beauty Salon",
+  "space": "Beauty salon — arched mirrors and pedicure",
+  "size": [
+   1468,
+   1600
+  ],
+  "tv_on": false,
+  "brands": false,
+  "dup_of": null
+ },
+ "s13": {
+  "path": "projects/instagram-planning/sources/2026-11-16e/13.jpg",
+  "project": "Beauty Salon",
+  "space": "Beauty salon — wave of backlit shelving",
+  "size": [
+   1468,
+   1600
+  ],
+  "tv_on": false,
+  "brands": false,
+  "dup_of": null
+ },
+ "s14": {
+  "path": "projects/instagram-planning/sources/2026-11-16e/14.jpg",
+  "project": "Beauty Salon",
+  "space": "Beauty salon — entrance with the salon's name",
+  "size": [
+   1468,
+   1600
+  ],
+  "tv_on": false,
+  "brands": false,
+  "dup_of": null
  }
 }

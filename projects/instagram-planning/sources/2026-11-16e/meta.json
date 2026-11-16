@@ -1,0 +1,86 @@
+{
+ "01.jpg": {
+  "id": "y01",
+  "project": "Barbershop",
+  "space": "Barbershop — shampoo cabin, walnut lower cabinets (variant of x10), shop name",
+  "tv_on": false
+ },
+ "02.jpg": {
+  "id": "y02",
+  "project": "Barbershop",
+  "space": "Barbershop — five arched mirrors, from the sofa",
+  "tv_on": false
+ },
+ "03.jpg": {
+  "id": "y03",
+  "project": "Barbershop",
+  "space": "Barbershop — shampoo, sofa and window",
+  "tv_on": false
+ },
+ "04.jpg": {
+  "id": "y04",
+  "project": "Barbershop",
+  "space": "Barbershop — arched mirrors and backlit shelving",
+  "tv_on": false
+ },
+ "05.jpg": {
+  "id": "y05",
+  "project": "Barbershop",
+  "space": "Barbershop — backlit display over a stone counter",
+  "tv_on": false
+ },
+ "06.jpg": {
+  "id": "y06",
+  "project": "Barbershop",
+  "space": "Barbershop — arched mirrors, angled",
+  "tv_on": false
+ },
+ "07.jpg": {
+  "id": "y07",
+  "project": "Barbershop",
+  "space": "Barbershop — waiting corner by the window",
+  "tv_on": false
+ },
+ "08.jpg": {
+  "id": "s08",
+  "project": "Beauty Salon",
+  "space": "Beauty salon — manicure niche, pedicure, wig display",
+  "tv_on": false
+ },
+ "09.jpg": {
+  "id": "s09",
+  "project": "Beauty Salon",
+  "space": "Beauty salon — pedicure and shampoo room",
+  "tv_on": false
+ },
+ "10.jpg": {
+  "id": "s10",
+  "project": "Beauty Salon",
+  "space": "Beauty salon — manicure table, fluted wood (partial name)",
+  "tv_on": false
+ },
+ "11.jpg": {
+  "id": "s11",
+  "project": "Beauty Salon",
+  "space": "Beauty salon — reception with the salon's name",
+  "tv_on": false
+ },
+ "12.jpg": {
+  "id": "s12",
+  "project": "Beauty Salon",
+  "space": "Beauty salon — arched mirrors and pedicure",
+  "tv_on": false
+ },
+ "13.jpg": {
+  "id": "s13",
+  "project": "Beauty Salon",
+  "space": "Beauty salon — wave of backlit shelving",
+  "tv_on": false
+ },
+ "14.jpg": {
+  "id": "s14",
+  "project": "Beauty Salon",
+  "space": "Beauty salon — entrance with the salon's name",
+  "tv_on": false
+ }
+}
