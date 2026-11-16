@@ -17,14 +17,21 @@
  "caption": "Material study — walnut & black marble.\n\nDeep woods and dark stones, balanced by greige lacquer and light oak. A palette we return to for kitchens, living rooms and workspaces: warm, quiet and made to last.\n\nWhich one would you choose for your home?",
  "hashtags": "#kairainteriordesign #interiorarchitecture #interiordesign #luxuryinteriors #interiordesigner #materialpalette #interiordetails #walnut #marble #naturalmaterials #bespokefurniture #customfurniture #joinerydesign #madetomeasure #quietluxury #minimalluxury",
  "full_caption": "Material study — walnut & black marble.\n\nDeep woods and dark stones, balanced by greige lacquer and light oak. A palette we return to for kitchens, living rooms and workspaces: warm, quiet and made to last.\n\nWhich one would you choose for your home?\n\n#kairainteriordesign #interiorarchitecture #interiordesign #luxuryinteriors #interiordesigner #materialpalette #interiordetails #walnut #marble #naturalmaterials #bespokefurniture #customfurniture #joinerydesign #madetomeasure #quietluxury #minimalluxury",
- "status": "ready",
+ "status": "published",
  "created": "2026-11-12",
- "published_at": null,
- "media_id": null,
- "permalink": null,
+ "published_at": "2026-11-16T17:39:07Z",
+ "media_id": "17970778620193293",
+ "permalink": "https://www.instagram.com/p/Dfz6VwfEcCz/",
  "checks": [
   "006-2: n01 whole, 100 %, pixel-identical on the HD slide",
   "006-3: n09 whole, 100 %, pixel-identical on the HD slide",
   "006-4: n04 whole, 100 %, pixel-identical on the HD slide"
- ]
+ ],
+ "media_urls": {
+  "1.jpg": "https://raw.githubusercontent.com/karrowwehbee-lang/Banana-claude-test./refs/heads/claude/kaira-interior-design-skill-1isxi1/projects/instagram-planning/queue/006_walnut-and-black-marble/1.jpg",
+  "2.jpg": "https://raw.githubusercontent.com/karrowwehbee-lang/Banana-claude-test./refs/heads/claude/kaira-interior-design-skill-1isxi1/projects/instagram-planning/queue/006_walnut-and-black-marble/2.jpg",
+  "3.jpg": "https://raw.githubusercontent.com/karrowwehbee-lang/Banana-claude-test./refs/heads/claude/kaira-interior-design-skill-1isxi1/projects/instagram-planning/queue/006_walnut-and-black-marble/3.jpg",
+  "4.jpg": "https://raw.githubusercontent.com/karrowwehbee-lang/Banana-claude-test./refs/heads/claude/kaira-interior-design-skill-1isxi1/projects/instagram-planning/queue/006_walnut-and-black-marble/4.jpg"
+ },
+ "hosting": "fallback: Banana-claude-test (public)"
 }
