@@ -1,0 +1,20 @@
+{
+ "01.jpg": {
+  "id": "h01",
+  "project": "Villa",
+  "space": "Ground-floor plan, annotated by hand",
+  "tv_on": false
+ },
+ "02.jpg": {
+  "id": "h02",
+  "project": "Studio",
+  "space": "At the desk — a wall modelled in Revit",
+  "tv_on": false
+ },
+ "03-without-file-path.jpg": {
+  "id": "h03",
+  "project": "Studio",
+  "space": "At the desk — a render in progress in Blender",
+  "tv_on": false
+ }
+}

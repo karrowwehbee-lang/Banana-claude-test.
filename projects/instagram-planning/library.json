@@ -1534,5 +1534,41 @@
   "tv_on": false,
   "brands": false,
   "dup_of": null
+ },
+ "h01": {
+  "path": "projects/instagram-planning/sources/earlier/01.jpg",
+  "project": "Villa",
+  "space": "Ground-floor plan, annotated by hand",
+  "size": [
+   1713,
+   1092
+  ],
+  "tv_on": false,
+  "brands": false,
+  "dup_of": null
+ },
+ "h02": {
+  "path": "projects/instagram-planning/sources/earlier/02.jpg",
+  "project": "Studio",
+  "space": "At the desk — a wall modelled in Revit",
+  "size": [
+   2016,
+   1512
+  ],
+  "tv_on": false,
+  "brands": false,
+  "dup_of": null
+ },
+ "h03": {
+  "path": "projects/instagram-planning/sources/earlier/03-without-file-path.jpg",
+  "project": "Studio",
+  "space": "At the desk — a render in progress in Blender",
+  "size": [
+   1450,
+   2133
+  ],
+  "tv_on": false,
+  "brands": false,
+  "dup_of": null
  }
 }

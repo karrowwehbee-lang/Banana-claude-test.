@@ -130,6 +130,7 @@ def cover(rid, theme, kick, title, num):
 
 
 FIT_W = W - 240                         # widest render shown at 100 % on the 2160-px slide
+FIT_H = H - 2 * M - 170                 # tallest, leaving room for the caption
 
 
 def render_slide(rid, theme, label, pg=""):
@@ -138,6 +139,8 @@ def render_slide(rid, theme, label, pg=""):
     w, h = size(rid)
     if w > FIT_W:                       # wider than the slide: shown whole, scaled down for display (never cropped)
         w, h = FIT_W, round(h * FIT_W / w)
+    if h > FIT_H:                       # taller than the slide (phone photos): same rule
+        w, h = round(w * FIT_H / h), FIT_H
     x = (W - w) // 2
     y = max(M, (H - h - 170) // 2)
     cx = x if w >= 1200 else M          # small files (plans): the caption keeps the slide's margins instead of the image width

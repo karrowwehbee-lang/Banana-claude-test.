@@ -69,3 +69,7 @@ week. Hashtags unchanged (no per-hashtag data available through the API).
 
 **16 Nov 2026 — Karen:** integrate all the images she sent into the schedule and publish them along the calendar. Posts 006–029 (16 Nov → 9 Dec) carry every publishable render (118/118), including inner slides that show screens switched on, flags and shop names. Still held until she answers: children's images 02/03 and the three white kitchens (authorship), the villa plans and the two salon top views (client plans).
 **16 Nov 2026 — Karen's answers:** the children's images 02/03 and the three white kitchens are KAÏRA designs; the three villa plans and the two salon top views may be published (her decision, an exception to the client-plan rule). Renders wider than the slide are shown whole, scaled down for display only.
+**16 Nov 2026 — full check of every file Karen sent (152):** 146 were already in posts; the hand-annotated villa plan
+joins 030, and the two photos of her screens (Revit, Blender) make 034 — the Blender photo cut just below its title bar,
+which showed her name and a client project name in the file path. Not published: the three Cloudflare dashboard
+screenshots (website set-up, not design content; they show the account e-mail).

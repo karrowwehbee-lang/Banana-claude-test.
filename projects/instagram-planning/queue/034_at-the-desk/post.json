@@ -1,0 +1,28 @@
+{
+ "id": "034",
+ "slug": "at-the-desk",
+ "pillar": "Process",
+ "kind": "carousel",
+ "renders": [
+  "h02",
+  "h03"
+ ],
+ "files": [
+  "1.jpg",
+  "2.jpg",
+  "3.jpg",
+  "4.jpg"
+ ],
+ "caption": "At the desk.\n\nBefore every render there is a model: walls, joinery and openings drawn in Revit, then materials, light and camera set in Blender. What you see on our page starts on these screens.\n\nInterior design & 3D visualization by KAÏRA Interior Design.",
+ "hashtags": "#kairainteriordesign #interiorarchitecture #interiordesign #luxuryinteriors #interiordesigner #behindthescenes #workinprogress #designprocess #revit #blender3d #3dmodeling #3dvisualization #archviz #studiolife",
+ "full_caption": "At the desk.\n\nBefore every render there is a model: walls, joinery and openings drawn in Revit, then materials, light and camera set in Blender. What you see on our page starts on these screens.\n\nInterior design & 3D visualization by KAÏRA Interior Design.\n\n#kairainteriordesign #interiorarchitecture #interiordesign #luxuryinteriors #interiordesigner #behindthescenes #workinprogress #designprocess #revit #blender3d #3dmodeling #3dvisualization #archviz #studiolife",
+ "status": "ready",
+ "created": "2026-11-16",
+ "published_at": null,
+ "media_id": null,
+ "permalink": null,
+ "checks": [
+  "034-2: h02 whole, shown at 95% to fit (not cropped), pixel-identical on the HD slide",
+  "034-3: h03 whole, shown at 96% to fit (not cropped), pixel-identical on the HD slide"
+ ]
+}

@@ -520,20 +520,21 @@ P(id="029", slug="barbershop-walkthrough-reel", pillar="Reel", kind="reel",
 
 # 030 — Villa — design notes: the villa on plan (two 3D layouts and the dimensioned ground-floor plan)
 P(id="030", slug="the-villa-on-plan", pillar="Design notes", kind="carousel",
-  renders=["p-rdc-amenagement", "p-etage1-amenagement", "p-rdc-cote-2D"],
+  renders=["p-rdc-amenagement", "p-etage1-amenagement", "p-rdc-cote-2D", "h01"],
   build=lambda S: [
       S.solid("olive", "Villa · On plan", "The villa,<br>on plan", "How the rooms you have seen fit together.", foot="Swipe"),
-      S.render_slide("p-rdc-amenagement", "white", "Ground floor — living, dining and the guest bedroom", "02 / 05"),
-      S.render_slide("p-etage1-amenagement", "white", "First floor — the lounge and the master bedroom", "03 / 05"),
-      S.render_slide("p-rdc-cote-2D", "white", "Ground floor, dimensioned", "04 / 05"),
+      S.render_slide("p-rdc-amenagement", "white", "Ground floor — living, dining and the guest bedroom", "02 / 06"),
+      S.render_slide("p-etage1-amenagement", "white", "First floor — the lounge and the master bedroom", "03 / 06"),
+      S.render_slide("p-rdc-cote-2D", "white", "Ground floor, dimensioned", "04 / 06"),
+      S.render_slide("h01", "white", "The same plan, annotated by hand — main living room, guest bedroom", "05 / 06"),
       S.numbered("white", "Design notes", "From plan to render", [
           ("Survey", "Every wall measured before anything is drawn."),
           ("Layout", "Furniture placed to scale, circulation first."),
           ("Elevations", "Each wall drawn, then built in 3D."),
-          ("Renders", "The views you see here come from these plans.")], size_t=80, pg="05 / 05")],
+          ("Renders", "The views you see here come from these plans.")], size_t=80, pg="06 / 06")],
   caption="The villa, on plan.\n\nThe rooms you have followed here, seen from above: on the ground floor the living room, the "
           "dining room and the guest bedroom; upstairs the lounge and the master bedroom. Every render starts here, with a "
-          "plan drawn to the centimetre.\n\nSwipe to see both floors and the dimensioned plan.",
+          "plan drawn to the centimetre.\n\nSwipe to see both floors, the dimensioned plan and our first notes on it.",
   hashtags=" ".join(CORE + ["#floorplan", "#3dfloorplan", "#spaceplanning", "#interiorlayout", "#technicaldrawing",
                             "#villadesign", "#designprocess", "#residentialdesign", "#interiordetails"]))
 
@@ -585,3 +586,20 @@ P(id="033", slug="two-salons-from-above", pillar="Process", kind="carousel", ren
           "each in their own corner around a central waiting area.\n\nSave it if you are planning a salon.",
   hashtags=" ".join(CORE + ["#floorplan", "#3dfloorplan", "#spaceplanning", "#salondesign", "#barbershopdesign",
                             "#beautysalon", "#commercialdesign", "#designprocess", "#interiorlayout"]))
+
+# 034 — Studio — process: at the desk (photos of Karen's screens: Revit, then Blender; h03 is cut below the file path)
+P(id="034", slug="at-the-desk", pillar="Process", kind="carousel", renders=["h02", "h03"],
+  build=lambda S: [
+      S.solid("burgundy", "Our process", "At the desk", "Before the render: the model.", foot="Swipe"),
+      S.render_slide("h02", "white", "A wall modelled in Revit, section by section", "02 / 04"),
+      S.render_slide("h03", "white", "The same care in Blender: materials, light, camera", "03 / 04"),
+      S.numbered("white", "Our process", "Behind every render", [
+          ("Model", "Walls, joinery and openings drawn to the millimetre."),
+          ("Materials", "Wood, stone and fabric set one by one."),
+          ("Light", "Daylight and lines of LED placed as they will be built."),
+          ("Render", "Hours of calculation for one calm image.")], size_t=80, pg="04 / 04")],
+  caption="At the desk.\n\nBefore every render there is a model: walls, joinery and openings drawn in Revit, then materials, "
+          "light and camera set in Blender. What you see on our page starts on these screens.\n\n"
+          "Interior design & 3D visualization by KAÏRA Interior Design.",
+  hashtags=" ".join(CORE + ["#behindthescenes", "#workinprogress", "#designprocess", "#revit", "#blender3d", "#3dmodeling",
+                            "#3dvisualization", "#archviz", "#studiolife"]))
