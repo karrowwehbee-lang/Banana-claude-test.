@@ -405,3 +405,75 @@ P(id="022", slug="behind-the-doors-reel", pillar="Reel", kind="reel",
           "piece by piece.\n\nSave it for your own dressing room.",
   hashtags=" ".join(CORE + ["#dressingroom", "#walkincloset", "#wardrobedesign", "#closetdesign", "#bespokefurniture",
                             "#customfurniture", "#joinerydesign", "#walnut", "#storagedesign", "#bedroomdesign"]))
+
+# ---- Images received 16 Nov 2026, fourth batch (sources/2026-11-16d): executive floor e01, light oak office l02–l06,
+#      barbershop x10–x13 + x16. Held for Karen: 07–09 (kitchens, edited with Apple Photos Clean Up), 14–15 (top views = plans) ----
+
+# 023 — Barbershop — design notes (x12, x16, x13; x10 and x11 go to 025)
+P(id="023", slug="arches-and-leather", pillar="Design notes", kind="carousel", renders=["x12", "x16", "x13"],
+  build=lambda S: [
+      S.cover("x12", "white", "Barbershop", "Arches &amp; leather", "Barbershop"),
+      S.render_slide("x16", "white", "The waiting area — a curved sofa, nested marble tables", "02 / 04"),
+      S.render_slide("x13", "white", "Arched mirrors along one wall, light from the street", "03 / 04"),
+      S.numbered("choc", "Design notes", "The barbershop", [
+          ("Arched mirrors", "One arch per chair, lit along its edge."),
+          ("Cognac leather", "Classic chairs against olive-taupe walls."),
+          ("A quiet wait", "A curved sofa and brass-legged tables."),
+          ("Display in light", "Backlit shelving above a stone counter.")], size_t=80, pg="04 / 04")],
+  caption="Arches & leather.\n\nA barbershop drawn around a row of arched mirrors, each lit along its edge, with cognac "
+          "leather chairs against olive-taupe walls. At the back, a curved sofa and nested marble tables make the wait part "
+          "of the visit, under backlit display shelving.\n\nInterior design & 3D visualization by KAÏRA Interior Design.",
+  hashtags=" ".join(CORE + ["#barbershop", "#barbershopdesign", "#salondesign", "#saloninterior", "#commercialdesign",
+                            "#archedmirror", "#brassdetails", "#3dvisualization", "#interiorrender", "#archviz"]))
+
+# 024 — Workspaces — Reel (Friday spotlight as a Reel): the light oak office, all five views
+P(id="024", slug="light-oak-black-lines-reel", pillar="Reel", kind="reel", renders=["l06", "l04", "l03", "l02", "l05"],
+  reel=dict(kick="Workspaces", title="Light oak,<br>black lines", scenes=[
+      ("l06", "Light oak and black slats"), ("l04", "A desk with a sculpted return"), ("l03", "Visitor chairs and open shelving"),
+      ("l02", "A lounge corner with wooden armchairs"), ("l05", "A coffee wall behind smoked glass")]),
+  caption="Light oak, black lines.\n\nA compact office in light oak and black: a desk with a slatted front and a sculpted "
+          "return, open shelving in both tones, a lounge corner with wooden armchairs and a glazed wall that hides a "
+          "coffee station.\n\nSave it for your next office project.",
+  hashtags=" ".join(CORE + ["#officedesign", "#workspacedesign", "#officeinterior", "#oakwood", "#officefurniture",
+                            "#deskdesign", "#bespokefurniture", "#minimaloffice", "#3dvisualization", "#interiorrender"]))
+
+# 025 — Barbershop — materials (x11, x10; x10 shows the shop's name: inner slide only)
+P(id="025", slug="olive-walnut-and-cognac", pillar="Materials", kind="carousel", renders=["x11", "x10"],
+  build=lambda S: [
+      S.palette_slide("white", "Material study", "Olive, walnut<br>&amp; cognac", [
+          ("Olive taupe", S.sample("x10", (610, 770, 700, 860))), ("Dark walnut", S.sample("x10", (1200, 300, 1330, 650))),
+          ("Cognac leather", S.sample("x10", (330, 1250, 420, 1350))), ("White stone", S.sample("x10", (200, 820, 500, 870))),
+          ("Brushed brass", S.sample("x10", (763, 1303, 766, 1343)))], "Tints sampled from our renders."),
+      S.render_slide("x11", "white", "Barbershop — reception and waiting, the street beyond", "02 / 03"),
+      S.render_slide("x10", "white", "The shampoo cabin in olive, the waiting sofa", "03 / 03")],
+  caption="Olive, walnut & cognac.\n\nThe palette of our barbershop: olive-taupe walls, dark walnut panels edged with a line "
+          "of light, cognac leather chairs, white veined stone and brushed brass on the side tables. Warm, grounded and "
+          "calm.\n\nWhich tone would you keep?",
+  hashtags=" ".join(CORE + ["#materialpalette", "#colorpalette", "#walnut", "#leatherchairs", "#brassdetails",
+                            "#barbershopdesign", "#salondesign", "#interiordetails", "#commercialdesign", "#earthtones"]))
+
+# 026 — Retail Showroom II — carousel (two weeks after 012; the last three showroom renders)
+P(id="026", slug="the-appliance-hall", pillar="Project", kind="carousel", renders=["n14", "n15", "n16"],
+  build=lambda S: [
+      S.cover("n14", "white", "Retail Showroom", "The appliance<br>hall", "Retail"),
+      S.render_slide("n15", "white", "TV wall and an island lit from below", "02 / 04"),
+      S.render_slide("n16", "white", "Display units outlined in light", "03 / 04"),
+      S.numbered("white", "Design notes", "Display", [
+          ("Wall bays", "Each brand framed in charcoal and wood."),
+          ("Lit plinths", "Islands that float on a line of light."),
+          ("A bright floor", "One continuous stone floor for the whole hall."),
+          ("Room to walk", "Wide aisles between the islands.")], size_t=80, pg="04 / 04")],
+  caption="The appliance hall.\n\nThe second part of our showroom: a long hall of appliances framed in charcoal and wood, a "
+          "TV wall facing an island lit from below, and display units outlined in light on a bright stone floor.\n\n"
+          "Retail interior design & 3D visualization by KAÏRA Interior Design.",
+  hashtags=" ".join(CORE + ["#retaildesign", "#showroomdesign", "#retailinterior", "#storedesign", "#visualmerchandising",
+                            "#commercialdesign", "#lightingdesign", "#displaydesign", "#3dvisualization", "#interiorrender"]))
+
+# 027 — Workspaces — detail: the executive floor (single image)
+P(id="027", slug="the-executive-floor", pillar="Detail", kind="image", renders=["e01"],
+  build=lambda S: [S.cover("e01", "white", "Workspaces", "The executive floor", "Detail")],
+  caption="The executive floor.\n\nOne open floor, three uses: a lounge in cream leather around a walnut and black table, a "
+          "meeting table by the windows, and a desk in front of stone-backed shelving, with stone-clad columns framing the "
+          "city view.\n\nWorkspaces — executive office.",
+  hashtags=" ".join(CORE + ["#executiveoffice", "#officedesign", "#workspacedesign", "#officeinterior", "#corporateinterior",
+                            "#walnut", "#naturalstone", "#cityview", "#indirectlighting"]))

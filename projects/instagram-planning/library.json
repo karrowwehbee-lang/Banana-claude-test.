@@ -1114,5 +1114,137 @@
   "tv_on": false,
   "brands": false,
   "dup_of": null
+ },
+ "e01": {
+  "path": "projects/instagram-planning/sources/2026-11-16d/01.jpg",
+  "project": "Workspaces",
+  "space": "Executive floor — lounge, meeting table, desk, city view",
+  "size": [
+   1468,
+   1600
+  ],
+  "tv_on": false,
+  "brands": false,
+  "dup_of": null
+ },
+ "l02": {
+  "path": "projects/instagram-planning/sources/2026-11-16d/02.jpg",
+  "project": "Workspaces",
+  "space": "Light oak office — desk and lounge corner",
+  "size": [
+   1600,
+   1264
+  ],
+  "tv_on": false,
+  "brands": false,
+  "dup_of": null
+ },
+ "l03": {
+  "path": "projects/instagram-planning/sources/2026-11-16d/03.jpg",
+  "project": "Workspaces",
+  "space": "Light oak office — desk and open shelving",
+  "size": [
+   1600,
+   1264
+  ],
+  "tv_on": false,
+  "brands": false,
+  "dup_of": null
+ },
+ "l04": {
+  "path": "projects/instagram-planning/sources/2026-11-16d/04.jpg",
+  "project": "Workspaces",
+  "space": "Light oak office — desk with sculpted return",
+  "size": [
+   1600,
+   1264
+  ],
+  "tv_on": false,
+  "brands": false,
+  "dup_of": null
+ },
+ "l05": {
+  "path": "projects/instagram-planning/sources/2026-11-16d/05.jpg",
+  "project": "Workspaces",
+  "space": "Light oak office — coffee wall behind smoked glass",
+  "size": [
+   1600,
+   1264
+  ],
+  "tv_on": false,
+  "brands": false,
+  "dup_of": null
+ },
+ "l06": {
+  "path": "projects/instagram-planning/sources/2026-11-16d/06.jpg",
+  "project": "Workspaces",
+  "space": "Light oak office — desk and lit black bookcase",
+  "size": [
+   1600,
+   1264
+  ],
+  "tv_on": false,
+  "brands": false,
+  "dup_of": null
+ },
+ "x10": {
+  "path": "projects/instagram-planning/sources/2026-11-16d/10.jpg",
+  "project": "Barbershop",
+  "space": "Barbershop — shampoo cabin with the shop's name, waiting sofa",
+  "size": [
+   1468,
+   1600
+  ],
+  "tv_on": false,
+  "brands": false,
+  "dup_of": null
+ },
+ "x11": {
+  "path": "projects/instagram-planning/sources/2026-11-16d/11.jpg",
+  "project": "Barbershop",
+  "space": "Barbershop — reception and waiting, street view",
+  "size": [
+   1468,
+   1600
+  ],
+  "tv_on": false,
+  "brands": false,
+  "dup_of": null
+ },
+ "x12": {
+  "path": "projects/instagram-planning/sources/2026-11-16d/12.jpg",
+  "project": "Barbershop",
+  "space": "Barbershop — arched mirrors and cognac chairs",
+  "size": [
+   1468,
+   1600
+  ],
+  "tv_on": false,
+  "brands": false,
+  "dup_of": null
+ },
+ "x13": {
+  "path": "projects/instagram-planning/sources/2026-11-16d/13.jpg",
+  "project": "Barbershop",
+  "space": "Barbershop — arched mirrors, windows",
+  "size": [
+   1468,
+   1600
+  ],
+  "tv_on": false,
+  "brands": false,
+  "dup_of": null
+ },
+ "x16": {
+  "path": "projects/instagram-planning/sources/2026-11-16d/16.jpg",
+  "project": "Barbershop",
+  "space": "Barbershop — waiting area and backlit shelving",
+  "size": [
+   1468,
+   1600
+  ],
+  "tv_on": false,
+  "brands": false,
+  "dup_of": null
  }
 }
