@@ -623,6 +623,30 @@
   "brands": false,
   "dup_of": null
  },
+ "k02": {
+  "path": "projects/portfolio-enfants/sources/recus/02.jpg",
+  "project": "Children's Rooms",
+  "space": "Olive bear room",
+  "size": [
+   1080,
+   1350
+  ],
+  "tv_on": false,
+  "brands": false,
+  "dup_of": null
+ },
+ "k03": {
+  "path": "projects/portfolio-enfants/sources/recus/03.jpg",
+  "project": "Children's Rooms",
+  "space": "Beige cloud room",
+  "size": [
+   1200,
+   960
+  ],
+  "tv_on": false,
+  "brands": false,
+  "dup_of": null
+ },
  "k04": {
   "path": "projects/portfolio-enfants/sources/recus/04.png",
   "project": "Children's Rooms",
@@ -666,6 +690,42 @@
   "size": [
    1536,
    1024
+  ],
+  "tv_on": false,
+  "brands": false,
+  "dup_of": null
+ },
+ "p-etage1-amenagement": {
+  "path": "projects/dossier-client/sources/plans/plan-etage1-amenagement.png",
+  "project": "Villa",
+  "space": "Plan — etage1-amenagement",
+  "size": [
+   927,
+   640
+  ],
+  "tv_on": false,
+  "brands": false,
+  "dup_of": null
+ },
+ "p-rdc-amenagement": {
+  "path": "projects/dossier-client/sources/plans/plan-rdc-amenagement.png",
+  "project": "Villa",
+  "space": "Plan — rdc-amenagement",
+  "size": [
+   879,
+   694
+  ],
+  "tv_on": false,
+  "brands": false,
+  "dup_of": null
+ },
+ "p-rdc-cote-2D": {
+  "path": "projects/dossier-client/sources/plans/plan-rdc-cote-2D.png",
+  "project": "Villa",
+  "space": "Plan — rdc-cote-2D",
+  "size": [
+   1713,
+   1092
   ],
   "tv_on": false,
   "brands": false,
@@ -1242,6 +1302,66 @@
   "size": [
    1468,
    1600
+  ],
+  "tv_on": false,
+  "brands": false,
+  "dup_of": null
+ },
+ "q07": {
+  "path": "projects/instagram-planning/sources/2026-11-16d/07.jpg",
+  "project": "Residential Interiors",
+  "space": "White kitchen — marble island, oak wall, sunset",
+  "size": [
+   2560,
+   1440
+  ],
+  "tv_on": false,
+  "brands": false,
+  "dup_of": null
+ },
+ "q08": {
+  "path": "projects/instagram-planning/sources/2026-11-16d/08.jpg",
+  "project": "Residential Interiors",
+  "space": "White kitchen — U-shape, marble island, oak tall units",
+  "size": [
+   2560,
+   1440
+  ],
+  "tv_on": false,
+  "brands": false,
+  "dup_of": null
+ },
+ "q09": {
+  "path": "projects/instagram-planning/sources/2026-11-16d/09.jpg",
+  "project": "Residential Interiors",
+  "space": "White kitchen — marble and oak island, wine fridge",
+  "size": [
+   2560,
+   1440
+  ],
+  "tv_on": false,
+  "brands": false,
+  "dup_of": null
+ },
+ "t14": {
+  "path": "projects/instagram-planning/sources/2026-11-16d/14.jpg",
+  "project": "Barbershop",
+  "space": "Top view — layout",
+  "size": [
+   640,
+   972
+  ],
+  "tv_on": false,
+  "brands": false,
+  "dup_of": null
+ },
+ "t15": {
+  "path": "projects/instagram-planning/sources/2026-11-16d/15.jpg",
+  "project": "Beauty Salon",
+  "space": "Top view — layout",
+  "size": [
+   853,
+   1144
   ],
   "tv_on": false,
   "brands": false,

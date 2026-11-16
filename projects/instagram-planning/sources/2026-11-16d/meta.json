@@ -64,5 +64,35 @@
   "project": "Barbershop",
   "space": "Barbershop — waiting area and backlit shelving",
   "tv_on": false
+ },
+ "07.jpg": {
+  "id": "q07",
+  "project": "Residential Interiors",
+  "space": "White kitchen — marble island, oak wall, sunset",
+  "tv_on": false
+ },
+ "08.jpg": {
+  "id": "q08",
+  "project": "Residential Interiors",
+  "space": "White kitchen — U-shape, marble island, oak tall units",
+  "tv_on": false
+ },
+ "09.jpg": {
+  "id": "q09",
+  "project": "Residential Interiors",
+  "space": "White kitchen — marble and oak island, wine fridge",
+  "tv_on": false
+ },
+ "14.jpg": {
+  "id": "t14",
+  "project": "Barbershop",
+  "space": "Top view — layout",
+  "tv_on": false
+ },
+ "15.jpg": {
+  "id": "t15",
+  "project": "Beauty Salon",
+  "space": "Top view — layout",
+  "tv_on": false
  }
 }

@@ -12,17 +12,7 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent
 LAUNCH_FEED = {"chambre-principale-02", "etage1-sejour-02", "rdc-salon-11", "rdc-salon-05", "r13", "r20", "r21"}  # 11 Nov
 PLANNED = {   # render: when / which post (specs written when the date approaches, so rotation rules hold)
 }
-AWAITING_KAREN = {   # sent by Karen but not publishable until she decides
-    "portfolio-enfants/sources/recus/02.jpg": "children's room — inspiration image or KAÏRA render? (web JPEG, Cyrillic book titles; sent again 16 Nov as 06)",
-    "portfolio-enfants/sources/recus/03.jpg": "children's room — inspiration image or KAÏRA render? (web JPEG; sent again 16 Nov as 05)",
-    "instagram-planning/sources/2026-11-16d/07.jpg": "white kitchen (sunset) — KAÏRA design? file edited with Apple Photos Clean Up (AI removal)",
-    "instagram-planning/sources/2026-11-16d/08.jpg": "white kitchen (U-shape) — KAÏRA design? edited with Apple Photos Clean Up",
-    "instagram-planning/sources/2026-11-16d/09.jpg": "white kitchen (wine fridge) — KAÏRA design? edited with Apple Photos Clean Up",
-    "instagram-planning/sources/2026-11-16d/14.jpg": "barbershop top view — a plan of a client project (privacy rule)",
-    "instagram-planning/sources/2026-11-16d/15.jpg": "salon top view (other layout) — a plan of a client project (privacy rule)",
-    "dossier-client/sources/plans/plan-rdc-amenagement.png": "client villa plan — privacy rule: client plans are never published",
-    "dossier-client/sources/plans/plan-etage1-amenagement.png": "client villa plan — privacy rule",
-    "dossier-client/sources/plans/plan-rdc-cote-2D.png": "client villa plan — privacy rule",
+AWAITING_KAREN = {   # sent by Karen but not publishable until she decides (16 Nov 2026: all confirmed — none left)
 }
 
 

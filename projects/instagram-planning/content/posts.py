@@ -514,3 +514,74 @@ P(id="029", slug="barbershop-walkthrough-reel", pillar="Reel", kind="reel",
           "Save it for your own salon project.",
   hashtags=" ".join(CORE + ["#barbershop", "#barbershopdesign", "#barbershopinterior", "#salondesign", "#commercialdesign",
                             "#archedmirror", "#leatherchairs", "#3dvisualization", "#interiorrender", "#archviz"]))
+
+# ---- 16 Nov 2026: Karen confirmed k02/k03 and the white kitchens q07–q09 as KAÏRA designs, and approved publishing the
+#      villa plans and the two salon top views ----
+
+# 030 — Villa — design notes: the villa on plan (two 3D layouts and the dimensioned ground-floor plan)
+P(id="030", slug="the-villa-on-plan", pillar="Design notes", kind="carousel",
+  renders=["p-rdc-amenagement", "p-etage1-amenagement", "p-rdc-cote-2D"],
+  build=lambda S: [
+      S.solid("olive", "Villa · On plan", "The villa,<br>on plan", "How the rooms you have seen fit together.", foot="Swipe"),
+      S.render_slide("p-rdc-amenagement", "white", "Ground floor — living, dining and the guest bedroom", "02 / 05"),
+      S.render_slide("p-etage1-amenagement", "white", "First floor — the lounge and the master bedroom", "03 / 05"),
+      S.render_slide("p-rdc-cote-2D", "white", "Ground floor, dimensioned", "04 / 05"),
+      S.numbered("white", "Design notes", "From plan to render", [
+          ("Survey", "Every wall measured before anything is drawn."),
+          ("Layout", "Furniture placed to scale, circulation first."),
+          ("Elevations", "Each wall drawn, then built in 3D."),
+          ("Renders", "The views you see here come from these plans.")], size_t=80, pg="05 / 05")],
+  caption="The villa, on plan.\n\nThe rooms you have followed here, seen from above: on the ground floor the living room, the "
+          "dining room and the guest bedroom; upstairs the lounge and the master bedroom. Every render starts here, with a "
+          "plan drawn to the centimetre.\n\nSwipe to see both floors and the dimensioned plan.",
+  hashtags=" ".join(CORE + ["#floorplan", "#3dfloorplan", "#spaceplanning", "#interiorlayout", "#technicaldrawing",
+                            "#villadesign", "#designprocess", "#residentialdesign", "#interiordetails"]))
+
+# 031 — Children's Rooms — project: two more rooms (k03, k02)
+P(id="031", slug="clouds-and-a-bear", pillar="Project", kind="carousel", renders=["k03", "k02"],
+  build=lambda S: [
+      S.cover("k03", "white", "Children's Rooms", "Clouds &amp; a bear", "Kids"),
+      S.render_slide("k02", "white", "Olive velvet under a framed, backlit bear", "02 / 03"),
+      S.numbered("olive", "Design notes", "Rooms that grow", [
+          ("Soft edges", "Rounded headboards and upholstered panels."),
+          ("Light as a story", "Backlit clouds and a bear that glows at night."),
+          ("Storage at their height", "Open niches and low shelves within reach."),
+          ("Calm colours", "Beige and olive, with one warm accent.")], size_t=80, pg="03 / 03")],
+  caption="Clouds & a bear.\n\nTwo more rooms from our children's collection: soft beige with backlit clouds above a rounded, "
+          "upholstered headboard and bunny-ear chairs; olive velvet under a framed, backlit bear, with fluted panels and "
+          "terracotta lights.\n\nInterior design & 3D visualization by KAÏRA Interior Design.",
+  hashtags=" ".join(CORE + ["#kidsroomdesign", "#childrensroom", "#kidsinterior", "#kidsbedroom", "#playfulinteriors",
+                            "#bespokefurniture", "#3dvisualization", "#interiorrender", "#archviz"]))
+
+# 032 — Residential — materials: three white kitchens (renders wider than the slide: shown whole, scaled to fit)
+P(id="032", slug="cream-and-white-marble", pillar="Materials", kind="carousel", renders=["q08", "q07", "q09"],
+  build=lambda S: [
+      S.palette_slide("white", "Material study", "Cream &amp;<br>white marble", [
+          ("Cream", S.sample("q08", (560, 330, 760, 600))), ("White marble", S.sample("q08", (925, 540, 1010, 760))),
+          ("Light oak", S.sample("q08", (2130, 340, 2420, 820))), ("Brushed steel", S.sample("q08", (220, 450, 300, 1100))),
+          ("Oak floor", S.sample("q09", (200, 1250, 600, 1400)))], "Tints sampled from our renders."),
+      S.render_slide("q08", "white", "A U-shaped kitchen around a marble island", "02 / 04"),
+      S.render_slide("q07", "white", "Cream cabinetry, a marble island, evening light", "03 / 04"),
+      S.render_slide("q09", "white", "Marble and light oak, a wine cabinet at the end", "04 / 04")],
+  caption="Cream & white marble.\n\nThree kitchens, one language: handleless cream cabinetry, islands wrapped in veined white "
+          "marble, warm light oak and a cove of light around the ceiling. Quiet surfaces that let the stone lead.\n\n"
+          "Which island would you choose?",
+  hashtags=" ".join(CORE + ["#kitchendesign", "#whitekitchen", "#marbleisland", "#kitchenisland", "#luxurykitchen",
+                            "#marble", "#oakwood", "#handlelesskitchen", "#materialpalette", "#modernkitchen"]))
+
+# 033 — Barbershop + Beauty Salon — process: the two salons from above (top views)
+P(id="033", slug="two-salons-from-above", pillar="Process", kind="carousel", renders=["t14", "t15"],
+  build=lambda S: [
+      S.solid("choc", "Our process", "Two salons,<br>from above", "Before any render, the layout.", foot="Swipe"),
+      S.render_slide("t14", "white", "Barbershop — five chairs facing the waiting area", "02 / 04"),
+      S.render_slide("t15", "white", "Beauty salon — hair, nails and pedicure around the wait", "03 / 04"),
+      S.numbered("white", "Our process", "Planning a salon", [
+          ("Flow first", "From the door to the chair to the shampoo."),
+          ("Waiting in view", "A sofa where clients can see the room."),
+          ("Water at the back", "Shampoo and washroom grouped together."),
+          ("One wall per service", "Each trade with its own light and storage.")], size_t=80, pg="04 / 04")],
+  caption="Two salons, from above.\n\nBefore any render, the layout: in the barbershop, five chairs along the mirror wall "
+          "facing the shampoo and the waiting sofa, a washroom at the back; in the beauty salon, hair, nails and pedicure "
+          "each in their own corner around a central waiting area.\n\nSave it if you are planning a salon.",
+  hashtags=" ".join(CORE + ["#floorplan", "#3dfloorplan", "#spaceplanning", "#salondesign", "#barbershopdesign",
+                            "#beautysalon", "#commercialdesign", "#designprocess", "#interiorlayout"]))

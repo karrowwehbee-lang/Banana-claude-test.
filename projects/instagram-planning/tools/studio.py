@@ -52,7 +52,8 @@ META = {   # id: (project, space)
     "n11": ("Retail Showroom", "Brand zones"), "n12": ("Retail Showroom", "Audio islands"),
     "n13": ("Retail Showroom", "Air-conditioning wall"), "n14": ("Retail Showroom", "Appliance hall"),
     "n15": ("Retail Showroom", "TV wall"), "n16": ("Retail Showroom", "Display units"),
-    "k01": ("Children's Rooms", "Douceur Lapin"), "k04": ("Children's Rooms", "Nuages"),
+    "k01": ("Children's Rooms", "Douceur Lapin"), "k02": ("Children's Rooms", "Olive bear room"),
+    "k03": ("Children's Rooms", "Beige cloud room"), "k04": ("Children's Rooms", "Nuages"),
     "k05": ("Children's Rooms", "Ourson Caramel"), "k06": ("Children's Rooms", "Jungle Douce"),
     "k07": ("Children's Rooms", "Nuage Olive"),
 }
@@ -69,9 +70,11 @@ def build_library():
             lib["r" + f.stem] = dict(path=str(f.relative_to(REPO)), project=META["r" + f.stem][0], space=META["r" + f.stem][1])
     for f in sorted(NEW.glob("*.jpg")):
         lib["n" + f.stem] = dict(path=str(f.relative_to(REPO)), project=META["n" + f.stem][0], space=META["n" + f.stem][1])
-    for k in ("01", "04", "05", "06", "07"):          # 02 and 03 are inspirations: never published
-        f = KIDS / f"{k}.png"
+    for k in ("01", "02", "03", "04", "05", "06", "07"):   # 02 and 03 confirmed as KAÏRA renders by Karen (16 Nov 2026)
+        f = next(KIDS.glob(f"{k}.*"))
         lib["k" + k] = dict(path=str(f.relative_to(REPO)), project="Children's Rooms", space=META["k" + k][1])
+    for f in sorted((VILLA / "plans").glob("*.png")):    # client plans: published with Karen's approval (16 Nov 2026)
+        lib["p-" + f.stem.replace("plan-", "")] = dict(path=str(f.relative_to(REPO)), project="Villa", space="Plan — " + f.stem.replace("plan-", ""))
     extra_tv = set()
     for meta in sorted((ROOT / "sources").glob("*/meta.json")):   # new images from Karen (README, "New images")
         for name, m in json.loads(meta.read_text()).items():      # {"01.jpg": {"id", "project", "space", "tv_on"}}
@@ -126,13 +129,19 @@ def cover(rid, theme, kick, title, num):
     return sl(page(t, bg, ink), [(rid, x, y, w)])
 
 
+FIT_W = W - 240                         # widest render shown at 100 % on the 2160-px slide
+
+
 def render_slide(rid, theme, label, pg=""):
     """Inner slide: whole render, centred, a discreet caption."""
     bg, ink, acc, sub = THEMES[theme]
     w, h = size(rid)
+    if w > FIT_W:                       # wider than the slide: shown whole, scaled down for display (never cropped)
+        w, h = FIT_W, round(h * FIT_W / w)
     x = (W - w) // 2
     y = max(M, (H - h - 170) // 2)
-    t = (f'<div class="abs" style="left:{x}px;right:{x}px;top:{y + h + 54}px;display:flex;justify-content:space-between">'
+    cx = x if w >= 1200 else M          # small files (plans): the caption keeps the slide's margins instead of the image width
+    t = (f'<div class="abs" style="left:{cx}px;right:{cx}px;top:{y + h + 54}px;display:flex;justify-content:space-between">'
          f'<div class="caps" style="font-size:24px;color:{sub}">{label}</div>'
          f'<div class="caps" style="font-size:24px;color:{acc}">{pg}</div></div>')
     return sl(page(t, bg, ink), [(rid, x, y, w)])
@@ -186,10 +195,14 @@ def render_slides(slides, outdir, stem="slide"):
         canvas = Image.open(bgp).convert("RGB")
         for rid, x, y, w in imgs:
             src = original(rid)
-            assert w == src.width, "renders are pasted at 100 % only"
+            note = "100 %"
+            if w != src.width:                                 # only for renders wider than the slide
+                assert w < src.width, "renders are never enlarged"
+                note = f"shown at {w / src.width:.0%} to fit (not cropped)"
+                src = src.resize((w, round(src.height * w / src.width)), Image.LANCZOS)
             canvas.paste(src, (x, y))
             assert np.array_equal(np.asarray(canvas)[y:y + src.height, x:x + src.width], np.asarray(src))
-            checks.append(f"{stem}-{i}: {rid} whole, 100 %, pixel-identical on the HD slide")
+            checks.append(f"{stem}-{i}: {rid} whole, {note}, pixel-identical on the HD slide")
         out = outdir / f"{i}.jpg"
         canvas.resize((1080, 1350), Image.LANCZOS).save(out, quality=95, icc_profile=SRGB, optimize=True)
         files.append(out.name)

@@ -31,7 +31,7 @@ retail renders follow the rules above (inner slides; retail every two weeks). Ne
 - Palette: luminous white, olive, burgundy, chocolate, beige touches. Cormorant + Jost. KAÏRA mark on covers.
 - Renders: only Karen's renders (library.json), **whole and unmodified** — pasted at 100 % on the HD slide and verified
   pixel by pixel; never cropped, retouched, recoloured, upscaled or generated. Images 02/03 of the children's folder
-  (inspirations) are never used.
+  were confirmed as KAÏRA renders by Karen on 16 Nov 2026.
 - Renders with a TV screen switched on (flag `tv_on`): never as a cover; at most as an inner slide when useful.
 
 ## No repetition
@@ -68,3 +68,4 @@ no follows attributed to a post) although the profile has 3,831 followers: reach
 week. Hashtags unchanged (no per-hashtag data available through the API).
 
 **16 Nov 2026 — Karen:** integrate all the images she sent into the schedule and publish them along the calendar. Posts 006–029 (16 Nov → 9 Dec) carry every publishable render (118/118), including inner slides that show screens switched on, flags and shop names. Still held until she answers: children's images 02/03 and the three white kitchens (authorship), the villa plans and the two salon top views (client plans).
+**16 Nov 2026 — Karen's answers:** the children's images 02/03 and the three white kitchens are KAÏRA designs; the three villa plans and the two salon top views may be published (her decision, an exception to the client-plan rule). Renders wider than the slide are shown whole, scaled down for display only.
