@@ -1,0 +1,39 @@
+{
+ "id": "019",
+ "slug": "around-the-table",
+ "pillar": "Project",
+ "kind": "carousel",
+ "renders": [
+  "b03",
+  "b01",
+  "b06",
+  "b02",
+  "b04",
+  "b05"
+ ],
+ "files": [
+  "1.jpg",
+  "2.jpg",
+  "3.jpg",
+  "4.jpg",
+  "5.jpg",
+  "6.jpg",
+  "7.jpg"
+ ],
+ "caption": "Around the table.\n\nA boardroom designed for long sessions: one long table with built-in microphones and a planted centre line, a slatted ceiling with linear lights, walnut walls and a wall of green marble that anchors the room. Storage is built in under the windows and into lit shelving.\n\nInterior design & 3D visualization by KAÏRA Interior Design.",
+ "hashtags": "#kairainteriordesign #interiorarchitecture #interiordesign #luxuryinteriors #interiordesigner #boardroom #meetingroom #conferenceroom #officedesign #workspacedesign #corporateinterior #walnut #marble #lightingdesign #3dvisualization",
+ "full_caption": "Around the table.\n\nA boardroom designed for long sessions: one long table with built-in microphones and a planted centre line, a slatted ceiling with linear lights, walnut walls and a wall of green marble that anchors the room. Storage is built in under the windows and into lit shelving.\n\nInterior design & 3D visualization by KAÏRA Interior Design.\n\n#kairainteriordesign #interiorarchitecture #interiordesign #luxuryinteriors #interiordesigner #boardroom #meetingroom #conferenceroom #officedesign #workspacedesign #corporateinterior #walnut #marble #lightingdesign #3dvisualization",
+ "status": "ready",
+ "created": "2026-11-16",
+ "published_at": null,
+ "media_id": null,
+ "permalink": null,
+ "checks": [
+  "019-1: b03 whole, 100 %, pixel-identical on the HD slide",
+  "019-2: b01 whole, 100 %, pixel-identical on the HD slide",
+  "019-3: b06 whole, 100 %, pixel-identical on the HD slide",
+  "019-4: b02 whole, 100 %, pixel-identical on the HD slide",
+  "019-5: b04 whole, 100 %, pixel-identical on the HD slide",
+  "019-6: b05 whole, 100 %, pixel-identical on the HD slide"
+ ]
+}

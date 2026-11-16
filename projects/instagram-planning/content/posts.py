@@ -314,3 +314,55 @@ P(id="017", slug="choosing-the-stone", pillar="Materials", kind="carousel", rend
           "panels and a white marble floor stay the same.\n\nWhich would you choose, A or B?",
   hashtags=" ".join(CORE + ["#materialpalette", "#materialselection", "#interiordetails", "#marble", "#naturalstone",
                             "#stoneinteriors", "#walnut", "#officedesign", "#workspacedesign", "#timelessdesign"]))
+
+# ---- Images received 16 Nov 2026, second batch (sources/2026-11-16b): boardroom b01–b06, green kitchen g07–g12, kitchen c14 ----
+
+# 018 — Residential — materials: the green kitchen (all six views)
+P(id="018", slug="forest-green-and-brass", pillar="Materials", kind="carousel",
+  renders=["g09", "g07", "g12", "g08", "g11", "g10"],
+  build=lambda S: [
+      S.palette_slide("white", "Material study", "Forest green<br>&amp; brass", [
+          ("Forest green", S.sample("g09", (990, 300, 1100, 520))), ("Brushed brass", S.sample("g09", (1358, 530, 1360, 550))),
+          ("White stone", S.sample("g09", (1290, 590, 1480, 680))), ("Black steel", S.sample("g09", (190, 450, 300, 700))),
+          ("Pale floor", S.sample("g09", (600, 1000, 900, 1150)))], "Tints sampled from our renders."),
+      S.render_slide("g09", "white", "Kitchen — tall units, glazed cabinets lit from within", "02 / 07"),
+      S.render_slide("g07", "white", "Built-in ovens beside a full-height glazed cabinet", "03 / 07"),
+      S.render_slide("g12", "white", "The range wall under a slim hood", "04 / 07"),
+      S.render_slide("g08", "white", "The whole run, from the fridge to the sink", "05 / 07"),
+      S.render_slide("g11", "white", "Sink corner — white veined splashback", "06 / 07"),
+      S.render_slide("g10", "white", "The island — green fronts wrapped in white stone", "07 / 07")],
+  caption="Forest green & brass.\n\nA kitchen in deep green with brushed brass handles, white veined worktops and "
+          "splashback, glazed upper cabinets lit from within and an island wrapped in white stone. One colour, carried "
+          "from the floor to the ceiling.\n\nWould you dare a green kitchen?",
+  hashtags=" ".join(CORE + ["#kitchendesign", "#greenkitchen", "#luxurykitchen", "#kitchencabinets", "#brasshardware",
+                            "#kitchenisland", "#materialpalette", "#interiordetails", "#residentialdesign", "#modernkitchen"]))
+
+# 019 — Workspaces — project: the boardroom (all six views; b01 shows flags: inner slide only)
+P(id="019", slug="around-the-table", pillar="Project", kind="carousel", renders=["b03", "b01", "b06", "b02", "b04", "b05"],
+  build=lambda S: [
+      S.cover("b03", "white", "Workspaces", "Around<br>the table", "Boardroom"),
+      S.render_slide("b01", "white", "One long table, a planted centre line, green marble behind", "02 / 07"),
+      S.render_slide("b06", "white", "Walnut-tone slats and lines of light overhead", "03 / 07"),
+      S.render_slide("b02", "white", "Walnut walls all around", "04 / 07"),
+      S.render_slide("b04", "white", "Storage wall — lit shelving backed in green marble", "05 / 07"),
+      S.render_slide("b05", "white", "Low cabinets under the windows, the city beyond", "06 / 07"),
+      S.numbered("choc", "Design notes", "The boardroom", [
+          ("One long table", "Microphones and power built in, plants down the centre."),
+          ("Slatted ceiling", "Linear lights between the slats, even and glare-free."),
+          ("Walnut and green marble", "Warm walls and one strong stone."),
+          ("Storage built in", "Cabinets under the windows, lit shelving between.")], size_t=80, pg="07 / 07")],
+  caption="Around the table.\n\nA boardroom designed for long sessions: one long table with built-in microphones and a "
+          "planted centre line, a slatted ceiling with linear lights, walnut walls and a wall of green marble that "
+          "anchors the room. Storage is built in under the windows and into lit shelving.\n\n"
+          "Interior design & 3D visualization by KAÏRA Interior Design.",
+  hashtags=" ".join(CORE + ["#boardroom", "#meetingroom", "#conferenceroom", "#officedesign", "#workspacedesign",
+                            "#corporateinterior", "#walnut", "#marble", "#lightingdesign", "#3dvisualization"]))
+
+# 020 — Residential — detail: the wood kitchen (single image)
+P(id="020", slug="a-bar-for-six", pillar="Detail", kind="image", renders=["c14"],
+  build=lambda S: [S.cover("c14", "white", "Residential — Kitchen", "A bar for six", "Detail")],
+  caption="A bar for six.\n\nWarm wood cabinetry with built-in ovens, a long wooden bar on a fluted cream base, six white "
+          "stools and a square cove of light above. The window brings the garden into the kitchen.\n\n"
+          "Residential interiors — kitchen.",
+  hashtags=" ".join(CORE + ["#kitchendesign", "#kitchenbar", "#breakfastbar", "#woodkitchen", "#fluteddetails",
+                            "#indirectlighting", "#contemporaryinterior", "#modernkitchen", "#residentialdesign"]))

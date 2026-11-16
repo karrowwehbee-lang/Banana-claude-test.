@@ -1,0 +1,15 @@
+{
+ "01.jpg": {"id": "b01", "project": "Workspaces", "space": "Boardroom — long table, flags, green marble wall"},
+ "02.jpg": {"id": "b02", "project": "Workspaces", "space": "Boardroom — side view, walnut walls"},
+ "03.jpg": {"id": "b03", "project": "Workspaces", "space": "Boardroom — frontal, lit green marble shelving"},
+ "04.jpg": {"id": "b04", "project": "Workspaces", "space": "Boardroom — storage wall and window"},
+ "05.jpg": {"id": "b05", "project": "Workspaces", "space": "Boardroom — window wall, lit shelving"},
+ "06.jpg": {"id": "b06", "project": "Workspaces", "space": "Boardroom — slatted ceiling, frontal"},
+ "07.jpg": {"id": "g07", "project": "Residential Interiors", "space": "Green kitchen — angled view, ovens"},
+ "08.jpg": {"id": "g08", "project": "Residential Interiors", "space": "Green kitchen — wide frontal view"},
+ "09.jpg": {"id": "g09", "project": "Residential Interiors", "space": "Green kitchen — frontal view"},
+ "10.jpg": {"id": "g10", "project": "Residential Interiors", "space": "Green kitchen — island"},
+ "11.jpg": {"id": "g11", "project": "Residential Interiors", "space": "Green kitchen — sink corner"},
+ "12.jpg": {"id": "g12", "project": "Residential Interiors", "space": "Green kitchen — range wall"},
+ "14.jpg": {"id": "c14", "project": "Residential Interiors", "space": "Wood kitchen — fluted bar for six"}
+}

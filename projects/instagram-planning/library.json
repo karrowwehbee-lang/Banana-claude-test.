@@ -766,5 +766,161 @@
   "tv_on": false,
   "brands": false,
   "dup_of": null
+ },
+ "b01": {
+  "path": "projects/instagram-planning/sources/2026-11-16b/01.jpg",
+  "project": "Workspaces",
+  "space": "Boardroom — long table, flags, green marble wall",
+  "size": [
+   1468,
+   1600
+  ],
+  "tv_on": false,
+  "brands": false,
+  "dup_of": null
+ },
+ "b02": {
+  "path": "projects/instagram-planning/sources/2026-11-16b/02.jpg",
+  "project": "Workspaces",
+  "space": "Boardroom — side view, walnut walls",
+  "size": [
+   1468,
+   1600
+  ],
+  "tv_on": false,
+  "brands": false,
+  "dup_of": null
+ },
+ "b03": {
+  "path": "projects/instagram-planning/sources/2026-11-16b/03.jpg",
+  "project": "Workspaces",
+  "space": "Boardroom — frontal, lit green marble shelving",
+  "size": [
+   1468,
+   1600
+  ],
+  "tv_on": false,
+  "brands": false,
+  "dup_of": null
+ },
+ "b04": {
+  "path": "projects/instagram-planning/sources/2026-11-16b/04.jpg",
+  "project": "Workspaces",
+  "space": "Boardroom — storage wall and window",
+  "size": [
+   1468,
+   1600
+  ],
+  "tv_on": false,
+  "brands": false,
+  "dup_of": null
+ },
+ "b05": {
+  "path": "projects/instagram-planning/sources/2026-11-16b/05.jpg",
+  "project": "Workspaces",
+  "space": "Boardroom — window wall, lit shelving",
+  "size": [
+   1468,
+   1600
+  ],
+  "tv_on": false,
+  "brands": false,
+  "dup_of": null
+ },
+ "b06": {
+  "path": "projects/instagram-planning/sources/2026-11-16b/06.jpg",
+  "project": "Workspaces",
+  "space": "Boardroom — slatted ceiling, frontal",
+  "size": [
+   1468,
+   1600
+  ],
+  "tv_on": false,
+  "brands": false,
+  "dup_of": null
+ },
+ "g07": {
+  "path": "projects/instagram-planning/sources/2026-11-16b/07.jpg",
+  "project": "Residential Interiors",
+  "space": "Green kitchen — angled view, ovens",
+  "size": [
+   1600,
+   1264
+  ],
+  "tv_on": false,
+  "brands": false,
+  "dup_of": null
+ },
+ "g08": {
+  "path": "projects/instagram-planning/sources/2026-11-16b/08.jpg",
+  "project": "Residential Interiors",
+  "space": "Green kitchen — wide frontal view",
+  "size": [
+   1600,
+   1264
+  ],
+  "tv_on": false,
+  "brands": false,
+  "dup_of": null
+ },
+ "g09": {
+  "path": "projects/instagram-planning/sources/2026-11-16b/09.jpg",
+  "project": "Residential Interiors",
+  "space": "Green kitchen — frontal view",
+  "size": [
+   1600,
+   1264
+  ],
+  "tv_on": false,
+  "brands": false,
+  "dup_of": null
+ },
+ "g10": {
+  "path": "projects/instagram-planning/sources/2026-11-16b/10.jpg",
+  "project": "Residential Interiors",
+  "space": "Green kitchen — island",
+  "size": [
+   1600,
+   1264
+  ],
+  "tv_on": false,
+  "brands": false,
+  "dup_of": null
+ },
+ "g11": {
+  "path": "projects/instagram-planning/sources/2026-11-16b/11.jpg",
+  "project": "Residential Interiors",
+  "space": "Green kitchen — sink corner",
+  "size": [
+   1600,
+   1264
+  ],
+  "tv_on": false,
+  "brands": false,
+  "dup_of": null
+ },
+ "g12": {
+  "path": "projects/instagram-planning/sources/2026-11-16b/12.jpg",
+  "project": "Residential Interiors",
+  "space": "Green kitchen — range wall",
+  "size": [
+   1600,
+   1264
+  ],
+  "tv_on": false,
+  "brands": false,
+  "dup_of": null
+ },
+ "c14": {
+  "path": "projects/instagram-planning/sources/2026-11-16b/14.jpg",
+  "project": "Residential Interiors",
+  "space": "Wood kitchen — fluted bar for six",
+  "size": [
+   1600,
+   1264
+  ],
+  "tv_on": false,
+  "brands": false,
+  "dup_of": null
  }
 }
