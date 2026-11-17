@@ -15,12 +15,19 @@
  "caption": "From render to drawing.\n\nA 3D view shows the atmosphere; the drawing makes it buildable. For each project we draw elevations, sections and bespoke joinery so that workshops build exactly what was designed.\n\nSwipe to see the Nuage Olive children's room concept, rendered and drawn.",
  "hashtags": "#kairainteriordesign #interiorarchitecture #interiordesign #luxuryinteriors #interiordesigner #designprocess #technicaldrawing #interiorelevation #3dvisualization #bespokefurniture #customfurniture #joinerydesign #madetomeasure #interiorrender #archviz",
  "full_caption": "From render to drawing.\n\nA 3D view shows the atmosphere; the drawing makes it buildable. For each project we draw elevations, sections and bespoke joinery so that workshops build exactly what was designed.\n\nSwipe to see the Nuage Olive children's room concept, rendered and drawn.\n\n#kairainteriordesign #interiorarchitecture #interiordesign #luxuryinteriors #interiordesigner #designprocess #technicaldrawing #interiorelevation #3dvisualization #bespokefurniture #customfurniture #joinerydesign #madetomeasure #interiorrender #archviz",
- "status": "ready",
+ "status": "published",
  "created": "2026-11-12",
- "published_at": null,
- "media_id": null,
- "permalink": null,
+ "published_at": "2026-11-17T17:39:47Z",
+ "media_id": "18079044293775971",
+ "permalink": "https://www.instagram.com/p/Df2fNhckcpy/",
  "checks": [
   "007-2: k07 whole, 100 %, pixel-identical on the HD slide"
- ]
+ ],
+ "media_urls": {
+  "1.jpg": "https://raw.githubusercontent.com/karrowwehbee-lang/Banana-claude-test./refs/heads/claude/kaira-interior-design-skill-1isxi1/projects/instagram-planning/queue/007_from-render-to-drawing/1.jpg",
+  "2.jpg": "https://raw.githubusercontent.com/karrowwehbee-lang/Banana-claude-test./refs/heads/claude/kaira-interior-design-skill-1isxi1/projects/instagram-planning/queue/007_from-render-to-drawing/2.jpg",
+  "3.jpg": "https://raw.githubusercontent.com/karrowwehbee-lang/Banana-claude-test./refs/heads/claude/kaira-interior-design-skill-1isxi1/projects/instagram-planning/queue/007_from-render-to-drawing/3.jpg",
+  "4.jpg": "https://raw.githubusercontent.com/karrowwehbee-lang/Banana-claude-test./refs/heads/claude/kaira-interior-design-skill-1isxi1/projects/instagram-planning/queue/007_from-render-to-drawing/4.jpg"
+ },
+ "hosting": "fallback: Banana-claude-test (public)"
 }
