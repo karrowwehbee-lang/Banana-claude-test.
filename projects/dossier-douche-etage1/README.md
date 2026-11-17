@@ -3,7 +3,17 @@
 Dossier indépendant, même identité, même qualité et même organisation que le dossier technique de la villa
 (`projects/dossier-technique`) : A3 paysage, cartouche KAÏRA, numérotation des planches et références des dessins.
 
-**Statut : en attente des images de Karen. Rien n'est finalisé avant l'envoi complet (consigne du 17/11/2026).**
+**Statut : document de travail (indice 0), 22 planches. Rien n'est finalisé avant que Karen confirme que tous les éléments
+ont été transmis (consigne du 17/11/2026).**
+
+Construction : `python3 tools/build.py --previews` → `build/` (non versionné) : HTML, PDF de travail, aperçus PNG.
+`tools/details.py` : rendus, 29 détails D01–D29 (zones en pixels du fichier original), planches 401–410.
+
+Règles de Karen (17/11/2026) :
+- Détails = agrandissements signalés, extraits des rendus sans retouche, numérotés et légendés ; le rendu original reste
+  présenté en entier et en grand sur la même planche, avec la zone encadrée.
+- Plan coté IMG_7771 (sources/05.png) : ne correspond pas à la salle d'eau → non utilisé ; ne jamais mélanger les plans
+  des chambres avec ceux de la salle d'eau. Sa cote « 478 » ≈ 386 à l'échelle : « À vérifier », rien n'est corrigé.
 
 ## Organisation prévue (mêmes séries que le dossier villa)
 
@@ -27,7 +37,7 @@ Dossier indépendant, même identité, même qualité et même organisation que 
 
 - `dossier-client/sources/plans/plan-etage1-amenagement.png` : vue de dessus de l'étage. En haut, quatre pièces carrelées
   (deux grandes en L, deux petites) **sans équipements** : la douche principale n'y est pas identifiable.
-- Aucun rendu de salle d'eau dans les fichiers reçus jusqu'ici.
+- 7 rendus de la salle d'eau reçus le 17/11 (sources/01–04, 06–08).
 
 ## Images reçues
 
