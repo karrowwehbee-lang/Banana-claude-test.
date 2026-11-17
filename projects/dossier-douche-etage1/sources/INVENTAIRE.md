@@ -20,3 +20,12 @@ Envoi du 17/11/2026. Toutes en PNG opaque, sans profil couleur.
 **Exception : la cote « 478.00 » (partie chambre) mesure ≈ 386 cm à cette échelle** → À VÉRIFIER, ni la cote ni le dessin
 ne sont corrigés. Partie salle d'eau : 374,80 · 234,10 · 137,00 · 164,80 · 66 · 74 · 70 · 116 · 40 (reprises dans geom.py),
 confirmée par la vue de dessus 03 (largeur du retour 164 relevée contre 164,80 écrite).
+
+## Envoi complémentaire du 17/11/2026
+
+| N° | Nom d'envoi | Contenu |
+|---|---|---|
+| 05-annote | IMG_7771.png (annoté) | Même plan coté que 05, annoté à la main par Karen : « Salle d'eau » sur la partie gauche en L, flèche sur l'ouverture de 74 = porte de la salle d'eau. Seule différence avec 05 : l'annotation rouge (vérifié pixel par pixel). |
+
+Le plan source contient aussi un rectangle de ≈ 196 × 192 contre les murs est et sud de la partie large (traits fins, sans
+cote), sans équivalent sur les rendus ni sur la vue de dessus : non dessiné, signalé à confirmer (planche 900).

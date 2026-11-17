@@ -150,7 +150,8 @@ def front():
      bord de porte 236 relevé contre 230,8 écrit ; coffrage 119 relevé contre 116 écrit.</li>
   </ul>
   <h2>Documents sources</h2>
-  <ul class="nl"><li><b>Plan coté</b> (IMG_7771) — partie salle d'eau</li>{rlist}</ul>
+  <ul class="nl"><li><b>Plan coté</b> (IMG_7771) — partie salle d'eau, <b>identifiée par KAÏRA</b> sur le plan annoté
+     (« Salle d'eau », flèche sur la porte de 74)</li>{rlist}</ul>
   <h2>Documents écartés</h2>
   <ul class="nl">
    <li><b>Partie droite du plan coté</b> (chambre) : hors dossier — non mélangée aux dessins de la salle d'eau.</li>
@@ -292,8 +293,9 @@ def series200():
     # 201 — plan coté
     svg, w, h = V.plan(20, "cote")
     side = notes([
-        "Contour de la salle d'eau : cotes écrites du plan coté IMG_7771 (partie gauche en L). La pièce voisine et la "
-        "chambre ne font pas partie de ce dossier.",
+        "Contour de la salle d'eau : cotes écrites du plan coté IMG_7771 (partie gauche en L, identifiée par KAÏRA sur le "
+        "plan annoté). La pièce voisine et la chambre ne font pas partie de ce dossier.",
+        "Porte P1 de 74 : désignée par KAÏRA sur le plan annoté comme la porte de la salle d'eau.",
         "Mur nord de la partie large : 66 · porte 74 · 70 (cotes écrites). Coffrage du WC : 116 × 40 (cotes écrites).",
         "Équipements placés d'après la vue de dessus IMG_7773 recalée sur le plan coté, et contrôlés sur les rendus de face.",
         "Fenêtres F1, F2 : position relevée sur le plan coté, hauteurs sur le rendu 02.",
@@ -506,6 +508,8 @@ def recap():
     items = [
         ("Plan", "Sens d'ouverture de la porte P1 et de la porte de douche ; épaisseur réelle des murs (≈ 20 relevée)."),
         ("Plan", "Cote « 478 » du plan coté (partie chambre) : ≈ 386 à l'échelle — <b>À VÉRIFIER</b>, non corrigée."),
+        ("Plan", "Rectangle de ≈ 196 × 192 tracé sur le plan coté contre les murs est et sud, sans cote ni équivalent sur les "
+                 "rendus : non dessiné — <b>À VÉRIFIER</b>."),
         ("Douche", "Type de sol (receveur extra-plat ou douche à l'italienne), pentes, évacuation, hauteur du seuil (≈ 8,5)."),
         ("Douche", "Rangement des produits : niche encastrée ou étagère ; dimensions."),
         ("Douche", "Éclairage de la douche (aucun luminaire visible) et indices de protection."),

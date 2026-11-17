@@ -3,7 +3,8 @@
 Statuts : 'v' vérifiée (écrite sur le plan coté IMG_7771), 'd' ≈ déduite (relevé), 'c' à confirmer.
 
 Sources et méthode
-- Plan coté IMG_7771 (sources/05.png), partie gauche en L = la salle d'eau. Échelle 0,577 cm/px, contrôlée sur ses
+- Plan coté IMG_7771 (sources/05.png), partie gauche en L = la salle d'eau, confirmée par Karen sur le plan annoté
+  (sources/05-annote.png : « Salle d'eau », flèche sur la porte de 74). Échelle 0,577 cm/px, contrôlée sur ses
   cotes écrites. Cotes écrites reprises : 374,80 · 234,10 · 137,00 · 164,80 · 66,00 · 74,00 · 70,00 · 116,00 · 40,00.
   Partie droite (chambre) : exclue. Sa cote « 478.00 » (≈ 386 à l'échelle) : À VÉRIFIER, non corrigée.
 - Vue de dessus IMG_7773 (sources/03.png) : caméra en perspective au-dessus de la pièce, recalée sur le plan coté
