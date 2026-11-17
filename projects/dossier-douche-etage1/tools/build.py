@@ -14,6 +14,7 @@ from PIL import Image
 HERE = pathlib.Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
 import details as T  # noqa: E402
+import views_dpe as V  # noqa: E402
 
 ROOT = HERE.parent
 REPO = ROOT.parent.parent
@@ -108,8 +109,9 @@ def front():
   <div class="cv-sub">Villa — salle d'eau principale</div>
   <div class="cv-list">Concept · Plans techniques cotés · Élévations · Rendus 3D · Détails décoratifs · Matériaux et finitions</div>
   <div class="cv-meta"><b>Indice {INDICE}</b> — {DATE}<br>Format A3 paysage · Cotes en centimètres</div>
-  <div class="cv-warn draft">{STATUS}. Les plans cotés et les planches matériaux seront ajoutés à réception des
-  documents de la salle d'eau. Aucune cote n'est inventée : <span class="st-c">COTE À CONFIRMER</span> sinon.</div>
+  <div class="cv-warn draft">Document établi à partir du plan coté et des rendus 3D du projet. Chaque cote est classée :
+  <span class="st-v">vérifiée</span>, <span class="st-d">≈ déduite</span> ou <span class="st-c">à confirmer</span>
+  (planche 002). Aucune cote n'a été inventée.</div>
 </div>"""
     sheet("000", "Page de garde", "Généralités", "—", body)
     sheet("001", "Sommaire", "Généralités", "—", "__TOC__")
@@ -137,21 +139,23 @@ def front():
   </ul>
  </div>
  <div class="col">
+  <h2>Méthode de relevé</h2>
+  <ul class="nl">
+   <li><b>Plan :</b> plan coté IMG_7771, partie gauche en L = la salle d'eau. Cotes écrites reprises telles quelles :
+     374,80 · 234,10 · 137,00 · 164,80 · 66 · 74 · 70 · 116 · 40. Échelle du dessin 0,577 cm/px (contrôlée sur ses cotes).</li>
+   <li><b>Équipements en plan :</b> vue de dessus IMG_7773 (caméra en perspective) recalée sur le plan coté :
+     largeur du retour 164 relevée contre 164,80 écrite.</li>
+   <li><b>Hauteurs :</b> rendus de face (perspective à un point) calibrés sur un mur de largeur connue : 02 (mur sud),
+     06 (mur est, 234,10), 08 (fond de douche, 164,80). Contrôles croisés : plafond 289 / 289 / 288 ; porte 202 / 203 ;
+     bord de porte 236 relevé contre 230,8 écrit ; coffrage 119 relevé contre 116 écrit.</li>
+  </ul>
   <h2>Documents sources</h2>
-  <ul class="nl">{rlist}</ul>
+  <ul class="nl"><li><b>Plan coté</b> (IMG_7771) — partie salle d'eau</li>{rlist}</ul>
   <h2>Documents écartés</h2>
   <ul class="nl">
-   <li><b>Plan coté IMG_7771</b> — ne correspond pas à la salle d'eau (chambres) : <b>non utilisé</b>, il n'est mélangé
-     à aucun dessin de ce dossier.</li>
-   <li>Sur ce plan, la cote écrite <b>« 478 »</b> ne correspond pas au dessin (≈ 386 cm à l'échelle des autres cotes) :
+   <li><b>Partie droite du plan coté</b> (chambre) : hors dossier — non mélangée aux dessins de la salle d'eau.</li>
+   <li>Sur cette partie, la cote écrite <b>« 478 »</b> ne correspond pas au dessin (≈ 386 à l'échelle des autres cotes) :
      <span class="st-c">À VÉRIFIER</span>. Ni la cote ni le dessin ne sont corrigés sans confirmation.</li>
-  </ul>
-  <h2>En attente</h2>
-  <ul class="nl">
-   <li>Plan de la salle d'eau (coté si possible) et son emplacement à l'étage 1 → série 200 : plan d'aménagement coté,
-     élévations de chaque mur, coupes.</li>
-   <li>Références réellement prévues (faïence, sol, terrazzo, robinetterie, vasque, miroir, luminaires, paroi) → série
-     500 : planches matériaux et finitions.</li>
   </ul>
  </div>
 </div>"""
@@ -240,6 +244,288 @@ def detail_plate(num, title, n, ds):
     sheet(num, f"Détails — {title}", "Détails décoratifs", "—", body)
 
 
+# ---------------------------------------------------------------- 200: plans, elevations, sections, furniture
+def place(svg, x, y):
+    return f'<div class="v" style="left:{x:.1f}mm;top:{y:.1f}mm">{svg}</div>'
+
+
+def vtitle(x, y, w, letter, title, scale):
+    return (f'<div class="vt" style="left:{x:.1f}mm;top:{y:.1f}mm;width:{w:.1f}mm"><span class="vn">{letter}</span>'
+            f'<span class="vtt">{esc(title)}</span><span class="vs">{scale}</span></div>')
+
+
+def notes(items, title="Notes"):
+    li = "".join(f"<li>{n}</li>" for n in items)
+    return f'<div class="nh">{title}</div><ul class="nl">{li}</ul>'
+
+
+def keyplan(x, y):
+    svg, w, h = V.plan(scale=80, mode="key")
+    return place(svg, x, y) + box(x, y + h - 2, w, '<div class="kpt">Plan de repérage des vues</div>'), w, h
+
+
+def drawing_sheet(num, title, scale, svg_w_h, letter, vt, side_items, render=None, side_title="Notes"):
+    svg, w, h = svg_w_h
+    body = place(svg, AX, AY + 2) + vtitle(AX + 4, AY + 2 + h + 1, w - 8, letter, vt, scale)
+    sx = AX + w + 6
+    sw = AW - w - 6
+    kp, kw, kh = keyplan(sx, AY + 4)
+    body += kp
+    y = AY + 4 + kh + 6
+    if render:
+        n, cap = render
+        rw = min(sw - 2, 70)
+        rh = rw * size(n)[1] / size(n)[0]
+        body += (f'<div class="rimg" style="left:{sx:.1f}mm;top:{y:.1f}mm;width:{rw:.1f}mm;height:{rh:.1f}mm">'
+                 f'<img src="{src(n).as_uri()}" style="width:100%;height:100%"></div>')
+        body += box(sx, y + rh + 1.2, rw, f'<p class="small">Rendu {n} — {esc(cap)}</p>')
+        y += rh + 10
+    body += box(sx, y, sw - 2, notes(side_items, side_title))
+    sheet(num, title, "Plans techniques", scale, body)
+
+
+def series200():
+    import geom as G
+    common = ["Cotes en cm. <span class='st-v'>Noir</span> : écrite sur le plan coté ; <span class='st-d'><i>olive ≈</i></span> : "
+              "relevée (tolérance ±3 cm en plan, ±5 cm en hauteur) ; <span class='st-c'>bordeaux</span> : à confirmer.",
+              "Hauteurs depuis le sol fini. Hauteur sous plafond ≈ 289 (trois rendus : 289, 289, 288)."]
+    # 201 — plan coté
+    svg, w, h = V.plan(20, "cote")
+    side = notes([
+        "Contour de la salle d'eau : cotes écrites du plan coté IMG_7771 (partie gauche en L). La pièce voisine et la "
+        "chambre ne font pas partie de ce dossier.",
+        "Mur nord de la partie large : 66 · porte 74 · 70 (cotes écrites). Coffrage du WC : 116 × 40 (cotes écrites).",
+        "Équipements placés d'après la vue de dessus IMG_7773 recalée sur le plan coté, et contrôlés sur les rendus de face.",
+        "Fenêtres F1, F2 : position relevée sur le plan coté, hauteurs sur le rendu 02.",
+        "Épaisseur des murs ≈ 20 (relevée sur le plan coté).",
+        "Sens d'ouverture de la porte P1 et de la porte de douche : À CONF.",
+    ] + common)
+    body = place(svg, AX, AY) + vtitle(AX + 4, AY + h - 2, w - 8, "1", "Plan d'aménagement coté", "1:20")
+    body += box(AX + w + 4, AY + 4, AW - w - 6, side)
+    sheet("201", "Plan d'aménagement coté", "Plans techniques", "1:20", body)
+    # 202 — plan de repérage : équipements et revêtements de sol
+    svg, w, h = V.plan(25, "equip")
+    rows = "".join(f'<tr><td class="ref">{a}</td><td>{esc(b)}</td><td>{c}</td></tr>' for a, b, c in [
+        ("E1", "Douche : paroi verrière d'angle, profilés noirs, porte", "≈ 122 × 90 · H ≈ 200"),
+        ("E2", "Colonne de douche noire, mitigeur", "mur ouest · tête ≈ 220 · mitigeur ≈ 100"),
+        ("E3", "Rangement de douche (niche ou étagère)", "fond de douche · H ≈ 105–175"),
+        ("E4", "Coffrage WC, faïence bordeaux", "116 × 40 (cotes écrites) · H ≈ 145"),
+        ("E5", "WC suspendu, plaque de commande noire", "axe ≈ 78 · saillie ≈ 57"),
+        ("E6", "Commode en noyer (M2)", "≈ 84 × 50 · H ≈ 87"),
+        ("E7", "Étagères en verre fumé (×3)", "≈ 100 · H ≈ 110 / 144 / 179"),
+        ("E8", "Étagères d'angle en noyer (×2) et miroir grossissant", "≈ 51 · H ≈ 179 / 216"),
+        ("E9", "Échelle porte-serviettes noire avec panier", "mur ouest · dimensions À CONF."),
+        ("E10", "Meuble vasque suspendu en noyer (M1), plan terrazzo", "≈ 156 × 52 · dessus ≈ 83"),
+        ("E11", "Vasque à poser, robinetterie noire 3 trous", "axe ≈ 137 depuis le mur sud"),
+        ("E12", "Miroir rétroéclairé", "≈ 175 × 100"),
+        ("E13", "Porte-serviettes à barres noir", "≈ 53 · H ≈ 78"),
+        ("E14", "Suspensions à globe (4)", "H ≈ 123–144"),
+        ("E15", "Patères noires (2)", "retour de la douche · H ≈ 180–197"),
+    ])
+    tbl = (f'<div class="nh">Équipements</div><table class="tb2 full"><tr><th>Repère</th><th>Élément</th>'
+           f'<th>Dimensions, position</th></tr>{rows}</table>'
+           f'<div class="nh" style="margin-top:3mm">Revêtement de sol</div><p class="small">Motif « galets » : grandes dalles '
+           f'blanches veinées à angles arrondis et inserts noirs, sur toute la pièce et dans la douche. Format des dalles et '
+           f'calepinage : À CONF.</p>')
+    body = place(svg, AX, AY) + vtitle(AX + 4, AY + h - 2, w - 8, "2", "Plan de repérage — équipements et sol", "1:25")
+    body += box(AX + w + 4, AY + 2, AW - w - 6, tbl)
+    sheet("202", "Plan de repérage — équipements et revêtement de sol", "Plans techniques", "1:25", body)
+    # 203 — plan de plafond
+    svg, w, h = V.plan(25, "plafond")
+    side = notes([
+        "Faux plafond peint blanc, hauteur ≈ 289 depuis le sol fini (rendus 02, 06, 08).",
+        "Gorge lumineuse LED continue le long des murs (rendus 01, 02, 04, 06). Retrait par rapport aux murs : relevé "
+        "≈ 28 sur le rendu 02 et ≈ 9 sur le rendu 06 → <span class='st-c'>À CONF.</span>",
+        "Suspensions à globe au-dessus du bord du plan vasque (rendus 01, 06) : 4 globes à H ≈ 123–144. Points d'accroche, "
+        "modèle et puissance : À CONF.",
+        "Miroir rétroéclairé : halo sur le pourtour (rendus 01, 06).",
+        "Douche : aucun luminaire visible sur les rendus. Éclairage et indice de protection (IP) de la zone humide : À CONF.",
+        "Température de couleur et intensité des LED : non mesurables sur les rendus — À CONF.",
+    ], "Plafond et éclairage")
+    body = place(svg, AX, AY) + vtitle(AX + 4, AY + h - 2, w - 8, "3", "Plan de plafond et d'éclairage", "1:25")
+    body += box(AX + w + 4, AY + 4, AW - w - 6, side)
+    sheet("203", "Plan de plafond et d'éclairage", "Plans techniques", "1:25", body)
+    # elevations
+    drawing_sheet("204", "Élévation A — mur sud (fenêtres)", "1:20", V.elev_A(), "A", "Élévation A — mur sud", [
+        "Mur en panneaux effet travertin, coffrage du WC en faïence bordeaux (116 × 40, cotes écrites ; H ≈ 145).",
+        "F1 au-dessus du coffrage : allège ≈ 157, haut ≈ 226. F2 haute et étroite : allège ≈ 13, haut ≈ 226.",
+        "Commode noyer ≈ 84 × 50, dessus ≈ 87, socle en retrait ≈ 9 ; étagères en verre fumé à ≈ 110 / 144 / 179.",
+        "Étagères d'angle en noyer à ≈ 179 / 216 ; WC suspendu, plaque de commande noire à ≈ 85–97.",
+        "Relevé : rendu 02, de face, calibré sur les fenêtres du plan coté (contrôle : coffrage 119 relevé / 116 écrit).",
+    ] + common[:1], render=("02", T.RENDERS["02"][1]))
+    drawing_sheet("205", "Élévation B — mur est (meuble vasque)", "1:20", V.elev_B(), "B", "Élévation B — mur est", [
+        "Meuble vasque suspendu en noyer ≈ 156 × 52 : 2 tiroirs (≈ 92) et niches ouvertes (≈ 64) ; dessous ≈ 34, dessus ≈ 83.",
+        "Plan et crédence en terrazzo (crédence ≈ 16 de haut) ; vasque à poser ≈ 45 (largeur À CONF.) ; robinetterie noire 3 trous.",
+        "Miroir rétroéclairé ≈ 175 × 100, de ≈ 99 à ≈ 199. Porte-serviettes à barres à ≈ 78.",
+        "Suspensions : 4 globes, ≈ 123 et ≈ 144.",
+        "Relevé : rendu 06, de face, calibré sur la largeur du mur (234,10 écrite).",
+    ] + common[:1], render=("06", T.RENDERS["06"][1]))
+    sv1, sv2 = V.elev_C(), V.elev_F()
+    body = place(sv1[0], AX, AY + 2) + vtitle(AX + 4, AY + 2 + sv1[2] + 1, sv1[1] - 8, "C", "Élévation C — mur nord (porte)", "1:20")
+    x2 = AX + sv1[1] + 4
+    body += place(sv2[0], x2, AY + 2) + vtitle(x2 + 4, AY + 2 + sv2[2] + 1, sv2[1] - 8, "F", "Élévation F — retour de la douche", "1:20")
+    body += box(AX, AY + max(sv1[2], sv2[2]) + 12, AW - 4, notes([
+        "C : porte P1 de 74 entre deux trumeaux de 66 et 70 (cotes écrites) ; hauteur ≈ 202 (rendus 06 et 08). Porte sombre à "
+        "inserts métalliques horizontaux, béquille métal ; sens d'ouverture À CONF.",
+        "F : mur entre la douche et la pièce voisine (137, cote écrite). Deux patères noires, la première à ≈ 197 ; position de la "
+        "seconde À CONF. (vue seulement de 3/4 sur le rendu 07).",
+    ] + common[:1]))
+    sheet("206", "Élévations C (mur nord, porte) et F (retour de la douche)", "Plans techniques", "1:20", body)
+    drawing_sheet("207", "Élévation D — mur ouest", "1:20", V.elev_D(), "D", "Élévation D — mur ouest", [
+        "Longueur 371,1 = 234,10 + 137,00 (cotes écrites).",
+        "Coffrage du WC vu de côté (40, cote écrite). Échelle porte-serviettes noire avec panier : position ≈ (vue de dessus), "
+        "hauteur et largeur À CONF.",
+        "Douche : colonne noire (tête ≈ 220), mitigeur ≈ 100 et second robinet ≈ 88 ; seuil ≈ 8.",
+        "Aucun rendu de face de ce mur : positions relevées sur la vue de dessus et le rendu 08.",
+    ] + common[:1], render=("04", T.RENDERS["04"][1]))
+    drawing_sheet("208", "Élévation E — fond de douche", "1:20", V.elev_E(), "E", "Élévation E — fond de douche", [
+        "Faïence bordeaux brillante posée à la verticale, sur toute la hauteur et toute la largeur (164,80, cote écrite).",
+        "Format relevé sur le coffrage : entraxe des joints ≈ 7,7 × 17,7 → format À CONF.",
+        "Paroi verrière vue de face : ≈ 122 de large, de ≈ 8,5 à ≈ 209 ; 5 rangs de ≈ 40 ; montant à ≈ 70 ; poignée verticale.",
+        "Rangement des produits à ≈ 105–175 : niche encastrée ou étagère, À CONF.",
+        "Relevé : rendu 08, de face, calibré sur la largeur du fond (164,80).",
+    ] + common[:1], render=("08", T.RENDERS["08"][1]))
+    drawing_sheet("209", "Coupe AA — douche, WC et fenêtre F1", "1:20", V.section_AA(), "AA", "Coupe AA (X ≈ 92), vue vers l'est", [
+        "Coupe nord-sud à travers le coffrage du WC, la pièce et la douche.",
+        "Plancher, chape, receveur ou douche à l'italienne, pentes et évacuation : non visibles sur les documents — À CONF.",
+        "Épaisseur du faux plafond et du plénum : À CONF.",
+    ] + common)
+    drawing_sheet("210", "Coupe BB — échelle, porte et meuble vasque", "1:20", V.section_BB(), "BB", "Coupe BB (Y ≈ 125), vue vers le nord", [
+        "Coupe est-ouest à travers l'échelle porte-serviettes et le meuble vasque ; porte P1 au fond.",
+        "Fixation du meuble suspendu, alimentation et évacuation de la vasque : À CONF.",
+    ] + common)
+    for num, ttl, fn, letter, cap in (("211", "Mobilier M1 — meuble vasque", V.furniture_M1, "M1", "Meuble vasque suspendu"),
+                                      ("212", "Mobilier M2 — commode", V.furniture_M2, "M2", "Commode en noyer")):
+        svg, w, h = fn()
+        it = ([
+            "Caisson et façades en noyer ; 2 tiroirs sans poignée apparente (gorge) ; niches ouvertes à 2 tablettes.",
+            "Plan en terrazzo clair ≈ 3 d'épaisseur (À CONF.), crédence en terrazzo ≈ 16 de haut.",
+            "Vasque à poser rectangulaire blanche ; mitigeur noir 3 trous (bec haut, 2 croisillons).",
+            "Dimensions relevées sur les rendus 06 et 01 et la vue de dessus. Profondeur ≈ 52 (vue de dessus).",
+            "Quincaillerie, coulisses, fixation murale, découpe de la vasque : À CONF.",
+        ] if letter == "M1" else [
+            "Caisson en noyer aux angles arrondis ; 2 tiroirs à poignées encastrées noires ; socle en retrait ≈ 9.",
+            "Dimensions relevées sur le rendu 02 et la vue de dessus (largeur ≈ 84, profondeur ≈ 50, hauteur ≈ 87).",
+            "Poignées : longueur ≈ 16, À CONF. ; finition du noyer (vernis, huile) : À CONF.",
+        ]) + common[:1]
+        body = place(svg, AX, AY + 4) + vtitle(AX + 4, AY + 4 + h + 1, w - 8, letter, cap, "1:10")
+        body += box(AX, AY + h + 14, min(w, 220), notes(it))
+        sheet(num, ttl, "Plans techniques", "1:10", body)
+
+
+# ---------------------------------------------------------------- 500: materials, finishes, equipment
+MATERIALS = [   # name, use, render, sample box (median colour), finish, format, extract (detail id or None)
+    ("Panneaux effet travertin", "Murs de la pièce, retour de la douche", "02", (380, 170, 860, 530),
+     "mat, veinage horizontal", "grand format, À CONF.", "D01"),
+    ("Faïence bordeaux", "Fond de douche, coffrage du WC", "02", (960, 900, 1250, 1080),
+     "brillante, pose verticale", "entraxe ≈ 7,7 × 17,7", "D02"),
+    ("Dalle « galets » blanche", "Sol de la pièce et de la douche", "02", (60, 1700, 300, 1800),
+     "veinée", "À CONF.", "D03"),
+    ("Insert noir", "Sol, entre les dalles", "02", None, "mat", "À CONF.", None),
+    ("Terrazzo clair", "Plan vasque, crédence", "06", (1000, 1065, 1400, 1100), "poli ?", "épaisseur ≈ 3, À CONF.", "D05"),
+    ("Noyer", "Meuble vasque, commode, étagères d'angle", "06", (600, 1240, 1100, 1360), "satiné ?", "—", "D04"),
+    ("Verre fumé", "Étagères murales", "02", None, "transparent teinté", "≈ 100 × 22", "D16"),
+    ("Verre clair + acier noir", "Paroi de douche", "08", None, "profilés noirs mats", "rangs de ≈ 40", "D10"),
+    ("Noir mat", "Robinetterie, colonne, porte-serviettes, patères, plaque WC", "06", None, "mat", "—", "D06"),
+    ("Céramique blanche", "Vasque, WC", "06", (690, 1150, 860, 1180), "brillante", "—", None),
+    ("Bois sombre + métal", "Porte P1", "06", (12, 650, 60, 850), "inserts métal horizontaux", "74 × ≈ 202", "D23"),
+    ("Peinture blanche", "Faux plafond", "02", (300, 20, 1200, 80), "mate", "—", "D27"),
+]
+
+
+def median_hex(n, b):
+    import numpy as np
+    a = np.asarray(Image.open(src(n)).convert("RGB").crop(b)).reshape(-1, 3)
+    m = np.median(a, axis=0).astype(int)
+    return "#%02X%02X%02X" % tuple(m)
+
+
+def dark_hex(n, b):
+    import numpy as np
+    a = np.asarray(Image.open(src(n)).convert("RGB").crop(b)).reshape(-1, 3)
+    d = a[a.sum(1) < 200]
+    return "#%02X%02X%02X" % tuple(np.median(d, axis=0).astype(int))
+
+
+def series500():
+    rows = ""
+    cards = ""
+    for name, use, n, b, fin, form, ext in MATERIALS:
+        hexc = median_hex(n, b) if b else (dark_hex("02", (40, 1496, 520, 1816)) if name == "Insert noir" else None)
+        chip = f'<span class="chip" style="background:{hexc}"></span>' if hexc else '<span class="chip none">—</span>'
+        rows += (f'<tr><td>{chip}</td><td><b>{esc(name)}</b></td><td>{esc(use)}</td><td>{hexc or "—"}</td>'
+                 f'<td>{esc(fin)}</td><td>{esc(form)}</td><td class="st-c">à confirmer</td></tr>')
+        if ext:
+            p, _ = crop(ext)
+            cards += (f'<figure class="mc"><div class="mci"><img src="{p.as_uri()}"></div>'
+                      f'<figcaption><span class="mcs" style="background:{hexc or "#fff"}"></span><b>{esc(name)}</b>'
+                      f'<br><span class="small">{esc(use)} · {ext}, rendu {T.D[ext][3]}</span></figcaption></figure>')
+    t = (f'<div class="nh">Matériaux et finitions — douche principale</div>'
+         f'<table class="tb2 full mat"><tr><th></th><th>Matériau</th><th>Localisation</th><th>Teinte relevée</th>'
+         f'<th>Finition observée</th><th>Format</th><th>Référence fabricant</th></tr>{rows}</table>')
+    side = notes([
+        "Matériaux identifiés sur les rendus 3D du projet ; aucune référence n'est inventée.",
+        "Teinte relevée : médiane des pixels d'une zone du rendu. Indicative : elle dépend de l'éclairage de la scène.",
+        "« — » : teinte non relevable sur le rendu (verre, reflets, métal).",
+        "À valider avant commande : échantillons physiques, références, finitions, formats, calepinage et joints.",
+        "Pièce humide : classement des revêtements (glissance du sol de douche, résistance à l'eau des panneaux muraux "
+        "et du noyer) à vérifier avec les fournisseurs.",
+    ])
+    sheet("501", "Matériaux et finitions — nomenclature", "Matériaux et finitions",
+          "—", box(AX + 2, AY + 2, 236, t) + box(AX + 244, AY + 2, 82, side))
+    body = (box(AX + 2, AY + 2, AW - 4, '<div class="nh">Planche matériaux — extraits des rendus 3D</div>'
+                f'<div class="mgrid">{cards}</div>'))
+    sheet("502", "Planche matériaux et textures", "Matériaux et finitions", "—", body)
+    rows = "".join(f'<tr><td><b>{esc(a)}</b></td><td>{esc(b)}</td><td>{c}</td><td class="st-c">à confirmer</td></tr>' for a, b, c in [
+        ("WC suspendu, cuvette carrée blanche", "devant le coffrage, axe ≈ 78", "saillie ≈ 57"),
+        ("Plaque de commande noire", "coffrage, H ≈ 85–97", "≈ 19 × 12"),
+        ("Dérouleur noir", "coffrage, à droite de la plaque", "—"),
+        ("Vasque à poser rectangulaire blanche", "plan vasque, axe ≈ 137 du mur sud", "≈ 45 de large"),
+        ("Mitigeur lavabo noir, 3 trous", "plan vasque", "bec haut ≈ 16 au-dessus de la vasque"),
+        ("Colonne de douche noire, tête ronde", "mur ouest de la douche", "tête ≈ 220"),
+        ("Mitigeur / thermostatique de douche noir", "mur ouest de la douche", "≈ 100 et ≈ 88"),
+        ("Paroi verrière d'angle, profilés noirs, porte", "douche", "≈ 122 × 90 · H ≈ 200"),
+        ("Miroir rétroéclairé", "au-dessus du meuble vasque", "≈ 175 × 100"),
+        ("Suspensions à globe (×4)", "au-dessus du bord du plan vasque", "H ≈ 123–144"),
+        ("Gorge lumineuse LED", "périphérie du faux plafond", "retrait À CONF."),
+        ("Échelle porte-serviettes noire + panier", "mur ouest", "À CONF."),
+        ("Porte-serviettes à barres noir", "mur est, au nord du meuble", "≈ 53 · H ≈ 78"),
+        ("Patères noires (×2)", "retour de la douche", "H ≈ 180–197"),
+        ("Miroir grossissant rond", "étagère noyer d'angle", "—"),
+    ])
+    t = (f'<div class="nh">Sanitaires, robinetterie, luminaires et accessoires</div><table class="tb2 full"><tr><th>Élément</th>'
+         f'<th>Emplacement</th><th>Dimensions relevées</th><th>Référence</th></tr>{rows}</table>')
+    sheet("503", "Équipements — sanitaires, robinetterie, luminaires, accessoires", "Matériaux et finitions", "—",
+          box(AX + 2, AY + 2, 236, t) + box(AX + 244, AY + 2, 82, notes([
+              "Éléments identifiés sur les rendus ; marques et modèles non lisibles : aucune référence n'est inventée.",
+              "Hauteurs de pose à valider avec le plombier et l'électricien (normes de la zone humide).",
+          ])))
+
+
+def recap():
+    items = [
+        ("Plan", "Sens d'ouverture de la porte P1 et de la porte de douche ; épaisseur réelle des murs (≈ 20 relevée)."),
+        ("Plan", "Cote « 478 » du plan coté (partie chambre) : ≈ 386 à l'échelle — <b>À VÉRIFIER</b>, non corrigée."),
+        ("Douche", "Type de sol (receveur extra-plat ou douche à l'italienne), pentes, évacuation, hauteur du seuil (≈ 8,5)."),
+        ("Douche", "Rangement des produits : niche encastrée ou étagère ; dimensions."),
+        ("Douche", "Éclairage de la douche (aucun luminaire visible) et indices de protection."),
+        ("Plafond", "Retrait de la gorge LED par rapport aux murs (≈ 28 ou ≈ 9 selon le rendu) ; épaisseur du faux plafond."),
+        ("Mobilier", "Épaisseur du plan terrazzo ; largeur exacte de la vasque ; quincaillerie et fixations de M1."),
+        ("Mobilier", "Poignées et finition de la commode M2."),
+        ("Accessoires", "Dimensions de l'échelle porte-serviettes ; position de la seconde patère."),
+        ("Matériaux", "Références, formats et finitions : travertin, faïence (entraxe ≈ 7,7 × 17,7), dalles « galets », terrazzo, noyer, verre fumé."),
+        ("Équipements", "Marques et modèles : WC, plaque, robinetterie, colonne, paroi, miroir, suspensions, LED."),
+    ]
+    li = "".join(f"<tr><td><b>{esc(a)}</b></td><td>{b}</td></tr>" for a, b in items)
+    body = box(AX + 2, AY + 2, 230, f'<div class="nh">Points à confirmer avant exécution</div>'
+               f'<table class="tb2 full"><tr><th>Sujet</th><th>À confirmer</th></tr>{li}</table>')
+    body += box(AX + 240, AY + 2, 86, notes([
+        "Toutes les cotes « ≈ » sont des relevés sur les documents du projet : à vérifier sur site avant fabrication.",
+        "Aucune cote n'a été inventée : sans source, la cote est marquée À CONF.",
+    ]))
+    sheet("900", "Points à confirmer", "Synthèse", "—", body)
+
+
 # ---------------------------------------------------------------- title block, toc, page
 def title_block(sh, page, total):
     logo = LOGO.read_text()
@@ -274,11 +560,6 @@ def toc_html(total):
             cur = sh["group"]
         out += (f'<div class="r"><b>KAI-DPE-{sh["num"]}</b><span class="t">{esc(sh["title"])}</span>'
                 f'<span class="s">{sh["scale"]}</span><span class="p">{i}</span></div>')
-    out += ('<div class="lv">À venir</div>'
-            '<div class="r"><b>KAI-DPE-2xx</b><span class="t">Plans techniques : plan d\'aménagement coté, élévations de '
-            'chaque mur, coupes — à réception du plan de la salle d\'eau</span><span class="s"></span><span class="p"></span></div>'
-            '<div class="r"><b>KAI-DPE-5xx</b><span class="t">Matériaux et finitions : planches matériaux, textures, '
-            'couleurs</span><span class="s"></span><span class="p"></span></div>')
     return f'<div class="toc">{out}</div>'
 
 
@@ -299,6 +580,10 @@ EXTRA_CSS = """
 .tb-status{font-size:2.05mm;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:#6E2234;
  border:.25mm solid #6E2234;padding:1.2mm 1.6mm;text-align:center}
 .nl.cols2{columns:2;column-gap:8mm}
+.mgrid{display:grid;grid-template-columns:repeat(5,1fr);gap:4mm 4mm;margin-top:2mm}
+.mc{margin:0}.mci{height:44mm;overflow:hidden;border:.2mm solid #3A2A22}.mci img{width:100%;height:100%;object-fit:cover;display:block}
+.mc figcaption{font-size:2.3mm;margin-top:1.2mm;line-height:1.35}
+.mcs{display:inline-block;width:4mm;height:4mm;border:.15mm solid #999;vertical-align:-0.6mm;margin-right:1.2mm}
 """
 
 
@@ -306,17 +591,20 @@ def main():
     BUILD.mkdir(exist_ok=True)
     front()
     concept()
+    series200()
     renders()
     index_sheet()
     for p in T.PLATES:
         detail_plate(*p)
+    series500()
+    recap()
     total = len(SHEETS)
     pages = [f'<section class="sheet"><div class="frame"></div>'
              f'{toc_html(total) if sh["body"] == "__TOC__" else sh["body"]}{title_block(sh, i, total)}</section>'
              for i, sh in enumerate(SHEETS, 1)]
     css = (VB.CSS + EXTRA_CSS).replace("FONTS/", FONTS.as_uri() + "/")
     doc = (f'<!doctype html><html lang="fr"><head><meta charset="utf-8"><title>KAÏRA — {PROJECT}</title>'
-           f'<style>{css}</style></head><body>{"".join(pages)}</body></html>')
+           f'<style>{css}</style></head><body>{V.PATTERNS}{"".join(pages)}</body></html>')
     out_html = BUILD / "dossier-douche-etage1.html"
     out_html.write_text(doc, encoding="utf-8")
     print(total, "planches")
