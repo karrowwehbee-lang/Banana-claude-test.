@@ -1,6 +1,6 @@
 """Douche principale — Étage 1 : rendus et détails décoratifs (données).
 
-Rendus : fichiers originaux de Karen dans ../sources (copies exactes). Plan coté 05 : seule sa partie gauche (salle d'eau)
+Rendus : fichiers originaux de Karen dans ../sources (copies exactes). Plan coté 05 : seule sa partie gauche (douche principale)
 est utilisée, dans tools/geom.py ; la partie chambre est exclue.
 Détails : agrandissements signalés, extraits des rendus. Chaque zone est encadrée et numérotée sur le rendu entier, qui
 reste présenté en grand format. Boîtes en pixels du fichier original : (x0, y0, x1, y1).

@@ -14,6 +14,7 @@ Construction : `python3 tools/build.py --previews` → `build/` (non versionné)
 - `tools/build.py` : mise en page, cartouche, séries 000–900.
 
 Règles de Karen (17/11/2026) :
+- Nom de l'espace partout : « Douche principale – Étage 1 » (pas « salle d'eau ») ; l'enceinte vitrée = « cabine de douche ».
 - Détails = agrandissements signalés, extraits des rendus sans retouche, numérotés et légendés ; le rendu original reste
   présenté en entier et en grand sur la même planche, avec la zone encadrée.
 - Plan coté IMG_7771 (sources/05.png) : partie gauche en L = salle d'eau ; la partie chambre n'est jamais mélangée aux

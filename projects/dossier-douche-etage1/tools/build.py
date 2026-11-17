@@ -29,7 +29,7 @@ VB = importlib.util.module_from_spec(_spec)
 _spec.loader.exec_module(VB)
 LOGO, FONTS = VB.LOGO, VB.FONTS
 
-PROJECT = "Villa — Douche principale, Étage 1"
+PROJECT = "Villa — Douche principale – Étage 1"
 DOC = "Dossier technique d'architecture intérieure"
 DATE = "17.11.2026"
 INDICE = "0"
@@ -105,8 +105,8 @@ def front():
 <div class="cover-txt">
   <div class="cv-logo">{logo}</div>
   <div class="cv-k">{DOC}</div>
-  <h1>Douche principale<br>Étage 1</h1>
-  <div class="cv-sub">Villa — salle d'eau principale</div>
+  <h1>Douche principale<br>– Étage 1</h1>
+  <div class="cv-sub">Villa · dossier indépendant</div>
   <div class="cv-list">Concept · Plans techniques cotés · Élévations · Rendus 3D · Détails décoratifs · Matériaux et finitions</div>
   <div class="cv-meta"><b>Indice {INDICE}</b> — {DATE}<br>Format A3 paysage · Cotes en centimètres</div>
   <div class="cv-warn draft">Document établi à partir du plan coté et des rendus 3D du projet. Chaque cote est classée :
@@ -121,7 +121,7 @@ def front():
  <div class="col">
   <h2>Statut des cotes</h2>
   <table class="lg">
-   <tr><td class="st-v big">424</td><td><b>Cote vérifiée</b> — écrite sur un plan coté de la salle d'eau fourni par
+   <tr><td class="st-v big">424</td><td><b>Cote vérifiée</b> — écrite sur le plan coté de la douche principale fourni par
      KAÏRA. Reportée telle quelle.</td></tr>
    <tr><td class="st-d big"><i>≈ 59</i></td><td><b>Cote déduite</b> — relevée à l'échelle sur un document du projet
      (vue de dessus de la maquette 3D, rendu de face calibré sur une cote connue). Arrondie au centimètre.</td></tr>
@@ -141,7 +141,7 @@ def front():
  <div class="col">
   <h2>Méthode de relevé</h2>
   <ul class="nl">
-   <li><b>Plan :</b> plan coté IMG_7771, partie gauche en L = la salle d'eau. Cotes écrites reprises telles quelles :
+   <li><b>Plan :</b> plan coté IMG_7771, partie gauche en L = la douche principale. Cotes écrites reprises telles quelles :
      374,80 · 234,10 · 137,00 · 164,80 · 66 · 74 · 70 · 116 · 40. Échelle du dessin 0,577 cm/px (contrôlée sur ses cotes).</li>
    <li><b>Équipements en plan :</b> vue de dessus IMG_7773 (caméra en perspective) recalée sur le plan coté :
      largeur du retour 164 relevée contre 164,80 écrite.</li>
@@ -150,11 +150,11 @@ def front():
      bord de porte 236 relevé contre 230,8 écrit ; coffrage 119 relevé contre 116 écrit.</li>
   </ul>
   <h2>Documents sources</h2>
-  <ul class="nl"><li><b>Plan coté</b> (IMG_7771) — partie salle d'eau, <b>identifiée par KAÏRA</b> sur le plan annoté
-     (« Salle d'eau », flèche sur la porte de 74)</li>{rlist}</ul>
+  <ul class="nl"><li><b>Plan coté</b> (IMG_7771) — partie gauche en L, <b>identifiée par KAÏRA</b> sur le plan annoté
+     (flèche sur la porte de 74)</li>{rlist}</ul>
   <h2>Documents écartés</h2>
   <ul class="nl">
-   <li><b>Partie droite du plan coté</b> (chambre) : hors dossier — non mélangée aux dessins de la salle d'eau.</li>
+   <li><b>Partie droite du plan coté</b> (chambre) : hors dossier — non mélangée aux dessins de la douche principale.</li>
    <li>Sur cette partie, la cote écrite <b>« 478 »</b> ne correspond pas au dessin (≈ 386 à l'échelle des autres cotes) :
      <span class="st-c">À VÉRIFIER</span>. Ni la cote ni le dessin ne sont corrigés sans confirmation.</li>
   </ul>
@@ -166,7 +166,7 @@ def front():
 def concept():
     img, w = framed_render("06", AX, AY + 2, 200)
     t = """<div class="nh">Concept architectural et décoratif</div>
-<p class="lead">Une salle d'eau calme et chaleureuse, où une base claire et minérale accueille trois accents francs :
+<p class="lead">La douche principale : un espace calme et chaleureux, où une base claire et minérale accueille trois accents francs :
 le noyer, le bordeaux et le noir.</p>
 <ul class="nl">
  <li><b>Une enveloppe minérale :</b> murs entièrement habillés de panneaux effet travertin à veinage horizontal, du sol
@@ -293,9 +293,9 @@ def series200():
     # 201 — plan coté
     svg, w, h = V.plan(20, "cote")
     side = notes([
-        "Contour de la salle d'eau : cotes écrites du plan coté IMG_7771 (partie gauche en L, identifiée par KAÏRA sur le "
+        "Contour de la douche principale : cotes écrites du plan coté IMG_7771 (partie gauche en L, identifiée par KAÏRA sur le "
         "plan annoté). La pièce voisine et la chambre ne font pas partie de ce dossier.",
-        "Porte P1 de 74 : désignée par KAÏRA sur le plan annoté comme la porte de la salle d'eau.",
+        "Porte P1 de 74 : désignée par KAÏRA sur le plan annoté comme la porte de la douche principale.",
         "Mur nord de la partie large : 66 · porte 74 · 70 (cotes écrites). Coffrage du WC : 116 × 40 (cotes écrites).",
         "Équipements placés d'après la vue de dessus IMG_7773 recalée sur le plan coté, et contrôlés sur les rendus de face.",
         "Fenêtres F1, F2 : position relevée sur le plan coté, hauteurs sur le rendu 02.",
@@ -308,7 +308,7 @@ def series200():
     # 202 — plan de repérage : équipements et revêtements de sol
     svg, w, h = V.plan(25, "equip")
     rows = "".join(f'<tr><td class="ref">{a}</td><td>{esc(b)}</td><td>{c}</td></tr>' for a, b, c in [
-        ("E1", "Douche : paroi verrière d'angle, profilés noirs, porte", "≈ 122 × 90 · H ≈ 200"),
+        ("E1", "Cabine de douche : paroi verrière d'angle, profilés noirs, porte", "≈ 122 × 90 · H ≈ 200"),
         ("E2", "Colonne de douche noire, mitigeur", "mur ouest · tête ≈ 220 · mitigeur ≈ 100"),
         ("E3", "Rangement de douche (niche ou étagère)", "fond de douche · H ≈ 105–175"),
         ("E4", "Coffrage WC, faïence bordeaux", "116 × 40 (cotes écrites) · H ≈ 145"),

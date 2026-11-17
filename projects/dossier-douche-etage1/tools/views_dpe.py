@@ -127,7 +127,7 @@ def _plan_fixtures(s, P, k, mode):
     nx1, _ = P(G.SHOWER_NICHE["x1"], 0)
     s.rect(nx0, ny, nx1 - nx0, 4 * k, "none", BURG, 0.15, "0.8 0.5")
     if lab:
-        tag(s, (x0 + x1) / 2, (y0 + y1) / 2 - 1, "DOUCHE", 1.9)
+        tag(s, (x0 + x1) / 2, (y0 + y1) / 2 - 1, "CABINE DE DOUCHE", 1.9)
         tag(s, (x0 + x1) / 2, (y0 + y1) / 2 + 1.6, "paroi verrière, profilés noirs", 1.45, GREY)
     # WC boxing + WC
     bx0, by1 = P(0, G.BOXING["y1"])
