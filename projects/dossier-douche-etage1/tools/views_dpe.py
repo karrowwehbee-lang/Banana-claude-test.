@@ -56,8 +56,8 @@ def tag(s, x, y, t, size=1.75, col=INK, anchor="middle"):
 
 
 # ================================================================ PLAN (1:20)
-def plan(scale=20, mode="cote"):
-    """mode: 'cote' (plan coté), 'equip' (repérage + revêtements), 'plafond' (plan de plafond)."""
+def plan(scale=20, mode="cote", view=None):
+    """mode: 'cote', 'equip', 'plafond', 'key', 'zones', 'install'. view: (X0, Y0, X1, Y1) camera → target (cm)."""
     k = 10 / scale
     ml, mt = (34, 26) if mode != "key" else (8, 8)
     w = ml + (G.W_TOT + 40) * k + (40 if mode != "key" else 8)
@@ -101,11 +101,16 @@ def plan(scale=20, mode="cote"):
            sw=0.15, dash="0.8 0.5")
     if mode == "plafond":
         _plan_ceiling(s, P, k)
+    elif mode in ("zones", "install"):
+        _plan_fixtures(s, P, k, "ghost")
+        (_plan_zones if mode == "zones" else _plan_install)(s, P, k)
     elif mode != "key":
         _plan_fixtures(s, P, k, mode)
+    if view:
+        _view_arrow(s, P, k, view)
     if mode == "cote":
         _plan_dims(s, P, k, ox, oy)
-    if mode != "plafond":
+    if mode in ("cote", "equip") or (mode == "key" and not view):
         _markers(s, P, k)
     return s.svg(), w, h
 
@@ -684,3 +689,111 @@ def furniture_M2():
     s.text(sx + (c["y1"] - c["y0"]) * k / 2, Z(0) + 16, "CÔTÉ", 2.0, INK, weight=500, ls=0.2)
     dh(s, sx, sx + (c["y1"] - c["y0"]) * k, Z(0) + 6, c["y1"] - c["y0"], "d", above=False)
     return s.svg(), w, h
+
+
+# ================================================================ extra plan overlays
+ZONES = [   # n°, name, X0, X1, Y0, Y1, colour
+    ("1", "Entrée", G.DOOR_X[0], G.DOOR_X[1], 175, G.D_LARGE, "#C9B8A6"),
+    ("2", "Espace vasque", 290, G.W_TOT, 8, 180, "#A88E77"),
+    ("3", "Coin WC", 0, 120, 0, 100, "#8E3B45"),
+    ("4", "Rangements", 135, 230, 0, 60, "#7A6150"),
+    ("4", "Rangements", 0, 40, 125, 207, "#7A6150"),
+    ("5", "Cabine de douche", 0, G.SHOWER["x1"], G.SHOWER["y0"], G.D_TOT, "#6E2234"),
+]
+
+
+def _plan_zones(s, P, k):
+    done = set()
+    for n, name, X0, X1, Y0, Y1, col in ZONES:
+        x0, y1 = P(X0, Y1)
+        x1, y0 = P(X1, Y0)
+        s.rect(x0, y1, x1 - x0, y0 - y1, col, col, 0.25, op=0.28)
+        if n not in done:
+            DR.bubble(s, (x0 + x1) / 2, (y0 + y1) / 2, n, r=3.2, fill=col, col="#FFFFFF", size=2.6)
+            done.add(n)
+    # circulation
+    a, b = P(200, 120), P(255, 205)
+    s.path(f"M{a[0]:.2f},{a[1]:.2f} L{b[0]:.2f},{b[1]:.2f}", stroke=GREY, sw=0.3, dash="1 0.8")
+
+
+def _plan_install(s, P, k):
+    def water(X, Y, label, dx=0, dy=0):
+        x, y = P(X, Y)
+        s.circle(x, y, 1.5, "#FFFFFF", "#2F5F8A", 0.35)
+        s.line(x - 1.0, y, x + 1.0, y, 0.25, "#2F5F8A")
+        s.text(x + dx, y + dy, label, 1.8, "#2F5F8A", "middle")
+
+    def drain(X, Y, label, dx=0, dy=0):
+        x, y = P(X, Y)
+        s.rect(x - 1.4, y - 1.4, 2.8, 2.8, "#FFFFFF", "#5A4636", 0.35)
+        s.line(x - 1.4, y - 1.4, x + 1.4, y + 1.4, 0.25, "#5A4636")
+        s.text(x + dx, y + dy, label, 1.8, "#5A4636", "middle")
+
+    def elec(X, Y, label, dx=0, dy=0):
+        x, y = P(X, Y)
+        s.path(f"M{x:.2f},{y - 1.6:.2f} L{x + 1.5:.2f},{y + 1.2:.2f} L{x - 1.5:.2f},{y + 1.2:.2f} Z", fill="#FFF3DA",
+               stroke=LED, sw=0.35)
+        s.text(x + dx, y + dy, label, 1.8, "#9A6B12", "middle")
+    water(G.W_TOT - 4, G.BASIN["ay"] + 6, "EF/EC lavabo", -12, 0.6)
+    drain(G.W_TOT - 4, G.BASIN["ay"] - 6, "EU lavabo", -10, 0.6)
+    water(G.WC["ax"] - 14, 4, "EF WC", -1, -2.6)
+    drain(G.WC["ax"], 4, "EV WC", 6, -2.6)
+    water(4, G.SHOWER_COL["y"], "EF/EC douche", 9, -2.6)
+    drain(G.SHOWER["x1"] / 2, (G.SHOWER["y0"] + G.D_TOT) / 2, "évacuation douche : À CONF.", 0, 4.2)
+    elec(G.W_TOT - 4, 60, "miroir", -7, 0.6)
+    for pnd in G.PENDANTS[::2]:
+        elec(G.PEND_X, pnd["y"], "", 0, 0)
+    x, y = P(G.PEND_X, 36)
+    s.text(x - 3.5, y + 0.6, "suspensions", 1.8, "#9A6B12", "end")
+    x, y = P(G.W_TOT / 2, G.D_LARGE / 2)
+    s.text(x, y, "Ventilation, prises, chauffage : non visibles — À CONF.", 1.6, BURG)
+
+
+def _view_arrow(s, P, k, view):
+    X0, Y0, X1, Y1 = view
+    a, b = P(X0, Y0), P(X1, Y1)
+    import math
+    ang = math.atan2(b[1] - a[1], b[0] - a[0])
+    L = math.hypot(b[0] - a[0], b[1] - a[1])
+    spread = math.radians(24)
+    p1 = (a[0] + L * math.cos(ang - spread), a[1] + L * math.sin(ang - spread))
+    p2 = (a[0] + L * math.cos(ang + spread), a[1] + L * math.sin(ang + spread))
+    s.path(f"M{a[0]:.2f},{a[1]:.2f} L{p1[0]:.2f},{p1[1]:.2f} L{p2[0]:.2f},{p2[1]:.2f} Z", fill="#6E2234", stroke=None,
+           extra='fill-opacity="0.18"')
+    s.line(a[0], a[1], b[0], b[1], 0.35, "#6E2234")
+    s.circle(a[0], a[1], 1.3, "#6E2234", None)
+
+
+def gorge_principle():
+    """Principle section of the perimeter LED cove — no scale, every dimension À CONF. except the ceiling height."""
+    s = SVG(150, 112)
+    wx = 30                     # wall face
+    s.rect(wx - 14, 6, 14, 104, FILL["trav"], INK, 0.3)               # wall with travertine-effect finish
+    s.rect(wx - 14, 6, 3, 104, POCHE, None)
+    s.rect(wx - 16, 0, 140, 6, POCHE, None)                           # slab
+    s.text(80, -1.5, "dalle / plancher haut", 1.9, GREY)
+    # suspended ceiling with a recessed cove along the wall
+    cy = 30
+    s.rect(wx + 22, cy, 96, 3, "#FFFFFF", INK, 0.3)                   # ceiling board
+    s.rect(wx + 22, cy - 9, 3, 12, "#FFFFFF", INK, 0.3)               # upturn
+    s.rect(wx, cy - 9, 22, 2.2, "#FFFFFF", INK, 0.25)                 # cove top
+    s.rect(wx + 6, cy - 7.6, 10, 1.4, LED, None)                      # LED strip
+    s.path(f"M{wx + 11},{cy - 6} L{wx + 1},{cy + 40} L{wx + 24},{cy + 40} Z", fill="#FFE8B8", stroke=None,
+           extra='fill-opacity="0.55"')
+    for y in range(cy - 4, 104, 6):
+        s.line(wx + 0.4, y, wx + 0.4, y + 3, 0.5, "#F2C77A")
+    s.line(wx - 16, 104, wx + 124, 104, 0.5)                          # finished floor
+    s.text(wx + 70, 108.5, "sol fini", 1.9, GREY)
+    # labels
+    s.wrap(wx + 70, cy + 9, "faux plafond peint blanc (matériau hydrofuge à confirmer)", 60, 2.0, INK)
+    s.wrap(wx + 60, cy - 15, "gorge lumineuse : ruban LED dans un profilé — modèle, température de couleur, IP : À CONF.",
+           70, 2.0, "#9A6B12")
+    s.wrap(wx + 34, 70, "lumière rasante sur le mur effet travertin", 40, 2.0, INK)
+    s.wrap(wx - 8, 112, "mur", 10, 1.9, GREY)
+    # dims
+    dv(s, 104, cy + 3, wx + 112, 289, "d")
+    dh(s, wx, wx + 22, cy + 6, None, "c", above=False)
+    s.text(wx + 11, cy + 12, "retrait", 1.7, BURG)
+    dv(s, cy - 9, cy + 3, wx + 30, None, "c", left=False)
+    s.text(wx + 33, cy - 2, "retombée", 1.7, BURG, "start")
+    return s.svg(), s.w, s.h

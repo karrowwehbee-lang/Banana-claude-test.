@@ -21,8 +21,16 @@ RENDERS = {   # n° de fichier : (nom d'envoi, légende, vue)
 }
 RENDER_ORDER = ["01", "06", "02", "04", "08", "07", "03"]
 
-CATEGORIES = ["Revêtements muraux", "Carrelage et marbre", "Meuble vasque", "Robinetterie", "Miroirs", "Éclairage",
-              "Douche et parois vitrées", "Niches murales", "Plafond et finitions", "Accessoires et décoration"]
+CATEGORIES = ["Meuble vasque", "Miroirs", "Robinetterie", "Douche", "Niches murales", "Parois vitrées", "Éclairage LED",
+              "Habillage mural", "Revêtements", "Rangements", "Accessoires et décoration", "Ouvertures et plafond"]
+RECAT = {"D01": "Habillage mural", "D02": "Habillage mural", "D03": "Revêtements", "D05": "Revêtements",
+         "D07": "Miroirs", "D08": "Éclairage LED", "D09": "Éclairage LED", "D10": "Parois vitrées", "D11": "Robinetterie",
+         "D12": "Robinetterie", "D13": "Douche", "D14": "Niches murales", "D15": "Douche", "D16": "Rangements",
+         "D17": "Rangements", "D18": "Rangements", "D19": "Accessoires et décoration", "D20": "Accessoires et décoration",
+         "D21": "Robinetterie", "D22": "Accessoires et décoration", "D23": "Ouvertures et plafond",
+         "D24": "Niches murales", "D25": "Ouvertures et plafond", "D26": "Ouvertures et plafond",
+         "D27": "Ouvertures et plafond", "D28": "Accessoires et décoration", "D29": "Parois vitrées", "D30": "Miroirs",
+         "D31": "Éclairage LED", "D32": "Éclairage LED", "D04": "Meuble vasque", "D06": "Robinetterie"}
 
 # D-number: (title, description, category, render, box)
 D = {
@@ -86,19 +94,49 @@ D = {
             "Douche et parois vitrées", "07", (560, 1360, 980, 1660)),
 }
 
+D.update({
+    "D30": ("Miroir rétroéclairé, vue de face", "Grand miroir sans cadre apparent au-dessus du plan, reflet de la pièce.",
+            "Miroirs", "06", (580, 540, 1480, 1080)),
+    "D31": ("Halo du miroir", "Lumière diffusée sur le pourtour du miroir, contre le mur effet travertin.",
+            "Éclairage LED", "06", (1330, 520, 1500, 760)),
+    "D32": ("Suspensions devant le miroir", "Globes lumineux à hauteurs décalées, câbles fins depuis le plafond.",
+            "Éclairage LED", "06", (1250, 720, 1500, 1000)),
+    "D33": ("Angle de la paroi et fond bordeaux", "Montant noir de la paroi contre la faïence bordeaux ; patère à droite.",
+            "Parois vitrées", "08", (700, 420, 1000, 820)),
+    "D34": ("Poignée de la porte de douche", "Poignée verticale noire sur le montant central.",
+            "Parois vitrées", "08", (380, 900, 560, 1120)),
+    "D35": ("Seuil et pied de paroi", "Profilé noir en pied de paroi, sol « galets » de la douche.",
+            "Parois vitrées", "08", (150, 1450, 800, 1640)),
+    "D36": ("Sculptures de chevaux", "Deux chevaux cabrés, noir et blanc, sur l'étagère en verre fumé.",
+            "Accessoires et décoration", "02", (600, 750, 860, 880)),
+    "D37": ("Linge sur la commode", "Serviettes pliées et roulées sur un plateau, sur le dessus en noyer.",
+            "Accessoires et décoration", "02", (430, 1100, 840, 1200)),
+    "D38": ("Plante et objets", "Plante en pot blanc et objets posés sur la tablette basse.",
+            "Accessoires et décoration", "02", (560, 930, 860, 1020)),
+    "D39": ("Plateau et diffuseur", "Plateau noir, diffuseur de parfum et savons sur le plan en terrazzo.",
+            "Accessoires et décoration", "06", (1150, 1060, 1360, 1200)),
+})
+
 # detail plates: (number, title, base render, [details]) — every detail on a plate comes from its base render
 PLATES = [
-    ("401", "Revêtements muraux et sol", "02", ["D01", "D02", "D03"]),
-    ("402", "Meuble vasque et robinetterie", "06", ["D04", "D05", "D06"]),
-    ("403", "Miroir et éclairage", "01", ["D07", "D08", "D09"]),
-    ("404", "Douche : paroi vitrée et robinetterie", "08", ["D10", "D11", "D12"]),
-    ("405", "Douche : fond, rangement et sol", "07", ["D13", "D14", "D15"]),
-    ("406", "Étagères, miroir d'appoint et commode", "02", ["D16", "D17", "D18"]),
-    ("407", "Coin WC et porte-serviettes", "04", ["D19", "D20", "D21"]),
-    ("408", "Meuble vasque : niches, porte-serviettes et porte", "06", ["D24", "D22", "D23"]),
-    ("409", "Fenêtres et plafond", "02", ["D25", "D26", "D27"]),
-    ("410", "Douche : patères et pied de paroi", "07", ["D28", "D29"]),
+    ("402", "Meuble vasque", "06", ["D04", "D05", "D24"]),
+    ("403", "Miroir et éclairage du miroir", "06", ["D30", "D31", "D32"]),
+    ("404", "Robinetterie du lavabo et plan", "06", ["D06", "D39"]),
+    ("405", "Douche : colonne, mitigeur et paroi", "08", ["D11", "D12", "D10"]),
+    ("406", "Douche : fond, niche murale et sol", "07", ["D13", "D14", "D15"]),
+    ("407", "Parois vitrées", "08", ["D33", "D34", "D35"]),
+    ("408", "Éclairage LED et suspensions", "01", ["D09", "D07", "D08"]),
+    ("409", "Habillage mural et revêtements", "02", ["D01", "D02", "D03"]),
+    ("410", "Rangements", "02", ["D16", "D17", "D18"]),
+    ("411", "Accessoires et décoration", "02", ["D36", "D37", "D38"]),
+    ("412", "Coin WC et échelle porte-serviettes", "04", ["D19", "D20", "D21"]),
+    ("413", "Patères et pied de paroi", "07", ["D28", "D29"]),
+    ("414", "Porte et porte-serviettes", "06", ["D23", "D22"]),
+    ("415", "Ouvertures et plafond", "02", ["D25", "D26", "D27"]),
 ]
 
 # where the number tag sits on the frame when frames are close (default: top-left)
-LABEL_POS = {"D04": "bl", "D06": "tr", "D12": "bl", "D21": "br"}
+LABEL_POS = {"D04": "bl", "D06": "tr", "D12": "bl", "D21": "br", "D31": "tr", "D32": "bl", "D22": "bl", "D39": "tr", "D36": "tr", "D38": "bl"}
+
+for _k, _c in RECAT.items():
+    D[_k] = D[_k][:2] + (_c,) + D[_k][3:]
