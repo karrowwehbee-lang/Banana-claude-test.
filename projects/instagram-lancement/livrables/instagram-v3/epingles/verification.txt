@@ -1,0 +1,3 @@
+01-the-project.png : rendu 05 entier (1667 × 1816 → 1080 × 1177), proportions exactes, sans recadrage ni retouche
+02-meet-kaira.png : visuel graphique
+03-our-services.png : visuel graphique

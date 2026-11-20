@@ -1,0 +1,31 @@
+01-kaira-1 : visuel graphique
+01-kaira-2 : visuel graphique
+01-kaira-3 : visuel graphique
+02-services-1 : visuel graphique
+02-services-2 : visuel graphique
+02-services-3 : visuel graphique
+03-master-bedroom-1 : rendu 05 entier à 100 %, identique à l'original
+03-master-bedroom-2 : rendu 05 entier, réduit à 72% (sans recadrage)
+04-first-floor-lounge-1 : rendu 04 entier à 100 %, identique à l'original
+04-first-floor-lounge-2 : visuel graphique
+05-our-process-1 : visuel graphique
+05-our-process-2 : visuel graphique
+06-open-plan-living-1 : rendu 13 entier à 100 %, identique à l'original
+06-open-plan-living-2 : visuel graphique
+07-dining-room-1 : rendu 09 entier à 100 %, identique à l'original
+07-dining-room-2 : visuel graphique
+08-living-room-1 : rendu 07 entier à 100 %, identique à l'original
+08-living-room-2 : visuel graphique
+09-design-notes-1 : visuel graphique
+09-design-notes-2 : visuel graphique
+09-design-notes-3 : visuel graphique
+09-design-notes-4 : visuel graphique
+09-design-notes-5 : visuel graphique
+09-design-notes-6 : visuel graphique
+10-entrance-1 : rendu 21 entier à 100 %, identique à l'original
+10-entrance-2 : visuel graphique
+11-quote-1 : visuel graphique
+12-kitchen-1 : rendu 20 entier à 100 %, identique à l'original
+12-kitchen-2 : rendu 20 entier, réduit à 82% (sans recadrage)
+
+Rendus utilisés : 7 (04, 05, 07, 09, 13, 20, 21) — entiers, sans recadrage ni retouche

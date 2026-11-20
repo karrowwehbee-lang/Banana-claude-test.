@@ -1,0 +1,32 @@
+{
+ "id": "001",
+ "slug": "sculptural-calm",
+ "pillar": "Project",
+ "kind": "carousel",
+ "renders": [
+  "n03",
+  "n02"
+ ],
+ "files": [
+  "1.jpg",
+  "2.jpg",
+  "3.jpg"
+ ],
+ "caption": "Sculptural calm.\n\nA living room shaped by soft curves — a bouclé sofa and arched armchairs set against taupe panels and walnut fluted strips — opening onto a dining room conceived as a gallery of portraits.\n\nSwipe for the dining room and the design notes.\n\nInterior design & 3D visualization by KAÏRA Interior Design.",
+ "hashtags": "#kairainteriordesign #interiorarchitecture #interiordesign #luxuryinteriors #interiordesigner #luxuryhomes #contemporaryinterior #modernluxury #residentialdesign #livingroomdesign #quietluxury #minimalluxury #timelessdesign #3dvisualization #interiorrender #archviz",
+ "full_caption": "Sculptural calm.\n\nA living room shaped by soft curves — a bouclé sofa and arched armchairs set against taupe panels and walnut fluted strips — opening onto a dining room conceived as a gallery of portraits.\n\nSwipe for the dining room and the design notes.\n\nInterior design & 3D visualization by KAÏRA Interior Design.\n\n#kairainteriordesign #interiorarchitecture #interiordesign #luxuryinteriors #interiordesigner #luxuryhomes #contemporaryinterior #modernluxury #residentialdesign #livingroomdesign #quietluxury #minimalluxury #timelessdesign #3dvisualization #interiorrender #archviz",
+ "status": "published",
+ "created": "2026-11-12",
+ "published_at": "2026-11-12T11:49:38Z",
+ "media_id": "18078936413560059",
+ "permalink": "https://www.instagram.com/p/Dfo_Kk3jUVi/",
+ "checks": [
+  "001-1: n03 whole, 100 %, pixel-identical on the HD slide",
+  "001-2: n02 whole, 100 %, pixel-identical on the HD slide"
+ ],
+ "media_urls": {
+  "1.jpg": "https://raw.githubusercontent.com/karrowwehbee-lang/Banana-claude-test./refs/heads/claude/kaira-interior-design-skill-1isxi1/projects/instagram-planning/queue/001_sculptural-calm/1.jpg",
+  "2.jpg": "https://raw.githubusercontent.com/karrowwehbee-lang/Banana-claude-test./refs/heads/claude/kaira-interior-design-skill-1isxi1/projects/instagram-planning/queue/001_sculptural-calm/2.jpg",
+  "3.jpg": "https://raw.githubusercontent.com/karrowwehbee-lang/Banana-claude-test./refs/heads/claude/kaira-interior-design-skill-1isxi1/projects/instagram-planning/queue/001_sculptural-calm/3.jpg"
+ }
+}

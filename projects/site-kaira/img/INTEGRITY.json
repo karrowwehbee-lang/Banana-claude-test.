@@ -1,0 +1,407 @@
+{
+ "chambre-amis-01": {
+  "source": "projects/dossier-client/sources/02-chambre-amis/chambre-amis-01.png",
+  "method": "JPEG q90 4:4:4, same size, no crop or retouch",
+  "psnr_db": 46.0,
+  "size": [
+   1667,
+   1816
+  ]
+ },
+ "chambre-amis-03": {
+  "source": "projects/dossier-client/sources/02-chambre-amis/chambre-amis-03.png",
+  "method": "JPEG q90 4:4:4, same size, no crop or retouch",
+  "psnr_db": 45.7,
+  "size": [
+   1667,
+   1816
+  ]
+ },
+ "chambre-principale-01": {
+  "source": "projects/dossier-client/sources/03-chambre-principale/chambre-principale-01.png",
+  "method": "JPEG q90 4:4:4, same size, no crop or retouch",
+  "psnr_db": 45.9,
+  "size": [
+   1667,
+   1816
+  ]
+ },
+ "chambre-principale-02": {
+  "source": "projects/dossier-client/sources/03-chambre-principale/chambre-principale-02.png",
+  "method": "JPEG q90 4:4:4, same size, no crop or retouch",
+  "psnr_db": 45.9,
+  "size": [
+   1667,
+   1816
+  ]
+ },
+ "chambre-principale-03": {
+  "source": "projects/dossier-client/sources/03-chambre-principale/chambre-principale-03.png",
+  "method": "JPEG q90 4:4:4, same size, no crop or retouch",
+  "psnr_db": 46.1,
+  "size": [
+   1667,
+   1816
+  ]
+ },
+ "chambre-principale-05": {
+  "source": "projects/dossier-client/sources/03-chambre-principale/chambre-principale-05.png",
+  "method": "JPEG q90 4:4:4, same size, no crop or retouch",
+  "psnr_db": 44.8,
+  "size": [
+   1667,
+   1816
+  ]
+ },
+ "etage1-sejour-02": {
+  "source": "projects/dossier-client/sources/04-etage1-sejour/etage1-sejour-02.png",
+  "method": "JPEG q90 4:4:4, same size, no crop or retouch",
+  "psnr_db": 42.2,
+  "size": [
+   1667,
+   1816
+  ]
+ },
+ "etage1-sejour-03": {
+  "source": "projects/dossier-client/sources/04-etage1-sejour/etage1-sejour-03.png",
+  "method": "JPEG q90 4:4:4, same size, no crop or retouch",
+  "psnr_db": 43.4,
+  "size": [
+   1667,
+   1816
+  ]
+ },
+ "etage1-sejour-04": {
+  "source": "projects/dossier-client/sources/04-etage1-sejour/etage1-sejour-04.png",
+  "method": "JPEG q90 4:4:4, same size, no crop or retouch",
+  "psnr_db": 42.8,
+  "size": [
+   1667,
+   1816
+  ]
+ },
+ "etage1-sejour-06": {
+  "source": "projects/dossier-client/sources/04-etage1-sejour/etage1-sejour-06.png",
+  "method": "JPEG q90 4:4:4, same size, no crop or retouch",
+  "psnr_db": 43.0,
+  "size": [
+   1667,
+   1816
+  ]
+ },
+ "etage1-sejour-08": {
+  "source": "projects/dossier-client/sources/04-etage1-sejour/etage1-sejour-08.png",
+  "method": "JPEG q90 4:4:4, same size, no crop or retouch",
+  "psnr_db": 43.1,
+  "size": [
+   1667,
+   1816
+  ]
+ },
+ "etage1-sejour-09": {
+  "source": "projects/dossier-client/sources/04-etage1-sejour/etage1-sejour-09.png",
+  "method": "JPEG q90 4:4:4, same size, no crop or retouch",
+  "psnr_db": 42.6,
+  "size": [
+   1667,
+   1816
+  ]
+ },
+ "k01": {
+  "source": "projects/portfolio-enfants/sources/recus/01.png",
+  "method": "JPEG q90 4:4:4, same size, no crop or retouch",
+  "psnr_db": 40.9,
+  "size": [
+   1536,
+   1024
+  ]
+ },
+ "k04": {
+  "source": "projects/portfolio-enfants/sources/recus/04.png",
+  "method": "JPEG q90 4:4:4, same size, no crop or retouch",
+  "psnr_db": 41.6,
+  "size": [
+   1536,
+   1024
+  ]
+ },
+ "k05": {
+  "source": "projects/portfolio-enfants/sources/recus/05.png",
+  "method": "JPEG q90 4:4:4, same size, no crop or retouch",
+  "psnr_db": 40.9,
+  "size": [
+   1536,
+   1024
+  ]
+ },
+ "k06": {
+  "source": "projects/portfolio-enfants/sources/recus/06.png",
+  "method": "JPEG q90 4:4:4, same size, no crop or retouch",
+  "psnr_db": 40.2,
+  "size": [
+   1536,
+   1024
+  ]
+ },
+ "k07": {
+  "source": "projects/portfolio-enfants/sources/recus/07.png",
+  "method": "JPEG q90 4:4:4, same size, no crop or retouch",
+  "psnr_db": 41.6,
+  "size": [
+   1536,
+   1024
+  ]
+ },
+ "n01": {
+  "source": "projects/portfolio-studio/sources/recus/01.jpg",
+  "method": "byte-identical copy",
+  "md5": "6b64938af8d11aca58e665b2f5392f5c",
+  "size": [
+   1600,
+   1264
+  ]
+ },
+ "n02": {
+  "source": "projects/portfolio-studio/sources/recus/02.jpg",
+  "method": "byte-identical copy",
+  "md5": "8cdfc63b0d26cbc4aca95df240b2bd6f",
+  "size": [
+   1600,
+   1264
+  ]
+ },
+ "n03": {
+  "source": "projects/portfolio-studio/sources/recus/03.jpg",
+  "method": "byte-identical copy",
+  "md5": "392b857746676309f266a1722958ac86",
+  "size": [
+   1600,
+   1264
+  ]
+ },
+ "n04": {
+  "source": "projects/portfolio-studio/sources/recus/04.jpg",
+  "method": "byte-identical copy",
+  "md5": "6b9afc74419fa626f0468b3306e887ec",
+  "size": [
+   1600,
+   1264
+  ]
+ },
+ "n05": {
+  "source": "projects/portfolio-studio/sources/recus/05.jpg",
+  "method": "byte-identical copy",
+  "md5": "0ae427c6f398afcdc0398ba1c13b74c6",
+  "size": [
+   1468,
+   1600
+  ]
+ },
+ "n06": {
+  "source": "projects/portfolio-studio/sources/recus/06.jpg",
+  "method": "byte-identical copy",
+  "md5": "038a9c6161c7c7df8f7550fab959c667",
+  "size": [
+   1468,
+   1600
+  ]
+ },
+ "n08": {
+  "source": "projects/portfolio-studio/sources/recus/08.jpg",
+  "method": "byte-identical copy",
+  "md5": "018f9525b969ebd1a9e1d3270d1342f7",
+  "size": [
+   1468,
+   1600
+  ]
+ },
+ "n09": {
+  "source": "projects/portfolio-studio/sources/recus/09.jpg",
+  "method": "byte-identical copy",
+  "md5": "3a925823b17e0150b7d0d2f4cbf24060",
+  "size": [
+   1600,
+   900
+  ]
+ },
+ "n10": {
+  "source": "projects/portfolio-studio/sources/recus/10.jpg",
+  "method": "byte-identical copy",
+  "md5": "457b42c3de7f78e2517f6e5ce924b560",
+  "size": [
+   1600,
+   900
+  ]
+ },
+ "n11": {
+  "source": "projects/portfolio-studio/sources/recus/11.jpg",
+  "method": "byte-identical copy",
+  "md5": "294a68c632e0d660810e446985efe176",
+  "size": [
+   1600,
+   900
+  ]
+ },
+ "n12": {
+  "source": "projects/portfolio-studio/sources/recus/12.jpg",
+  "method": "byte-identical copy",
+  "md5": "49f0f13b73cbd72bb17fa73264bcbbfd",
+  "size": [
+   1600,
+   900
+  ]
+ },
+ "n13": {
+  "source": "projects/portfolio-studio/sources/recus/13.jpg",
+  "method": "byte-identical copy",
+  "md5": "5bdf6c48abd10754e512db279dc9ee44",
+  "size": [
+   1600,
+   1264
+  ]
+ },
+ "n14": {
+  "source": "projects/portfolio-studio/sources/recus/14.jpg",
+  "method": "byte-identical copy",
+  "md5": "948e2c28ec6cb14f082156f71897bcd4",
+  "size": [
+   1600,
+   1264
+  ]
+ },
+ "n15": {
+  "source": "projects/portfolio-studio/sources/recus/15.jpg",
+  "method": "byte-identical copy",
+  "md5": "082134c3dffd62cbf7cf43833040b434",
+  "size": [
+   1468,
+   1600
+  ]
+ },
+ "n16": {
+  "source": "projects/portfolio-studio/sources/recus/16.jpg",
+  "method": "byte-identical copy",
+  "md5": "8913399509388dabf045fd0698ed03c4",
+  "size": [
+   1468,
+   1600
+  ]
+ },
+ "r13": {
+  "source": "projects/instagram-lancement/sources/recus/13.jpg",
+  "method": "byte-identical copy",
+  "md5": "3fd4db7fecbe6a637609498d0f10159a",
+  "size": [
+   1600,
+   1264
+  ]
+ },
+ "r14": {
+  "source": "projects/instagram-lancement/sources/recus/14.jpg",
+  "method": "byte-identical copy",
+  "md5": "827cc9d0e9e097df73411e406dd92013",
+  "size": [
+   1468,
+   1600
+  ]
+ },
+ "r19": {
+  "source": "projects/instagram-lancement/sources/recus/19.jpg",
+  "method": "byte-identical copy",
+  "md5": "c56a941edaafd1627fe5bd91eda3bd37",
+  "size": [
+   1600,
+   1264
+  ]
+ },
+ "r20": {
+  "source": "projects/instagram-lancement/sources/recus/20.jpg",
+  "method": "byte-identical copy",
+  "md5": "3e511489a3d8f37ee52d739abca86601",
+  "size": [
+   1468,
+   1600
+  ]
+ },
+ "r21": {
+  "source": "projects/instagram-lancement/sources/recus/21.jpg",
+  "method": "byte-identical copy",
+  "md5": "b04326a86a9b94754ca3bfcf6866f5b6",
+  "size": [
+   1468,
+   1600
+  ]
+ },
+ "rdc-salon-01": {
+  "source": "projects/dossier-client/sources/01-rdc-salon-principal/rdc-salon-01.png",
+  "method": "JPEG q90 4:4:4, same size, no crop or retouch",
+  "psnr_db": 45.4,
+  "size": [
+   1667,
+   1816
+  ]
+ },
+ "rdc-salon-02": {
+  "source": "projects/dossier-client/sources/01-rdc-salon-principal/rdc-salon-02.png",
+  "method": "JPEG q90 4:4:4, same size, no crop or retouch",
+  "psnr_db": 46.3,
+  "size": [
+   1667,
+   1816
+  ]
+ },
+ "rdc-salon-05": {
+  "source": "projects/dossier-client/sources/01-rdc-salon-principal/rdc-salon-05.png",
+  "method": "JPEG q90 4:4:4, same size, no crop or retouch",
+  "psnr_db": 46.4,
+  "size": [
+   1667,
+   1816
+  ]
+ },
+ "rdc-salon-06": {
+  "source": "projects/dossier-client/sources/01-rdc-salon-principal/rdc-salon-06.png",
+  "method": "JPEG q90 4:4:4, same size, no crop or retouch",
+  "psnr_db": 45.7,
+  "size": [
+   1667,
+   1816
+  ]
+ },
+ "rdc-salon-08": {
+  "source": "projects/dossier-client/sources/01-rdc-salon-principal/rdc-salon-08.png",
+  "method": "JPEG q90 4:4:4, same size, no crop or retouch",
+  "psnr_db": 46.2,
+  "size": [
+   1667,
+   1816
+  ]
+ },
+ "rdc-salon-09": {
+  "source": "projects/dossier-client/sources/01-rdc-salon-principal/rdc-salon-09.png",
+  "method": "JPEG q90 4:4:4, same size, no crop or retouch",
+  "psnr_db": 44.7,
+  "size": [
+   1667,
+   1816
+  ]
+ },
+ "rdc-salon-10": {
+  "source": "projects/dossier-client/sources/01-rdc-salon-principal/rdc-salon-10.png",
+  "method": "JPEG q90 4:4:4, same size, no crop or retouch",
+  "psnr_db": 47.6,
+  "size": [
+   1667,
+   1816
+  ]
+ },
+ "rdc-salon-11": {
+  "source": "projects/dossier-client/sources/01-rdc-salon-principal/rdc-salon-11.png",
+  "method": "JPEG q90 4:4:4, same size, no crop or retouch",
+  "psnr_db": 46.5,
+  "size": [
+   1667,
+   1816
+  ]
+ }
+}

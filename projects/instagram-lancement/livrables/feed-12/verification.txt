@@ -1,0 +1,21 @@
+HD 2160 × 2700 : rendus collés tels quels. Instagram 1080 × 1350 : la slide HD entière réduite de moitié.
+
+01-manifesto-1 : visuel graphique (aucun rendu)
+02-villa-living-room-1 : rendu 07 entier à 100 % (1667 × 1816), identique à l'original
+02-villa-living-room-2 : rendu 12 entier à 100 % (1667 × 1816), identique à l'original
+02-villa-living-room-3 : rendu 08 entier à 100 % (1667 × 1816), identique à l'original
+03-brand-palette-1 : visuel graphique (aucun rendu)
+04-villa-master-bedroom-1 : rendu 05 entier à 100 % (1667 × 1816), identique à l'original
+04-villa-master-bedroom-2 : rendu 05 entier, réduit à 72% (proportions conservées, sans recadrage)
+05-our-belief-1 : visuel graphique (aucun rendu)
+06-villa-guest-bedroom-1 : rendu 06 entier à 100 % (1667 × 1816), identique à l'original
+07-our-approach-1 : visuel graphique (aucun rendu)
+08-villa-dining-room-1 : rendu 09 entier à 100 % (1667 × 1816), identique à l'original
+09-the-detail-1 : rendu 11 entier, réduit à 82% (proportions conservées, sans recadrage)
+10-villa-lounge-1 : rendu 04 entier à 100 % (1667 × 1816), identique à l'original
+10-villa-lounge-2 : rendu 02 entier à 100 % (1667 × 1816), identique à l'original
+10-villa-lounge-3 : rendu 01 entier à 100 % (1667 × 1816), identique à l'original
+11-our-services-1 : visuel graphique (aucun rendu)
+11-our-services-2 : visuel graphique (aucun rendu)
+12-selected-projects-1 : rendu 13 entier à 100 % (1600 × 1264), identique à l'original
+12-selected-projects-2 : rendu 14 entier à 100 % (1468 × 1600), identique à l'original

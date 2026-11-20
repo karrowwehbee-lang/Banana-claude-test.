@@ -1,0 +1,98 @@
+{
+ "01.jpg": {
+  "id": "e01",
+  "project": "Workspaces",
+  "space": "Executive floor — lounge, meeting table, desk, city view",
+  "tv_on": false
+ },
+ "02.jpg": {
+  "id": "l02",
+  "project": "Workspaces",
+  "space": "Light oak office — desk and lounge corner",
+  "tv_on": false
+ },
+ "03.jpg": {
+  "id": "l03",
+  "project": "Workspaces",
+  "space": "Light oak office — desk and open shelving",
+  "tv_on": false
+ },
+ "04.jpg": {
+  "id": "l04",
+  "project": "Workspaces",
+  "space": "Light oak office — desk with sculpted return",
+  "tv_on": false
+ },
+ "05.jpg": {
+  "id": "l05",
+  "project": "Workspaces",
+  "space": "Light oak office — coffee wall behind smoked glass",
+  "tv_on": false
+ },
+ "06.jpg": {
+  "id": "l06",
+  "project": "Workspaces",
+  "space": "Light oak office — desk and lit black bookcase",
+  "tv_on": false
+ },
+ "10.jpg": {
+  "id": "x10",
+  "project": "Barbershop",
+  "space": "Barbershop — shampoo cabin with the shop's name, waiting sofa",
+  "tv_on": false
+ },
+ "11.jpg": {
+  "id": "x11",
+  "project": "Barbershop",
+  "space": "Barbershop — reception and waiting, street view",
+  "tv_on": false
+ },
+ "12.jpg": {
+  "id": "x12",
+  "project": "Barbershop",
+  "space": "Barbershop — arched mirrors and cognac chairs",
+  "tv_on": false
+ },
+ "13.jpg": {
+  "id": "x13",
+  "project": "Barbershop",
+  "space": "Barbershop — arched mirrors, windows",
+  "tv_on": false
+ },
+ "16.jpg": {
+  "id": "x16",
+  "project": "Barbershop",
+  "space": "Barbershop — waiting area and backlit shelving",
+  "tv_on": false
+ },
+ "07.jpg": {
+  "id": "q07",
+  "project": "Residential Interiors",
+  "space": "White kitchen — marble island, oak wall, sunset",
+  "tv_on": false
+ },
+ "08.jpg": {
+  "id": "q08",
+  "project": "Residential Interiors",
+  "space": "White kitchen — U-shape, marble island, oak tall units",
+  "tv_on": false
+ },
+ "09.jpg": {
+  "id": "q09",
+  "project": "Residential Interiors",
+  "space": "White kitchen — marble and oak island, wine fridge",
+  "tv_on": false
+ },
+ "14.jpg": {
+  "id": "t14",
+  "project": "Barbershop",
+  "space": "Top view — layout",
+  "tv_on": false
+ },
+ "15.jpg": {
+  "id": "t15",
+  "project": "Beauty Salon",
+  "space": "Top view — layout",
+  "tv_on": false
+ }
+}

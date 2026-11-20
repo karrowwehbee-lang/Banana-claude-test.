@@ -1,0 +1,34 @@
+{
+ "id": "030",
+ "slug": "the-villa-on-plan",
+ "pillar": "Design notes",
+ "kind": "carousel",
+ "renders": [
+  "p-rdc-amenagement",
+  "p-etage1-amenagement",
+  "p-rdc-cote-2D",
+  "h01"
+ ],
+ "files": [
+  "1.jpg",
+  "2.jpg",
+  "3.jpg",
+  "4.jpg",
+  "5.jpg",
+  "6.jpg"
+ ],
+ "caption": "The villa, on plan.\n\nThe rooms you have followed here, seen from above: on the ground floor the living room, the dining room and the guest bedroom; upstairs the lounge and the master bedroom. Every render starts here, with a plan drawn to the centimetre.\n\nSwipe to see both floors, the dimensioned plan and our first notes on it.",
+ "hashtags": "#kairainteriordesign #interiorarchitecture #interiordesign #luxuryinteriors #interiordesigner #floorplan #3dfloorplan #spaceplanning #interiorlayout #technicaldrawing #villadesign #designprocess #residentialdesign #interiordetails",
+ "full_caption": "The villa, on plan.\n\nThe rooms you have followed here, seen from above: on the ground floor the living room, the dining room and the guest bedroom; upstairs the lounge and the master bedroom. Every render starts here, with a plan drawn to the centimetre.\n\nSwipe to see both floors, the dimensioned plan and our first notes on it.\n\n#kairainteriordesign #interiorarchitecture #interiordesign #luxuryinteriors #interiordesigner #floorplan #3dfloorplan #spaceplanning #interiorlayout #technicaldrawing #villadesign #designprocess #residentialdesign #interiordetails",
+ "status": "ready",
+ "created": "2026-11-16",
+ "published_at": null,
+ "media_id": null,
+ "permalink": null,
+ "checks": [
+  "030-2: p-rdc-amenagement whole, 100 %, pixel-identical on the HD slide",
+  "030-3: p-etage1-amenagement whole, 100 %, pixel-identical on the HD slide",
+  "030-4: p-rdc-cote-2D whole, 100 %, pixel-identical on the HD slide",
+  "030-5: h01 whole, 100 %, pixel-identical on the HD slide"
+ ]
+}

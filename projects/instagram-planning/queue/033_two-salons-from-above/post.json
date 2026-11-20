@@ -1,0 +1,28 @@
+{
+ "id": "033",
+ "slug": "two-salons-from-above",
+ "pillar": "Process",
+ "kind": "carousel",
+ "renders": [
+  "t14",
+  "t15"
+ ],
+ "files": [
+  "1.jpg",
+  "2.jpg",
+  "3.jpg",
+  "4.jpg"
+ ],
+ "caption": "Two salons, from above.\n\nBefore any render, the layout: in the barbershop, five chairs along the mirror wall facing the shampoo and the waiting sofa, a washroom at the back; in the beauty salon, hair, nails and pedicure each in their own corner around a central waiting area.\n\nSave it if you are planning a salon.",
+ "hashtags": "#kairainteriordesign #interiorarchitecture #interiordesign #luxuryinteriors #interiordesigner #floorplan #3dfloorplan #spaceplanning #salondesign #barbershopdesign #beautysalon #commercialdesign #designprocess #interiorlayout",
+ "full_caption": "Two salons, from above.\n\nBefore any render, the layout: in the barbershop, five chairs along the mirror wall facing the shampoo and the waiting sofa, a washroom at the back; in the beauty salon, hair, nails and pedicure each in their own corner around a central waiting area.\n\nSave it if you are planning a salon.\n\n#kairainteriordesign #interiorarchitecture #interiordesign #luxuryinteriors #interiordesigner #floorplan #3dfloorplan #spaceplanning #salondesign #barbershopdesign #beautysalon #commercialdesign #designprocess #interiorlayout",
+ "status": "ready",
+ "created": "2026-11-16",
+ "published_at": null,
+ "media_id": null,
+ "permalink": null,
+ "checks": [
+  "033-2: t14 whole, 100 %, pixel-identical on the HD slide",
+  "033-3: t15 whole, 100 %, pixel-identical on the HD slide"
+ ]
+}

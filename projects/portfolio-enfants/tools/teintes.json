@@ -1,0 +1,62 @@
+{
+ "01": {
+  "rose_arche": "#BC7F69",
+  "rose_rideau": "#B77A67",
+  "creme_commode": "#CE9F7F",
+  "creme_mur": "#D6B198",
+  "laine": "#D0A993",
+  "velours_rose": "#854E3B",
+  "voilage": "#A16343",
+  "sol": "#B4876D",
+  "vegetal": "#3B3301"
+ },
+ "06": {
+  "olive": "#7D6836",
+  "creme": "#CDA37D",
+  "chene": "#BB885A",
+  "fresque_fond": "#B67E48",
+  "girafe": "#D7974D",
+  "feuillage": "#67532A",
+  "caramel": "#6F3916",
+  "boucle": "#BA9371",
+  "voilage": "#C28C57",
+  "laine": "#DCBB9E",
+  "laine_verte": "#937D54",
+  "sol": "#CCA685"
+ },
+ "04": {
+  "creme": "#DFCAB9",
+  "lames": "#C1A286",
+  "velours_olive": "#705F3A",
+  "chene": "#BF884F",
+  "laine": "#E9D8CC",
+  "pois_olive": "#BBAB8F",
+  "sol": "#CEB29E",
+  "linge": "#ECDDD3",
+  "mur": "#D8BAA2"
+ },
+ "05": {
+  "caramel": "#914F29",
+  "creme": "#D4B69C",
+  "beige_arche": "#D2A987",
+  "ourson": "#D2AB8A",
+  "boucle": "#B18D6C",
+  "laine": "#D6B69D",
+  "pois": "#A97552",
+  "lames": "#C8A88B",
+  "linge": "#D6BCA7",
+  "sol": "#B68E6A"
+ },
+ "07": {
+  "creme": "#C2A186",
+  "velours_olive": "#72623A",
+  "lames": "#AB8765",
+  "nuage": "#CAB19E",
+  "linge": "#DFD2CA",
+  "boucle": "#CEB29D",
+  "laine": "#DCC0AB",
+  "pois_olive": "#A38F6D",
+  "sol": "#CBB3A4",
+  "pouf_olive": "#5A4923"
+ }
+}

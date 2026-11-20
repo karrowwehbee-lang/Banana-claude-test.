@@ -1,0 +1,30 @@
+{
+ "id": "026",
+ "slug": "the-appliance-hall",
+ "pillar": "Project",
+ "kind": "carousel",
+ "renders": [
+  "n14",
+  "n15",
+  "n16"
+ ],
+ "files": [
+  "1.jpg",
+  "2.jpg",
+  "3.jpg",
+  "4.jpg"
+ ],
+ "caption": "The appliance hall.\n\nThe second part of our showroom: a long hall of appliances framed in charcoal and wood, a TV wall facing an island lit from below, and display units outlined in light on a bright stone floor.\n\nRetail interior design & 3D visualization by KAÏRA Interior Design.",
+ "hashtags": "#kairainteriordesign #interiorarchitecture #interiordesign #luxuryinteriors #interiordesigner #retaildesign #showroomdesign #retailinterior #storedesign #visualmerchandising #commercialdesign #lightingdesign #displaydesign #3dvisualization #interiorrender",
+ "full_caption": "The appliance hall.\n\nThe second part of our showroom: a long hall of appliances framed in charcoal and wood, a TV wall facing an island lit from below, and display units outlined in light on a bright stone floor.\n\nRetail interior design & 3D visualization by KAÏRA Interior Design.\n\n#kairainteriordesign #interiorarchitecture #interiordesign #luxuryinteriors #interiordesigner #retaildesign #showroomdesign #retailinterior #storedesign #visualmerchandising #commercialdesign #lightingdesign #displaydesign #3dvisualization #interiorrender",
+ "status": "ready",
+ "created": "2026-11-16",
+ "published_at": null,
+ "media_id": null,
+ "permalink": null,
+ "checks": [
+  "026-1: n14 whole, 100 %, pixel-identical on the HD slide",
+  "026-2: n15 whole, 100 %, pixel-identical on the HD slide",
+  "026-3: n16 whole, 100 %, pixel-identical on the HD slide"
+ ]
+}

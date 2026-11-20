@@ -1,0 +1,20 @@
+{
+ "id": "launch",
+ "slug": "website-launch",
+ "status": "awaiting-approval",
+ "rule": "Not part of the daily queue. Publish only after the website is online at its final domain and Karen approves.",
+ "carousel": [
+  "carousel/1.jpg",
+  "carousel/2.jpg",
+  "carousel/3.jpg",
+  "carousel/4.jpg",
+  "carousel/5.jpg"
+ ],
+ "reel": "reel.mp4",
+ "reel_cover": "reel-cover.jpg",
+ "story": "story.jpg",
+ "reel_seconds": 25.3,
+ "caption": "Our new website is online.\n\nA walk through our interiors, room by room: a family villa, residential interiors, workspaces, a rooftop bar, a retail showroom and a collection of children's rooms, with every render shown in full. You will also find the studio's approach, our eight disciplines and the way we work, from the first visit to the finished space.\n\nVisit it through the link in our bio.\n\nInterior design & 3D visualization by KAÏRA Interior Design.",
+ "hashtags": "#kairainteriordesign #interiorarchitecture #interiordesign #luxuryinteriors #interiordesigner #newwebsite #interiordesignstudio #luxuryhomes #contemporaryinterior #quietluxury #timelessdesign #3dvisualization #interiorrender #archviz #bespokefurniture #designstudio",
+ "full_caption": "Our new website is online.\n\nA walk through our interiors, room by room: a family villa, residential interiors, workspaces, a rooftop bar, a retail showroom and a collection of children's rooms, with every render shown in full. You will also find the studio's approach, our eight disciplines and the way we work, from the first visit to the finished space.\n\nVisit it through the link in our bio.\n\nInterior design & 3D visualization by KAÏRA Interior Design.\n\n#kairainteriordesign #interiorarchitecture #interiordesign #luxuryinteriors #interiordesigner #newwebsite #interiordesignstudio #luxuryhomes #contemporaryinterior #quietluxury #timelessdesign #3dvisualization #interiorrender #archviz #bespokefurniture #designstudio"
+}

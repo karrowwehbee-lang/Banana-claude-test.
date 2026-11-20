@@ -1,0 +1,27 @@
+{
+ "id": "031",
+ "slug": "clouds-and-a-bear",
+ "pillar": "Project",
+ "kind": "carousel",
+ "renders": [
+  "k03",
+  "k02"
+ ],
+ "files": [
+  "1.jpg",
+  "2.jpg",
+  "3.jpg"
+ ],
+ "caption": "Clouds & a bear.\n\nTwo more rooms from our children's collection: soft beige with backlit clouds above a rounded, upholstered headboard and bunny-ear chairs; olive velvet under a framed, backlit bear, with fluted panels and terracotta lights.\n\nInterior design & 3D visualization by KAÏRA Interior Design.",
+ "hashtags": "#kairainteriordesign #interiorarchitecture #interiordesign #luxuryinteriors #interiordesigner #kidsroomdesign #childrensroom #kidsinterior #kidsbedroom #playfulinteriors #bespokefurniture #3dvisualization #interiorrender #archviz",
+ "full_caption": "Clouds & a bear.\n\nTwo more rooms from our children's collection: soft beige with backlit clouds above a rounded, upholstered headboard and bunny-ear chairs; olive velvet under a framed, backlit bear, with fluted panels and terracotta lights.\n\nInterior design & 3D visualization by KAÏRA Interior Design.\n\n#kairainteriordesign #interiorarchitecture #interiordesign #luxuryinteriors #interiordesigner #kidsroomdesign #childrensroom #kidsinterior #kidsbedroom #playfulinteriors #bespokefurniture #3dvisualization #interiorrender #archviz",
+ "status": "ready",
+ "created": "2026-11-16",
+ "published_at": null,
+ "media_id": null,
+ "permalink": null,
+ "checks": [
+  "031-1: k03 whole, 100 %, pixel-identical on the HD slide",
+  "031-2: k02 whole, 100 %, pixel-identical on the HD slide"
+ ]
+}

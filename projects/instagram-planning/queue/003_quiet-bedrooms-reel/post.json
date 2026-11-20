@@ -1,0 +1,51 @@
+{
+ "id": "003",
+ "slug": "quiet-bedrooms-reel",
+ "pillar": "Reel",
+ "kind": "reel",
+ "renders": [
+  "chambre-principale-05",
+  "chambre-principale-01",
+  "chambre-principale-03",
+  "chambre-amis-01",
+  "chambre-amis-03"
+ ],
+ "files": [
+  "reel.mp4",
+  "cover.jpg"
+ ],
+ "caption": "Quiet bedrooms.\n\nA dark veined marble band, backlit between oak columns. A wall-to-wall upholstered headboard. In the guest room, vertical oak slats and opal pendants. Two bedrooms of the same villa, written in the same calm language.\n\nInterior design & 3D visualization by KAÏRA Interior Design.",
+ "hashtags": "#kairainteriordesign #interiorarchitecture #interiordesign #luxuryinteriors #interiordesigner #bedroomdesign #masterbedroom #luxurybedroom #calminteriors #quietluxury #minimalluxury #timelessdesign #3dvisualization #interiorrender #archviz",
+ "full_caption": "Quiet bedrooms.\n\nA dark veined marble band, backlit between oak columns. A wall-to-wall upholstered headboard. In the guest room, vertical oak slats and opal pendants. Two bedrooms of the same villa, written in the same calm language.\n\nInterior design & 3D visualization by KAÏRA Interior Design.\n\n#kairainteriordesign #interiorarchitecture #interiordesign #luxuryinteriors #interiordesigner #bedroomdesign #masterbedroom #luxurybedroom #calminteriors #quietluxury #minimalluxury #timelessdesign #3dvisualization #interiorrender #archviz",
+ "status": "published",
+ "created": "2026-11-12",
+ "published_at": "2026-11-13T17:40:14Z",
+ "media_id": "18115243403150712",
+ "permalink": "https://www.instagram.com/reel/DfsMCrTqvtq/",
+ "checks": [
+  "reel 18.3 s — renders shown whole: chambre-principale-05, chambre-principale-01, chambre-principale-03, chambre-amis-01, chambre-amis-03"
+ ],
+ "media_urls": {
+  "reel.mp4": "https://raw.githubusercontent.com/karrowwehbee-lang/Banana-claude-test./refs/heads/claude/kaira-interior-design-skill-1isxi1/projects/instagram-planning/queue/003_quiet-bedrooms-reel/reel.mp4",
+  "cover.jpg": "https://raw.githubusercontent.com/karrowwehbee-lang/Banana-claude-test./refs/heads/claude/kaira-interior-design-skill-1isxi1/projects/instagram-planning/queue/003_quiet-bedrooms-reel/cover.jpg"
+ },
+ "hosting": "fallback: Banana-claude-test (public)",
+ "attempts": [
+  {
+   "at": "2026-11-13T17:40Z",
+   "action": "create_video_post",
+   "result": "MCP server \"Windsor_ai_for_Social_Media\" tool \"execute_action\" timed out after 60s — no media id returned; outcome unknown",
+   "note": "Not retried, to avoid a duplicate Reel. Windsor's cached data (trial plan) did not show a post dated 2026-11-13. Resolve: if the Reel is on the profile, record its media id and set 'published'; if not, set back to 'ready' and retry with Karen's OK."
+  },
+  {
+   "at": "2026-11-13T20:45Z",
+   "action": "re-check (Windsor get_data, 12–13 Nov)",
+   "result": "no post dated 2026-11-13 in Windsor data; still unconfirmed — not retried, waiting for Karen to check her profile"
+  },
+  {
+   "at": "2026-11-14T17:39Z",
+   "action": "re-check (Windsor get_data, media_id filter)",
+   "result": "found: REEL 18115243403150712 published 2026-11-13T17:40:14Z with the 003 caption — the timed-out call had succeeded"
+  }
+ ]
+}

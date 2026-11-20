@@ -1,0 +1,39 @@
+{
+ "id": "009",
+ "slug": "one-room-several-zones",
+ "pillar": "Design notes",
+ "kind": "carousel",
+ "renders": [
+  "r19",
+  "n06",
+  "r14"
+ ],
+ "files": [
+  "1.jpg",
+  "2.jpg",
+  "3.jpg",
+  "4.jpg",
+  "5.jpg"
+ ],
+ "caption": "One room, several zones.\n\nOpen spaces need structure, not walls. A rug and two low sofas draw the lounge, a recessed line of light marks the dining table, oak-clad columns frame the view, and in an office the lounge, the meeting table and the desk each find their own place, all on one continuous floor.\n\nSave this post for your next open-plan project.",
+ "hashtags": "#kairainteriordesign #interiorarchitecture #interiordesign #luxuryinteriors #interiordesigner #openplanliving #spaceplanning #livingroomdesign #diningroomdesign #officedesign #workspacedesign #residentialdesign #contemporaryinterior #3dvisualization #interiorrender",
+ "full_caption": "One room, several zones.\n\nOpen spaces need structure, not walls. A rug and two low sofas draw the lounge, a recessed line of light marks the dining table, oak-clad columns frame the view, and in an office the lounge, the meeting table and the desk each find their own place, all on one continuous floor.\n\nSave this post for your next open-plan project.\n\n#kairainteriordesign #interiorarchitecture #interiordesign #luxuryinteriors #interiordesigner #openplanliving #spaceplanning #livingroomdesign #diningroomdesign #officedesign #workspacedesign #residentialdesign #contemporaryinterior #3dvisualization #interiorrender",
+ "status": "published",
+ "created": "2026-11-14",
+ "published_at": "2026-11-19T17:40:31Z",
+ "media_id": "18440210221146955",
+ "permalink": "https://www.instagram.com/p/Df7o5OaEYZ-/",
+ "checks": [
+  "009-2: r19 whole, 100 %, pixel-identical on the HD slide",
+  "009-3: n06 whole, 100 %, pixel-identical on the HD slide",
+  "009-4: r14 whole, 100 %, pixel-identical on the HD slide"
+ ],
+ "media_urls": {
+  "1.jpg": "https://raw.githubusercontent.com/karrowwehbee-lang/Banana-claude-test./refs/heads/claude/kaira-interior-design-skill-1isxi1/projects/instagram-planning/queue/009_one-room-several-zones/1.jpg",
+  "2.jpg": "https://raw.githubusercontent.com/karrowwehbee-lang/Banana-claude-test./refs/heads/claude/kaira-interior-design-skill-1isxi1/projects/instagram-planning/queue/009_one-room-several-zones/2.jpg",
+  "3.jpg": "https://raw.githubusercontent.com/karrowwehbee-lang/Banana-claude-test./refs/heads/claude/kaira-interior-design-skill-1isxi1/projects/instagram-planning/queue/009_one-room-several-zones/3.jpg",
+  "4.jpg": "https://raw.githubusercontent.com/karrowwehbee-lang/Banana-claude-test./refs/heads/claude/kaira-interior-design-skill-1isxi1/projects/instagram-planning/queue/009_one-room-several-zones/4.jpg",
+  "5.jpg": "https://raw.githubusercontent.com/karrowwehbee-lang/Banana-claude-test./refs/heads/claude/kaira-interior-design-skill-1isxi1/projects/instagram-planning/queue/009_one-room-several-zones/5.jpg"
+ },
+ "hosting": "fallback: Banana-claude-test (public)"
+}

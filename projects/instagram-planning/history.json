@@ -1,0 +1,132 @@
+{
+ "published": [
+  {
+   "id": "001",
+   "slug": "sculptural-calm",
+   "kind": "carousel",
+   "media_id": "18078936413560059",
+   "published_at": "2026-11-12T11:49:38Z",
+   "renders": [
+    "n03",
+    "n02"
+   ],
+   "permalink": "https://www.instagram.com/p/Dfo_Kk3jUVi/"
+  },
+  {
+   "id": "002",
+   "slug": "oak-and-shadow",
+   "kind": "image",
+   "media_id": "18095111228187583",
+   "published_at": "2026-11-12T12:04:33Z",
+   "renders": [
+    "rdc-salon-08"
+   ],
+   "permalink": "https://www.instagram.com/p/DfpA32hDmaL/"
+  },
+  {
+   "id": "003",
+   "slug": "quiet-bedrooms-reel",
+   "kind": "reel",
+   "media_id": "18115243403150712",
+   "published_at": "2026-11-13T17:40:14Z",
+   "renders": [
+    "chambre-principale-05",
+    "chambre-principale-01",
+    "chambre-principale-03",
+    "chambre-amis-01",
+    "chambre-amis-03"
+   ],
+   "permalink": "https://www.instagram.com/reel/DfsMCrTqvtq/"
+  },
+  {
+   "id": "004",
+   "slug": "light-that-disappears",
+   "kind": "carousel",
+   "media_id": "18122037616785614",
+   "published_at": "2026-11-14T17:39:44Z",
+   "renders": [
+    "rdc-salon-10",
+    "chambre-principale-03",
+    "n01"
+   ],
+   "permalink": "https://www.instagram.com/p/Dfuw01eiBrm/"
+  },
+  {
+   "id": "005",
+   "slug": "rooftop-bar",
+   "kind": "carousel",
+   "media_id": "18112078954924326",
+   "published_at": "2026-11-15T17:39:00Z",
+   "renders": [
+    "n05",
+    "n08"
+   ],
+   "permalink": "https://www.instagram.com/p/DfxViZmCERN/"
+  },
+  {
+   "id": "006",
+   "slug": "walnut-and-black-marble",
+   "kind": "carousel",
+   "media_id": "17970778620193293",
+   "published_at": "2026-11-16T17:39:07Z",
+   "renders": [
+    "n01",
+    "n09",
+    "n04"
+   ],
+   "permalink": "https://www.instagram.com/p/Dfz6VwfEcCz/"
+  },
+  {
+   "id": "007",
+   "slug": "from-render-to-drawing",
+   "kind": "carousel",
+   "media_id": "18079044293775971",
+   "published_at": "2026-11-17T17:39:47Z",
+   "renders": [
+    "k07"
+   ],
+   "permalink": "https://www.instagram.com/p/Df2fNhckcpy/"
+  },
+  {
+   "id": "008",
+   "slug": "upstairs-living-reel",
+   "kind": "reel",
+   "media_id": "18181406707450617",
+   "published_at": "2026-11-18T17:40:03Z",
+   "renders": [
+    "etage1-sejour-03",
+    "etage1-sejour-04",
+    "etage1-sejour-06",
+    "etage1-sejour-09"
+   ],
+   "permalink": "https://www.instagram.com/reel/Df5D_sAxMVW/"
+  },
+  {
+   "id": "009",
+   "slug": "one-room-several-zones",
+   "kind": "carousel",
+   "media_id": "18440210221146955",
+   "published_at": "2026-11-19T17:40:31Z",
+   "renders": [
+    "r19",
+    "n06",
+    "r14"
+   ],
+   "permalink": "https://www.instagram.com/p/Df7o5OaEYZ-/"
+  },
+  {
+   "id": "010",
+   "slug": "little-worlds-reel",
+   "kind": "reel",
+   "media_id": "18148883914589916",
+   "published_at": "2026-11-20T17:40:03Z",
+   "renders": [
+    "k01",
+    "k04",
+    "k05",
+    "k06"
+   ],
+   "permalink": "https://www.instagram.com/reel/Df-NkMaK3xJ/"
+  }
+ ]
+}

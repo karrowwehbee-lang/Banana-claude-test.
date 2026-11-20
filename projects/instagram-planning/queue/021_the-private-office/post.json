@@ -1,0 +1,45 @@
+{
+ "id": "021",
+ "slug": "the-private-office",
+ "pillar": "Project",
+ "kind": "carousel",
+ "renders": [
+  "o04",
+  "o08",
+  "o06",
+  "o05",
+  "o03",
+  "o07",
+  "o01",
+  "o02"
+ ],
+ "files": [
+  "1.jpg",
+  "2.jpg",
+  "3.jpg",
+  "4.jpg",
+  "5.jpg",
+  "6.jpg",
+  "7.jpg",
+  "8.jpg",
+  "9.jpg"
+ ],
+ "caption": "The private office.\n\nWalnut panels that wrap the room, cream walls with fine joints, a walnut and black desk in front of the window, a wall of four screens above a floating unit, and a lounge corner with two armchairs and stone-backed shelving that can be lit.\n\nInterior design & 3D visualization by KAÏRA Interior Design.",
+ "hashtags": "#kairainteriordesign #interiorarchitecture #interiordesign #luxuryinteriors #interiordesigner #officedesign #privateoffice #executiveoffice #workspacedesign #officeinterior #walnut #woodpanelling #indirectlighting #3dvisualization #interiorrender",
+ "full_caption": "The private office.\n\nWalnut panels that wrap the room, cream walls with fine joints, a walnut and black desk in front of the window, a wall of four screens above a floating unit, and a lounge corner with two armchairs and stone-backed shelving that can be lit.\n\nInterior design & 3D visualization by KAÏRA Interior Design.\n\n#kairainteriordesign #interiorarchitecture #interiordesign #luxuryinteriors #interiordesigner #officedesign #privateoffice #executiveoffice #workspacedesign #officeinterior #walnut #woodpanelling #indirectlighting #3dvisualization #interiorrender",
+ "status": "ready",
+ "created": "2026-11-16",
+ "published_at": null,
+ "media_id": null,
+ "permalink": null,
+ "checks": [
+  "021-1: o04 whole, 100 %, pixel-identical on the HD slide",
+  "021-2: o08 whole, 100 %, pixel-identical on the HD slide",
+  "021-3: o06 whole, 100 %, pixel-identical on the HD slide",
+  "021-4: o05 whole, 100 %, pixel-identical on the HD slide",
+  "021-5: o03 whole, 100 %, pixel-identical on the HD slide",
+  "021-6: o07 whole, 100 %, pixel-identical on the HD slide",
+  "021-7: o01 whole, 100 %, pixel-identical on the HD slide",
+  "021-8: o02 whole, 100 %, pixel-identical on the HD slide"
+ ]
+}

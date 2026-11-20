@@ -1,0 +1,362 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><title>KAÏRA — Dossier de conception</title>
+<style>/* KAÏRA — Dossier de conception · A4 paysage. Typographies provisoires (en attente de la charte officielle). */
+@font-face { font-family: "Cormorant"; font-weight: 300; src: url(fonts/cormorant-garamond-latin-300-normal.woff2); }
+@font-face { font-family: "Cormorant"; font-weight: 400; src: url(fonts/cormorant-garamond-latin-400-normal.woff2); }
+@font-face { font-family: "Cormorant"; font-weight: 500; src: url(fonts/cormorant-garamond-latin-500-normal.woff2); }
+@font-face { font-family: "Cormorant"; font-weight: 300; font-style: italic; src: url(fonts/cormorant-garamond-latin-300-italic.woff2); }
+@font-face { font-family: "Cormorant"; font-weight: 400; font-style: italic; src: url(fonts/cormorant-garamond-latin-400-italic.woff2); }
+@font-face { font-family: "Jost"; font-weight: 300; src: url(fonts/jost-latin-300-normal.woff2); }
+@font-face { font-family: "Jost"; font-weight: 400; src: url(fonts/jost-latin-400-normal.woff2); }
+@font-face { font-family: "Jost"; font-weight: 500; src: url(fonts/jost-latin-500-normal.woff2); }
+
+:root { --paper: #F5F1EB; --paper2: #EDE6DC; --ink: #2B2622; --soft: #6E6258; --line: #CDBFAE; --accent: #8C7462; --m: 14mm; }
+@page { size: 297mm 210mm; margin: 0; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { background: var(--paper); }
+body { font-family: "Jost", sans-serif; font-weight: 300; color: var(--ink); font-size: 10.2pt; line-height: 1.55;
+       -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+.page { width: 297mm; height: 210mm; position: relative; overflow: hidden; background: var(--paper); page-break-after: always; break-after: page; }
+h1, h2, h3 { font-family: "Cormorant", serif; font-weight: 300; line-height: 1.05; letter-spacing: .2px; }
+h1 { font-size: 46pt; } h2 { font-size: 30pt; margin-bottom: 7mm; } h2.xl { font-size: 42pt; } h3 { font-size: 22pt; margin-bottom: 3mm; }
+em { font-style: italic; color: var(--accent); }
+p { margin-bottom: 3.2mm; } .lead { font-size: 12pt; line-height: 1.6; }
+.kicker { font-family: "Jost"; font-weight: 400; font-size: 7.4pt; letter-spacing: 3.2px; text-transform: uppercase; color: var(--accent); margin-bottom: 3.5mm; }
+.num { font-family: "Cormorant"; font-weight: 300; font-size: 20pt; color: var(--line); margin-bottom: 3mm; }
+.num.big { font-size: 64pt; line-height: 1; color: var(--line); }
+.rule { width: 18mm; height: .3mm; background: var(--accent); margin: 6mm 0; }
+.note { font-size: 8.6pt; color: var(--soft); max-width: 150mm; }
+ul { list-style: none; } li { padding: 1.3mm 0; border-bottom: .2mm solid var(--line); font-size: 9.2pt; }
+
+/* image tiles */
+.tile { position: relative; overflow: hidden; }
+.tile .ph { position: absolute; inset: 0; background-size: cover; background-repeat: no-repeat; }
+.tile figcaption { position: absolute; left: 0; right: 0; bottom: 0; padding: 7mm 4mm 3mm; font-size: 7.6pt; letter-spacing: .4px; color: #fff;
+  background: linear-gradient(transparent, rgba(30,24,20,.62)); }
+
+/* folio */
+.folio { position: absolute; left: var(--m); right: var(--m); bottom: 6mm; display: flex; justify-content: space-between; align-items: center;
+  font-size: 6.6pt; letter-spacing: 1.6px; text-transform: uppercase; color: var(--soft); z-index: 5; }
+.folio .pn { font-family: "Cormorant"; font-size: 11pt; letter-spacing: 0; color: var(--ink); }
+.folio span:nth-child(2) { position: absolute; left: 50%; transform: translateX(-50%); }
+.folio.narrow span:nth-child(2) { display: none; }
+
+/* cover */
+.cover { display: grid; grid-template-columns: 172mm 1fr; height: 100%; }
+.cover-img { height: 210mm; }
+.cover-panel { padding: 18mm 15mm 14mm; display: flex; flex-direction: column; justify-content: space-between; background: var(--paper); }
+.wordmark { font-family: "Cormorant"; font-weight: 400; font-size: 34pt; letter-spacing: 14px; line-height: 1; }
+.sub { font-size: 7pt; letter-spacing: 6.4px; color: var(--soft); margin-top: 3mm; }
+.cover-title h1 { margin-top: 3mm; } .cover-title .proj { font-size: 10pt; color: var(--soft); letter-spacing: .6px; }
+.cover-foot { font-size: 7.4pt; letter-spacing: 3px; text-transform: uppercase; color: var(--soft); }
+
+/* toc */
+.toc { display: grid; grid-template-columns: 112mm 1fr; height: 100%; }
+.toc-img { height: 210mm; } .toc-text { padding: 22mm 20mm; }
+.toc-list { margin-top: 4mm; columns: 1; }
+.toc-row { display: flex; gap: 8mm; padding: 2.6mm 0; border-bottom: .2mm solid var(--line); align-items: baseline; }
+.tn { font-family: "Cormorant"; font-size: 15pt; color: var(--accent); width: 10mm; } .tt { font-family: "Cormorant"; font-size: 15pt; }
+
+/* split / concept */
+.split { display: grid; grid-template-columns: 1fr 118mm; height: 100%; }
+.col-text { padding: 20mm 16mm 20mm var(--m); } .col-img { height: 210mm; }
+.facts { margin-top: 7mm; display: grid; gap: 2mm; font-size: 9pt; }
+.facts span { display: inline-block; width: 22mm; font-size: 7pt; letter-spacing: 2.4px; text-transform: uppercase; color: var(--accent); }
+.concept { display: grid; grid-template-columns: 100mm 1fr; height: 100%; }
+.concept-img { height: 210mm; } .concept-text { padding: 18mm 16mm 18mm 16mm; }
+.pillars { display: grid; grid-template-columns: 1fr 1fr; gap: 6mm 9mm; }
+.pillars b { font-family: "Cormorant"; font-weight: 500; font-size: 14pt; display: block; margin-bottom: 1.5mm; }
+.pillars p { font-size: 9pt; color: #4a413a; }
+
+/* moodboard */
+.mood { padding: 13mm var(--m) 14mm; height: 100%; display: flex; flex-direction: column; }
+.mood-head { display: flex; gap: 6mm; align-items: flex-end; } .mood-head h2 { margin-bottom: 5mm; }
+.mood-grid { flex: 1; display: grid; gap: 3mm; grid-template-columns: 2fr 1fr 1fr 1.3fr; grid-template-rows: 1fr 1fr; margin-bottom: 6mm; }
+.m1 { grid-row: span 2; } .m4 { grid-row: span 2; }
+
+/* palette pages */
+.palette-page, .mat-page { padding: 14mm var(--m) 16mm; height: 100%; display: flex; flex-direction: column; }
+.pp-head { display: flex; gap: 6mm; } .pp-head h2 { margin-bottom: 3mm; }
+.bars { flex: 1; display: grid; grid-template-columns: repeat(12, 1fr); gap: 0; margin-top: 7mm; }
+.bar { position: relative; } .bar span { display: none; }
+.bnames { display: grid; grid-template-columns: repeat(12, 1fr); gap: 1.5mm; margin-top: 2.5mm; margin-bottom: 6mm; }
+.bn { font-size: 6.6pt; line-height: 1.35; color: var(--soft); }
+.matgrid { flex: 1; display: grid; grid-template-columns: repeat(6, 1fr); grid-template-rows: 1fr 1fr; gap: 4mm 4mm; margin: 6mm 0 6mm; }
+.mat { display: flex; flex-direction: column; } .mchip { flex: 1; background-size: cover; background-position: center; }
+.mname { font-family: "Cormorant"; font-size: 11pt; line-height: 1.15; margin-top: 2mm; } .hex { font-size: 6.8pt; letter-spacing: 1.6px; color: var(--soft); }
+
+/* plans */
+.plans { padding: 12mm var(--m) 14mm; height: 100%; display: grid; grid-template-columns: 62mm 1fr; grid-template-rows: auto 1fr; gap: 0 10mm; }
+.plans-head { grid-column: 1; grid-row: 1; } .plans-head h2 { font-size: 26pt; }
+.plan-box { grid-column: 2; grid-row: 1 / span 2; background: var(--paper2); display: flex; align-items: center; justify-content: center; padding: 6mm; margin-bottom: 6mm; }
+.plan-box.white { background: #fff; }
+.plan-box img { max-width: 100%; max-height: 170mm; object-fit: contain; }
+.legend { grid-column: 1; grid-row: 2; align-self: end; margin-bottom: 8mm; display: flex; flex-direction: column; gap: 1.6mm; font-size: 9pt; }
+.legend b { font-family: "Cormorant"; font-weight: 500; font-size: 13pt; } .legend span::before { content: "— "; color: var(--accent); }
+
+/* opener */
+.opener { display: grid; grid-template-columns: 1fr 150mm; height: 100%; }
+.op-text { padding: 20mm 14mm 20mm var(--m); display: flex; flex-direction: column; justify-content: center; }
+.op-text p { font-size: 10.6pt; max-width: 110mm; } .op-img { height: 210mm; }
+
+/* galleries */
+.gal { padding: 12mm var(--m) 14mm; height: 100%; display: flex; flex-direction: column; }
+.g-head { display: grid; grid-template-columns: 1fr; margin-bottom: 4mm; } .g-head h3 { margin-bottom: 2mm; }
+.gintro { font-size: 9.2pt; color: #4a413a; max-width: 210mm; margin-bottom: 0; }
+.g3row { flex: 1; display: grid; grid-template-columns: repeat(3, 1fr); gap: 3.5mm; margin-bottom: 6mm; }
+
+/* feature */
+.feature { display: grid; grid-template-columns: 128mm 76mm 1fr; height: 100%; gap: 0; }
+.f-big { height: 210mm; } .f-small { height: 210mm; border-left: 1.2mm solid var(--paper); }
+.f-text { padding: 18mm 11mm 18mm 10mm; display: flex; flex-direction: column; justify-content: center; }
+.f-text p { font-size: 9.2pt; color: #4a413a; } .f-text ul { margin-top: 3mm; }
+
+/* room sheet */
+.sheet { display: grid; grid-template-columns: 1fr 104mm; height: 100%; }
+.sh-left { padding: 13mm 12mm 16mm var(--m); display: flex; flex-direction: column; }
+.palette { flex: 1; display: flex; flex-direction: column; margin-top: 3mm; }
+.swgrid { flex: 1; display: grid; grid-template-columns: repeat(4, 1fr); grid-auto-rows: 1fr; gap: 3.5mm; margin-bottom: 4mm; }
+.swgrid.n5, .swgrid.n6 { grid-template-columns: repeat(3, 1fr); }
+.sw { display: grid; grid-template-rows: 1fr 5mm auto auto; }
+.chip { background-size: cover; background-position: center; } .flat { }
+.swname { font-family: "Cormorant"; font-size: 10.5pt; line-height: 1.1; margin-top: 1.6mm; }
+.sh-right { background: var(--paper2); display: grid; grid-template-rows: 88mm 1fr; }
+.sh-img { height: 88mm; }
+.lists { padding: 7mm 9mm 16mm; display: grid; grid-template-columns: 1fr 1fr; gap: 6mm; }
+.lists li { font-size: 8.2pt; padding: 1mm 0; }
+
+/* custom */
+.custom { padding: 12mm var(--m) 14mm; height: 100%; display: flex; flex-direction: column; }
+.custom .g-head { margin-bottom: 4mm; } .custom .num { margin-bottom: 0; }
+.c6grid { flex: 1; display: grid; grid-template-columns: repeat(3, 1fr); grid-template-rows: 1fr 1fr; gap: 3.5mm; margin-bottom: 6mm; }
+.c6 figcaption { font-size: 7.4pt; } .c6 figcaption b { font-family: "Cormorant"; font-weight: 500; font-size: 11pt; letter-spacing: .2px; }
+
+/* synthesis / back */
+.synth { display: grid; grid-template-columns: 150mm 1fr; height: 100%; }
+.sy-img { height: 210mm; } .sy-text { padding: 22mm 18mm 20mm 16mm; display: flex; flex-direction: column; justify-content: center; }
+.back { display: grid; grid-template-columns: 1fr 100mm; height: 100%; }
+.back-img { height: 210mm; }
+.back-panel { padding: 20mm 16mm; display: flex; flex-direction: column; justify-content: center; align-items: flex-start; background: var(--ink); color: var(--paper); }
+.back-panel .sub { color: #b9ab9b; } .back-panel p { font-size: 8.6pt; letter-spacing: 1px; color: #cbbfb1; }
+.back-panel .rule { background: #b9ab9b; }
+.bhex { display: block; font-size: 7pt; letter-spacing: 1.4px; color: var(--ink); margin-bottom: .8mm; }
+</style></head><body><section class="page p-cover">
+<div class="cover">
+  <figure class="tile cover-img"><div class="ph" style="background-image:url(img/rdc-salon-02.jpg);background-position:45% 60%;"></div></figure>
+  <div class="cover-panel">
+    <div class="brand"><div class="wordmark">KAÏRA</div><div class="sub">INTERIOR DESIGN</div></div>
+    <div class="cover-title">
+      <div class="kicker">Dossier de conception<br>et d'aménagement intérieur</div>
+      <h1>Interior Design<br><em>Project Book</em></h1>
+      <div class="rule"></div>
+      <p class="proj">Villa — Rez-de-chaussée & Étage 1</p>
+    </div>
+    <div class="cover-foot">Novembre 2026</div>
+  </div>
+</div></section><section class="page p-toc">
+<div class="toc">
+  <figure class="tile toc-img"><div class="ph" style="background-image:url(img/etage1-sejour-04.jpg);background-position:30% 50%;"></div></figure>
+  <div class="toc-text"><div class="kicker">Sommaire</div><h2>Contenu <em>du dossier</em></h2><div class="toc-list"><div class="toc-row"><span class="tn">01</span><span class="tt">Le projet et son concept</span></div><div class="toc-row"><span class="tn">02</span><span class="tt">Moodboard et univers</span></div><div class="toc-row"><span class="tn">03</span><span class="tt">Palette chromatique et matières</span></div><div class="toc-row"><span class="tn">04</span><span class="tt">Plans d&#x27;aménagement</span></div><div class="toc-row"><span class="tn">05</span><span class="tt">Salon principal</span></div><div class="toc-row"><span class="tn">06</span><span class="tt">Chambre d&#x27;amis</span></div><div class="toc-row"><span class="tn">07</span><span class="tt">Séjour de l&#x27;étage</span></div><div class="toc-row"><span class="tn">08</span><span class="tt">Chambre principale</span></div><div class="toc-row"><span class="tn">09</span><span class="tt">Agencements et menuiseries</span></div><div class="toc-row"><span class="tn">10</span><span class="tt">Synthèse</span></div></div></div>
+</div><div class="folio narrow" style="left:132mm;right:20mm"><span>KAÏRA</span><span>Sommaire</span><span class="pn">02</span></div></section><section class="page ">
+<div class="split">
+  <div class="col-text">
+    <div class="num">01</div>
+    <div class="kicker">Le projet</div>
+    <h2>Une demeure pensée comme<br><em>un écrin de calme</em></h2>
+    <p class="lead">Ce dossier présente l'aménagement intérieur de quatre espaces de la villa : au rez-de-chaussée,
+    le salon principal ouvert sur la salle à manger et la chambre d'amis ; à l'étage, le séjour et la chambre principale.</p>
+    <p>Chaque pièce est traitée comme une composition à part entière, tout en partageant un même vocabulaire :
+    des parois rythmées par des panneaux à joints creux, la chaleur du bois, la présence ponctuelle de la pierre,
+    une lumière indirecte qui dessine les volumes et des œuvres d'art qui donnent à chaque espace son caractère.</p>
+    <div class="facts">
+      <div><span>Niveaux</span>Rez-de-chaussée · Étage 1</div>
+      <div><span>Espaces</span>Salon principal · Salle à manger · Chambre d'amis · Séjour · Chambre principale</div>
+    </div>
+  </div>
+  <figure class="tile col-img"><div class="ph" style="background-image:url(img/rdc-salon-11.jpg);background-position:50% 55%;"></div></figure>
+</div><div class="folio" style="left:14mm;right:132mm"><span>KAÏRA Interior Design · Dossier de conception</span><span>Le projet</span><span class="pn">03</span></div></section><section class="page ">
+<div class="concept">
+  <figure class="tile concept-img"><div class="ph" style="background-image:url(img/chambre-principale-05.jpg);background-position:50% 40%;"></div></figure>
+  <div class="concept-text">
+    <div class="kicker">Concept architectural et intention esthétique</div>
+    <h2>Lumière, matière,<br><em>sérénité</em></h2>
+    <div class="pillars">
+      <div><b>La lumière comme architecture</b><p>Des gorges lumineuses soulignent le périmètre des plafonds ; les niches, les lames
+      de bois et les panneaux de pierre sont rétroéclairés. La lumière indirecte crée une atmosphère enveloppante, sans éblouissement.</p></div>
+      <div><b>Des parois composées</b><p>Panneaux muraux à joints creux, colonnes de bois et bandes de lames verticales
+      structurent les murs et donnent aux pièces leur rythme et leur hauteur.</p></div>
+      <div><b>Une matière naturelle et chaleureuse</b><p>Le bois, la pierre aux veinages marqués, les textiles doux et
+      les tapis clairs composent une palette tactile, dans des tons neutres et chauds.</p></div>
+      <div><b>L'art comme point focal</b><p>Chaque espace s'articule autour d'une œuvre ou d'un mur signature
+      qui apporte une note de couleur et de personnalité.</p></div>
+    </div>
+  </div>
+</div><div class="folio" style="left:116mm;right:14mm"><span>KAÏRA Interior Design · Dossier de conception</span><span>Concept</span><span class="pn">04</span></div></section><section class="page ">
+<div class="mood">
+  <div class="mood-head"><div class="num">02</div><div><div class="kicker">Moodboard</div><h2>L'univers <em>du projet</em></h2></div></div>
+  <div class="mood-grid">
+    <figure class="tile m1"><div class="ph" style="background-image:url(img/rdc-salon-09.jpg);background-position:20% 45%;"></div></figure>
+    <figure class="tile m2"><div class="ph" style="background-image:url(img/chambre-amis-02.jpg);background-position:62% 6%;background-size:300%;"></div></figure>
+    <figure class="tile m3"><div class="ph" style="background-image:url(img/chambre-principale-05.jpg);background-position:52% 30%;background-size:300%;"></div></figure>
+    <figure class="tile m4"><div class="ph" style="background-image:url(img/etage1-sejour-08.jpg);background-position:62% 45%;background-size:220%;"></div></figure>
+    <figure class="tile m5"><div class="ph" style="background-image:url(img/rdc-salon-08.jpg);background-position:45% 62%;background-size:230%;"></div></figure>
+    <figure class="tile m6"><div class="ph" style="background-image:url(img/rdc-salon-01.jpg);background-position:36% 52%;background-size:230%;"></div></figure>
+    <figure class="tile m7"><div class="ph" style="background-image:url(img/etage1-sejour-03.jpg);background-position:20% 82%;background-size:260%;"></div></figure>
+    <figure class="tile m8"><div class="ph" style="background-image:url(img/rdc-salon-05.jpg);background-position:40% 30%;background-size:190%;"></div></figure>
+  </div>
+</div><div class="folio" style="left:14mm;right:14mm"><span>KAÏRA Interior Design · Dossier de conception</span><span>Moodboard</span><span class="pn">05</span></div></section><section class="page ">
+<div class="palette-page">
+  <div class="pp-head"><div class="num">03</div><div><div class="kicker">Palette chromatique</div>
+  <h2>Les couleurs <em>du projet</em></h2>
+  <p class="note">Teintes relevées directement dans les rendus du projet (valeur médiane de chaque matière, codes HEX).
+  Elles restent à confirmer sur échantillons physiques.</p></div></div>
+  <div class="bars"><div class="bar" style="background:#978B80"><span>#978B80</span></div><div class="bar" style="background:#6A5442"><span>#6A5442</span></div><div class="bar" style="background:#624D3E"><span>#624D3E</span></div><div class="bar" style="background:#251B13"><span>#251B13</span></div><div class="bar" style="background:#C2BAB2"><span>#C2BAB2</span></div><div class="bar" style="background:#B6AFA9"><span>#B6AFA9</span></div><div class="bar" style="background:#312A1B"><span>#312A1B</span></div><div class="bar" style="background:#4E463E"><span>#4E463E</span></div><div class="bar" style="background:#42362D"><span>#42362D</span></div><div class="bar" style="background:#3A3322"><span>#3A3322</span></div><div class="bar" style="background:#503726"><span>#503726</span></div><div class="bar" style="background:#7B3931"><span>#7B3931</span></div></div>
+  <div class="bnames"><div class="bn"><span class="bhex">#978B80</span>Panneaux muraux crème</div><div class="bn"><span class="bhex">#6A5442</span>Chêne clair — panneaux et colonnes</div><div class="bn"><span class="bhex">#624D3E</span>Parquet bois</div><div class="bn"><span class="bhex">#251B13</span>Bois foncé — double porte</div><div class="bn"><span class="bhex">#C2BAB2</span>Travertin — table à manger</div><div class="bn"><span class="bhex">#B6AFA9</span>Marbre blanc veiné caramel</div><div class="bn"><span class="bhex">#312A1B</span>Marbre brun foncé veiné</div><div class="bn"><span class="bhex">#4E463E</span>Cuir taupe foncé — canapé</div><div class="bn"><span class="bhex">#42362D</span>Rideaux taupe</div><div class="bn"><span class="bhex">#3A3322</span>Kaki — linge de lit</div><div class="bn"><span class="bhex">#503726</span>Cuir cognac — pouf</div><div class="bn"><span class="bhex">#7B3931</span>Rouge — œuvre</div></div>
+</div><div class="folio" style="left:14mm;right:14mm"><span>KAÏRA Interior Design · Dossier de conception</span><span>Palette</span><span class="pn">06</span></div></section><section class="page ">
+<div class="mat-page">
+  <div class="pp-head"><div class="num">03</div><div><div class="kicker">Palette de matériaux et de finitions</div>
+  <h2>Bois, pierres <em>et textiles</em></h2>
+  <p class="note">Échantillons extraits des rendus. Les références fournisseurs, essences, finitions et formats
+  seront précisés dans le cahier des prescriptions.</p></div></div>
+  <div class="matgrid"><div class="mat"><div class="mchip" style="background-image:url(swatches/rdc-00.jpg)"></div><div class="mname">Chêne clair — panneaux et colonnes</div><div class="hex">#6A5442</div></div><div class="mat"><div class="mchip" style="background-image:url(swatches/amis-12.jpg)"></div><div class="mname">Lames chêne</div><div class="hex">#82624B</div></div><div class="mat"><div class="mchip" style="background-image:url(swatches/rdc-05.jpg)"></div><div class="mname">Parquet bois</div><div class="hex">#624D3E</div></div><div class="mat"><div class="mchip" style="background-image:url(swatches/rdc-02.jpg)"></div><div class="mname">Bois foncé — double porte</div><div class="hex">#251B13</div></div><div class="mat"><div class="mchip" style="background-image:url(swatches/amis-11.jpg)"></div><div class="mname">Marbre blanc veiné caramel</div><div class="hex">#B6AFA9</div></div><div class="mat"><div class="mchip" style="background-image:url(swatches/rdc-06.jpg)"></div><div class="mname">Marbre blanc veiné — colonne</div><div class="hex">#97887A</div></div><div class="mat"><div class="mchip" style="background-image:url(swatches/princ-16.jpg)"></div><div class="mname">Marbre brun foncé veiné</div><div class="hex">#312A1B</div></div><div class="mat"><div class="mchip" style="background-image:url(swatches/rdc-07.jpg)"></div><div class="mname">Travertin — table à manger</div><div class="hex">#C2BAB2</div></div><div class="mat"><div class="mchip" style="background-image:url(swatches/rdc-08.jpg)"></div><div class="mname">Bouclé — chaises</div><div class="hex">#AAA198</div></div><div class="mat"><div class="mchip" style="background-image:url(swatches/rdc-03.jpg)"></div><div class="mname">Cuir taupe foncé — canapé</div><div class="hex">#4E463E</div></div><div class="mat"><div class="mchip" style="background-image:url(swatches/et1-24.jpg)"></div><div class="mname">Cuir cognac — pouf</div><div class="hex">#503726</div></div><div class="mat"><div class="mchip" style="background-image:url(swatches/et1-27.jpg)"></div><div class="mname">Tapis tissé</div><div class="hex">#8D837A</div></div></div>
+</div><div class="folio" style="left:14mm;right:14mm"><span>KAÏRA Interior Design · Dossier de conception</span><span>Matériaux</span><span class="pn">07</span></div></section><section class="page ">
+<div class="plans">
+  <div class="plans-head"><div class="num">04</div><div><div class="kicker">Plans d'aménagement</div><h2>Rez-de-chaussée</h2></div></div>
+  <div class="plan-box"><img src="img/plan-rdc-amenagement.jpg"></div>
+  <div class="legend"><b>Rez-de-chaussée</b><span>Salon principal</span><span>Salle à manger</span><span>Chambre d'amis</span></div>
+</div><div class="folio" style="left:14mm;right:14mm"><span>KAÏRA Interior Design · Dossier de conception</span><span>Plans</span><span class="pn">08</span></div></section><section class="page ">
+<div class="plans">
+  <div class="plans-head"><div class="num">04</div><div><div class="kicker">Plans d'aménagement</div><h2>Étage 1</h2></div></div>
+  <div class="plan-box"><img src="img/plan-etage1-amenagement.jpg"></div>
+  <div class="legend"><b>Étage 1</b><span>Séjour</span><span>Chambre principale</span></div>
+</div><div class="folio" style="left:14mm;right:14mm"><span>KAÏRA Interior Design · Dossier de conception</span><span>Plans</span><span class="pn">09</span></div></section><section class="page ">
+<div class="plans tech">
+  <div class="plans-head"><div class="num">04</div><div><div class="kicker">Plan technique</div><h2>Rez-de-chaussée <em>— plan coté</em></h2></div></div>
+  <div class="plan-box white"><img src="img/plan-rdc-cote-2D.jpg"></div>
+  <div class="legend"><b>Cotes en centimètres</b><span>Plan d'architecture existant</span></div>
+</div><div class="folio" style="left:14mm;right:14mm"><span>KAÏRA Interior Design · Dossier de conception</span><span>Plans</span><span class="pn">10</span></div></section><section class="page ">
+<div class="opener">
+  <div class="op-text">
+    <div class="num big">05</div>
+    <div class="kicker">Rez-de-chaussée</div>
+    <h2 class="xl">Salon<br><em>principal</em></h2>
+    <div class="rule"></div>
+    <p>Un grand espace de réception ouvert, où le salon, la salle à manger et la bibliothèque se répondent. Les murs sont rythmés par des panneaux crème et des colonnes de bois rétroéclairées ; une gorge lumineuse court le long du plafond et unifie l'ensemble.</p>
+  </div>
+  <figure class="tile op-img"><div class="ph" style="background-image:url(img/rdc-salon-02.jpg);background-position:40% 60%;"></div></figure>
+</div><div class="folio narrow" style="left:14mm;right:164mm"><span>KAÏRA</span><span>Salon principal</span><span class="pn">11</span></div></section><section class="page "><div class="gal"><div class="g-head"><div class="kicker">Salon</div><h3>Un salon composé autour de l'art</h3><p class="gintro">Deux canapés modulaires bas — l'un en cuir taupe foncé, l'autre crème — se font face autour d'une table basse en bois noir et pierre veinée, posés sur un grand tapis clair.</p></div>
+<div class="g3row"><figure class="tile g3"><div class="ph" style="background-image:url(img/rdc-salon-11.jpg);background-position:50% 50%;"></div><figcaption>Mur signature : œuvre graphique entre deux rideaux</figcaption></figure><figure class="tile g3"><div class="ph" style="background-image:url(img/rdc-salon-08.jpg);background-position:50% 50%;"></div><figcaption>Colonnes de bois et lames rétroéclairées</figcaption></figure><figure class="tile g3"><div class="ph" style="background-image:url(img/rdc-salon-03.jpg);background-position:50% 50%;"></div><figcaption>Mur TV et baie vitrée</figcaption></figure></div></div><div class="folio" style="left:14mm;right:14mm"><span>KAÏRA Interior Design · Dossier de conception</span><span>Salon principal</span><span class="pn">12</span></div></section><section class="page ">
+<div class="feature">
+  <figure class="tile f-big"><div class="ph" style="background-image:url(img/rdc-salon-07.jpg);background-position:45% 55%;"></div><figcaption>Vue frontale</figcaption></figure>
+  <figure class="tile f-small"><div class="ph" style="background-image:url(img/rdc-salon-04.jpg);background-position:40% 55%;"></div><figcaption>Vue en perspective</figcaption></figure>
+  <div class="f-text"><div class="kicker">Mur TV</div><h3>Un mur sculpté par la lumière</h3><p>Le mur TV associe des panneaux de bois aux angles arrondis, une bande de lames verticales et des niches lumineuses. Le meuble bas suspendu laqué blanc libère le sol et allège la composition.</p><ul><li>Panneaux bois aux angles arrondis, rétroéclairés</li><li>Bande de lames verticales</li><li>Niches éclairées</li><li>Meuble bas suspendu blanc</li></ul></div>
+</div><div class="folio narrow" style="left:214mm;right:11mm"><span>KAÏRA</span><span>Salon principal</span><span class="pn">13</span></div></section><section class="page "><div class="gal"><div class="g-head"><div class="kicker">Salle à manger</div><h3>Recevoir sous une ligne de lumière</h3><p class="gintro">Une grande table en pierre claire accueille huit chaises en bouclé à structure en bois foncé. Au-dessus, une suspension lumineuse aux courbes libres dessine un trait de lumière.</p></div>
+<div class="g3row"><figure class="tile g3"><div class="ph" style="background-image:url(img/rdc-salon-05.jpg);background-position:50% 50%;"></div><figcaption>Table en pierre et pied cannelé</figcaption></figure><figure class="tile g3"><div class="ph" style="background-image:url(img/rdc-salon-09.jpg);background-position:50% 50%;"></div><figcaption>Bibliothèque en bois et œuvre rouge</figcaption></figure><figure class="tile g3"><div class="ph" style="background-image:url(img/rdc-salon-06.jpg);background-position:50% 50%;"></div><figcaption>Mur d'art et olivier</figcaption></figure></div></div><div class="folio" style="left:14mm;right:14mm"><span>KAÏRA Interior Design · Dossier de conception</span><span>Salon principal</span><span class="pn">14</span></div></section><section class="page ">
+<div class="feature">
+  <figure class="tile f-big"><div class="ph" style="background-image:url(img/rdc-salon-01.jpg);background-position:50% 50%;"></div><figcaption>Colonne en marbre veiné, console et sculpture</figcaption></figure>
+  <figure class="tile f-small"><div class="ph" style="background-image:url(img/rdc-salon-10.jpg);background-position:60% 50%;"></div><figcaption>Double porte en bois foncé</figcaption></figure>
+  <div class="f-text"><div class="kicker">Transitions</div><h3>Seuils et circulations</h3><p>Les passages entre les espaces sont traités comme des scènes : une colonne de marbre veiné porte une console et une sculpture, la bibliothèque asymétrique en bois se prolonge jusqu'au plafond.</p><ul><li>Bibliothèque asymétrique en bois</li><li>Colonne et console en marbre veiné</li><li>Double porte en bois foncé</li><li>Plafond à caissons séparés par un profil noir</li></ul></div>
+</div><div class="folio narrow" style="left:214mm;right:11mm"><span>KAÏRA</span><span>Salon principal</span><span class="pn">15</span></div></section><section class="page ">
+<div class="sheet">
+  <div class="sh-left">
+    <div class="kicker">Salon principal</div><h3>Couleurs et matières</h3>
+    <div class="palette"><div class="kicker">Nuancier — salon principal</div><div class="swgrid n11"><div class="sw"><div class="chip" style="background-image:url(swatches/rdc-00.jpg)"></div><div class="flat" style="background:#6A5442"></div><div class="swname">Chêne clair — panneaux et colonnes</div><div class="hex">#6A5442</div></div><div class="sw"><div class="chip" style="background-image:url(swatches/rdc-01.jpg)"></div><div class="flat" style="background:#978B80"></div><div class="swname">Panneaux muraux crème</div><div class="hex">#978B80</div></div><div class="sw"><div class="chip" style="background-image:url(swatches/rdc-02.jpg)"></div><div class="flat" style="background:#251B13"></div><div class="swname">Bois foncé — double porte</div><div class="hex">#251B13</div></div><div class="sw"><div class="chip" style="background-image:url(swatches/rdc-03.jpg)"></div><div class="flat" style="background:#4E463E"></div><div class="swname">Cuir taupe foncé — canapé</div><div class="hex">#4E463E</div></div><div class="sw"><div class="chip" style="background-image:url(swatches/rdc-04.jpg)"></div><div class="flat" style="background:#9C9085"></div><div class="swname">Tapis clair</div><div class="hex">#9C9085</div></div><div class="sw"><div class="chip" style="background-image:url(swatches/rdc-05.jpg)"></div><div class="flat" style="background:#624D3E"></div><div class="swname">Parquet bois</div><div class="hex">#624D3E</div></div><div class="sw"><div class="chip" style="background-image:url(swatches/rdc-06.jpg)"></div><div class="flat" style="background:#97887A"></div><div class="swname">Marbre blanc veiné — colonne</div><div class="hex">#97887A</div></div><div class="sw"><div class="chip" style="background-image:url(swatches/rdc-07.jpg)"></div><div class="flat" style="background:#C2BAB2"></div><div class="swname">Travertin — table à manger</div><div class="hex">#C2BAB2</div></div><div class="sw"><div class="chip" style="background-image:url(swatches/rdc-08.jpg)"></div><div class="flat" style="background:#AAA198"></div><div class="swname">Bouclé — chaises</div><div class="hex">#AAA198</div></div><div class="sw"><div class="chip" style="background-image:url(swatches/rdc-09.jpg)"></div><div class="flat" style="background:#5C2924"></div><div class="swname">Rouge — œuvre salle à manger</div><div class="hex">#5C2924</div></div><div class="sw"><div class="chip" style="background-image:url(swatches/rdc-10.jpg)"></div><div class="flat" style="background:#42362D"></div><div class="swname">Rideaux taupe</div><div class="hex">#42362D</div></div></div></div>
+  </div>
+  <div class="sh-right">
+    <figure class="tile sh-img"><div class="ph" style="background-image:url(img/rdc-salon-08.jpg);background-position:55% 65%;background-size:240%;"></div></figure>
+    <div class="lists"><div><div class="kicker">Mobilier et aménagement</div><ul><li>Canapés modulaires cuir taupe foncé et crème</li><li>Table basse bois noir et pierre veinée</li><li>Grand tapis clair</li><li>Table à manger en pierre, pied cannelé</li><li>Chaises bouclé, structure bois foncé</li><li>Suspension lumineuse sculpturale</li><li>Rideaux taupe et voilages</li></ul></div>
+    <div><div class="kicker">Détails architecturaux</div><ul><li>Gorge lumineuse périphérique au plafond</li><li>Panneaux muraux à joints creux</li><li>Colonnes de bois avec lames rétroéclairées</li><li>Mur TV en bois aux angles arrondis</li><li>Bibliothèques intégrées</li></ul></div></div>
+  </div>
+</div><div class="folio" style="left:14mm;right:14mm"><span>KAÏRA Interior Design · Dossier de conception</span><span>Salon principal</span><span class="pn">16</span></div></section><section class="page ">
+<div class="opener">
+  <div class="op-text">
+    <div class="num big">06</div>
+    <div class="kicker">Rez-de-chaussée</div>
+    <h2 class="xl">Chambre<br><em>d'amis</em></h2>
+    <div class="rule"></div>
+    <p>Une chambre lumineuse et douce, entre tons clairs et touches de bois. Le mur de tête de lit joue la sobriété ; le mur opposé réunit un habillage de marbre blanc veiné, le meuble TV et une coiffeuse.</p>
+  </div>
+  <figure class="tile op-img"><div class="ph" style="background-image:url(img/chambre-amis-03.jpg);background-position:45% 50%;"></div></figure>
+</div><div class="folio narrow" style="left:14mm;right:164mm"><span>KAÏRA</span><span>Chambre d&#x27;amis</span><span class="pn">17</span></div></section><section class="page "><div class="gal"><div class="g-head"><div class="kicker">Chambre d'amis</div><h3>Douceur et clarté</h3><p class="gintro">Lit plateforme tapissé aux angles arrondis, suspensions globe, chevets ronds en métal noir ; face au lit, un meuble suspendu en bois à plateau de marbre se prolonge en coiffeuse.</p></div>
+<div class="g3row"><figure class="tile g3"><div class="ph" style="background-image:url(img/chambre-amis-01.jpg);background-position:50% 50%;"></div><figcaption>Mur de tête de lit</figcaption></figure><figure class="tile g3"><div class="ph" style="background-image:url(img/chambre-amis-02.jpg);background-position:50% 50%;"></div><figcaption>Marbre, meuble TV et coiffeuse</figcaption></figure><figure class="tile g3"><div class="ph" style="background-image:url(img/chambre-amis-04.jpg);background-position:50% 50%;"></div><figcaption>Vue en perspective</figcaption></figure></div></div><div class="folio" style="left:14mm;right:14mm"><span>KAÏRA Interior Design · Dossier de conception</span><span>Chambre d&#x27;amis</span><span class="pn">18</span></div></section><section class="page ">
+<div class="sheet">
+  <div class="sh-left">
+    <div class="kicker">Chambre d'amis</div><h3>Couleurs et matières</h3>
+    <div class="palette"><div class="kicker">Nuancier — chambre d'amis</div><div class="swgrid n5"><div class="sw"><div class="chip" style="background-image:url(swatches/amis-11.jpg)"></div><div class="flat" style="background:#B6AFA9"></div><div class="swname">Marbre blanc veiné caramel</div><div class="hex">#B6AFA9</div></div><div class="sw"><div class="chip" style="background-image:url(swatches/amis-12.jpg)"></div><div class="flat" style="background:#82624B"></div><div class="swname">Lames chêne</div><div class="hex">#82624B</div></div><div class="sw"><div class="chip" style="background-image:url(swatches/amis-13.jpg)"></div><div class="flat" style="background:#A1968E"></div><div class="swname">Panneaux muraux beige</div><div class="hex">#A1968E</div></div><div class="sw"><div class="chip" style="background-image:url(swatches/amis-14.jpg)"></div><div class="flat" style="background:#A1978F"></div><div class="swname">Lin clair — lit</div><div class="hex">#A1978F</div></div><div class="sw"><div class="chip" style="background-image:url(swatches/amis-15.jpg)"></div><div class="flat" style="background:#483C33"></div><div class="swname">Cuir brun — pouf</div><div class="hex">#483C33</div></div></div></div>
+  </div>
+  <div class="sh-right">
+    <figure class="tile sh-img"><div class="ph" style="background-image:url(img/chambre-amis-03.jpg);background-position:50% 62%;background-size:240%;"></div></figure>
+    <div class="lists"><div><div class="kicker">Mobilier et aménagement</div><ul><li>Lit plateforme tapissé, tête de lit double</li><li>Chevets ronds en métal noir</li><li>Suspensions globe opalin</li><li>Meuble TV suspendu bois et marbre</li><li>Coiffeuse et pouf capitonné cuir</li><li>Rideaux taupe et voilage</li></ul></div>
+    <div><div class="kicker">Détails architecturaux</div><ul><li>Habillage mural en marbre blanc veiné</li><li>Bande de lames de bois verticales</li><li>Panneaux muraux à joints creux</li><li>Gorge lumineuse au plafond</li><li>Miroir toute hauteur</li></ul></div></div>
+  </div>
+</div><div class="folio" style="left:14mm;right:14mm"><span>KAÏRA Interior Design · Dossier de conception</span><span>Chambre d&#x27;amis</span><span class="pn">19</span></div></section><section class="page ">
+<div class="opener">
+  <div class="op-text">
+    <div class="num big">07</div>
+    <div class="kicker">Étage 1</div>
+    <h2 class="xl">Séjour<br><em>de l'étage</em></h2>
+    <div class="rule"></div>
+    <p>Un salon plus intime, baigné de lumière par de hautes fenêtres. Une grande œuvre graphique rouge et blanche répond à la bibliothèque éclairée ; les assises gris taupe et les accents cognac installent une atmosphère chaleureuse.</p>
+  </div>
+  <figure class="tile op-img"><div class="ph" style="background-image:url(img/etage1-sejour-04.jpg);background-position:40% 50%;"></div></figure>
+</div><div class="folio narrow" style="left:14mm;right:164mm"><span>KAÏRA</span><span>Séjour de l&#x27;étage</span><span class="pn">20</span></div></section><section class="page "><div class="gal"><div class="g-head"><div class="kicker">Séjour</div><h3>Un salon intime et lumineux</h3><p class="gintro">Canapé d'angle gris taupe, coussins pied-de-poule et cuir cognac, table basse ovale en marbre veiné associée à une table d'appoint en bois foncé, fauteuil à structure métallique et pouf en cuir cognac.</p></div>
+<div class="g3row"><figure class="tile g3"><div class="ph" style="background-image:url(img/etage1-sejour-02.jpg);background-position:50% 50%;"></div><figcaption>Vue vers les fenêtres</figcaption></figure><figure class="tile g3"><div class="ph" style="background-image:url(img/etage1-sejour-03.jpg);background-position:50% 50%;"></div><figcaption>Canapé, fauteuil et pouf</figcaption></figure><figure class="tile g3"><div class="ph" style="background-image:url(img/etage1-sejour-09.jpg);background-position:50% 50%;"></div><figcaption>Œuvre et bibliothèque</figcaption></figure></div></div><div class="folio" style="left:14mm;right:14mm"><span>KAÏRA Interior Design · Dossier de conception</span><span>Séjour — étage 1</span><span class="pn">21</span></div></section><section class="page ">
+<div class="feature">
+  <figure class="tile f-big"><div class="ph" style="background-image:url(img/etage1-sejour-01.jpg);background-position:45% 55%;"></div><figcaption>Mur TV et étagère lumineuse</figcaption></figure>
+  <figure class="tile f-small"><div class="ph" style="background-image:url(img/etage1-sejour-08.jpg);background-position:45% 50%;"></div><figcaption>Double porte en bois et bibliothèque</figcaption></figure>
+  <div class="f-text"><div class="kicker">Mur TV et entrée</div><h3>Bois, lumière et seuils</h3><p>Le mur TV s'inscrit dans des panneaux crème à joints creux ; une étagère verticale en bois éclairée, rythmée par un montant de marbre, l'accompagne. La double porte en bois à fentes vitrées marque l'entrée.</p><ul><li>Meuble bas suspendu en bois</li><li>Étagère verticale éclairée</li><li>Double porte en bois à fentes vitrées</li><li>Bibliothèque éclairée toute hauteur</li></ul></div>
+</div><div class="folio narrow" style="left:214mm;right:11mm"><span>KAÏRA</span><span>Séjour — étage 1</span><span class="pn">22</span></div></section><section class="page ">
+<div class="sheet">
+  <div class="sh-left">
+    <div class="kicker">Séjour — étage 1</div><h3>Couleurs et matières</h3>
+    <div class="palette"><div class="kicker">Nuancier — séjour</div><div class="swgrid n6"><div class="sw"><div class="chip" style="background-image:url(swatches/et1-22.jpg)"></div><div class="flat" style="background:#685E4D"></div><div class="swname">Gris taupe — canapé</div><div class="hex">#685E4D</div></div><div class="sw"><div class="chip" style="background-image:url(swatches/et1-23.jpg)"></div><div class="flat" style="background:#877B6D"></div><div class="swname">Marbre blanc veiné — table basse</div><div class="hex">#877B6D</div></div><div class="sw"><div class="chip" style="background-image:url(swatches/et1-24.jpg)"></div><div class="flat" style="background:#503726"></div><div class="swname">Cuir cognac — pouf</div><div class="hex">#503726</div></div><div class="sw"><div class="chip" style="background-image:url(swatches/et1-25.jpg)"></div><div class="flat" style="background:#7B3931"></div><div class="swname">Rouge — œuvre</div><div class="hex">#7B3931</div></div><div class="sw"><div class="chip" style="background-image:url(swatches/et1-26.jpg)"></div><div class="flat" style="background:#563C27"></div><div class="swname">Chêne — portes et bibliothèque</div><div class="hex">#563C27</div></div><div class="sw"><div class="chip" style="background-image:url(swatches/et1-27.jpg)"></div><div class="flat" style="background:#8D837A"></div><div class="swname">Tapis tissé</div><div class="hex">#8D837A</div></div></div></div>
+  </div>
+  <div class="sh-right">
+    <figure class="tile sh-img"><div class="ph" style="background-image:url(img/etage1-sejour-03.jpg);background-position:15% 85%;background-size:240%;"></div></figure>
+    <div class="lists"><div><div class="kicker">Mobilier et aménagement</div><ul><li>Canapé d'angle gris taupe</li><li>Table basse ovale en marbre veiné</li><li>Table d'appoint bois foncé et métal noir</li><li>Fauteuil tissu, structure métal noir</li><li>Pouf en cuir cognac</li><li>Tapis tissé</li><li>Rideaux taupe et voilages</li></ul></div>
+    <div><div class="kicker">Détails architecturaux</div><ul><li>Gorge lumineuse au plafond</li><li>Panneaux muraux à joints creux</li><li>Bibliothèque éclairée</li><li>Étagère avec montant en marbre</li></ul></div></div>
+  </div>
+</div><div class="folio" style="left:14mm;right:14mm"><span>KAÏRA Interior Design · Dossier de conception</span><span>Séjour — étage 1</span><span class="pn">23</span></div></section><section class="page ">
+<div class="opener">
+  <div class="op-text">
+    <div class="num big">08</div>
+    <div class="kicker">Étage 1</div>
+    <h2 class="xl">Chambre<br><em>principale</em></h2>
+    <div class="rule"></div>
+    <p>Une suite enveloppante construite autour d'une bande de marbre brun foncé rétroéclairée. La tête de lit aux formes arrondies, le linge kaki et les touches dorées composent une ambiance feutrée et précieuse.</p>
+  </div>
+  <figure class="tile op-img"><div class="ph" style="background-image:url(img/chambre-principale-01.jpg);background-position:50% 50%;"></div></figure>
+</div><div class="folio narrow" style="left:14mm;right:164mm"><span>KAÏRA</span><span>Chambre principale</span><span class="pn">24</span></div></section><section class="page "><div class="gal"><div class="g-head"><div class="kicker">Chambre principale</div><h3>Un écrin feutré</h3><p class="gintro">Grande tête de lit enveloppante, chevets en bois, suspensions globe à anneau doré, banc capitonné à piètement doré ; face au lit, un dressing en bois toute hauteur.</p></div>
+<div class="g3row"><figure class="tile g3"><div class="ph" style="background-image:url(img/chambre-principale-05.jpg);background-position:50% 50%;"></div><figcaption>Mur de tête de lit</figcaption></figure><figure class="tile g3"><div class="ph" style="background-image:url(img/chambre-principale-03.jpg);background-position:50% 50%;"></div><figcaption>Vue d'ensemble et baie vitrée</figcaption></figure><figure class="tile g3"><div class="ph" style="background-image:url(img/chambre-principale-04.jpg);background-position:50% 50%;"></div><figcaption>Dressing et meuble TV</figcaption></figure></div></div><div class="folio" style="left:14mm;right:14mm"><span>KAÏRA Interior Design · Dossier de conception</span><span>Chambre principale</span><span class="pn">25</span></div></section><section class="page ">
+<div class="sheet">
+  <div class="sh-left">
+    <div class="kicker">Chambre principale</div><h3>Couleurs et matières</h3>
+    <div class="palette"><div class="kicker">Nuancier — chambre principale</div><div class="swgrid n6"><div class="sw"><div class="chip" style="background-image:url(swatches/princ-16.jpg)"></div><div class="flat" style="background:#312A1B"></div><div class="swname">Marbre brun foncé veiné</div><div class="hex">#312A1B</div></div><div class="sw"><div class="chip" style="background-image:url(swatches/princ-17.jpg)"></div><div class="flat" style="background:#918376"></div><div class="swname">Tissu clair — tête de lit</div><div class="hex">#918376</div></div><div class="sw"><div class="chip" style="background-image:url(swatches/princ-18.jpg)"></div><div class="flat" style="background:#3A3322"></div><div class="swname">Kaki — linge de lit</div><div class="hex">#3A3322</div></div><div class="sw"><div class="chip" style="background-image:url(swatches/princ-19.jpg)"></div><div class="flat" style="background:#8D7E6F"></div><div class="swname">Tissu — banc</div><div class="hex">#8D7E6F</div></div><div class="sw"><div class="chip" style="background-image:url(swatches/princ-20.jpg)"></div><div class="flat" style="background:#694E39"></div><div class="swname">Chêne — dressing</div><div class="hex">#694E39</div></div><div class="sw"><div class="chip" style="background-image:url(swatches/princ-21.jpg)"></div><div class="flat" style="background:#19170D"></div><div class="swname">Noir — meuble TV</div><div class="hex">#19170D</div></div></div></div>
+  </div>
+  <div class="sh-right">
+    <figure class="tile sh-img"><div class="ph" style="background-image:url(img/chambre-principale-05.jpg);background-position:50% 30%;background-size:240%;"></div></figure>
+    <div class="lists"><div><div class="kicker">Mobilier et aménagement</div><ul><li>Tête de lit enveloppante aux formes arrondies</li><li>Chevets en bois à deux tiroirs</li><li>Suspensions globe, anneau doré</li><li>Banc capitonné, piètement doré</li><li>Meuble TV noir</li><li>Rideaux taupe et voilage</li></ul></div>
+    <div><div class="kicker">Détails architecturaux</div><ul><li>Bande de marbre brun foncé rétroéclairée</li><li>Colonnes de bois avec lames éclairées</li><li>Miroirs verticaux</li><li>Dressing en bois toute hauteur</li><li>Gorge lumineuse au plafond</li></ul></div></div>
+  </div>
+</div><div class="folio" style="left:14mm;right:14mm"><span>KAÏRA Interior Design · Dossier de conception</span><span>Chambre principale</span><span class="pn">26</span></div></section><section class="page ">
+<div class="custom"><div class="g-head"><div class="num">09</div><div class="kicker">Agencements et menuiseries</div>
+<h3>Le sur-mesure <em>au cœur du projet</em></h3>
+<p class="gintro">Les menuiseries intégrées dessinent l'architecture intérieure de chaque pièce. Les plans de fabrication,
+dimensions et finitions seront détaillés dans les dossiers d'exécution.</p></div>
+<div class="c6grid"><figure class="tile c6"><div class="ph" style="background-image:url(img/rdc-salon-07.jpg);background-position:45% 50%;background-size:170%;"></div><figcaption><b>Mur TV — salon principal</b><br>Panneaux bois aux angles arrondis, lames et niches lumineuses</figcaption></figure><figure class="tile c6"><div class="ph" style="background-image:url(img/rdc-salon-01.jpg);background-position:70% 40%;background-size:160%;"></div><figcaption><b>Bibliothèque — salle à manger</b><br>Composition asymétrique en bois, toute hauteur</figcaption></figure><figure class="tile c6"><div class="ph" style="background-image:url(img/chambre-amis-02.jpg);background-position:45% 70%;background-size:170%;"></div><figcaption><b>Meuble TV et coiffeuse — chambre d'amis</b><br>Bois et plateau de marbre, suspendus</figcaption></figure><figure class="tile c6"><div class="ph" style="background-image:url(img/chambre-principale-04.jpg);background-position:50% 40%;background-size:150%;"></div><figcaption><b>Dressing — chambre principale</b><br>Façades bois toute hauteur, poignées intégrées</figcaption></figure><figure class="tile c6"><div class="ph" style="background-image:url(img/etage1-sejour-08.jpg);background-position:85% 45%;background-size:170%;"></div><figcaption><b>Bibliothèque — séjour</b><br>Étagères éclairées en bois</figcaption></figure><figure class="tile c6"><div class="ph" style="background-image:url(img/chambre-principale-05.jpg);background-position:50% 62%;background-size:170%;"></div><figcaption><b>Tête de lit — chambre principale</b><br>Volume enveloppant aux formes arrondies</figcaption></figure></div></div><div class="folio" style="left:14mm;right:14mm"><span>KAÏRA Interior Design · Dossier de conception</span><span>Agencements</span><span class="pn">27</span></div></section><section class="page ">
+<div class="synth">
+  <figure class="tile sy-img"><div class="ph" style="background-image:url(img/rdc-salon-05.jpg);background-position:35% 50%;"></div></figure>
+  <div class="sy-text">
+    <div class="num">10</div><div class="kicker">Synthèse esthétique</div>
+    <h2>Une écriture <em>cohérente</em>,<br>des pièces singulières</h2>
+    <p>Du salon de réception à la chambre principale, le projet décline un même langage : des parois composées,
+    la chaleur du bois, la profondeur de la pierre et une lumière indirecte omniprésente.</p>
+    <p>Chaque espace affirme ensuite sa propre identité — l'art au salon, le marbre clair dans la chambre d'amis,
+    la couleur au séjour de l'étage, la pierre sombre et le kaki dans la chambre principale — pour une demeure à la fois
+    unifiée et vivante.</p>
+  </div>
+</div><div class="folio narrow" style="left:166mm;right:18mm"><span>KAÏRA</span><span>Synthèse</span><span class="pn">28</span></div></section><section class="page p-back">
+<div class="back">
+  <figure class="tile back-img"><div class="ph" style="background-image:url(img/chambre-principale-05.jpg);background-position:50% 35%;"></div></figure>
+  <div class="back-panel"><div class="wordmark">KAÏRA</div><div class="sub">INTERIOR DESIGN</div>
+  <div class="rule"></div><p>Villa — Rez-de-chaussée & Étage 1<br>Novembre 2026</p></div>
+</div></section></body></html>

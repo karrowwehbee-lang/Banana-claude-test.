@@ -1,0 +1,30 @@
+{
+ "id": "023",
+ "slug": "arches-and-leather",
+ "pillar": "Design notes",
+ "kind": "carousel",
+ "renders": [
+  "x12",
+  "x16",
+  "x13"
+ ],
+ "files": [
+  "1.jpg",
+  "2.jpg",
+  "3.jpg",
+  "4.jpg"
+ ],
+ "caption": "Arches & leather.\n\nA barbershop drawn around a row of arched mirrors, each lit along its edge, with cognac leather chairs against olive-taupe walls. At the back, a curved sofa and nested marble tables make the wait part of the visit, under backlit display shelving.\n\nInterior design & 3D visualization by KAÏRA Interior Design.",
+ "hashtags": "#kairainteriordesign #interiorarchitecture #interiordesign #luxuryinteriors #interiordesigner #barbershop #barbershopdesign #salondesign #saloninterior #commercialdesign #archedmirror #brassdetails #3dvisualization #interiorrender #archviz",
+ "full_caption": "Arches & leather.\n\nA barbershop drawn around a row of arched mirrors, each lit along its edge, with cognac leather chairs against olive-taupe walls. At the back, a curved sofa and nested marble tables make the wait part of the visit, under backlit display shelving.\n\nInterior design & 3D visualization by KAÏRA Interior Design.\n\n#kairainteriordesign #interiorarchitecture #interiordesign #luxuryinteriors #interiordesigner #barbershop #barbershopdesign #salondesign #saloninterior #commercialdesign #archedmirror #brassdetails #3dvisualization #interiorrender #archviz",
+ "status": "ready",
+ "created": "2026-11-16",
+ "published_at": null,
+ "media_id": null,
+ "permalink": null,
+ "checks": [
+  "023-1: x12 whole, 100 %, pixel-identical on the HD slide",
+  "023-2: x16 whole, 100 %, pixel-identical on the HD slide",
+  "023-3: x13 whole, 100 %, pixel-identical on the HD slide"
+ ]
+}
