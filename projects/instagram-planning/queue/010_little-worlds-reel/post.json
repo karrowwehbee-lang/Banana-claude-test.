@@ -16,12 +16,17 @@
  "caption": "Little worlds.\n\nFour children's rooms from our collection, each built around one idea: soft pink arches for Douceur Lapin, backlit clouds above a sage bed for Nuages, a caramel teddy-bear arch for Ourson Caramel and painted leaves for Jungle Douce. Rounded shapes, warm light and low open shelves within reach.\n\nInterior design & 3D visualization by KAÏRA Interior Design.",
  "hashtags": "#kairainteriordesign #interiorarchitecture #interiordesign #luxuryinteriors #interiordesigner #kidsroomdesign #childrensroom #nurserydesign #kidsinterior #playfulinteriors #bespokefurniture #customfurniture #3dvisualization #interiorrender #archviz",
  "full_caption": "Little worlds.\n\nFour children's rooms from our collection, each built around one idea: soft pink arches for Douceur Lapin, backlit clouds above a sage bed for Nuages, a caramel teddy-bear arch for Ourson Caramel and painted leaves for Jungle Douce. Rounded shapes, warm light and low open shelves within reach.\n\nInterior design & 3D visualization by KAÏRA Interior Design.\n\n#kairainteriordesign #interiorarchitecture #interiordesign #luxuryinteriors #interiordesigner #kidsroomdesign #childrensroom #nurserydesign #kidsinterior #playfulinteriors #bespokefurniture #customfurniture #3dvisualization #interiorrender #archviz",
- "status": "ready",
+ "status": "published",
  "created": "2026-11-15",
- "published_at": null,
- "media_id": null,
- "permalink": null,
+ "published_at": "2026-11-20T17:40:03Z",
+ "media_id": "18148883914589916",
+ "permalink": "https://www.instagram.com/reel/Df-NkMaK3xJ/",
  "checks": [
   "reel 15.5 s — renders shown whole: k01, k04, k05, k06"
- ]
+ ],
+ "media_urls": {
+  "reel.mp4": "https://raw.githubusercontent.com/karrowwehbee-lang/Banana-claude-test./refs/heads/claude/kaira-interior-design-skill-1isxi1/projects/instagram-planning/queue/010_little-worlds-reel/reel.mp4",
+  "cover.jpg": "https://raw.githubusercontent.com/karrowwehbee-lang/Banana-claude-test./refs/heads/claude/kaira-interior-design-skill-1isxi1/projects/instagram-planning/queue/010_little-worlds-reel/cover.jpg"
+ },
+ "hosting": "fallback: Banana-claude-test (public)"
 }
