@@ -17,14 +17,21 @@
  "caption": "Material study — oak, marble & burgundy.\n\nIn the villa's living and dining room, light oak shelving and fins meet a veined marble column, greige wall panels and charcoal leather, with one deep burgundy artwork as the accent. Warm, restrained and made to age well.\n\nSave it as a reference for your own palette.",
  "hashtags": "#kairainteriordesign #interiorarchitecture #interiordesign #luxuryinteriors #interiordesigner #materialpalette #interiordetails #oakwood #marble #naturalmaterials #villadesign #livingroomdesign #diningroomdesign #quietluxury #timelessdesign",
  "full_caption": "Material study — oak, marble & burgundy.\n\nIn the villa's living and dining room, light oak shelving and fins meet a veined marble column, greige wall panels and charcoal leather, with one deep burgundy artwork as the accent. Warm, restrained and made to age well.\n\nSave it as a reference for your own palette.\n\n#kairainteriordesign #interiorarchitecture #interiordesign #luxuryinteriors #interiordesigner #materialpalette #interiordetails #oakwood #marble #naturalmaterials #villadesign #livingroomdesign #diningroomdesign #quietluxury #timelessdesign",
- "status": "ready",
+ "status": "published",
  "created": "2026-11-15",
- "published_at": null,
- "media_id": null,
- "permalink": null,
+ "published_at": "2026-11-21T17:40:19Z",
+ "media_id": "18145381480616132",
+ "permalink": "https://www.instagram.com/p/DgAydEUDOpE/",
  "checks": [
   "011-2: rdc-salon-02 whole, 100 %, pixel-identical on the HD slide",
   "011-3: rdc-salon-01 whole, 100 %, pixel-identical on the HD slide",
   "011-4: rdc-salon-09 whole, 100 %, pixel-identical on the HD slide"
- ]
+ ],
+ "media_urls": {
+  "1.jpg": "https://raw.githubusercontent.com/karrowwehbee-lang/Banana-claude-test./refs/heads/claude/kaira-interior-design-skill-1isxi1/projects/instagram-planning/queue/011_oak-marble-and-burgundy/1.jpg",
+  "2.jpg": "https://raw.githubusercontent.com/karrowwehbee-lang/Banana-claude-test./refs/heads/claude/kaira-interior-design-skill-1isxi1/projects/instagram-planning/queue/011_oak-marble-and-burgundy/2.jpg",
+  "3.jpg": "https://raw.githubusercontent.com/karrowwehbee-lang/Banana-claude-test./refs/heads/claude/kaira-interior-design-skill-1isxi1/projects/instagram-planning/queue/011_oak-marble-and-burgundy/3.jpg",
+  "4.jpg": "https://raw.githubusercontent.com/karrowwehbee-lang/Banana-claude-test./refs/heads/claude/kaira-interior-design-skill-1isxi1/projects/instagram-planning/queue/011_oak-marble-and-burgundy/4.jpg"
+ },
+ "hosting": "fallback: Banana-claude-test (public)"
 }
