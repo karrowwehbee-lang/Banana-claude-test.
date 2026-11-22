@@ -19,15 +19,23 @@
  "caption": "A showroom in zones.\n\nAn electronics and appliance showroom organised brand by brand: framed wall bays in charcoal and white, islands on wood-topped plinths, and lines of light that lead visitors through the hall.\n\nRetail interior design & 3D visualization by KAÏRA Interior Design.",
  "hashtags": "#kairainteriordesign #interiorarchitecture #interiordesign #luxuryinteriors #interiordesigner #retaildesign #showroomdesign #retailinterior #storedesign #visualmerchandising #commercialdesign #retailspace #3dvisualization #interiorrender #archviz",
  "full_caption": "A showroom in zones.\n\nAn electronics and appliance showroom organised brand by brand: framed wall bays in charcoal and white, islands on wood-topped plinths, and lines of light that lead visitors through the hall.\n\nRetail interior design & 3D visualization by KAÏRA Interior Design.\n\n#kairainteriordesign #interiorarchitecture #interiordesign #luxuryinteriors #interiordesigner #retaildesign #showroomdesign #retailinterior #storedesign #visualmerchandising #commercialdesign #retailspace #3dvisualization #interiorrender #archviz",
- "status": "ready",
+ "status": "published",
  "created": "2026-11-16",
- "published_at": null,
- "media_id": null,
- "permalink": null,
+ "published_at": "2026-11-22T17:40:13Z",
+ "media_id": "18220408339309987",
+ "permalink": "https://www.instagram.com/p/DgDXPSojNiD/",
  "checks": [
   "012-1: n13 whole, 100 %, pixel-identical on the HD slide",
   "012-2: n11 whole, 100 %, pixel-identical on the HD slide",
   "012-3: n10 whole, 100 %, pixel-identical on the HD slide",
   "012-4: n12 whole, 100 %, pixel-identical on the HD slide"
- ]
+ ],
+ "media_urls": {
+  "1.jpg": "https://raw.githubusercontent.com/karrowwehbee-lang/Banana-claude-test./refs/heads/claude/kaira-interior-design-skill-1isxi1/projects/instagram-planning/queue/012_a-showroom-in-zones/1.jpg",
+  "2.jpg": "https://raw.githubusercontent.com/karrowwehbee-lang/Banana-claude-test./refs/heads/claude/kaira-interior-design-skill-1isxi1/projects/instagram-planning/queue/012_a-showroom-in-zones/2.jpg",
+  "3.jpg": "https://raw.githubusercontent.com/karrowwehbee-lang/Banana-claude-test./refs/heads/claude/kaira-interior-design-skill-1isxi1/projects/instagram-planning/queue/012_a-showroom-in-zones/3.jpg",
+  "4.jpg": "https://raw.githubusercontent.com/karrowwehbee-lang/Banana-claude-test./refs/heads/claude/kaira-interior-design-skill-1isxi1/projects/instagram-planning/queue/012_a-showroom-in-zones/4.jpg",
+  "5.jpg": "https://raw.githubusercontent.com/karrowwehbee-lang/Banana-claude-test./refs/heads/claude/kaira-interior-design-skill-1isxi1/projects/instagram-planning/queue/012_a-showroom-in-zones/5.jpg"
+ },
+ "hosting": "fallback: Banana-claude-test (public)"
 }
