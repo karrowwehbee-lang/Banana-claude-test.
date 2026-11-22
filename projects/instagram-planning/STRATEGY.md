@@ -75,3 +75,11 @@ joins 030, and the two photos of her screens (Revit, Blender) make 034 — the B
 screenshots (website set-up, not design content; they show the account e-mail).
 **16 Nov 2026 — Karen:** every original stays unchanged, at full resolution, never cropped or retouched. `ORIGINALS.json` fingerprints each file (bytes and pixel size) and `tools/coverage.py` fails if one ever changes. On a slide, a render is pasted whole and verified pixel by pixel; it is only scaled when it is larger than the slide, and Instagram itself shows every feed image at most 1080 px wide. Files in Display P3 (iPhone/Mac) are colour-managed into sRGB for the slide so their colours look the same. Design studies made by Claude stay out unless she approves them. The website launch kit waits for her separate approval.
 **16 Nov 2026 — Karen:** the three Cloudflare dashboard screenshots stay off Instagram; everything else she sent is in the calendar.
+
+**22 Nov 2026 (weekly review — posts 005–011, 15–21 Nov).** Reach: Reel 008 *Upstairs, softly lit* 98 accounts (best),
+Reel 010 *Little worlds* 42 after < 2 days (1 comment); carousels 17–36 (weakest: 007 *From render to drawing*, 17).
+Views 63–116 per post; 0–2 likes, no saves, no shares on any post; 35 new followers over the week (profile: 3,042
+followers today — the 15 Nov log noted 3,831, to be checked in the app). Reels reach about three times more accounts
+than carousels (≈ 70 vs ≈ 26). **Decision:** the two-Reels-a-week test meets its rule (Reels ≥ 2× carousels) — keep it.
+Lesson: reach, not content, still limits results; Reels are the lever. No hashtag change (no per-hashtag data).
+Next 7 days ready in the queue (012–018, one Reel on Wed 25 Nov).
