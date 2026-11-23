@@ -15,13 +15,19 @@
  "caption": "Art first.\n\nA large painted portrait, a figure under a wide straw hat in red, ochre and stripes, is given a whole white wall beside the dining table. Upstairs, a red-and-white work answers the oak door. Everything around them stays quiet so that they can lead.\n\nVilla — living and dining room, first-floor lounge.",
  "hashtags": "#kairainteriordesign #interiorarchitecture #interiordesign #luxuryinteriors #interiordesigner #artininteriors #interiorart #statementart #villadesign #diningroomdesign #contemporaryinterior #quietluxury #timelessdesign #interiordetails",
  "full_caption": "Art first.\n\nA large painted portrait, a figure under a wide straw hat in red, ochre and stripes, is given a whole white wall beside the dining table. Upstairs, a red-and-white work answers the oak door. Everything around them stays quiet so that they can lead.\n\nVilla — living and dining room, first-floor lounge.\n\n#kairainteriordesign #interiorarchitecture #interiordesign #luxuryinteriors #interiordesigner #artininteriors #interiorart #statementart #villadesign #diningroomdesign #contemporaryinterior #quietluxury #timelessdesign #interiordetails",
- "status": "ready",
+ "status": "published",
  "created": "2026-11-16",
- "published_at": null,
- "media_id": null,
- "permalink": null,
+ "published_at": "2026-11-23T17:39:06Z",
+ "media_id": "18640518004006312",
+ "permalink": "https://www.instagram.com/p/DgF75fkDO5j/",
  "checks": [
   "013-1: rdc-salon-06 whole, 100 %, pixel-identical on the HD slide",
   "013-2: etage1-sejour-08 whole, 100 %, pixel-identical on the HD slide"
- ]
+ ],
+ "media_urls": {
+  "1.jpg": "https://raw.githubusercontent.com/karrowwehbee-lang/Banana-claude-test./refs/heads/claude/kaira-interior-design-skill-1isxi1/projects/instagram-planning/queue/013_art-first/1.jpg",
+  "2.jpg": "https://raw.githubusercontent.com/karrowwehbee-lang/Banana-claude-test./refs/heads/claude/kaira-interior-design-skill-1isxi1/projects/instagram-planning/queue/013_art-first/2.jpg",
+  "3.jpg": "https://raw.githubusercontent.com/karrowwehbee-lang/Banana-claude-test./refs/heads/claude/kaira-interior-design-skill-1isxi1/projects/instagram-planning/queue/013_art-first/3.jpg"
+ },
+ "hosting": "fallback: Banana-claude-test (public)"
 }
