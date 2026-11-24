@@ -83,3 +83,6 @@ followers today — the 15 Nov log noted 3,831, to be checked in the app). Reels
 than carousels (≈ 70 vs ≈ 26). **Decision:** the two-Reels-a-week test meets its rule (Reels ≥ 2× carousels) — keep it.
 Lesson: reach, not content, still limits results; Reels are the lever. No hashtag change (no per-hashtag data).
 Next 7 days ready in the queue (012–018, one Reel on Wed 25 Nov).
+
+**24 Nov 2026 — Karen:** captions stay in English (no switch to French, no change to the caption rules). KAÏRA and SKR are
+separate companies: never mention, tag, collaborate with or show SKR on the KAÏRA account or in KAÏRA client material.
