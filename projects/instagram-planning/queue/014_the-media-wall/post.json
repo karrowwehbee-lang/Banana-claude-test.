@@ -18,14 +18,22 @@
  "caption": "The media wall.\n\nThe screen is part of the room, so we design around it: walnut cabinetry and a lit low unit, a dark frame between wood panels, oak slats with black lines and a floating bench. Cables disappear and the wall stays calm when the screen is off.\n\nSave this post for your living-room project.",
  "hashtags": "#kairainteriordesign #interiorarchitecture #interiordesign #luxuryinteriors #interiordesigner #tvwall #mediawall #tvunit #livingroomdesign #joinerydesign #bespokefurniture #walnut #woodpanelling #contemporaryinterior #residentialdesign",
  "full_caption": "The media wall.\n\nThe screen is part of the room, so we design around it: walnut cabinetry and a lit low unit, a dark frame between wood panels, oak slats with black lines and a floating bench. Cables disappear and the wall stays calm when the screen is off.\n\nSave this post for your living-room project.\n\n#kairainteriordesign #interiorarchitecture #interiordesign #luxuryinteriors #interiordesigner #tvwall #mediawall #tvunit #livingroomdesign #joinerydesign #bespokefurniture #walnut #woodpanelling #contemporaryinterior #residentialdesign",
- "status": "ready",
+ "status": "published",
  "created": "2026-11-16",
- "published_at": null,
- "media_id": null,
- "permalink": null,
+ "published_at": "2026-11-24T17:39:17Z",
+ "media_id": "18345678976287669",
+ "permalink": "https://www.instagram.com/p/DgIguCuDcnz/",
  "checks": [
   "014-2: r15 whole, 100 %, pixel-identical on the HD slide",
   "014-3: r16 whole, 100 %, pixel-identical on the HD slide",
   "014-4: n07 whole, 100 %, pixel-identical on the HD slide"
- ]
+ ],
+ "media_urls": {
+  "1.jpg": "https://raw.githubusercontent.com/karrowwehbee-lang/Banana-claude-test./refs/heads/claude/kaira-interior-design-skill-1isxi1/projects/instagram-planning/queue/014_the-media-wall/1.jpg",
+  "2.jpg": "https://raw.githubusercontent.com/karrowwehbee-lang/Banana-claude-test./refs/heads/claude/kaira-interior-design-skill-1isxi1/projects/instagram-planning/queue/014_the-media-wall/2.jpg",
+  "3.jpg": "https://raw.githubusercontent.com/karrowwehbee-lang/Banana-claude-test./refs/heads/claude/kaira-interior-design-skill-1isxi1/projects/instagram-planning/queue/014_the-media-wall/3.jpg",
+  "4.jpg": "https://raw.githubusercontent.com/karrowwehbee-lang/Banana-claude-test./refs/heads/claude/kaira-interior-design-skill-1isxi1/projects/instagram-planning/queue/014_the-media-wall/4.jpg",
+  "5.jpg": "https://raw.githubusercontent.com/karrowwehbee-lang/Banana-claude-test./refs/heads/claude/kaira-interior-design-skill-1isxi1/projects/instagram-planning/queue/014_the-media-wall/5.jpg"
+ },
+ "hosting": "fallback: Banana-claude-test (public)"
 }

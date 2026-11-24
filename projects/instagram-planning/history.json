@@ -166,6 +166,19 @@
     "rdc-salon-06",
     "etage1-sejour-08"
    ]
+  },
+  {
+   "id": "014",
+   "slug": "the-media-wall",
+   "kind": "carousel",
+   "media_id": "18345678976287669",
+   "permalink": "https://www.instagram.com/p/DgIguCuDcnz/",
+   "published_at": "2026-11-24T17:39:17Z",
+   "renders": [
+    "r15",
+    "r16",
+    "n07"
+   ]
   }
  ]
 }
