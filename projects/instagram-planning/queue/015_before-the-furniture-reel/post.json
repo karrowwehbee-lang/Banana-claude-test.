@@ -16,12 +16,17 @@
  "caption": "Before the furniture.\n\nAn office floor shown bare, so the architecture speaks first: walnut walls, a beige veined stone panel, niches backed in green marble, marble-clad columns between tall windows and a line of light that runs around the ceiling.\n\nInterior design & 3D visualization by KAÏRA Interior Design.",
  "hashtags": "#kairainteriordesign #interiorarchitecture #interiordesign #luxuryinteriors #interiordesigner #officedesign #workspacedesign #officeinterior #corporateinterior #walnut #marble #architecturallighting #3dvisualization #interiorrender #archviz",
  "full_caption": "Before the furniture.\n\nAn office floor shown bare, so the architecture speaks first: walnut walls, a beige veined stone panel, niches backed in green marble, marble-clad columns between tall windows and a line of light that runs around the ceiling.\n\nInterior design & 3D visualization by KAÏRA Interior Design.\n\n#kairainteriordesign #interiorarchitecture #interiordesign #luxuryinteriors #interiordesigner #officedesign #workspacedesign #officeinterior #corporateinterior #walnut #marble #architecturallighting #3dvisualization #interiorrender #archviz",
- "status": "ready",
+ "status": "published",
  "created": "2026-11-16",
- "published_at": null,
- "media_id": null,
- "permalink": null,
+ "published_at": "2026-11-25T17:39:33Z",
+ "media_id": "18100912811442722",
+ "permalink": "https://www.instagram.com/reel/DgLFgKfMHa9/",
  "checks": [
   "reel 15.5 s — renders shown whole: w08, w13, w10, w09"
- ]
+ ],
+ "media_urls": {
+  "reel.mp4": "https://raw.githubusercontent.com/karrowwehbee-lang/Banana-claude-test./refs/heads/claude/kaira-interior-design-skill-1isxi1/projects/instagram-planning/queue/015_before-the-furniture-reel/reel.mp4",
+  "cover.jpg": "https://raw.githubusercontent.com/karrowwehbee-lang/Banana-claude-test./refs/heads/claude/kaira-interior-design-skill-1isxi1/projects/instagram-planning/queue/015_before-the-furniture-reel/cover.jpg"
+ },
+ "hosting": "fallback: Banana-claude-test (public)"
 }
