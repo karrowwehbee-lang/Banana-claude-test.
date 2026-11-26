@@ -193,6 +193,24 @@
     "w10",
     "w09"
    ]
+  },
+  {
+   "id": "016",
+   "slug": "the-screen-framed",
+   "kind": "carousel",
+   "media_id": "18136757614707267",
+   "permalink": "https://www.instagram.com/p/DgNqTLiEVrj/",
+   "published_at": "2026-11-26T17:39:11Z",
+   "renders": [
+    "rdc-salon-04",
+    "rdc-salon-03",
+    "rdc-salon-07",
+    "etage1-sejour-01",
+    "etage1-sejour-05",
+    "chambre-amis-02",
+    "chambre-amis-04",
+    "chambre-principale-04"
+   ]
   }
  ]
 }
