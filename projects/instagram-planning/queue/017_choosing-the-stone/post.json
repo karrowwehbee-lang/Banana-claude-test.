@@ -20,15 +20,24 @@
  "caption": "Choosing the stone.\n\nThe same office, before the furniture, in two finishes: a beige veined stone or a dark green marble for the feature wall, and the same choice for the columns between the windows. Walnut, black panels and a white marble floor stay the same.\n\nWhich would you choose, A or B?",
  "hashtags": "#kairainteriordesign #interiorarchitecture #interiordesign #luxuryinteriors #interiordesigner #materialpalette #materialselection #interiordetails #marble #naturalstone #stoneinteriors #walnut #officedesign #workspacedesign #timelessdesign",
  "full_caption": "Choosing the stone.\n\nThe same office, before the furniture, in two finishes: a beige veined stone or a dark green marble for the feature wall, and the same choice for the columns between the windows. Walnut, black panels and a white marble floor stay the same.\n\nWhich would you choose, A or B?\n\n#kairainteriordesign #interiorarchitecture #interiordesign #luxuryinteriors #interiordesigner #materialpalette #materialselection #interiordetails #marble #naturalstone #stoneinteriors #walnut #officedesign #workspacedesign #timelessdesign",
- "status": "ready",
+ "status": "published",
  "created": "2026-11-16",
- "published_at": null,
- "media_id": null,
- "permalink": null,
+ "published_at": "2026-11-27T17:39:00Z",
+ "media_id": "18203166640400838",
+ "permalink": "https://www.instagram.com/p/DgQPFMRCE3N/",
  "checks": [
   "017-2: w14 whole, 100 %, pixel-identical on the HD slide",
   "017-3: w15 whole, 100 %, pixel-identical on the HD slide",
   "017-4: w11 whole, 100 %, pixel-identical on the HD slide",
   "017-5: w12 whole, 100 %, pixel-identical on the HD slide"
- ]
+ ],
+ "media_urls": {
+  "1.jpg": "https://raw.githubusercontent.com/karrowwehbee-lang/Banana-claude-test./refs/heads/claude/kaira-interior-design-skill-1isxi1/projects/instagram-planning/queue/017_choosing-the-stone/1.jpg",
+  "2.jpg": "https://raw.githubusercontent.com/karrowwehbee-lang/Banana-claude-test./refs/heads/claude/kaira-interior-design-skill-1isxi1/projects/instagram-planning/queue/017_choosing-the-stone/2.jpg",
+  "3.jpg": "https://raw.githubusercontent.com/karrowwehbee-lang/Banana-claude-test./refs/heads/claude/kaira-interior-design-skill-1isxi1/projects/instagram-planning/queue/017_choosing-the-stone/3.jpg",
+  "4.jpg": "https://raw.githubusercontent.com/karrowwehbee-lang/Banana-claude-test./refs/heads/claude/kaira-interior-design-skill-1isxi1/projects/instagram-planning/queue/017_choosing-the-stone/4.jpg",
+  "5.jpg": "https://raw.githubusercontent.com/karrowwehbee-lang/Banana-claude-test./refs/heads/claude/kaira-interior-design-skill-1isxi1/projects/instagram-planning/queue/017_choosing-the-stone/5.jpg",
+  "6.jpg": "https://raw.githubusercontent.com/karrowwehbee-lang/Banana-claude-test./refs/heads/claude/kaira-interior-design-skill-1isxi1/projects/instagram-planning/queue/017_choosing-the-stone/6.jpg"
+ },
+ "hosting": "fallback: Banana-claude-test (public)"
 }
