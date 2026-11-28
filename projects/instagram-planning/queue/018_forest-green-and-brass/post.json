@@ -23,11 +23,11 @@
  "caption": "Forest green & brass.\n\nA kitchen in deep green with brushed brass handles, white veined worktops and splashback, glazed upper cabinets lit from within and an island wrapped in white stone. One colour, carried from the floor to the ceiling.\n\nWould you dare a green kitchen?",
  "hashtags": "#kairainteriordesign #interiorarchitecture #interiordesign #luxuryinteriors #interiordesigner #kitchendesign #greenkitchen #luxurykitchen #kitchencabinets #brasshardware #kitchenisland #materialpalette #interiordetails #residentialdesign #modernkitchen",
  "full_caption": "Forest green & brass.\n\nA kitchen in deep green with brushed brass handles, white veined worktops and splashback, glazed upper cabinets lit from within and an island wrapped in white stone. One colour, carried from the floor to the ceiling.\n\nWould you dare a green kitchen?\n\n#kairainteriordesign #interiorarchitecture #interiordesign #luxuryinteriors #interiordesigner #kitchendesign #greenkitchen #luxurykitchen #kitchencabinets #brasshardware #kitchenisland #materialpalette #interiordetails #residentialdesign #modernkitchen",
- "status": "ready",
+ "status": "published",
  "created": "2026-11-16",
- "published_at": null,
- "media_id": null,
- "permalink": null,
+ "published_at": "2026-11-28T17:39:09Z",
+ "media_id": "17915303070484678",
+ "permalink": "https://www.instagram.com/p/DgSz4dKDo9W/",
  "checks": [
   "018-2: g09 whole, 100 %, pixel-identical on the HD slide",
   "018-3: g07 whole, 100 %, pixel-identical on the HD slide",
@@ -35,5 +35,15 @@
   "018-5: g08 whole, 100 %, pixel-identical on the HD slide",
   "018-6: g11 whole, 100 %, pixel-identical on the HD slide",
   "018-7: g10 whole, 100 %, pixel-identical on the HD slide"
- ]
+ ],
+ "media_urls": {
+  "1.jpg": "https://raw.githubusercontent.com/karrowwehbee-lang/Banana-claude-test./refs/heads/claude/kaira-interior-design-skill-1isxi1/projects/instagram-planning/queue/018_forest-green-and-brass/1.jpg",
+  "2.jpg": "https://raw.githubusercontent.com/karrowwehbee-lang/Banana-claude-test./refs/heads/claude/kaira-interior-design-skill-1isxi1/projects/instagram-planning/queue/018_forest-green-and-brass/2.jpg",
+  "3.jpg": "https://raw.githubusercontent.com/karrowwehbee-lang/Banana-claude-test./refs/heads/claude/kaira-interior-design-skill-1isxi1/projects/instagram-planning/queue/018_forest-green-and-brass/3.jpg",
+  "4.jpg": "https://raw.githubusercontent.com/karrowwehbee-lang/Banana-claude-test./refs/heads/claude/kaira-interior-design-skill-1isxi1/projects/instagram-planning/queue/018_forest-green-and-brass/4.jpg",
+  "5.jpg": "https://raw.githubusercontent.com/karrowwehbee-lang/Banana-claude-test./refs/heads/claude/kaira-interior-design-skill-1isxi1/projects/instagram-planning/queue/018_forest-green-and-brass/5.jpg",
+  "6.jpg": "https://raw.githubusercontent.com/karrowwehbee-lang/Banana-claude-test./refs/heads/claude/kaira-interior-design-skill-1isxi1/projects/instagram-planning/queue/018_forest-green-and-brass/6.jpg",
+  "7.jpg": "https://raw.githubusercontent.com/karrowwehbee-lang/Banana-claude-test./refs/heads/claude/kaira-interior-design-skill-1isxi1/projects/instagram-planning/queue/018_forest-green-and-brass/7.jpg"
+ },
+ "hosting": "fallback: Banana-claude-test (public)"
 }
